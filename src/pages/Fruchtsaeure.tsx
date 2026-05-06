@@ -1,43 +1,40 @@
 import TreatmentPage from "@/components/TreatmentPage";
-import img from "@/assets/treatment-fruchtsaeure.jpg";
+import hero from "@/assets/treatment-fruchtsaeure.jpg";
+import g1 from "@/assets/treatment-skin.jpg";
+import g2 from "@/assets/treatment-facial.jpg";
+import g3 from "@/assets/studio.jpg";
 
 const Fruchtsaeure = () => (
   <TreatmentPage
-    eyebrow="Fruchtsäure Behandlung Wien"
-    title={<>Fruchtsäure — sanft <span className="italic text-primary">erneuern.</span></>}
-    intro="Eine professionelle Fruchtsäure-Behandlung erneuert die Haut, klärt das Hautbild und hinterlässt einen sichtbaren Glow."
-    image={img}
-    longText={
-      <>
-        <p>Fruchtsäuren (AHA / BHA) zählen zu den effektivsten Wirkstoffen für eine sichtbare Hautverbesserung. Sie lösen abgestorbene Hautzellen, regen die Erneuerung an und gleichen das Hautbild aus — ideal bei Unreinheiten, Pigmentflecken oder fahler Haut.</p>
-        <p>Im Studio wähle ich die passende Säure und Konzentration individuell für deine Haut. So profitierst du vom maximalen Effekt — bei höchster Verträglichkeit.</p>
-      </>
-    }
+    eyebrow="Fruchtsäurebehandlung Wien"
+    title={<>Fruchtsäure — <span className="italic text-primary">sanfte</span> Hauterneuerung.</>}
+    subtitle="Ein moderner Klassiker für ein frisches, ebenmäßiges Hautbild — gezielt, sanft und sichtbar wirksam."
+    intro="Fruchtsäure löst sanft abgestorbene Hautzellen, regt die Zellerneuerung an und sorgt für ein klareres, frischeres Hautbild. Ideal bei Pigmentflecken, Unreinheiten oder fahlem Teint — individuell auf deine Haut abgestimmt."
+    heroImage={hero}
+    gallery={[g1, g2, g3]}
     benefits={[
-      "Ebenmäßiges Hautbild",
+      "Frischer, ebenmäßiger Teint",
       "Reduktion von Pigmentflecken",
-      "Glow & Frische",
+      "Klärung bei Unreinheiten",
       "Verfeinerte Poren",
-      "Klärt Unreinheiten",
-      "Ideal als Serie",
+      "Sichtbarer Glow-Effekt",
+      "Individuelle Konzentrationen",
     ]}
     process={[
-      { t: "Reinigung", d: "Vorbereitung der Haut." },
-      { t: "Säure-Auftrag", d: "Individuell dosiert auf deine Haut." },
-      { t: "Neutralisation", d: "Sanfte Beruhigung der Haut." },
-      { t: "Pflege & Schutz", d: "Beruhigende Pflege & SPF-Empfehlung." },
+      { t: "Beratung", d: "Hautziele & passende Säurekonzentration." },
+      { t: "Analyse", d: "Beurteilung von Hautzustand und Verträglichkeit." },
+      { t: "Behandlung", d: "Sanfte Anwendung der Fruchtsäure." },
+      { t: "Pflegeempfehlung", d: "Beruhigende Pflege & UV-Schutz." },
     ]}
-    results={[
-      "Sichtbar ebenmäßigeres Hautbild",
-      "Frischer Glow direkt nach der Behandlung",
-      "Stärkste Effekte in einer Kur (4–6 Behandlungen)",
+    prices={[
+      { name: "Fruchtsäure Klassik", duration: "60 Min", price: "ab € 85" },
+      { name: "Fruchtsäure Premium", duration: "75 Min", price: "ab € 110" },
+      { name: "Fruchtsäure 4er Serie", duration: "4 × 60 Min", price: "ab € 300", note: "Für sichtbare Resultate" },
     ]}
-    meta={{ duration: "45 Min", price: "ab € 85", intervals: "alle 2–4 W." }}
-    faqs={[
-      { q: "Brennt die Fruchtsäure?", a: "Ein leichtes Kribbeln ist normal — angenehm und kontrolliert." },
-      { q: "Welche Hauttypen profitieren?", a: "Fast alle. Die Konzentration wird individuell gewählt — auch sensible Haut wird sanft behandelt." },
-      { q: "Brauche ich Sonnenschutz?", a: "Ja, unbedingt. SPF 30+ ist nach jeder Säurebehandlung Pflicht." },
-    ]}
+    faqs={Array.from({ length: 8 }, (_, i) => ({
+      q: `FAQ ${i + 1}`,
+      a: `Antwort ${i + 1} — Platzhaltertext. Hier wird die finale Antwort eingefügt.`,
+    }))}
   />
 );
 
