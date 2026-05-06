@@ -12,6 +12,8 @@ import Microneedling from "./pages/Microneedling.tsx";
 import Fruchtsaeure from "./pages/Fruchtsaeure.tsx";
 import AntiAging from "./pages/AntiAging.tsx";
 import Problemhaut from "./pages/Problemhaut.tsx";
+import Microblading from "./pages/Microblading.tsx";
+import Gesichtsbehandlung from "./pages/Gesichtsbehandlung.tsx";
 import UeberMich from "./pages/UeberMich.tsx";
 import Kontakt from "./pages/Kontakt.tsx";
 import Impressum from "./pages/Impressum.tsx";
@@ -34,6 +36,8 @@ const App = () => (
           <Route path="/leistungen/fruchtsaeure" element={<Fruchtsaeure />} />
           <Route path="/leistungen/anti-aging" element={<AntiAging />} />
           <Route path="/leistungen/problemhaut" element={<Problemhaut />} />
+          <Route path="/leistungen/microblading" element={<Microblading />} />
+          <Route path="/leistungen/gesichtsbehandlung" element={<Gesichtsbehandlung />} />
           <Route path="/ueber-mich" element={<UeberMich />} />
           <Route path="/kontakt" element={<Kontakt />} />
           <Route path="/impressum" element={<Impressum />} />
