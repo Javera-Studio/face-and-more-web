@@ -18,6 +18,7 @@ import UeberMich from "./pages/UeberMich.tsx";
 import Kontakt from "./pages/Kontakt.tsx";
 import Impressum from "./pages/Impressum.tsx";
 import Datenschutz from "./pages/Datenschutz.tsx";
+import Wimpernkranzverdichtung from "./pages/Wimpernkranzverdichtung";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +38,7 @@ const App = () => (
           <Route path="/leistungen/anti-aging" element={<AntiAging />} />
           <Route path="/leistungen/problemhaut" element={<Problemhaut />} />
           <Route path="/leistungen/microblading" element={<Microblading />} />
+          <Route path="/leistungen/wimpernkranzverdichtung" element={<Wimpernkranzverdichtung />} />
           <Route path="/leistungen/gesichtsbehandlung" element={<Gesichtsbehandlung />} />
           <Route path="/ueber-mich" element={<UeberMich />} />
           <Route path="/kontakt" element={<Kontakt />} />
