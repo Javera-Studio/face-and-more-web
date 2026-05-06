@@ -1,18 +1,17 @@
 import TreatmentPage from "@/components/TreatmentPage";
-import img from "@/assets/skin-analysis.jpg";
+import hero from "@/assets/skin-analysis.jpg";
+import g1 from "@/assets/treatment-facial.jpg";
+import g2 from "@/assets/treatment-skin.jpg";
+import g3 from "@/assets/studio.jpg";
 
 const Hautanalyse = () => (
   <TreatmentPage
     eyebrow="Hautanalyse Wien"
     title={<>Moderne 3D-<span className="italic text-primary">Hautanalyse</span> in Wien.</>}
-    intro="Der Einstieg in eine Hautpflege, die wirklich zu dir passt — fundiert, präzise und persönlich besprochen."
-    image={img}
-    longText={
-      <>
-        <p>Eine moderne Hautanalyse ist weit mehr als ein Blick auf die Hautoberfläche. In meinem Studio in Wien arbeite ich mit einem hochauflösenden 3D-Hautanalysesystem, das Hautzustände sichtbar macht, die mit dem bloßen Auge nicht erkennbar sind — von Feuchtigkeitsverteilung über UV-Schäden bis zu beginnender Pigmentierung.</p>
-        <p>Auf Basis der Auswertung besprechen wir gemeinsam, was deine Haut wirklich braucht, und entwickeln einen individuellen Pflege- und Behandlungsplan. So vermeiden wir Pauschallösungen — und investieren deine Zeit und dein Budget dort, wo es wirklich Wirkung zeigt.</p>
-      </>
-    }
+    subtitle="Der Einstieg in eine Hautpflege, die wirklich zu dir passt — fundiert, präzise und persönlich besprochen."
+    intro="Eine moderne Hautanalyse ist mehr als ein Blick auf die Hautoberfläche. Mit hochauflösender 3D-Technologie machen wir Hautzustände sichtbar, die mit dem bloßen Auge nicht erkennbar sind — und entwickeln einen Pflegeplan, der wirklich passt."
+    heroImage={hero}
+    gallery={[g1, g2, g3]}
     benefits={[
       "Sichtbare Auswertung deiner Haut",
       "Individueller Pflegeplan",
@@ -22,23 +21,20 @@ const Hautanalyse = () => (
       "Persönliche 1:1 Beratung",
     ]}
     process={[
-      { t: "Vorgespräch", d: "Wir besprechen deine Hautgeschichte und Ziele." },
-      { t: "3D-Aufnahme", d: "Schmerzfreie, hochauflösende Analyse deiner Haut." },
+      { t: "Vorgespräch", d: "Hautgeschichte und Ziele besprechen." },
+      { t: "3D-Aufnahme", d: "Schmerzfreie, hochauflösende Analyse." },
       { t: "Auswertung", d: "Gemeinsame Besprechung der Ergebnisse." },
-      { t: "Pflege- & Behandlungsplan", d: "Individuell auf dich abgestimmt." },
+      { t: "Pflegeplan", d: "Individuell auf dich abgestimmt." },
     ]}
-    results={[
-      "Klarheit über den tatsächlichen Hautzustand",
-      "Ein Pflegeplan, der zu deinem Alltag passt",
-      "Sichere Entscheidung für die richtige Behandlung",
+    prices={[
+      { name: "3D Hautanalyse & Beratung", duration: "60 Min", price: "ab € 65" },
+      { name: "Folge-Hautanalyse", duration: "45 Min", price: "ab € 45", note: "Für Vergleichsmessung" },
+      { name: "Hautanalyse + Pflegeplan", duration: "90 Min", price: "ab € 95" },
     ]}
-    meta={{ duration: "60 Min", price: "ab € 65", intervals: "1–2× p.a." }}
-    faqs={[
-      { q: "Tut die Hautanalyse weh?", a: "Nein. Die 3D-Hautanalyse ist vollständig berührungsarm und schmerzfrei." },
-      { q: "Wie lange dauert der Termin?", a: "Plane rund 60 Minuten ein — inklusive ausführlicher Beratung." },
-      { q: "Was kostet die Hautanalyse?", a: "Die Hautanalyse beginnt ab € 65. Bei vielen Folgebehandlungen wird der Betrag angerechnet." },
-      { q: "Für wen ist die Hautanalyse geeignet?", a: "Für jeden Hauttyp, jedes Alter und jede Hautsituation — auch ohne aktuelle Beschwerden." },
-    ]}
+    faqs={Array.from({ length: 8 }, (_, i) => ({
+      q: `FAQ ${i + 1}`,
+      a: `Antwort ${i + 1} — Platzhaltertext. Hier wird die finale Antwort eingefügt.`,
+    }))}
   />
 );
 
