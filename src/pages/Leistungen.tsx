@@ -18,8 +18,8 @@ const items = [
   { img: antiagingImg, title: "Anti Aging", desc: "Sichtbar straffere, vitale Haut.", price: "ab € 120", to: "/leistungen/anti-aging" },
   { img: fruchtImg, title: "Fruchtsäure Peeling", desc: "Sanfte Hauterneuerung mit Glow-Effekt.", price: "ab € 85", to: "/leistungen/fruchtsaeure" },
   { img: needlingImg, title: "Microneedling", desc: "Aktiviert Kollagen & Hauterneuerung.", price: "ab € 140", to: "/leistungen/microneedling" },
-  { img: facialImg, title: "Klassische Behandlung", desc: "Ruhige, gründliche Pflege.", price: "ab € 75", to: "/kontakt" },
-  { img: pmuImg, title: "Microblading / PMU", desc: "Definierte, natürliche Augenbrauen.", price: "ab € 380", to: "/kontakt" },
+  { img: facialImg, title: "Kosmetische Gesichtsbehandlung", desc: "Ruhige, gründliche Pflege.", price: "ab € 75", to: "/leistungen/gesichtsbehandlung" },
+  { img: pmuImg, title: "Microblading", desc: "Definierte, natürliche Augenbrauen.", price: "ab € 380", to: "/leistungen/microblading" },
 ];
 
 const Leistungen = () => (
