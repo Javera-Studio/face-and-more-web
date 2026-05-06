@@ -1,6 +1,6 @@
 import SiteLayout from "@/components/SiteLayout";
 import PageHero from "@/components/PageHero";
-import portrait from "@/assets/michaela.jpg";
+import portrait from "@/assets/michaela.avif";
 import studio from "@/assets/studio.jpg";
 import { Link } from "react-router-dom";
 

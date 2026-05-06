@@ -1,6 +1,7 @@
 import { Link, NavLink as RouterNavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.jpg";
 
 const links = [
   { to: "/leistungen", label: "Leistungen" },
@@ -27,9 +28,8 @@ const SiteHeader = () => {
       }`}
     >
       <div className="container-editorial flex items-center justify-between h-16 md:h-20">
-        <Link to="/" className="flex flex-col leading-none" aria-label="FACE AND MORE — Startseite">
-          <span className="font-serif text-xl md:text-[1.55rem] tracking-wide">FACE AND MORE</span>
-          <span className="eyebrow mt-1 hidden sm:block">by Michaela Kornherr · Wien</span>
+        <Link to="/" className="flex items-center" aria-label="FACE AND MORE — Startseite">
+          <img src={logo} alt="FACE AND MORE by Michaela Kornherr" className="h-12 md:h-14 w-auto" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-9">
