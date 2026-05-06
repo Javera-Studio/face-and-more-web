@@ -7,20 +7,20 @@
 @layer base {
   :root {
     /* Editorial premium skin clinic palette */
-    --background: 36 30% 97%;          /* off-white warm */
-    --foreground: 200 15% 16%;         /* deep ink */
+    --background: 60 14% 98%;          /* #FAFAF8 warm off-white */
+    --foreground: 0 0% 18%;            /* #2E2E2E deep ink */
 
-    --card: 36 30% 99%;
-    --card-foreground: 200 15% 16%;
+    --card: 60 14% 99%;
+    --card-foreground: 0 0% 18%;
 
-    --popover: 36 30% 99%;
-    --popover-foreground: 200 15% 16%;
+    --popover: 60 14% 99%;
+    --popover-foreground: 0 0% 18%;
 
-    /* Muted teal — elegant, rich, not minty */
-    --primary: 188 38% 30%;
-    --primary-foreground: 36 30% 97%;
-    --primary-soft: 188 30% 92%;
-    --primary-glow: 188 42% 38%;
+    /* Logo teal */
+    --primary: 180 79% 33%;            /* #129798 */
+    --primary-foreground: 60 14% 98%;
+    --primary-soft: 173 31% 95%;       /* #EEF7F6 */
+    --primary-glow: 180 80% 28%;       /* #0E7F80 hover */
 
     --secondary: 32 22% 92%;           /* warm sand */
     --secondary-foreground: 200 15% 16%;
