@@ -18,7 +18,6 @@ import UeberMich from "./pages/UeberMich.tsx";
 import Kontakt from "./pages/Kontakt.tsx";
 import Impressum from "./pages/Impressum.tsx";
 import Datenschutz from "./pages/Datenschutz.tsx";
-import Wimpernkranzverdichtung from "./pages/Wimpernkranzverdichtung";
 
 const queryClient = new QueryClient();
 
