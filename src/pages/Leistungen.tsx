@@ -20,6 +20,7 @@ const items = [
   { img: needlingImg, title: "Microneedling", desc: "Aktiviert Kollagen & Hauterneuerung.", price: "ab € 140", to: "/leistungen/microneedling" },
   { img: facialImg, title: "Kosmetische Gesichtsbehandlung", desc: "Ruhige, gründliche Pflege.", price: "ab € 75", to: "/leistungen/gesichtsbehandlung" },
   { img: pmuImg, title: "Microblading", desc: "Definierte, natürliche Augenbrauen.", price: "ab € 380", to: "/leistungen/microblading" },
+  {   img: pmuImg, title: "Wimpernkranzverdichtung", desc: "Natürlich betonte Augen und ein ausdrucksstarker Blick durch präzises Permanent Make-Up.", price: "ab € 275", to: "/leistungen/wimpernkranzverdichtung"}
 ];
 
 const Leistungen = () => (
