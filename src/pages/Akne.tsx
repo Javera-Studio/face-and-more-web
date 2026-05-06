@@ -1,40 +1,74 @@
-import TreatmentPage from "@/components/TreatmentPage";
-import hero from "@/assets/treatment-akne.jpg";
-import g1 from "@/assets/treatment-skin.jpg";
-import g2 from "@/assets/treatment-facial.jpg";
-import g3 from "@/assets/studio.jpg";
+eyebrow="Aknebehandlung Wien"
 
-const Akne = () => (
-  <TreatmentPage
-    eyebrow="Aknebehandlung Wien"
-    title={<>Aknebehandlung — <span className="italic text-primary">klärend</span> & nachhaltig.</>}
-    subtitle="Ein durchdachtes Konzept aus Hautanalyse, professioneller Behandlung und passender Heimpflege — für ein dauerhaft klareres Hautbild."
-    intro="Akne hat viele Ursachen. Statt symptomatisch zu reagieren, beginnen wir mit einer fundierten Hautanalyse und entwickeln eine Strategie, die langfristig wirkt — sanft, professionell und individuell auf deine Haut abgestimmt."
-    heroImage={hero}
-    gallery={[g1, g2, g3]}
-    benefits={[
-      "Sichtbare Reduktion von Unreinheiten",
-      "Beruhigte, ausgeglichene Haut",
-      "Verfeinerte Poren",
-      "Stärkere, widerstandsfähigere Hautbarriere",
-      "Individuelle Heimpflegeempfehlung",
-      "Persönliche Begleitung über mehrere Schritte",
-    ]}
-    process={[
-      { t: "Beratung", d: "Persönliches Gespräch zu Hautbild, Pflege & Lebensstil." },
-      { t: "Hautanalyse", d: "Fundierte Bestimmung von Hautzustand und Ursachen." },
-      { t: "Behandlung", d: "Tiefenreinigung & Wirkstofftherapie — sanft und gezielt." },
-      { t: "Pflegeempfehlung", d: "Individueller Pflegeplan für nachhaltige Ergebnisse." },
-    ]}
-    prices={[
-      { name: "Erstberatung & Hautanalyse", duration: "60 Min", price: "ab € 65" },
-      { name: "Aknebehandlung", duration: "75 Min", price: "ab € 95" },
-      { name: "Akne — Serie 4er Paket", duration: "4 × 75 Min", price: "ab € 340", note: "Für nachhaltige Ergebnisse" },
-    ]}
-    faqs={Array.from({ length: 8 }, (_, i) => ({
-      q: `FAQ ${i + 1}`,
-      a: `Antwort ${i + 1} — Platzhaltertext. Hier wird die finale Antwort eingefügt.`,
-    }))}
+title={<>Gezielte <span className="italic text-primary">Aknebehandlungen</span> für reine und ausgeglichene Haut.</>}
+
+subtitle="Individuelle Aknebehandlungen und Hautcoaching für jugendliche sowie reife Haut."
+
+intro="Unreine Haut, Akne oder entzündete Hautstellen brauchen eine individuell abgestimmte Behandlung. Durch meine langjährige Erfahrung als Hautcoach unterstütze ich Jugendliche und Erwachsene dabei, ihr Hautbild nachhaltig zu verbessern. Gemeinsam kombinieren wir professionelle Behandlungen im Studio mit der passenden Pflegeroutine für Zuhause."
+
+benefits={[
+  "Reinere und ausgeglichenere Haut",
+  "Verfeinerung der Poren",
+  "Regulierung der Talgproduktion",
+  "Entzündungshemmende Wirkung",
+  "Individuelles Hautcoaching",
+  "Geeignet für jugendliche & reife Haut",
+]}
+
+process={[
+  { t: "Persönliche Hautanalyse", d: "Besprechung deiner Hautbedürfnisse und Ziele." },
+  { t: "Reinigung & Vorbereitung", d: "Sanfte Reinigung und Vorbereitung der Haut." },
+  { t: "Behandlung", d: "Ausreinigen, Fruchtsäure oder gezielte Wirkstoffe je nach Hautzustand." },
+  { t: "Pflege & Beratung", d: "Pflegeempfehlungen und individuelle Routine für Zuhause." },
+]}
+
+prices={[
+  { name: "Akne Jugendprogramm", duration: "60 Min", price: "€ 63" },
+  { name: "Fruchtsäurebehandlung", duration: "30 Min", price: "€ 94" },
+  { name: "Kurpaket Fruchtsäure", duration: "6 Sitzungen", price: "auf Anfrage" },
+]}
+    faqs={[
+  {
+    q: "Wie läuft eine Aknebehandlung ab?",
+    a: "Jede Behandlung startet mit einem persönlichen Hautcoaching und einer Analyse deiner Haut. Danach folgen Reinigung, Peeling, Bedampfung der Haut, Ausreinigung und eine beruhigende Hochfrequenzbehandlung. Die Behandlung dauert etwa 60 Minuten.",
+  },
+  {
+    q: "Was kostet eine Aknebehandlung?",
+    a: "Eine Aknebehandlung inklusive Hautcoaching kostet für Jugendliche bis 18 Jahre ab € 63 und für Erwachsene ab € 89. Für langfristige Ergebnisse empfehle ich mehrere aufeinander abgestimmte Behandlungen.",
+  },
+  {
+    q: "Was hilft gegen Akne, Pickel und Mitesser?",
+    a: "Eine Kombination aus professionellen Behandlungen, regelmäßiger Tiefenreinigung und der passenden Heimpflege kann das Hautbild nachhaltig verbessern. Besonders Fruchtsäurebehandlungen und individuell abgestimmte Pflegeprodukte helfen dabei, Entzündungen zu reduzieren und die Poren zu verfeinern.",
+  },
+  {
+    q: "Warum entsteht Akne und unreine Haut?",
+    a: "Akne entsteht häufig durch hormonelle Veränderungen, eine erhöhte Talgproduktion, verstopfte Poren und Bakterien. Besonders in der Pubertät reagiert die Haut oft empfindlich. Auch Stress, Ernährung, falsche Pflege oder reizende Inhaltsstoffe können Hautunreinheiten verstärken.",
+  },
+  {
+    q: "Welche Wirkung hat die Hochfrequenzbehandlung?",
+    a: "Die Hochfrequenz wirkt antibakteriell, entzündungshemmend und desinfizierend. Sie unterstützt die Hautregeneration, beruhigt entzündete Stellen und hilft dabei, neue Akneausbrüche zu reduzieren.",
+  },
+  {
+    q: "Wie wirkt ein Fruchtsäurepeeling bei Akne?",
+    a: "Fruchtsäure entfernt abgestorbene Hautzellen, löst Verhornungen und unterstützt die Hauterneuerung. Dadurch werden Poren gereinigt, Entzündungen reduziert und das Hautbild wirkt feiner, glatter und ebenmäßiger.",
+  },
+  {
+    q: "Kann Microneedling bei Aknenarben helfen?",
+    a: "Ja. Microneedling kann Aknenarben, Unebenheiten und vergrößerte Poren sichtbar verbessern. Durch die Anregung der Kollagenproduktion wird die Hautstruktur gestärkt und geglättet. Besonders in Kombination mit Fruchtsäurebehandlungen können sehr schöne Ergebnisse erzielt werden.",
+  },
+  {
+    q: "Welche Pflegeprodukte eignen sich bei Akne?",
+    a: "Besonders wirksam sind Produkte mit Fruchtsäuren, Salicylsäure oder beruhigenden Wirkstoffen. Wichtig ist eine regelmäßige und auf den Hauttyp abgestimmte Pflegeroutine. Gerne berate ich dich persönlich zu geeigneten Produkten und der richtigen Heimpflege.",
+  },
+  {
+    q: "Wie oft sollte eine Aknebehandlung durchgeführt werden?",
+    a: "Je nach Hautzustand empfehle ich mehrere Behandlungen im Abstand von einigen Wochen. Kontinuität und die richtige Pflege zuhause sind entscheidend, um langfristig ein ruhigeres und klareres Hautbild zu erreichen.",
+  },
+  {
+    q: "Ist Fruchtsäure auch für erwachsene Haut geeignet?",
+    a: "Ja. Fruchtsäure eignet sich nicht nur bei jugendlicher Akne, sondern auch bei unreiner Haut im Erwachsenenalter. Sie kann Poren verfeinern, Narben und Pigmentflecken mildern sowie das Hautbild insgesamt frischer und glatter wirken lassen.",
+  },
+]}
   />
 );
 
