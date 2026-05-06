@@ -1,4 +1,8 @@
-<TreatmentPage
+import TreatmentPage from "@/components/TreatmentPage";
+import hero from "@/assets/treatment-acne.jpg";
+import g1 from "@/assets/treatment-facial.jpg";
+import g2 from "@/assets/studio.jpg";
+import g3 from "@/assets/michaela.avif";
   eyebrow="Aknebehandlung Wien"
   title={<>Gezielte <span className="italic text-primary">Aknebehandlungen</span> für reine und ausgeglichene Haut.</>}
   subtitle="Individuelle Aknebehandlungen und Hautcoaching für jugendliche sowie reife Haut."
