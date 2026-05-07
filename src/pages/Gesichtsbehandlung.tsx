@@ -9,7 +9,7 @@ const Gesichtsbehandlung = () => (
     eyebrow="Kosmetische Gesichtsbehandlung Wien"
     title={<>Gesichtsbehandlung — <span className="italic text-primary">ruhig</span>, gründlich, persönlich.</>}
     subtitle="Eine moderne Klassik-Behandlung mit Tiefenreinigung, Pflege und Massage — für gesunde, strahlende Haut."
-    intro="Eine Auszeit für deine Haut: ruhige Tiefenreinigung, gezielte Wirkstoffe und eine entspannende Massage — abgestimmt auf deinen Hautzustand. So wirkt deine Haut frisch, gepflegt und sichtbar erholt."
+    intro="Jede Haut hat andere Bedürfnisse. Deshalb kombiniere ich entspannende Gesichtsbehandlungen mit persönlichem Hautcoaching und individuell abgestimmter Pflege — für ein gesundes, strahlendes Hautbild und echte Wohlfühlmomente."
     heroImage={hero}
     gallery={[g1, g2, g3]}
     benefits={[
