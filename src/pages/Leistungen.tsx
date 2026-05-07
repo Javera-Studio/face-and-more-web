@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import SiteLayout from "@/components/SiteLayout";
 import PageHero from "@/components/PageHero";
 import { Link } from "react-router-dom";
@@ -12,16 +13,102 @@ import akneImg from "@/assets/treatment-akne.jpg";
 import analysisImg from "@/assets/skin-analysis.jpg";
 
 const items = [
-  { img: analysisImg, title: "3D Hautanalyse", desc: "Der Einstieg in individuelle Hautpflege.", price: "ab € 65", to: "/hautanalyse" },
-  { img: akneImg, title: "Akne Behandlung", desc: "Klärend, ausgleichend, langfristig wirksam.", price: "ab € 95", to: "/leistungen/akne" },
-  { img: skinImg, title: "Problemhaut", desc: "Individuelle Pflege für sensible & gestresste Haut.", price: "ab € 95", to: "/leistungen/problemhaut" },
-  { img: antiagingImg, title: "Anti Aging", desc: "Sichtbar straffere, vitale Haut.", price: "ab € 120", to: "/leistungen/anti-aging" },
-  { img: fruchtImg, title: "Fruchtsäure Peeling", desc: "Sanfte Hauterneuerung mit Glow-Effekt.", price: "ab € 85", to: "/leistungen/fruchtsaeure" },
-  { img: needlingImg, title: "Microneedling", desc: "Aktiviert Kollagen & Hauterneuerung.", price: "ab € 140", to: "/leistungen/microneedling" },
-  { img: facialImg, title: "Kosmetische Gesichtsbehandlung", desc: "Ruhige, gründliche Pflege.", price: "ab € 75", to: "/leistungen/gesichtsbehandlung" },
-  { img: pmuImg, title: "Microblading", desc: "Definierte, natürliche Augenbrauen.", price: "ab € 380", to: "/leistungen/microblading" },
-  {   img: pmuImg, title: "Wimpernkranzverdichtung", desc: "Ausdrucksstarke Augen mit natürlichem Permanent Make-Up..", price: "ab € 275", to: "/leistungen/wimpernkranzverdichtung"}
+  { img: analysisImg, title: "3D Hautanalyse", desc: "Der präzise Einstieg in eine individuell abgestimmte Hautpflege — fundiert, datenbasiert und persönlich begleitet.", price: "ab € 65", duration: "45 Min", to: "/hautanalyse" },
+  { img: akneImg, title: "Akne Behandlung", desc: "Klärend, ausgleichend und langfristig wirksam — für ein ruhiges, klares Hautbild, das du wieder gerne zeigst.", price: "ab € 95", duration: "75 Min", to: "/leistungen/akne" },
+  { img: skinImg, title: "Problemhaut", desc: "Sanfte, individuelle Pflege für sensible, gestresste oder reaktive Haut. Mit Geduld und Expertise zurück ins Gleichgewicht.", price: "ab € 95", duration: "75 Min", to: "/leistungen/problemhaut" },
+  { img: antiagingImg, title: "Anti Aging", desc: "Sichtbar straffere, vitale Haut durch hochwirksame Wirkstofftherapien — natürlich und altersgerecht.", price: "ab € 120", duration: "75 Min", to: "/leistungen/anti-aging" },
+  { img: fruchtImg, title: "Fruchtsäure Peeling", desc: "Eine sanfte Hauterneuerung mit sichtbarem Glow-Effekt — verfeinert die Poren und ebnet das Hautbild.", price: "ab € 85", duration: "45 Min", to: "/leistungen/fruchtsaeure" },
+  { img: needlingImg, title: "Microneedling", desc: "Aktiviert Kollagen und natürliche Hauterneuerung — für mehr Spannkraft, Frische und Strahlkraft.", price: "ab € 140", duration: "75 Min", to: "/leistungen/microneedling" },
+  { img: facialImg, title: "Kosmetische Gesichtsbehandlung", desc: "Eine ruhige, gründliche Pflegeroutine, die deine Haut tief reinigt, beruhigt und sichtbar zum Strahlen bringt.", price: "ab € 75", duration: "60 Min", to: "/leistungen/gesichtsbehandlung" },
+  { img: pmuImg, title: "Microblading", desc: "Definierte, natürliche Augenbrauen mit feinster Härchenzeichnung — handwerklich präzise und individuell gestaltet.", price: "ab € 380", duration: "120 Min", to: "/leistungen/microblading" },
+  { img: pmuImg, title: "Wimpernkranzverdichtung", desc: "Ausdrucksstarke Augen mit natürlichem Permanent Make-Up — dezent, elegant und wunderbar wachfrisch.", price: "ab € 275", duration: "120 Min", to: "/leistungen/wimpernkranzverdichtung" },
 ];
+
+const TreatmentRow = ({ item, index }: { item: typeof items[number]; index: number }) => {
+  const ref = useRef<HTMLElement>(null);
+  const [visible, setVisible] = useState(false);
+  const reverse = index % 2 === 1;
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          io.disconnect();
+        }
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -80px 0px" },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
+  return (
+    <article
+      ref={ref}
+      className="group relative py-16 md:py-24 border-b border-border/60 last:border-b-0"
+    >
+      <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-center">
+        {/* Image */}
+        <div
+          className={`md:col-span-7 ${reverse ? "md:order-1" : "md:order-2"} transition-all duration-1000 ease-out ${
+            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
+          <Link to={item.to} className="block overflow-hidden bg-muted">
+            <div className="aspect-[4/3] md:aspect-[5/4] overflow-hidden">
+              <img
+                src={item.img}
+                alt={item.title}
+                loading="lazy"
+                className={`w-full h-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.04] ${
+                  visible ? "scale-100" : "scale-105"
+                }`}
+              />
+            </div>
+          </Link>
+        </div>
+
+        {/* Text */}
+        <div
+          className={`md:col-span-5 ${reverse ? "md:order-2 md:pl-4" : "md:order-1 md:pr-4"} transition-all duration-1000 delay-150 ease-out ${
+            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+          }`}
+        >
+          <p className="eyebrow mb-5">{String(index + 1).padStart(2, "0")} — Behandlung</p>
+          <h2 className="font-serif text-4xl md:text-5xl leading-[1.05] text-foreground">
+            {item.title}
+          </h2>
+          <p className="mt-6 text-base md:text-lg text-muted-foreground leading-relaxed max-w-md">
+            {item.desc}
+          </p>
+
+          <div className="mt-8 flex items-center gap-8">
+            <div>
+              <p className="eyebrow">Dauer</p>
+              <p className="mt-1 text-sm text-foreground">{item.duration}</p>
+            </div>
+            <div className="h-8 w-px bg-border" />
+            <div>
+              <p className="eyebrow">Preis</p>
+              <p className="mt-1 text-sm text-primary">{item.price}</p>
+            </div>
+          </div>
+
+          <Link
+            to={item.to}
+            className="mt-10 inline-flex items-center gap-2 text-sm tracking-wide text-foreground border-b border-foreground/30 pb-1 transition-all duration-300 hover:text-primary hover:border-primary hover:gap-3"
+          >
+            Mehr erfahren
+            <ArrowUpRight size={16} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </Link>
+        </div>
+      </div>
+    </article>
+  );
+};
 
 const Leistungen = () => (
   <SiteLayout>
@@ -30,22 +117,10 @@ const Leistungen = () => (
       title={<>Behandlungen für jede Haut <span className="italic text-primary">— individuell</span> abgestimmt.</>}
       intro="Jede Behandlung im Studio FACE AND MORE wird individuell auf dein Hautbild und deine Ziele abgestimmt — basierend auf einer fundierten Hautanalyse."
     />
-    <section className="py-20">
-      <div className="container-editorial grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
-        {items.map((t) => (
-          <Link key={t.title} to={t.to} className="group block">
-            <div className="aspect-[4/5] overflow-hidden bg-muted">
-              <img src={t.img} alt={t.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            </div>
-            <div className="pt-5">
-              <div className="flex items-baseline justify-between gap-3">
-                <h3 className="font-serif text-2xl">{t.title}</h3>
-                <ArrowUpRight size={18} className="text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
-              </div>
-              <p className="mt-2 text-sm text-muted-foreground">{t.desc}</p>
-              <p className="mt-3 eyebrow text-primary">{t.price}</p>
-            </div>
-          </Link>
+    <section className="pb-24 md:pb-32">
+      <div className="container-editorial">
+        {items.map((t, i) => (
+          <TreatmentRow key={t.title} item={t} index={i} />
         ))}
       </div>
     </section>
