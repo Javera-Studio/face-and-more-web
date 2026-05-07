@@ -105,11 +105,19 @@ const TreatmentPage = (p: TreatmentPageProps) => (
           <p className="eyebrow mb-5">Vorteile</p>
           <h2 className="headline">Was diese Behandlung <span className="italic text-primary">besonders</span> macht.</h2>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
           {p.benefits.map((b, i) => (
-            <div key={b} className="bg-background p-8 flex gap-5 items-start min-h-[140px]">
-              <span className="font-serif text-primary text-sm mt-1">{String(i + 1).padStart(2, "0")}</span>
-              <p className="text-foreground/85 leading-relaxed">{b}</p>
+            <div
+              key={b}
+              className="group relative bg-background p-8 lg:p-10 flex flex-col gap-5 min-h-[180px] transition-colors duration-500 hover:bg-secondary/40"
+            >
+              <div className="flex items-center justify-between">
+                <span className="font-serif text-xs text-primary tracking-widest">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span className="h-px w-10 bg-border group-hover:bg-primary transition-colors duration-500" />
+              </div>
+              <p className="font-serif text-lg leading-snug text-foreground/90">{b}</p>
             </div>
           ))}
         </div>
