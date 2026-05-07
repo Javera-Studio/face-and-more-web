@@ -105,11 +105,19 @@ const TreatmentPage = (p: TreatmentPageProps) => (
           <p className="eyebrow mb-5">Vorteile</p>
           <h2 className="headline">Was diese Behandlung <span className="italic text-primary">besonders</span> macht.</h2>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
           {p.benefits.map((b, i) => (
-            <div key={b} className="bg-background p-8 flex gap-5 items-start min-h-[140px]">
-              <span className="font-serif text-primary text-sm mt-1">{String(i + 1).padStart(2, "0")}</span>
-              <p className="text-foreground/85 leading-relaxed">{b}</p>
+            <div
+              key={b}
+              className="group relative bg-background p-8 lg:p-10 flex flex-col gap-5 min-h-[180px] transition-colors duration-500 hover:bg-secondary/40"
+            >
+              <div className="flex items-center justify-between">
+                <span className="font-serif text-xs text-primary tracking-widest">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span className="h-px w-10 bg-border group-hover:bg-primary transition-colors duration-500" />
+              </div>
+              <p className="font-serif text-lg leading-snug text-foreground/90">{b}</p>
             </div>
           ))}
         </div>
@@ -155,15 +163,30 @@ const TreatmentPage = (p: TreatmentPageProps) => (
             Der finale Preis hängt vom individuellen Hautbild und Behandlungsumfang ab. Wir besprechen alles im Vorgespräch.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {p.prices.map((pr) => (
-            <div key={pr.name} className="bg-background p-8 border border-border flex flex-col">
-              <p className="font-serif text-xl">{pr.name}</p>
-              {pr.note && <p className="text-sm text-muted-foreground mt-2">{pr.note}</p>}
-              <div className="mt-8 pt-6 border-t border-border flex items-baseline justify-between">
-                <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <Clock size={14} /> {pr.duration}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
+          {p.prices.map((pr, i) => (
+            <div
+              key={pr.name}
+              className="group relative bg-background p-8 lg:p-10 flex flex-col transition-colors duration-500 hover:bg-secondary/40"
+            >
+              <div className="flex items-start justify-between gap-4">
+                <span className="font-serif text-xs text-primary tracking-widest">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div className="flex items-center gap-1.5 text-[11px] uppercase tracking-widest text-muted-foreground">
+                  <Clock size={12} /> {pr.duration}
                 </div>
+              </div>
+
+              <div className="mt-8 min-h-[5.5rem] flex flex-col">
+                <p className="font-serif text-xl leading-snug">{pr.name}</p>
+                {pr.note && (
+                  <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{pr.note}</p>
+                )}
+              </div>
+
+              <div className="mt-auto pt-8 border-t border-border/70 flex items-baseline justify-between">
+                <span className="text-[11px] uppercase tracking-widest text-muted-foreground">Preis</span>
                 <p className="font-serif text-2xl text-primary">{pr.price}</p>
               </div>
             </div>

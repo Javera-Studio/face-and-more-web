@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
+import logo from "@/assets/logo.jpg";
 
 const SiteFooter = () => (
   <footer className="bg-secondary/60 border-t border-border mt-24">
     <div className="container-editorial py-16 grid gap-12 md:grid-cols-4">
       <div className="md:col-span-2">
-        <p className="font-serif text-2xl">FACE AND MORE</p>
-        <p className="eyebrow mt-2">by Michaela Kornherr</p>
+        <Link to="/" aria-label="FACE AND MORE — Startseite" className="inline-block">
+          <img src={logo} alt="FACE AND MORE by Michaela Kornherr" className="h-28 md:h-32 w-auto" />
+        </Link>
         <p className="mt-6 max-w-sm text-sm text-muted-foreground leading-relaxed">
           Moderne Hautanalyse, gezielte Behandlungen und persönliche Hautberatung im Herzen Wiens.
         </p>
