@@ -27,9 +27,9 @@ const SiteHeader = () => {
         scrolled ? "bg-background/85 backdrop-blur-md border-b border-border" : "bg-transparent"
       }`}
     >
-      <div className="container-editorial flex items-center justify-between h-16 md:h-20">
+      <div className="container-editorial flex items-center justify-between h-24 md:h-32">
         <Link to="/" className="flex items-center" aria-label="FACE AND MORE — Startseite">
-          <img src={logo} alt="FACE AND MORE by Michaela Kornherr" className="h-12 md:h-14 w-auto" />
+          <img src={logo} alt="FACE AND MORE by Michaela Kornherr" className="h-24 md:h-28 w-auto" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-9">
