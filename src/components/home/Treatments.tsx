@@ -5,7 +5,7 @@ import skinImg from "@/assets/treatment-skin.jpg";
 import antiagingImg from "@/assets/treatment-antiaging.jpg";
 import fruchtImg from "@/assets/treatment-fruchtsaeure.jpg";
 import needlingImg from "@/assets/treatment-microneedling.jpg";
-import facialImg from "@/assets/treatment-facial.jpg";
+import facialImg from "@/assets/gesichtsbehandlungl.jpg";
 import pmuImg from "@/assets/treatment-pmu.jpg";
 
 const treatments = [
