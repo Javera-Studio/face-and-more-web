@@ -8,18 +8,18 @@ const Gesichtsbehandlung = () => (
   <TreatmentPage
     eyebrow="Kosmetische Gesichtsbehandlung Wien"
     title={<>Gesichtsbehandlung — <span className="italic text-primary">ruhig</span>, gründlich, persönlich.</>}
-    subtitle="Eine moderne Klassik-Behandlung mit Tiefenreinigung, Pflege und Massage — für gesunde, strahlende Haut."
-    intro="Jede Haut hat andere Bedürfnisse. Deshalb kombiniere ich entspannende Gesichtsbehandlungen mit persönlichem Hautcoaching und individuell abgestimmter Pflege — für ein gesundes, strahlendes Hautbild und echte Wohlfühlmomente."
+    subtitle="Jede Haut hat andere Bedürfnisse. Deshalb kombiniere ich entspannende Gesichtsbehandlungen mit persönlichem Hautcoaching und individuell abgestimmter Pflege — für ein gesundes, strahlendes Hautbild und echte Wohlfühlmomente."
+    intro="Deine Haut verändert sich ständig — durch Stress, Hormone, Jahreszeiten oder den Alltag. Deshalb arbeite ich nicht mit Standardbehandlungen, sondern stimme jede Gesichtsbehandlung individuell auf deinen Hautzustand und deine Bedürfnisse ab. Mit gezielten Wirkstoffen, entspannender Pflege und persönlichem Hautcoaching entsteht eine Behandlung, die deine Haut langfristig unterstützt."
     heroImage={hero}
     gallery={[g1, g2, g3]}
     benefits={[
-      "Sichtbar gepflegtes Hautbild",
-      "Tiefenreinigende Wirkung",
-      "Beruhigende Pflege",
-      "Frischer, gesunder Glow",
-      "Entspannende Atmosphäre",
-      "Individuell auf deine Haut abgestimmt",
-    ]}
+  "Individuell auf deine Haut abgestimmt",
+  "Persönliche Hautberatung & Coaching",
+  "Tiefenreinigung & intensive Pflege",
+  "Strahlender, frischer Teint",
+  "Entspannende Auszeit für dich",
+  "Hochwertige Wirkstoffe für nachhaltige Ergebnisse",
+]}
     process={[
       { t: "Beratung", d: "Kurzes Gespräch zu Hautbild & Wünschen." },
       { t: "Reinigung & Analyse", d: "Sanfte Tiefenreinigung & Hautcheck." },
