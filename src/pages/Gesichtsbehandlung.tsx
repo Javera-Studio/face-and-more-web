@@ -1,5 +1,5 @@
 import TreatmentPage from "@/components/TreatmentPage";
-import hero from "@/assets/treatment-facial.jpg";
+import hero from "@/assets/gesichtsbehandlung.jpg";
 import g1 from "@/assets/treatment-skin.jpg";
 import g2 from "@/assets/treatment-antiaging.jpg";
 import g3 from "@/assets/studio.jpg";
