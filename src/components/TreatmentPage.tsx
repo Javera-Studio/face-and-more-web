@@ -160,7 +160,7 @@ const TreatmentPage = (p: TreatmentPageProps) => (
             <h2 className="headline">Transparent. <span className="italic text-primary">Klar.</span> Persönlich.</h2>
           </div>
           <p className="text-sm text-muted-foreground max-w-sm">
-            Der finale Preis hängt vom individuellen Hautbild und Behandlungsumfang ab. Wir besprechen alles im Vorgespräch.
+            Jede Behandlung wird individuell an deinen Hautzustand angepasst. Gemeinsam finden wir die passende Pflege und Behandlung für deine Hautziele.
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
@@ -207,10 +207,9 @@ const TreatmentPage = (p: TreatmentPageProps) => (
         </div>
         <div className="flex flex-col justify-center">
           <p className="eyebrow mb-5">Persönlich. Diskret.</p>
-          <h2 className="headline">Behandlung mit <span className="italic text-primary">Zeit</span> und Ruhe.</h2>
+          <h2 className="headline">Hautpflege mit <span className="italic text-primary">Wirkung</span> und Ruhe.</h2>
           <p className="mt-6 text-foreground/75 leading-relaxed max-w-md">
-            Im Studio FACE AND MORE in Wien arbeite ich ohne Zeitdruck — mit Fokus auf dich, deine Haut und ein
-            Ergebnis, das sich natürlich und gesund anfühlt.
+            Im Studio FACE AND MORE in Wien nehme ich mir bewusst Zeit für dich und deine Haut. Mit persönlicher Beratung, individueller Pflege und entspannter Atmosphäre entsteht eine Behandlung, die sich genauso gut anfühlt, wie sie wirkt.
           </p>
           {p.closingNote && (
             <p className="mt-6 text-foreground/75 leading-relaxed max-w-md">{p.closingNote}</p>
