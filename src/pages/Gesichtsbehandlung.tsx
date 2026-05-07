@@ -31,10 +31,32 @@ const Gesichtsbehandlung = () => (
       { name: "Premium Gesichtsbehandlung", duration: "90 Min", price: "ab € 110" },
       { name: "Express-Pflege", duration: "45 Min", price: "ab € 55", note: "Für zwischendurch" },
     ]}
-    faqs={Array.from({ length: 8 }, (_, i) => ({
-      q: `FAQ ${i + 1}`,
-      a: `Antwort ${i + 1} — Platzhaltertext. Hier wird die finale Antwort eingefügt.`,
-    }))}
+    faqs={[
+  {
+    q: "Was bewirkt eine kosmetische Gesichtsbehandlung?",
+    a: "Eine kosmetische Gesichtsbehandlung unterstützt die Hauterneuerung, verbessert die Durchblutung und hilft der Haut, Wirkstoffe besser aufzunehmen. Bereits nach der ersten Behandlung wirkt die Haut oft frischer, gepflegter und strahlender.",
+  },
+  {
+    q: "Wie läuft eine Gesichtsbehandlung bei Face and More ab?",
+    a: "Die Behandlung beginnt mit einer gründlichen Reinigung und Hautanalyse. Danach folgen Peeling, Maske, Ausreinigung und individuell abgestimmte Wirkstoffe. Eine entspannende Massage und passende Abschlusspflege runden die Behandlung ab.",
+  },
+  {
+    q: "Warum ist ein Peeling bei der Gesichtsbehandlung wichtig?",
+    a: "Ein Peeling entfernt abgestorbene Hautzellen, verfeinert das Hautbild und bereitet die Haut optimal auf Wirkstoffe vor. Dadurch können Pflegeprodukte besser aufgenommen werden und die Haut wirkt glatter, frischer und ebenmäßiger.",
+  },
+  {
+    q: "Wie oft sollte man eine Gesichtsbehandlung machen?",
+    a: "Da sich die Haut regelmäßig erneuert, ist eine Behandlung etwa alle 4 bis 6 Wochen sinnvoll. Wie oft eine Behandlung wirklich nötig ist, hängt aber von deinem Hautzustand, deinen Zielen und deiner Pflegeroutine zu Hause ab.",
+  },
+  {
+    q: "Ist die Gesichtsbehandlung auch für Jugendliche geeignet?",
+    a: "Ja. Besonders bei unreiner Haut, Mitessern oder ersten Hautproblemen kann eine professionelle Gesichtsbehandlung sehr hilfreich sein. Als Hautcoach erkläre ich Jugendlichen auch, wie sie ihre Haut zu Hause richtig reinigen und pflegen können.",
+  },
+  {
+    q: "Welche Vorteile hat eine Gesichtsmassage?",
+    a: "Eine Gesichtsmassage regt die Durchblutung an, entspannt die Muskulatur und unterstützt einen frischen, rosigen Teint. Sie kann Schwellungen reduzieren, die Haut geschmeidiger wirken lassen und sorgt gleichzeitig für eine wohltuende Auszeit.",
+  },
+]}
   />
 );
 
