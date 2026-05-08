@@ -12,25 +12,27 @@ const Hautanalyse = () => (
     intro="Eine moderne Hautanalyse ist mehr als ein Blick auf die Hautoberfläche. Mit hochauflösender 3D-Technologie machen wir Hautzustände sichtbar, die mit dem bloßen Auge nicht erkennbar sind — und entwickeln einen Pflegeplan, der wirklich passt."
     heroImage={hero}
     gallery={[g1, g2, g3]}
-    benefits={[
-      "Sichtbare Auswertung deiner Haut",
-      "Individueller Pflegeplan",
-      "Konkrete Behandlungsempfehlungen",
-      "Vergleichsmessung bei Folgeterminen",
-      "Für jede Haut & jedes Alter geeignet",
-      "Persönliche 1:1 Beratung",
-    ]}
+  benefits={[
+  "Professionelle Hautberatung",
+  "3D-Hautanalyse mit modernen Hautscans",
+  "Persönliches Beratungsgespräch",
+  "Individuelle Behandlungsansätze",
+  "Empfehlung für passende Heimpflege",
+  "Analyse von Poren, Feuchtigkeit & Hautstruktur",
+]}
     process={[
       { t: "Vorgespräch", d: "Hautgeschichte und Ziele besprechen." },
       { t: "3D-Aufnahme", d: "Schmerzfreie, hochauflösende Analyse." },
       { t: "Auswertung", d: "Gemeinsame Besprechung der Ergebnisse." },
       { t: "Pflegeplan", d: "Individuell auf dich abgestimmt." },
     ]}
-    prices={[
-      { name: "3D Hautanalyse & Beratung", duration: "60 Min", price: "ab € 65" },
-      { name: "Folge-Hautanalyse", duration: "45 Min", price: "ab € 45", note: "Für Vergleichsmessung" },
-      { name: "Hautanalyse + Pflegeplan", duration: "90 Min", price: "ab € 95" },
-    ]}
+  prices={[
+  { 
+    name: "3D-Hautanalyse mit Skin Focus Pro", 
+    duration: "45 Min", 
+    price: "€ 95" 
+  },
+]}
    faqs={[
   {
     q: "Was ist die 3D-Hautanalyse mit Skin Focus Pro?",
