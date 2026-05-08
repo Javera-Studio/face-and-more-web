@@ -7,30 +7,33 @@ import g3 from "@/assets/studio.jpg";
 const Microblading = () => (
   <TreatmentPage
     eyebrow="Microblading Wien"
-    title={<>Natürlich schöne Augenbrauen mit präzisem <span className="italic text-primary">Microblading</span>.</>}
-    subtitle="Typgerechtes Microblading und Permanent Make-Up für natürliche und harmonische Ergebnisse."
-    intro="Mit Microblading können Augenbrauen auf natürliche Weise verdichtet und neu geformt werden. Feine pigmentierte Härchen sorgen für ein harmonisches und typgerechtes Ergebnis, das deine natürliche Schönheit dezent unterstreicht."
-    heroImage={hero}
-    gallery={[g1, g2, g3]}
-    benefits={[
-      "Natürliche Härchenoptik",
-      "Kein tägliches Nachzeichnen",
-      "Typgerechte, harmonische Form",
-      "Langanhaltendes Ergebnis",
-      "Ideal bei lückenhaften Brauen",
-      "Individuelle Farbabstimmung",
-    ]}
-    process={[
-      { t: "Persönliche Beratung", d: "Wünsche, Form und Farbe besprechen." },
-      { t: "Vorzeichnung", d: "Symmetrie- und Formfindung — passend zu deinem Gesicht." },
-      { t: "Pigmentierung", d: "Präzises Setzen feiner Härchen." },
-      { t: "Pflege & Nachbehandlung", d: "Pflegehinweise und Refresh-Termin." },
-    ]}
-    prices={[
-      { name: "Microblading inkl. Nachbehandlung", duration: "120 Min", price: "ab € 380" },
-      { name: "Permanent Make-Up Brauen", duration: "120 Min", price: "ab € 420" },
-      { name: "Refresh (innerhalb 12 Monaten)", duration: "75 Min", price: "ab € 180" },
-    ]}
+
+title={<>Natürlich schöne Augenbrauen mit präzisem <span className="italic text-primary">Microblading</span>.</>}
+
+subtitle="Typgerechtes Microblading und Permanent Make-Up für natürliche, harmonische Ergebnisse."
+
+intro="Mit Microblading lassen sich lückenhafte oder sehr feine Augenbrauen auf natürliche Weise auffüllen und neu formen. Feine pigmentierte Härchen werden farblich auf deinen Hauttyp und deine Haarfarbe abgestimmt, sodass ein besonders harmonisches und typgerechtes Ergebnis entsteht."
+
+benefits={[
+  "Natürlich wirkende Härchenzeichnung",
+  "Kein tägliches Nachzeichnen",
+  "Kein Verwischen von Make-Up",
+  "Typgerechte Form & Farbabstimmung",
+  "Rekonstruktion fehlender Augenbrauen",
+  "Inklusive Nachbehandlung",
+]}
+process={[
+  { t: "Aufklärungsgespräch", d: "Wir besprechen deine Wünsche, Form, Farbe und den genauen Ablauf." },
+  { t: "Vorzeichnung", d: "Die ideale Brauenform wird vorab exakt vorgezeichnet und gemeinsam abgestimmt." },
+  { t: "Pigmentierung", d: "Feine Härchen werden präzise pigmentiert und dezent aufgefüllt." },
+  { t: "Pflege & Nachbehandlung", d: "Du erhältst eine Healing Creme, Pflegeanleitung und eine Nachbearbeitung innerhalb von 2 Monaten." },
+]}
+
+prices={[
+  { name: "Microblading Augenbrauen inkl. Nachbehandlung", duration: "120 Min", price: "€ 345 inkl. MwSt." },
+  { name: "Zusätzliche Schattierung", duration: "nach Aufwand", price: "auf Anfrage" },
+  { name: "Refresh Behandlung", duration: "75 Min", price: "auf Anfrage" },
+]}
     faqs={[
   {
     q: "Was ist Microblading?",
