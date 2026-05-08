@@ -9,6 +9,7 @@ import fruchtImg from "@/assets/treatment-fruchtsaeure.jpg";
 import needlingImg from "@/assets/treatment-microneedling.jpg";
 import facialImg from "@/assets/treatment-facial.jpg";
 import pmuImg from "@/assets/treatment-pmu.jpg";
+import wimpernImg from "@/assets/wimpernkranz.jpg";
 import akneImg from "@/assets/treatment-akne.jpg";
 import analysisImg from "@/assets/skin-analysis.jpg";
 
