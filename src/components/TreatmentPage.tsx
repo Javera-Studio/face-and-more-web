@@ -49,8 +49,8 @@ const FaqItem = ({ q, a, defaultOpen = false }: Faq & { defaultOpen?: boolean })
 const TreatmentPage = (p: TreatmentPageProps) => (
   <SiteLayout>
     {/* HERO */}
-    <section className="bg-gradient-warm pt-28 md:pt-32 pb-16 md:pb-24">
-      <div className="container-editorial grid lg:grid-cols-12 gap-10 lg:gap-16 items-end">
+    <section className="bg-gradient-warm pt-16 md:pt-20 pb-16 md:pb-24">
+     <div className="container-editorial grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
         <div className="lg:col-span-6">
           <p className="eyebrow mb-6">{p.eyebrow}</p>
           <h1 className="display">{p.title}</h1>
