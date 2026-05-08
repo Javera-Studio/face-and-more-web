@@ -19,6 +19,10 @@ import Kontakt from "./pages/Kontakt.tsx";
 import Impressum from "./pages/Impressum.tsx";
 import Datenschutz from "./pages/Datenschutz.tsx";
 import Wimpernkranzverdichtung from "./pages/Wimpernkranzverdichtung";
+import Hautcoaching from "./pages/Hautcoaching.tsx";
+import JugendlicheHaut from "./pages/hautcoaching/JugendlicheHaut.tsx";
+import ReifeHaut from "./pages/hautcoaching/ReifeHaut.tsx";
+import AllgemeineHautberatung from "./pages/hautcoaching/AllgemeineHautberatung.tsx";
 
 const queryClient = new QueryClient();
 
@@ -41,6 +45,10 @@ const App = () => (
           <Route path="/leistungen/wimpernkranzverdichtung" element={<Wimpernkranzverdichtung />} />
           <Route path="/leistungen/gesichtsbehandlung" element={<Gesichtsbehandlung />} />
           <Route path="/ueber-mich" element={<UeberMich />} />
+          <Route path="/hautcoaching" element={<Hautcoaching />} />
+          <Route path="/hautcoaching/jugendliche-haut" element={<JugendlicheHaut />} />
+          <Route path="/hautcoaching/reife-haut" element={<ReifeHaut />} />
+          <Route path="/hautcoaching/allgemeine-hautberatung" element={<AllgemeineHautberatung />} />
           <Route path="/kontakt" element={<Kontakt />} />
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
