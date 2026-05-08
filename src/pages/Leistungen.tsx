@@ -9,6 +9,7 @@ import fruchtImg from "@/assets/treatment-fruchtsaeure.jpg";
 import needlingImg from "@/assets/treatment-microneedling.jpg";
 import facialImg from "@/assets/treatment-facial.jpg";
 import pmuImg from "@/assets/treatment-pmu.jpg";
+import wimpernImg from "@/assets/wimpernkranz.jpg";
 import akneImg from "@/assets/treatment-akne.jpg";
 import analysisImg from "@/assets/skin-analysis.jpg";
 
@@ -21,7 +22,7 @@ const items = [
   { img: needlingImg, title: "Microneedling", desc: "Aktiviert Kollagen und natürliche Hauterneuerung — für mehr Spannkraft, Frische und Strahlkraft.", price: "ab € 140", duration: "75 Min", to: "/leistungen/microneedling" },
   { img: facialImg, title: "Kosmetische Gesichtsbehandlung", desc: "Eine ruhige, gründliche Pflegeroutine, die deine Haut tief reinigt, beruhigt und sichtbar zum Strahlen bringt.", price: "ab € 75", duration: "60 Min", to: "/leistungen/gesichtsbehandlung" },
   { img: pmuImg, title: "Microblading", desc: "Definierte, natürliche Augenbrauen mit feinster Härchenzeichnung — handwerklich präzise und individuell gestaltet.", price: "ab € 380", duration: "120 Min", to: "/leistungen/microblading" },
-  { img: pmuImg, title: "Wimpernkranzverdichtung", desc: "Ausdrucksstarke Augen mit natürlichem Permanent Make-Up — dezent, elegant und wunderbar wachfrisch.", price: "ab € 275", duration: "120 Min", to: "/leistungen/wimpernkranzverdichtung" },
+  { img: wimpernImg, title: "Wimpernkranzverdichtung", desc: "Ausdrucksstarke Augen mit natürlichem Permanent Make-Up — dezent, elegant und wunderbar wachfrisch.", price: "ab € 275", duration: "120 Min", to: "/leistungen/wimpernkranzverdichtung" },
 ];
 
 const TreatmentRow = ({ item, index }: { item: typeof items[number]; index: number }) => {
