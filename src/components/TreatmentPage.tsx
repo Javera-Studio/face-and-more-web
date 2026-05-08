@@ -137,9 +137,9 @@ const TreatmentPage = (p: TreatmentPageProps) => (
             <img src={p.gallery[1]} alt="" className="w-full h-full object-cover" loading="lazy" />
           </div>
         </div>
-        <ol className="lg:col-span-7 lg:pt-16 space-y-px bg-border">
+        <ol className="lg:col-span-7 lg:pt-16">
           {p.process.map((s, i) => (
-            <li key={s.t} className="bg-background grid grid-cols-[auto_1fr] gap-8 p-8 md:p-10">
+            <li key={s.t} className="grid grid-cols-[auto_1fr] gap-8 p-8 md:p-10 border-b border-border last:border-b-0">
               <span className="font-serif text-3xl text-primary leading-none">{String(i + 1).padStart(2, "0")}</span>
               <div>
                 <p className="font-serif text-xl">{s.t}</p>
