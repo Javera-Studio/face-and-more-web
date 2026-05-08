@@ -7,6 +7,8 @@ import g3 from "@/assets/studio.jpg";
 const Microblading = () => (
   <TreatmentPage
     eyebrow="Microblading Wien"
+    heroImage={hero}
+    gallery={[g1, g2, g3]}
 
 title={<>Natürlich schöne Augenbrauen mit präzisem <span className="italic text-primary">Microblading</span>.</>}
 
