@@ -24,6 +24,9 @@ import Hautcoaching from "./pages/Hautcoaching.tsx";
 import JugendlicheHaut from "./pages/hautcoaching/JugendlicheHaut.tsx";
 import ReifeHaut from "./pages/hautcoaching/ReifeHaut.tsx";
 import AllgemeineHautberatung from "./pages/hautcoaching/AllgemeineHautberatung.tsx";
+import Produkte from "./pages/Produkte.tsx";
+import Preise from "./pages/Preise.tsx";
+import Blog from "./pages/Blog.tsx";
 
 const queryClient = new QueryClient();
 
@@ -47,6 +50,9 @@ const App = () => (
           <Route path="/leistungen/wimpernkranzverdichtung" element={<Wimpernkranzverdichtung />} />
           <Route path="/leistungen/gesichtsbehandlung" element={<Gesichtsbehandlung />} />
           <Route path="/ueber-mich" element={<UeberMich />} />
+          <Route path="/produkte" element={<Produkte />} />
+          <Route path="/preise" element={<Preise />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/hautcoaching" element={<Hautcoaching />} />
           <Route path="/hautcoaching/jugendliche-haut" element={<JugendlicheHaut />} />
           <Route path="/hautcoaching/reife-haut" element={<ReifeHaut />} />
