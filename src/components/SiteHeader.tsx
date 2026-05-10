@@ -6,6 +6,9 @@ import logo from "@/assets/logo.jpg";
 const links = [
   { to: "/leistungen", label: "Leistungen" },
   { to: "/hautanalyse", label: "Hautanalyse" },
+  { to: "/produkte", label: "Produkte" },
+  { to: "/preise", label: "Preise" },
+  { to: "/blog", label: "Blog" },
   { to: "/ueber-mich", label: "Über mich" },
   { to: "/kontakt", label: "Kontakt" },
 ];

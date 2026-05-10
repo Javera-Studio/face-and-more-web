@@ -14,7 +14,7 @@ export default function Akne() {
       heroImage={hero}
       gallery={[g1, g2, g3]}
       benefits={[
-        "Reiniere und ausgeglichenere Haut",
+        "Reinere und ausgeglichenere Haut",
         "Verfeinerung der Poren",
         "Regulierung der Talgproduktion",
         "Entzündungshemmende Wirkung",
