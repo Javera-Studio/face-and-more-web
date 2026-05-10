@@ -25,6 +25,9 @@ const SiteFooter = () => (
         <ul className="space-y-2 text-sm">
           <li><Link to="/leistungen" className="hover:text-primary">Leistungen</Link></li>
           <li><Link to="/hautanalyse" className="hover:text-primary">Hautanalyse</Link></li>
+          <li><Link to="/produkte" className="hover:text-primary">Produkte</Link></li>
+          <li><Link to="/preise" className="hover:text-primary">Preise</Link></li>
+          <li><Link to="/blog" className="hover:text-primary">Blog</Link></li>
           <li><Link to="/ueber-mich" className="hover:text-primary">Über mich</Link></li>
           <li><Link to="/kontakt" className="hover:text-primary">Kontakt</Link></li>
           <li><Link to="/impressum" className="hover:text-primary">Impressum</Link></li>
