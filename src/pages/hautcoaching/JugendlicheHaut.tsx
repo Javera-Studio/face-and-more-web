@@ -16,7 +16,7 @@ export default function JugendlicheHaut() {
       title={<>Hautcoaching für <span className="italic text-primary">junge Haut</span>.</>}
       subtitle="Reinigung, Pflege und Selbstvertrauen — Schritt für Schritt zu einem ruhigeren Hautbild."
       heroImage={hero}
-      intro="In der Pubertät verändert sich die Haut stark. Pickel, Mitesser und Unreinheiten gehören oft dazu — müssen aber nicht das Selbstbewusstsein belasten. Im Hautcoaching für Jugendliche erkläre ich verständlich, wie die Haut funktioniert, welche Reinigung sie braucht und wie eine einfache, alltagstaugliche Routine aussehen kann."
+      intro="In der Pubertät verändert sich die Haut stark. Pickel, Mitesser und Unreinheiten gehören oft dazu — müssen aber nicht das Selbstbewusstsein belasten. Im Hautcoaching für Jugendliche erkläre ich verständlich, wie die Haut funktioniert, welche Reinigung sie braucht und wie eine einfache, alltagstaugliche Routine aussehen kann. Gerade bei jugendlicher Haut ist Vertrauen wichtig — du darfst deshalb gerne gemeinsam mit einer Begleitperson zu deinem Termin kommen."
       treatments={[
         { title: "Aknebehandlung", desc: "Tiefenreinigung, Ausreinigung und beruhigende Wirkstoffe für reine Haut.", to: "/leistungen/akne", image: akneImg },
         { title: "Fruchtsäure Peeling", desc: "Sanfte Erneuerung — verfeinert die Poren und reduziert Unreinheiten.", to: "/leistungen/fruchtsaeure", image: fruchtImg },
