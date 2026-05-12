@@ -25,6 +25,15 @@ import JugendlicheHaut from "./pages/hautcoaching/JugendlicheHaut.tsx";
 import ReifeHaut from "./pages/hautcoaching/ReifeHaut.tsx";
 import AllgemeineHautberatung from "./pages/hautcoaching/AllgemeineHautberatung.tsx";
 import Produkte from "./pages/Produkte.tsx";
+import ProdReinigung from "./pages/produkte/Reinigung.tsx";
+import ProdSeren from "./pages/produkte/Seren.tsx";
+import ProdAntiAging from "./pages/produkte/AntiAging.tsx";
+import ProdProblemhaut from "./pages/produkte/Problemhaut.tsx";
+import ProdFeuchtigkeit from "./pages/produkte/Feuchtigkeit.tsx";
+import ProdSonnenschutz from "./pages/produkte/Sonnenschutz.tsx";
+import ProdKoerperpflege from "./pages/produkte/Koerperpflege.tsx";
+import ProdSets from "./pages/produkte/Sets.tsx";
+import ProdZubehoer from "./pages/produkte/Zubehoer.tsx";
 import Preise from "./pages/Preise.tsx";
 import Blog from "./pages/Blog.tsx";
 
@@ -51,6 +60,15 @@ const App = () => (
           <Route path="/leistungen/gesichtsbehandlung" element={<Gesichtsbehandlung />} />
           <Route path="/ueber-mich" element={<UeberMich />} />
           <Route path="/produkte" element={<Produkte />} />
+          <Route path="/produkte/reinigung" element={<ProdReinigung />} />
+          <Route path="/produkte/seren" element={<ProdSeren />} />
+          <Route path="/produkte/anti-aging" element={<ProdAntiAging />} />
+          <Route path="/produkte/problemhaut" element={<ProdProblemhaut />} />
+          <Route path="/produkte/feuchtigkeit" element={<ProdFeuchtigkeit />} />
+          <Route path="/produkte/sonnenschutz" element={<ProdSonnenschutz />} />
+          <Route path="/produkte/koerperpflege" element={<ProdKoerperpflege />} />
+          <Route path="/produkte/sets" element={<ProdSets />} />
+          <Route path="/produkte/zubehoer" element={<ProdZubehoer />} />
           <Route path="/preise" element={<Preise />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/hautcoaching" element={<Hautcoaching />} />
