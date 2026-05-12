@@ -291,18 +291,23 @@ const Produkte = () => (
             Kuratierte Pflege — <span className="italic text-primary">für jeden Schritt</span>.
           </h2>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
           {categories.map((c, i) => (
-            <div
+            <Link
               key={c.title}
-              className="group bg-background p-7 lg:p-9 min-h-[180px] flex flex-col gap-4 transition-colors duration-500 hover:bg-secondary/40"
+              to={c.href}
+              className="group bg-background p-7 lg:p-9 min-h-[200px] flex flex-col gap-4 transition-colors duration-500 hover:bg-secondary/40 relative"
             >
               <span className="font-serif text-xs text-primary tracking-widest">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <p className="font-serif text-xl leading-snug">{c.title}</p>
               <p className="text-sm text-foreground/70 leading-relaxed">{c.text}</p>
-            </div>
+              <ArrowRight
+                size={18}
+                className="text-primary mt-auto transition-transform duration-500 group-hover:translate-x-1"
+              />
+            </Link>
           ))}
         </div>
       </div>
