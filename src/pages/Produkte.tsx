@@ -113,15 +113,16 @@ const products: Product[] = [
   },
 ];
 
-const categories = [
-  { title: "Reinigung", text: "Sanfte, effektive Reinigung als Basis jeder Pflegeroutine." },
-  { title: "Seren", text: "Hochkonzentrierte Wirkstoffe für gezielte Hautziele." },
-  { title: "Anti-Aging", text: "Pflege, die Festigkeit, Glow und Elastizität unterstützt." },
-  { title: "Akne & Problemhaut", text: "Klärende Pflege für ein beruhigtes, reineres Hautbild." },
-  { title: "Feuchtigkeit", text: "Aufbauende Pflege für eine widerstandsfähige Hautbarriere." },
-  { title: "Sonnenschutz", text: "Täglicher Schutz vor UV-Strahlung und vorzeitiger Hautalterung." },
-  { title: "Körperpflege", text: "Verwöhnende Pflege für einen seidigen, glatten Teint am Körper." },
-  { title: "Sets & Starter Kits", text: "Abgestimmte Routinen, ideal zum Einstieg in deine Pflege." },
+const categories: { title: string; text: string; href: string }[] = [
+  { title: "Reinigung", text: "Sanfte, effektive Reinigung als Basis jeder Pflegeroutine.", href: "/produkte/reinigung" },
+  { title: "Seren", text: "Hochkonzentrierte Wirkstoffe für gezielte Hautziele.", href: "/produkte/seren" },
+  { title: "Anti-Aging & Regeneration", text: "Pflege, die Festigkeit, Glow und Elastizität unterstützt.", href: "/produkte/anti-aging" },
+  { title: "Problemhaut & Akne", text: "Klärende Pflege für ein beruhigtes, reineres Hautbild.", href: "/produkte/problemhaut" },
+  { title: "Feuchtigkeit & Pflege", text: "Aufbauende Pflege für eine widerstandsfähige Hautbarriere.", href: "/produkte/feuchtigkeit" },
+  { title: "Sonnenschutz", text: "Täglicher Schutz vor UV-Strahlung und vorzeitiger Hautalterung.", href: "/produkte/sonnenschutz" },
+  { title: "Körperpflege", text: "Verwöhnende Pflege für einen seidigen, glatten Teint am Körper.", href: "/produkte/koerperpflege" },
+  { title: "Sets & Pflegekits", text: "Abgestimmte Routinen, ideal zum Einstieg in deine Pflege.", href: "/produkte/sets" },
+  { title: "Zubehör & Tools", text: "Hochwertige Tools, die deine Pflegeroutine ergänzen.", href: "/produkte/zubehoer" },
 ];
 
 const benefits = [
