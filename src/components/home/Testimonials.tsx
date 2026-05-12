@@ -87,9 +87,9 @@ const Testimonials = () => (
       </div>
 
       {/* Editorial grid */}
-      <div className="mt-20 md:mt-28 grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
+      <div className="mt-20 md:mt-28 grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-stretch">
         {/* Featured */}
-        <article className="md:col-span-8 md:row-span-2 relative bg-card border border-border/70 p-10 md:p-14 lg:p-16 shadow-soft">
+        <article className="md:col-span-8 relative bg-card border border-border/70 p-10 md:p-12 lg:p-14 shadow-soft flex flex-col h-full">
           <Quote
             aria-hidden
             className="absolute -top-6 left-8 md:left-12 text-primary/15"
@@ -97,18 +97,18 @@ const Testimonials = () => (
             strokeWidth={1}
             fill="currentColor"
           />
-          <div className="relative">
+          <div className="relative flex flex-col h-full">
             <div className="flex items-center gap-4">
               <span className="eyebrow text-primary">Featured</span>
               <span className="h-px w-10 bg-primary/40" />
               <span className="eyebrow">{featured.tag}</span>
             </div>
 
-            <blockquote className="font-serif text-3xl md:text-4xl lg:text-[2.75rem] leading-[1.2] mt-10 text-foreground/95">
+            <blockquote className="font-serif text-2xl md:text-3xl lg:text-[2.4rem] leading-[1.25] mt-8 md:mt-10 text-foreground/95">
               „{featured.text}“
             </blockquote>
 
-            <figcaption className="mt-12 flex items-center justify-between flex-wrap gap-6">
+            <figcaption className="mt-10 md:mt-12 flex items-center justify-between flex-wrap gap-6">
               <div className="flex items-center gap-4">
                 <Initial name={featured.name} />
                 <div>
@@ -121,37 +121,39 @@ const Testimonials = () => (
           </div>
         </article>
 
-        {/* Side cards */}
-        <article className="md:col-span-4 bg-primary/[0.04] border border-primary/15 p-8 md:p-10 md:translate-y-6">
-          <Stars />
-          <blockquote className="font-serif text-xl md:text-[1.45rem] leading-snug mt-6 text-foreground/90">
-            „{reviews[0].text}“
-          </blockquote>
-          <figcaption className="mt-8 flex items-center gap-3">
-            <Initial name={reviews[0].name} />
-            <div>
-              <p className="text-sm font-medium">— {reviews[0].name}</p>
-              <p className="eyebrow mt-0.5">{reviews[0].tag}</p>
-            </div>
-          </figcaption>
-        </article>
+        {/* Right stacked column — matches featured height */}
+        <div className="md:col-span-4 flex flex-col gap-6 md:gap-8 h-full">
+          <article className="flex-1 bg-primary/[0.04] border border-primary/15 p-8 md:p-9 flex flex-col">
+            <Stars />
+            <blockquote className="font-serif text-lg md:text-xl leading-snug mt-5 text-foreground/90">
+              „{reviews[0].text}“
+            </blockquote>
+            <figcaption className="mt-auto pt-8 flex items-center gap-3">
+              <Initial name={reviews[0].name} />
+              <div>
+                <p className="text-sm font-medium">— {reviews[0].name}</p>
+                <p className="eyebrow mt-0.5">{reviews[0].tag}</p>
+              </div>
+            </figcaption>
+          </article>
 
-        <article className="md:col-span-4 bg-card border border-border/70 p-8 md:p-10">
-          <Stars />
-          <blockquote className="font-serif text-xl md:text-[1.45rem] leading-snug mt-6 text-foreground/90">
-            „{reviews[1].text}“
-          </blockquote>
-          <figcaption className="mt-8 flex items-center gap-3">
-            <Initial name={reviews[1].name} />
-            <div>
-              <p className="text-sm font-medium">— {reviews[1].name}</p>
-              <p className="eyebrow mt-0.5">{reviews[1].tag}</p>
-            </div>
-          </figcaption>
-        </article>
+          <article className="flex-1 bg-card border border-border/70 p-8 md:p-9 flex flex-col">
+            <Stars />
+            <blockquote className="font-serif text-lg md:text-xl leading-snug mt-5 text-foreground/90">
+              „{reviews[1].text}“
+            </blockquote>
+            <figcaption className="mt-auto pt-8 flex items-center gap-3">
+              <Initial name={reviews[1].name} />
+              <div>
+                <p className="text-sm font-medium">— {reviews[1].name}</p>
+                <p className="eyebrow mt-0.5">{reviews[1].tag}</p>
+              </div>
+            </figcaption>
+          </article>
+        </div>
 
-        {/* Row 3 — short pull-quote + two cards */}
-        <article className="md:col-span-5 md:-translate-y-4 relative p-10 md:p-12 bg-gradient-to-br from-primary to-primary-glow text-primary-foreground">
+        {/* Row 2 — three cards, all aligned top & bottom */}
+        <article className="md:col-span-5 relative p-10 md:p-12 bg-gradient-to-br from-primary to-primary-glow text-primary-foreground flex flex-col h-full">
           <Quote
             aria-hidden
             className="absolute top-6 right-6 text-primary-foreground/20"
@@ -162,7 +164,7 @@ const Testimonials = () => (
           <blockquote className="font-serif text-2xl md:text-3xl leading-snug">
             „{reviews[2].text}“
           </blockquote>
-          <figcaption className="mt-10 flex items-center justify-between">
+          <figcaption className="mt-auto pt-10 flex items-center justify-between">
             <div>
               <p className="text-sm font-medium">— {reviews[2].name}</p>
               <p className="text-[0.7rem] uppercase tracking-[0.22em] mt-1 text-primary-foreground/70">
@@ -177,23 +179,23 @@ const Testimonials = () => (
           </figcaption>
         </article>
 
-        <article className="md:col-span-3 bg-card border border-border/70 p-8">
+        <article className="md:col-span-3 bg-card border border-border/70 p-8 md:p-9 flex flex-col h-full">
           <Stars />
           <blockquote className="font-serif text-lg md:text-xl leading-snug mt-6 text-foreground/90">
             „{reviews[3].text}“
           </blockquote>
-          <figcaption className="mt-8">
+          <figcaption className="mt-auto pt-8">
             <p className="text-sm font-medium">— {reviews[3].name}</p>
             <p className="eyebrow mt-1">{reviews[3].tag}</p>
           </figcaption>
         </article>
 
-        <article className="md:col-span-4 md:translate-y-6 bg-secondary/60 border border-border/60 p-8 md:p-10">
+        <article className="md:col-span-4 bg-secondary/60 border border-border/60 p-8 md:p-10 flex flex-col h-full">
           <Stars />
-          <blockquote className="font-serif text-xl md:text-[1.4rem] leading-snug mt-6 text-foreground/90">
+          <blockquote className="font-serif text-lg md:text-xl leading-snug mt-6 text-foreground/90">
             „{reviews[4].text}“
           </blockquote>
-          <figcaption className="mt-8 flex items-center gap-3">
+          <figcaption className="mt-auto pt-8 flex items-center gap-3">
             <Initial name={reviews[4].name} />
             <div>
               <p className="text-sm font-medium">— {reviews[4].name}</p>
