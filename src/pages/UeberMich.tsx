@@ -60,10 +60,10 @@ const UeberMich = () => (
       </div>
     </section>
 
-    <section className="py-20">
+<section className="py-20">
   <div className="container-editorial">
-    <div className="grid md:grid-cols-12 gap-4">
-      <div className="md:col-span-7 aspect-[4/5] overflow-hidden shadow-soft">
+    <div className="grid grid-cols-3 gap-4">
+      <div className="aspect-[3/4] overflow-hidden shadow-soft">
         <img
           src={studio}
           alt="Behandlungsraum FACE AND MORE"
@@ -71,24 +71,21 @@ const UeberMich = () => (
           className="w-full h-full object-cover"
         />
       </div>
-
-      <div className="md:col-span-5 grid grid-rows-2 gap-4">
-        <div className="overflow-hidden shadow-soft">
-          <img
-            src={studio2}
-            alt="Hautanalyse und Empfang"
-            loading="lazy"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="overflow-hidden shadow-soft">
-          <img
-            src={studio3}
-            alt="Studio Atmosphäre"
-            loading="lazy"
-            className="w-full h-full object-cover"
-          />
-        </div>
+      <div className="aspect-[3/4] overflow-hidden shadow-soft">
+        <img
+          src={studio2}
+          alt="Hautanalyse und Empfang"
+          loading="lazy"
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div className="aspect-[3/4] overflow-hidden shadow-soft">
+        <img
+          src={studio3}
+          alt="Studio Atmosphäre"
+          loading="lazy"
+          className="w-full h-full object-cover"
+        />
       </div>
     </div>
   </div>
