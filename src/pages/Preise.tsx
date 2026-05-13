@@ -91,7 +91,7 @@ const categories: Category[] = [
 
 const Preise = () => (
   <SiteLayout>
-    <PageHero
+<PageHero
       eyebrow="Preise — FACE AND MORE Wien"
       title={
         <>
@@ -101,17 +101,13 @@ const Preise = () => (
       intro="Unsere Preise sind transparent und nachvollziehbar. Welche Behandlung wirklich zu dir passt, besprechen wir gemeinsam in einer persönlichen Beratung — die finale Empfehlung richtet sich immer nach deinem Hautzustand und deinen Zielen."
     />
 
-    <section className="py-20 md:py-28">
-      <div className="container-editorial space-y-24 md:space-y-32">
-        {categories.map((cat) => (
-          <div key={cat.title} className="grid lg:grid-cols-12 gap-10 lg:gap-16">
-            <div className="lg:col-span-4">
-              <p className="eyebrow mb-5">{cat.eyebrow}</p>
-              <h2 className="headline">{cat.title}</h2>
-              <Link
-                to={cat.to}
-                className="group mt-8 inline-flex items-center gap-2 text-sm tracking-wide text-primary hover:text-primary-glow transition-colors"
-              >
+    <div className="container-editorial py-10">
+      <div className="aspect-[21/9] overflow-hidden shadow-soft">
+        <img
+          src={haut}
+          alt="Hautpflege FACE AND MORE"
+          loading="lazy"
+          className="w-full h-full object-cove
                 Behandlung ansehen
                 <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
               </Link>
