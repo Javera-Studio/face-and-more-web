@@ -86,9 +86,6 @@ const UeberMich = () => (
         className="w-full h-full object-cover"
       />
     </div>
-
-  </div>
-
 </div>
         </div>
       </div>
