@@ -123,30 +123,30 @@ const TreatmentPage = (p: TreatmentPageProps) => (
       </div>
     </section>
 
-    {/* PROCESS */}
+   {/* PROCESS */}
     <section className="py-24 md:py-32">
-      <div className="container-editorial grid lg:grid-cols-12 gap-12 lg:gap-16">
-        <div className="lg:col-span-5">
+      <div className="container-editorial grid lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
+        <div className="lg:col-span-7 flex flex-col">
           <p className="eyebrow mb-5">Ablauf</p>
           <h2 className="headline">Dein Weg <span className="italic text-primary">Schritt für Schritt</span>.</h2>
           <p className="mt-6 text-foreground/75 leading-relaxed max-w-md">
             Jede Behandlung beginnt mit einem persönlichen Gespräch und einer fundierten Einschätzung deiner Haut.
           </p>
-          <div className="mt-10 aspect-[4/5] overflow-hidden">
-            <img src={p.gallery[1]} alt="" className="w-full h-full object-cover" loading="lazy" />
-          </div>
+          <ol className="mt-8 flex-1">
+            {p.process.map((s, i) => (
+              <li key={s.t} className="grid grid-cols-[auto_1fr] gap-8 p-8 md:p-10 border-b border-border last:border-b-0">
+                <span className="font-serif text-3xl text-primary leading-none">{String(i + 1).padStart(2, "0")}</span>
+                <div>
+                  <p className="font-serif text-xl">{s.t}</p>
+                  <p className="mt-2 text-foreground/70 leading-relaxed">{s.d}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
         </div>
-        <ol className="lg:col-span-7 lg:pt-16">
-          {p.process.map((s, i) => (
-            <li key={s.t} className="grid grid-cols-[auto_1fr] gap-8 p-8 md:p-10 border-b border-border last:border-b-0">
-              <span className="font-serif text-3xl text-primary leading-none">{String(i + 1).padStart(2, "0")}</span>
-              <div>
-                <p className="font-serif text-xl">{s.t}</p>
-                <p className="mt-2 text-foreground/70 leading-relaxed">{s.d}</p>
-              </div>
-            </li>
-          ))}
-        </ol>
+        <div className="lg:col-span-5 overflow-hidden">
+          <img src={p.gallery[1]} alt="" className="w-full h-full object-cover" loading="lazy" />
+        </div>
       </div>
     </section>
 
