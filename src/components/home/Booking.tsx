@@ -36,7 +36,7 @@ const Booking = () => (
         </Link>
 
         <a
-          href="https://www.treatwell.at"
+          href="https://www.treatwell.at/ort/face-and-more/"
           target="_blank"
           rel="noopener noreferrer"
           className="group bg-background/5 border border-background/15 p-8 flex flex-col justify-between hover:bg-background/10 transition-colors"
