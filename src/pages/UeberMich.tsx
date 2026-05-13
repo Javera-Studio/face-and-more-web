@@ -98,3 +98,4 @@ const UeberMich = () => (
 
   </SiteLayout>
 );
+export default UeberMich; 
