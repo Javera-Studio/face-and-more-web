@@ -166,38 +166,44 @@ const TreatmentPage = (p: TreatmentPageProps) => (
         </div>
 
         {p.prices.length === 1 ? (
-          <div className="grid md:grid-cols-2 gap-8 items-start">
-            <div className="grid gap-px bg-border border border-border">
-              {p.prices.map((pr, i) => (
-                <div
-                  key={pr.name}
-                  className="group relative bg-background p-8 lg:p-10 flex flex-col transition-colors duration-500 hover:bg-secondary/40"
-                >
-                  <div className="flex items-start justify-between gap-4">
-                    <span className="font-serif text-xs text-primary tracking-widest">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <div className="flex items-center gap-1.5 text-[11px] uppercase tracking-widest text-muted-foreground">
-                      <Clock size={12} /> {pr.duration}
-                    </div>
-                  </div>
-                  <div className="mt-8 min-h-[5.5rem] flex flex-col">
-                    <p className="font-serif text-xl leading-snug">{pr.name}</p>
-                    {pr.note && (
-                      <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{pr.note}</p>
-                    )}
-                  </div>
-                  <div className="mt-auto pt-8 border-t border-border/70 flex items-baseline justify-between">
-                    <span className="text-[11px] uppercase tracking-widest text-muted-foreground">Preis</span>
-                    <p className="font-serif text-2xl text-primary">{pr.price}</p>
-                  </div>
-                </div>
-              ))}
+  <div className="flex flex-col gap-8">
+    <div className="grid md:grid-cols-2 gap-8 items-start">
+      <div className="grid gap-px bg-border border border-border">
+        {p.prices.map((pr, i) => (
+          <div
+            key={pr.name}
+            className="group relative bg-background p-8 lg:p-10 flex flex-col transition-colors duration-500 hover:bg-secondary/40"
+          >
+            <div className="flex items-start justify-between gap-4">
+              <span className="font-serif text-xs text-primary tracking-widest">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <div className="flex items-center gap-1.5 text-[11px] uppercase tracking-widest text-muted-foreground">
+                <Clock size={12} /> {pr.duration}
+              </div>
             </div>
-            <div className="flex flex-col gap-6">
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Jede Behandlung wird individuell an deinen Hautzustand angepasst. Gemeinsam finden wir die passende Pflege und Behandlung für deine Hautziele.
-              </p>
+            <div className="mt-8 min-h-[5.5rem] flex flex-col">
+              <p className="font-serif text-xl leading-snug">{pr.name}</p>
+              {pr.note && (
+                <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{pr.note}</p>
+              )}
+            </div>
+            <div className="mt-auto pt-8 border-t border-border/70 flex items-baseline justify-between">
+              <span className="text-[11px] uppercase tracking-widest text-muted-foreground">Preis</span>
+              <p className="font-serif text-2xl text-primary">{pr.price}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="aspect-[4/3] overflow-hidden shadow-soft">
+        <img src={haut1} alt="" className="w-full h-full object-cover" loading="lazy" />
+      </div>
+    </div>
+    <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">
+      Jede Behandlung wird individuell an deinen Hautzustand angepasst. Gemeinsam finden wir die passende Pflege und Behandlung für deine Hautziele.
+    </p>
+  </div>
+) : (
               <div className="aspect-[4/3] overflow-hidden shadow-soft">
                 <img src={haut1} alt="" className="w-full h-full object-cover" loading="lazy" />
               </div>
