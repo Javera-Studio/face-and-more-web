@@ -49,50 +49,32 @@ const FaqItem = ({ q, a, defaultOpen = false }: Faq & { defaultOpen?: boolean })
 const TreatmentPage = (p: TreatmentPageProps) => (
   <SiteLayout>
     {/* HERO */}
-<section className="bg-gradient-warm pt-16 md:pt-20 pb-16 md:pb-24 overflow-hidden">
-  <div className="container-editorial grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-    <div className="lg:col-span-5 xl:col-span-6">
-      <p className="eyebrow mb-6">{p.eyebrow}</p>
-      <h1 className="display">{p.title}</h1>
-      <p className="lede mt-6 max-w-xl">{p.subtitle}</p>
-
-      <div className="mt-9 flex flex-wrap gap-4">
-        <Link
-          to="/kontakt"
-          className="group inline-flex items-center gap-2 px-7 py-4 bg-primary text-primary-foreground text-sm tracking-wide hover:bg-primary-glow transition-colors"
-        >
-          Termin buchen <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-        </Link>
-
-        <Link
-          to="/leistungen"
-          className="inline-flex items-center px-7 py-4 border border-border text-sm tracking-wide hover:border-primary hover:text-primary transition-colors"
-        >
-          Alle Leistungen
-        </Link>
+    <section className="bg-gradient-warm pt-16 md:pt-20 pb-16 md:pb-24">
+     <div className="container-editorial grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+        <div className="lg:col-span-6">
+          <p className="eyebrow mb-6">{p.eyebrow}</p>
+          <h1 className="display">{p.title}</h1>
+          <p className="lede mt-6 max-w-xl">{p.subtitle}</p>
+          <div className="mt-9 flex flex-wrap gap-4">
+            <Link
+              to="/kontakt"
+              className="group inline-flex items-center gap-2 px-7 py-4 bg-primary text-primary-foreground text-sm tracking-wide hover:bg-primary-glow transition-colors"
+            >
+              Termin buchen <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+            </Link>
+            <Link to="/leistungen" className="inline-flex items-center px-7 py-4 border border-border text-sm tracking-wide hover:border-primary hover:text-primary transition-colors">
+              Alle Leistungen
+            </Link>
+          </div>
+        </div>
+        <div className="lg:col-span-6">
+          <div className="aspect-[4/5] md:aspect-[5/6] overflow-hidden shadow-soft">
+            <img src={p.heroImage} alt={p.eyebrow} className="w-full h-full object-cover" />
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div className="lg:col-span-7 xl:col-span-6">
-      <div className="relative aspect-[4/5] md:aspect-[4/5] overflow-hidden">
-        <img
-          src={p.heroImage}
-          alt={p.eyebrow}
-          className="w-full h-full object-cover scale-[1.04]"
-        />
-
-        {/* Soft right fade */}
-        <div className="absolute inset-y-0 right-0 w-40 bg-gradient-to-l from-white to-transparent pointer-events-none" />
-
-        {/* Soft bottom fade */}
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white to-transparent pointer-events-none" />
-
-        {/* Subtle left fade */}
-        <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-white to-transparent pointer-events-none" />
-      </div>
-    </div>
-  </div>
-</section>
     {/* INTRO */}
     <section className="py-24 md:py-32">
       <div className="container-editorial grid lg:grid-cols-12 gap-12">
