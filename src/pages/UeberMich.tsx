@@ -20,10 +20,25 @@ const UeberMich = () => (
           </div>
         </div>
         <div className="lg:col-span-7 space-y-6 text-foreground/85 leading-relaxed">
-          <p>Mein Anspruch ist es, moderne, fundierte Behandlungen mit echter Zeit, Aufmerksamkeit und Wärme zu verbinden. Im Studio FACE AND MORE arbeite ich nicht nach Schema F — jede Behandlung beginnt mit einer fundierten Hautanalyse und einem Gespräch.</p>
-          <p>Kontinuierliche Weiterbildung ist mir besonders wichtig: Ich besuche regelmäßig Fortbildungen rund um moderne Hautanalyse, Wirkstofftherapie und Behandlungstechniken — damit du immer auf dem aktuellsten Stand profitierst.</p>
-          <p>Mein Studio in Wien ist bewusst ruhig, hochwertig und persönlich gestaltet — ein Ort, an dem du dich entspannen, deine Haut verstehen und langfristig stärken kannst.</p>
+  <p>
+    Mein Anspruch ist es, moderne, fundierte Behandlungen mit echter Zeit, Aufmerksamkeit und Wärme zu verbinden. Im Studio FACE AND MORE arbeite ich nicht nach Schema F — jede Behandlung beginnt mit einer fundierten Hautanalyse und einem Gespräch.
+  </p>
 
+  <p>
+    Als Kosmetikerin und Hautcoach begleite ich Jugendliche und Erwachsene bei Akne, Problemhaut und individuellen Hautbedürfnissen. Mir ist wichtig, die Haut nicht nur kurzfristig zu behandeln, sondern gemeinsam langfristig zu verstehen und zu stärken.
+  </p>
+
+  <p>
+    Besonders spezialisiert habe ich mich auf unreine Haut, Akne, Pigmentflecken und die Bedürfnisse reifer Haut. Jede Haut ist anders — deshalb erhältst du bei FACE AND MORE nicht nur eine Behandlung, sondern auch eine individuell abgestimmte Pflege und ehrliche Beratung für Zuhause.
+  </p>
+
+  <p>
+    Kontinuierliche Weiterbildung ist mir besonders wichtig: Ich besuche regelmäßig Fortbildungen rund um moderne Hautanalyse, Wirkstofftherapie und Behandlungstechniken — damit du immer auf dem aktuellsten Stand profitierst.
+  </p>
+
+  <p>
+    Mein Studio in Wien ist bewusst ruhig, hochwertig und persönlich gestaltet — ein Ort, an dem du dich entspannen, deine Haut verstehen und langfristig stärken kannst.
+  </p>
           <div className="pt-6">
             <Link to="/kontakt" className="inline-flex items-center px-7 py-4 bg-primary text-primary-foreground text-sm tracking-wide hover:bg-primary-glow transition-colors">
               Termin vereinbaren
