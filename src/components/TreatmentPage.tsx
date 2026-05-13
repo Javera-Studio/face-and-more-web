@@ -167,7 +167,7 @@ const TreatmentPage = (p: TreatmentPageProps) => (
 
         {p.prices.length === 1 ? (
           <div className="flex flex-col gap-8">
-            <div className="grid md:grid-cols-2 gap-8 items-start">
+            <div className="grid md:grid-cols-2 gap-8 items-end">
               <div className="grid gap-px bg-border border border-border">
                 {p.prices.map((pr, i) => (
                   <div
