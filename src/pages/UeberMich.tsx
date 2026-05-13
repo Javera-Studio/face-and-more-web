@@ -2,15 +2,20 @@ import SiteLayout from "@/components/SiteLayout";
 import PageHero from "@/components/PageHero";
 import portrait from "@/assets/michaela.avif";
 import studio from "@/assets/studio.jpg";
-import studio from "@/assets/studio2.jpg";
-import studio from "@/assets/studio3.jpg";
+import studio2 from "@/assets/studio2.jpg";
+import studio3 from "@/assets/studio3.jpg";
 import { Link } from "react-router-dom";
 
 const UeberMich = () => (
   <SiteLayout>
     <PageHero
       eyebrow="Über Michaela"
-      title={<>Hautgesundheit ist für mich <span className="italic text-primary">persönlich.</span></>}
+      title={
+        <>
+          Hautgesundheit ist für mich{" "}
+          <span className="italic text-primary">persönlich.</span>
+        </>
+      }
       intro="Mein Name ist Michaela Kornherr. Seit vielen Jahren begleite ich Menschen in Wien auf dem Weg zu einer Haut, in der sie sich wohlfühlen."
     />
 <section className="py-20">
