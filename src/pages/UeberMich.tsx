@@ -74,24 +74,24 @@ const UeberMich = () => (
             </div>
           </div>
 
-          <div className="md:col-span-5 flex flex-col gap-4">
-            <div className="aspect-[4/3] overflow-hidden shadow-soft">
-              <img
-                src={studio2}
-                alt="Hautanalyse und Empfang"
-                loading="lazy"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="aspect-[4/3] overflow-hidden shadow-soft">
-              <img
-                src={studio3}
-                alt="Studio Atmosphäre"
-                loading="lazy"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
+<div className="md:col-span-5 flex flex-col gap-4">
+  <div className="flex-1 overflow-hidden shadow-soft">
+    <img
+      src={studio2}
+      alt="Hautanalyse und Empfang"
+      loading="lazy"
+      className="w-full h-full object-cover"
+    />
+  </div>
+  <div className="flex-1 overflow-hidden shadow-soft">
+    <img
+      src={studio3}
+      alt="Studio Atmosphäre"
+      loading="lazy"
+      className="w-full h-full object-cover"
+    />
+  </div>
+</div>
         </div>
       </div>
     </section>
