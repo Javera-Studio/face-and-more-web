@@ -11,35 +11,34 @@ const LegalSection = ({ title, children }: { title: string; children: React.Reac
 const Impressum = () => (
   <SiteLayout>
     <PageHero eyebrow="Rechtliches" title="Impressum" />
-    
+
     <section className="py-16">
       <div className="container-editorial max-w-3xl">
-
         <LegalSection title="Angaben gemäß §5 ECG">
           <p>
             FACE AND MORE<br />
             Michaela Kornherr<br />
             Liechtensteinstraße 62 TOP 2<br />
-            A - 1090 Wien<br />
+            A-1090 Wien<br />
             Österreich
           </p>
-
-          <p className="mt-4">
+          <p>
             Tel: +43 677 62 920 665<br />
             E-Mail: michaela@faceandmore.at<br />
-            Website: www.faceandmore.at
+            Website: <a href="https://www.faceandmore.at" className="underline hover:text-primary">www.faceandmore.at</a>
           </p>
         </LegalSection>
 
         <LegalSection title="Unternehmensgegenstand">
-          <p>
-            Kosmetikstudio, Hautanalyse, Hautcoaching und kosmetische Behandlungen.
-          </p>
+          <p>Kosmetikstudio, Hautanalyse, Hautcoaching und kosmetische Behandlungen.</p>
         </LegalSection>
 
         <LegalSection title="Berufsrecht">
           <p>
-            Gewerbeordnung: www.ris.bka.gv.at
+            Gewerbeordnung:{" "}
+            <a href="https://www.ris.bka.gv.at" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">
+              www.ris.bka.gv.at
+            </a>
           </p>
         </LegalSection>
 
@@ -59,16 +58,15 @@ const Impressum = () => (
           <p>
             Verbraucher haben die Möglichkeit, Beschwerden an die Online-Streitbeilegungsplattform der EU zu richten:
           </p>
-
-          <p className="mt-2">
-            https://ec.europa.eu/consumers/odr/
+          <p>
+            <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">
+              https://ec.europa.eu/consumers/odr/
+            </a>
           </p>
-
-          <p className="mt-4">
+          <p>
             Wir sind nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
           </p>
         </LegalSection>
-
       </div>
     </section>
   </SiteLayout>
