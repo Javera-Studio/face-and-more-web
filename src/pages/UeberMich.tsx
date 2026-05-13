@@ -2,6 +2,8 @@ import SiteLayout from "@/components/SiteLayout";
 import PageHero from "@/components/PageHero";
 import portrait from "@/assets/michaela.avif";
 import studio from "@/assets/studio.jpg";
+import studio from "@/assets/studio2.jpg";
+import studio from "@/assets/studio3.jpg";
 import { Link } from "react-router-dom";
 
 const UeberMich = () => (
