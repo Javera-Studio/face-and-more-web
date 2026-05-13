@@ -7,10 +7,10 @@
 @layer base {
   :root {
     /* Editorial premium skin clinic palette */
-    --background: 60 14% 98%;          /* #FAFAF8 warm off-white */
+    --background: 340 12% 98%;          /* #FAFAF8 warm off-white */
     --foreground: 0 0% 18%;            /* #2E2E2E deep ink */
 
-    --card: 60 14% 99%;
+    --card: 340 12% 99%
     --card-foreground: 0 0% 18%;
 
     --popover: 60 14% 99%;
@@ -22,10 +22,10 @@
     --primary-soft: 173 31% 95%;       /* #EEF7F6 */
     --primary-glow: 180 80% 28%;       /* #0E7F80 hover */
 
-    --secondary: 173 31% 95%;          /* soft aqua #EEF7F6 */
+    --secondary: 340 18% 93%;          /* soft aqua #EEF7F6 */
     --secondary-foreground: 0 0% 18%;
 
-    --muted: 60 10% 95%;
+    --muted: 340 10% 95%;
     --muted-foreground: 0 0% 38%;
 
     --accent: 173 31% 95%;
@@ -40,7 +40,7 @@
 
     --radius: 0.25rem;
 
-    --gradient-warm: linear-gradient(180deg, hsl(60 14% 99%) 0%, hsl(173 31% 96%) 100%);
+   --gradient-warm: linear-gradient(180deg, hsl(340 12% 99%) 0%, hsl(340 18% 95%) 100%);
     --gradient-teal: linear-gradient(135deg, hsl(180 79% 33%), hsl(180 80% 28%));
     --shadow-soft: 0 1px 2px hsl(0 0% 18% / 0.04), 0 12px 40px -12px hsl(0 0% 18% / 0.08);
     --shadow-elegant: 0 30px 60px -30px hsl(180 79% 33% / 0.22);
