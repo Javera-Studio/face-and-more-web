@@ -104,7 +104,7 @@ const Preise = () => (
     <div className="container-editorial py-10">
       <div className="aspect-[21/9] overflow-hidden shadow-soft">
         <img
-          src={haut}
+          src={haut1}
           alt="Hautpflege FACE AND MORE"
           loading="lazy"
           className="w-full h-full object-cove
