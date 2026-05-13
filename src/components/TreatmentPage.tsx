@@ -241,7 +241,7 @@ const TreatmentPage = (p: TreatmentPageProps) => (
    {/* IMAGE BAND 2 */}
     <section className="py-24 md:py-32">
       <div className="container-editorial grid md:grid-cols-2 gap-6 items-center">
-        <div className="aspect-[4/5] overflow-hidden">
+        <div className="aspect-[3/4] overflow-hidden">
           <img src={p.gallery[2]} alt="" className="w-full h-full object-cover" loading="lazy" />
         </div>
         <div className="flex flex-col justify-center">
