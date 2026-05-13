@@ -163,7 +163,13 @@ const TreatmentPage = (p: TreatmentPageProps) => (
             Jede Behandlung wird individuell an deinen Hautzustand angepasst. Gemeinsam finden wir die passende Pflege und Behandlung für deine Hautziele.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
+        <div className={`grid gap-px bg-border border border-border ${
+  p.prices.length === 1
+    ? "max-w-md"
+    : p.prices.length === 2
+    ? "md:grid-cols-2"
+    : "md:grid-cols-2 lg:grid-cols-3"
+}`}>
           {p.prices.map((pr, i) => (
             <div
               key={pr.name}
