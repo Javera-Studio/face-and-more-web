@@ -2,6 +2,7 @@ import { ReactNode, useState } from "react";
 import SiteLayout from "@/components/SiteLayout";
 import { Link } from "react-router-dom";
 import { ArrowRight, Check, Plus, Clock, Tag, Repeat } from "lucide-react";
+import haut1 from "@/assets/haut1.jpg";
 
 interface Faq { q: string; a: string }
 interface Step { t: string; d: string }
@@ -13,11 +14,11 @@ export interface TreatmentPageProps {
   subtitle: string;
   intro: string;
   heroImage: string;
-  gallery: [string, string, string]; // 3 supporting images (+ hero = 4 large images)
+  gallery: [string, string, string];
   benefits: string[];
   process: Step[];
   prices: PriceItem[];
-  faqs: Faq[]; // 8
+  faqs: Faq[];
   closingNote?: string;
 }
 
@@ -35,9 +36,7 @@ const FaqItem = ({ q, a, defaultOpen = false }: Faq & { defaultOpen?: boolean })
           <Plus size={16} />
         </span>
       </button>
-      <div
-        className={`grid transition-all duration-500 ease-out ${open ? "grid-rows-[1fr] opacity-100 pb-7" : "grid-rows-[0fr] opacity-0"}`}
-      >
+      <div className={`grid transition-all duration-500 ease-out ${open ? "grid-rows-[1fr] opacity-100 pb-7" : "grid-rows-[0fr] opacity-0"}`}>
         <div className="overflow-hidden">
           <p className="text-foreground/75 leading-relaxed max-w-2xl">{a}</p>
         </div>
@@ -50,7 +49,7 @@ const TreatmentPage = (p: TreatmentPageProps) => (
   <SiteLayout>
     {/* HERO */}
     <section className="bg-gradient-warm pt-16 md:pt-20 pb-16 md:pb-24">
-     <div className="container-editorial grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+      <div className="container-editorial grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
         <div className="lg:col-span-6">
           <p className="eyebrow mb-6">{p.eyebrow}</p>
           <h1 className="display">{p.title}</h1>
@@ -159,17 +158,20 @@ const TreatmentPage = (p: TreatmentPageProps) => (
             <p className="eyebrow mb-5">Preise & Dauer</p>
             <h2 className="headline">Transparent. <span className="italic text-primary">Klar.</span> Persönlich.</h2>
           </div>
-          <p className="text-sm text-muted-foreground max-w-sm">
-            Jede Behandlung wird individuell an deinen Hautzustand angepasst. Gemeinsam finden wir die passende Pflege und Behandlung für deine Hautziele.
-          </p>
+          {p.prices.length > 1 && (
+            <p className="text-sm text-muted-foreground max-w-sm">
+              Jede Behandlung wird individuell an deinen Hautzustand angepasst. Gemeinsam finden wir die passende Pflege und Behandlung für deine Hautziele.
+            </p>
+          )}
         </div>
+
         <div className={`grid gap-px bg-border border border-border ${
-  p.prices.length === 1
-    ? "max-w-md"
-    : p.prices.length === 2
-    ? "md:grid-cols-2"
-    : "md:grid-cols-2 lg:grid-cols-3"
-}`}>
+          p.prices.length === 1
+            ? "max-w-md"
+            : p.prices.length === 2
+            ? "md:grid-cols-2"
+            : "md:grid-cols-2 lg:grid-cols-3"
+        }`}>
           {p.prices.map((pr, i) => (
             <div
               key={pr.name}
@@ -183,14 +185,12 @@ const TreatmentPage = (p: TreatmentPageProps) => (
                   <Clock size={12} /> {pr.duration}
                 </div>
               </div>
-
               <div className="mt-8 min-h-[5.5rem] flex flex-col">
                 <p className="font-serif text-xl leading-snug">{pr.name}</p>
                 {pr.note && (
                   <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{pr.note}</p>
                 )}
               </div>
-
               <div className="mt-auto pt-8 border-t border-border/70 flex items-baseline justify-between">
                 <span className="text-[11px] uppercase tracking-widest text-muted-foreground">Preis</span>
                 <p className="font-serif text-2xl text-primary">{pr.price}</p>
@@ -198,6 +198,18 @@ const TreatmentPage = (p: TreatmentPageProps) => (
             </div>
           ))}
         </div>
+
+        {p.prices.length === 1 && (
+          <div className="mt-12 grid md:grid-cols-2 gap-8 items-center">
+            <div className="aspect-[4/3] overflow-hidden shadow-soft">
+              <img src={haut1} alt="" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Jede Behandlung wird individuell an deinen Hautzustand angepasst. Gemeinsam finden wir die passende Pflege und Behandlung für deine Hautziele.
+            </p>
+          </div>
+        )}
+
         <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 text-xs text-muted-foreground">
           <span className="inline-flex items-center gap-2"><Tag size={14} /> Inkl. Beratung & Hautanalyse</span>
           <span className="inline-flex items-center gap-2"><Repeat size={14} /> Serien-Pakete auf Anfrage</span>
