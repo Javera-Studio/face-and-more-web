@@ -57,10 +57,6 @@ const Hero = () => (
           />
           <div className="absolute -bottom-px left-0 right-0 h-32 bg-gradient-to-t from-background/40 to-transparent" />
         </div>
-        <div className="mt-6 flex items-center gap-4">
-          <div className="h-px flex-1 bg-border" />
-          <p className="eyebrow">Editorial Skin Care</p>
-        </div>
       </div>
     </div>
   </section>
