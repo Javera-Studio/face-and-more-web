@@ -5,7 +5,7 @@ import heroImg from "@/assets/hero-skin.jpg";
 const Hero = () => (
   <section className="relative overflow-hidden bg-gradient-warm">
     <div className="container-editorial pt-12 md:pt-20 pb-16 md:pb-24 grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-      <div className="lg:col-span-7 reveal">
+      <div className="lg:col-span-6 reveal">
         <p className="eyebrow mb-6">Premium Skin Studio · Wien</p>
         <h1 className="display">
           Individuelle Hautpflege beginnt mit dem richtigen{" "}
@@ -47,7 +47,7 @@ const Hero = () => (
         </div>
       </div>
 
-      <div className="lg:col-span-5 reveal reveal-delay-2">
+      <div className="lg:col-span-6 reveal reveal-delay-2">
         <div className="relative aspect-[2/3] overflow-hidden shadow-elegant">
           <img
             src={heroImg}
