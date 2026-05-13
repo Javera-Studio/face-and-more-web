@@ -68,9 +68,24 @@ const TreatmentPage = (p: TreatmentPageProps) => (
           </div>
         </div>
         <div className="lg:col-span-6">
-          <div className="aspect-[4/5] md:aspect-[5/6] overflow-hidden shadow-soft">
-            <img src={p.heroImage} alt={p.eyebrow} className="w-full h-full object-cover" />
-          </div>
+          <div className="relative aspect-[4/5] md:aspect-[5/6] overflow-hidden">
+  
+  <img
+    src={p.heroImage}
+    alt={p.eyebrow}
+    className="w-full h-full object-cover"
+  />
+
+  {/* Soft overall fade */}
+  <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_58%,white_100%)]" />
+
+  {/* Softer right edge */}
+  <div className="absolute top-0 right-0 h-full w-32 bg-gradient-to-l from-white to-transparent pointer-events-none" />
+
+  {/* Softer bottom edge */}
+  <div className="absolute bottom-0 left-0 w-full h-28 bg-gradient-to-t from-white to-transparent pointer-events-none" />
+
+</div>
         </div>
       </div>
     </section>
