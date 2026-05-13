@@ -48,7 +48,7 @@ const Hero = () => (
       </div>
 
       <div className="lg:col-span-5 reveal reveal-delay-2">
-        <div className="relative aspect-[4/5] overflow-hidden shadow-elegant">
+        <div className="relative aspect-[2/3] overflow-hidden shadow-elegant">
           <img
             src={heroImg}
             alt="Hautanalyse und Hautpflege bei FACE AND MORE in Wien"
