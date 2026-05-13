@@ -52,8 +52,44 @@ const UeberMich = () => (
 
     <section className="py-20">
       <div className="container-editorial">
-        <div className="aspect-[16/8] overflow-hidden">
-          <img src={studio} alt="Studio FACE AND MORE in Wien" loading="lazy" className="w-full h-full object-cover" />
+        <div className="grid md:grid-cols-12 gap-4">
+
+  {/* Großes Hauptbild */}
+  <div className="md:col-span-7">
+    <div className="aspect-[4/5] overflow-hidden shadow-soft">
+      <img
+        src={studio}
+        alt="Behandlungsraum FACE AND MORE"
+        loading="lazy"
+        className="w-full h-full object-cover"
+      />
+    </div>
+  </div>
+
+  {/* Rechte kleine Bilder */}
+  <div className="md:col-span-5 flex flex-col gap-4">
+
+    <div className="aspect-[4/3] overflow-hidden shadow-soft">
+      <img
+        src={studio2}
+        alt="Hautanalyse & Empfang"
+        loading="lazy"
+        className="w-full h-full object-cover"
+      />
+    </div>
+
+    <div className="aspect-[4/3] overflow-hidden shadow-soft">
+      <img
+        src={studio3}
+        alt="Studio Atmosphäre"
+        loading="lazy"
+        className="w-full h-full object-cover"
+      />
+    </div>
+
+  </div>
+
+</div>
         </div>
       </div>
     </section>
