@@ -62,40 +62,39 @@ const UeberMich = () => (
 
     <section className="py-20">
       <div className="container-editorial">
-        <div className="grid md:grid-cols-12 gap-4">
-          <div className="md:col-span-7">
-            <div className="aspect-[4/5] overflow-hidden shadow-soft">
+        <div className="grid md:grid-cols-12 gap-4 h-[600px]">
+          <div className="md:col-span-7 overflow-hidden shadow-soft">
+            <img
+              src={studio}
+              alt="Behandlungsraum FACE AND MORE"
+              loading="lazy"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          <div className="md:col-span-5 flex flex-col gap-4">
+            <div className="flex-1 overflow-hidden shadow-soft">
               <img
-                src={studio}
-                alt="Behandlungsraum FACE AND MORE"
+                src={studio2}
+                alt="Hautanalyse und Empfang"
+                loading="lazy"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="flex-1 overflow-hidden shadow-soft">
+              <img
+                src={studio3}
+                alt="Studio Atmosphäre"
                 loading="lazy"
                 className="w-full h-full object-cover"
               />
             </div>
           </div>
-
-<div className="md:col-span-5 flex flex-col gap-4">
-  <div className="flex-1 overflow-hidden shadow-soft">
-    <img
-      src={studio2}
-      alt="Hautanalyse und Empfang"
-      loading="lazy"
-      className="w-full h-full object-cover"
-    />
-  </div>
-  <div className="flex-1 overflow-hidden shadow-soft">
-    <img
-      src={studio3}
-      alt="Studio Atmosphäre"
-      loading="lazy"
-      className="w-full h-full object-cover"
-    />
-  </div>
-</div>
         </div>
       </div>
     </section>
 
   </SiteLayout>
 );
-export default UeberMich; 
+
+export default UeberMich;
