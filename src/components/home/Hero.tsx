@@ -47,7 +47,7 @@ const Hero = () => (
         </div>
       </div>
 
-      <div className="lg:col-span-6 reveal reveal-delay-2">
+      <div className="lg:col-span-5 reveal reveal-delay-2">
         <div className="relative aspect-[2/3] overflow-hidden shadow-elegant">
           <img
             src={heroImg}
