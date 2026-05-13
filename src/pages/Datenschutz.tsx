@@ -10,20 +10,37 @@ const Section = ({ title, children }: { title: string; children: React.ReactNode
 
 const Datenschutz = () => (
   <SiteLayout>
-    <PageHero eyebrow="Rechtliches" title="Datenschutz" intro="Der Schutz deiner persönlichen Daten ist uns ein wichtiges Anliegen." />
+    <PageHero eyebrow="Rechtliches" title="Datenschutz" intro="Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen. Wir verarbeiten Ihre Daten daher ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, TKG 2003)." />
     <section className="py-16">
       <div className="container-editorial max-w-3xl">
+        <Section title="Verantwortliche">
+          <p>Michaela Kornherr</p>
+            <p>Liechtensteinstraße 62 TOP 2</p>
+            <p>A - 1090 Wien</p>
+<p>
+  E-Mail:{" "}
+  <a
+    href="mailto:michaela@faceandmore.at"
+    className="text-foreground transition hover:text-rose"
+  >
+    michaela@faceandmore.at
+  </a>
+</p>
+        </Section>
         <Section title="Kontaktaufnahme">
-          <p>Wenn du uns per Formular oder E-Mail kontaktierst, werden deine Angaben zur Bearbeitung der Anfrage und für mögliche Rückfragen gespeichert.</p>
+          <p>Wenn Sie per Formular auf der Website oder per E-Mail Kontakt mit uns aufnehmen, werden Ihre angegebenen Daten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
+        </Section>
+        <Section title="Terminbuchung über externe Anbieter">
+          <p>Für Terminbuchungen werden Sie auf externe Plattformen (z.B. Treatwell oder Phorest) weitergeleitet. Dabei gelten die Datenschutzbestimmungen der jeweiligen Anbieter.</p>
         </Section>
         <Section title="Cookies">
           <p>Diese Website verwendet ausschließlich technisch notwendige Cookies, um die Funktionalität zu gewährleisten.</p>
         </Section>
-        <Section title="Deine Rechte">
-          <p>Du hast jederzeit das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung, Widerspruch und Datenübertragbarkeit.</p>
+                <Section title="Server-Logfiles">
+          <p>Der Provider der Website erhebt und speichert automatisch Informationen (z.B. IP-Adresse, Browsertyp, Uhrzeit), die Ihr Browser automatisch übermittelt. Diese Daten sind nicht bestimmten Personen zuordenbar.</p>
         </Section>
-        <Section title="Kontakt">
-          <p>Bei Fragen zum Datenschutz: hello@faceandmore.at</p>
+        <Section title="Deine Rechte">
+          <p>Ihnen stehen grundsätzlich die Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch zu. Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt, können Sie sich bei der österreichischen Datenschutzbehörde beschweren.</p>
         </Section>
       </div>
     </section>
