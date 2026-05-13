@@ -71,13 +71,18 @@ const Kontakt = () => {
           </div>
 
           <aside className="lg:col-span-5 space-y-8">
-            <div className="bg-secondary/60 p-7 space-y-4">
-              <p className="eyebrow">Studio</p>
-              <div className="flex gap-3 text-sm text-foreground/85"><MapPin size={16} className="text-primary mt-0.5" /> Wien, Österreich</div>
-              <div className="flex gap-3 text-sm text-foreground/85"><Phone size={16} className="text-primary mt-0.5" /> Auf Anfrage</div>
-              <div className="flex gap-3 text-sm text-foreground/85"><Mail size={16} className="text-primary mt-0.5" /> hello@faceandmore.at</div>
-            </div>
+  <div className="bg-secondary/60 p-7 space-y-4">
+    <p className="eyebrow">Studio</p>
+    <div className="flex gap-3 text-sm text-foreground/85"><MapPin size={16} className="text-primary mt-0.5" /> Wolfsaugasse 6/2, A-1200 Wien</div>
+    <div className="flex gap-3 text-sm text-foreground/85"><Phone size={16} className="text-primary mt-0.5" /> <a href="tel:+436776292066">+43 677 62 920 665</a></div>
+    <div className="flex gap-3 text-sm text-foreground/85"><Mail size={16} className="text-primary mt-0.5" /> <a href="mailto:michaela@faceandmore.at">michaela@faceandmore.at</a></div>
+  </div>
 
+  <div className="bg-secondary/60 p-7 space-y-4">  {/* ← gleicher Stil */}
+    <p className="eyebrow">Öffnungszeiten</p>
+    <p className="text-sm text-foreground/85">Mo – Do: 08:30 – 18:00 Uhr</p>
+    <p className="text-sm text-foreground/85">Fr: 08:30 – 13:00 Uhr <span className="text-foreground/50">(nachmittags nach Rücksprache)</span></p>
+  </div>
             <a
               href="https://www.treatwell.at"
               target="_blank"
