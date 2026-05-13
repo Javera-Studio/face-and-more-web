@@ -96,7 +96,7 @@ const Kontakt = () => {
             </div>
 
             
-              href="https://www.treatwell.at"
+<a href="https://www.treatwell.at"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center justify-between border border-border p-5 hover:border-primary/40 transition-colors"
