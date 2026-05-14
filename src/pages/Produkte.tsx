@@ -41,7 +41,7 @@ const products: Product[] = [
       "Hochkonzentriertes Vitamin-C-Serum für einen ebenmäßigen, strahlenden Teint.",
     skinType: "Alle Hauttypen · fahle Haut",
     benefits: ["Glow & Kollagenaufbau", "Antioxidativer Schutz", "Ebenmäßiger Teint"],
-    image: productPlaceholder(1),
+    image: Produkt1,
     category: "Seren",
   },
   {
@@ -52,7 +52,7 @@ const products: Product[] = [
       "Niacinamid-Serum, das Rötungen beruhigt und das Hautbild sichtbar verfeinert.",
     skinType: "Sensible & unreine Haut",
     benefits: ["Beruhigt Rötungen", "Unterstützt Feuchtigkeit", "Gegen Pigmentflecken"],
-    image: productPlaceholder(2),
+    image: Produkt2,
     category: "Seren",
   },
   {
@@ -67,7 +67,7 @@ const products: Product[] = [
       "Unterstützt Kollagenproduktion",
       "Mehr Glow über Nacht",
     ],
-    image: productPlaceholder(3),
+    image: Produkt3,
     category: "Anti-Aging",
   },
   {
@@ -82,7 +82,7 @@ const products: Product[] = [
       "Beruhigt entzündete Haut",
       "Unterstützt reine Haut",
     ],
-    image: productPlaceholder(4),
+    image: Produkt4,
     category: "Akne & Problemhaut",
   },
   {
@@ -93,7 +93,7 @@ const products: Product[] = [
       "Leichter, feuchtigkeitsspendender Sonnenschutz für täglichen UVA/UVB-Schutz.",
     skinType: "Alle Hauttypen",
     benefits: ["UVA/UVB Schutz", "Feuchtigkeit", "Anti-Aging Schutz"],
-    image: productPlaceholder(5),
+    image: Produkt5,
     category: "Sonnenschutz",
   },
   {
@@ -108,7 +108,7 @@ const products: Product[] = [
       "Unterstützt Elastizität",
       "Für trockene Haut",
     ],
-    image: productPlaceholder(6),
+    image: Produkt6,
     category: "Feuchtigkeit",
   },
 ];
