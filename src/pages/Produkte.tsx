@@ -19,7 +19,7 @@ import Produkt2 from "@/assets/Produkt2.JPG";
 import Produkt3 from "@/assets/Produkt3.JPG";
 import Produkt1 from "@/assets/Produkt4.JPG";
 import Produkt2 from "@/assets/Produkt5.JPG";
-import Produkt3 from "@/assets/Produkt6.JPG"
+import Produkt3 from "@/assets/Produkt6.JPG";
 
 // Placeholder product images — replace with real product photography later.
 // Filenames are intentionally generic (Produkt1.jpg ... Produkt6.jpg) so the
