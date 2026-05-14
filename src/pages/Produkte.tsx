@@ -14,6 +14,12 @@ import SiteLayout from "@/components/SiteLayout";
 import heroImg from "@/assets/treatment-skin.jpg";
 import beratungImg from "@/assets/treatment-facial.jpg";
 import philosophyImg from "@/assets/treatment-antiaging.jpg";
+import Produkt1 from "@/assets/Produkt1.JPG";
+import Produkt2 from "@/assets/Produkt2.JPG";
+import Produkt3 from "@/assets/Produkt3.JPG";
+import Produkt1 from "@/assets/Produkt4.JPG";
+import Produkt2 from "@/assets/Produkt5.JPG";
+import Produkt3 from "@/assets/Produkt6.JPG"
 
 // Placeholder product images — replace with real product photography later.
 // Filenames are intentionally generic (Produkt1.jpg ... Produkt6.jpg) so the
@@ -41,7 +47,7 @@ const products: Product[] = [
       "Hochkonzentriertes Vitamin-C-Serum für einen ebenmäßigen, strahlenden Teint.",
     skinType: "Alle Hauttypen · fahle Haut",
     benefits: ["Glow & Kollagenaufbau", "Antioxidativer Schutz", "Ebenmäßiger Teint"],
-    image: Produkt1.JPG,
+    image: Produkt1,
     category: "Seren",
   },
   {
@@ -52,7 +58,7 @@ const products: Product[] = [
       "Niacinamid-Serum, das Rötungen beruhigt und das Hautbild sichtbar verfeinert.",
     skinType: "Sensible & unreine Haut",
     benefits: ["Beruhigt Rötungen", "Unterstützt Feuchtigkeit", "Gegen Pigmentflecken"],
-    image: Produkt2.JPG,
+    image: Produkt2,
     category: "Seren",
   },
   {
@@ -82,7 +88,7 @@ const products: Product[] = [
       "Beruhigt entzündete Haut",
       "Unterstützt reine Haut",
     ],
-    image: Produkt4.JPG,
+    image: Produkt4,
     category: "Akne & Problemhaut",
   },
   {
@@ -93,7 +99,7 @@ const products: Product[] = [
       "Leichter, feuchtigkeitsspendender Sonnenschutz für täglichen UVA/UVB-Schutz.",
     skinType: "Alle Hauttypen",
     benefits: ["UVA/UVB Schutz", "Feuchtigkeit", "Anti-Aging Schutz"],
-    image: Produkt5.JPG,
+    image: Produkt5,
     category: "Sonnenschutz",
   },
   {
@@ -108,7 +114,7 @@ const products: Product[] = [
       "Unterstützt Elastizität",
       "Für trockene Haut",
     ],
-    image: Produkt6.JPG,
+    image: Produkt6,
     category: "Feuchtigkeit",
   },
 ];
