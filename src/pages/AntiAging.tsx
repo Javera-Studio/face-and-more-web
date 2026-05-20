@@ -31,34 +31,36 @@ const AntiAging = () => (
       { name: "Anti Aging Premium", duration: "90 Min", price: "ab € 150" },
       { name: "Anti Aging 4er Serie", duration: "4 × 75 Min", price: "ab € 440", note: "Optimale Wirkung in Serie" },
     ]}
-    faqs={Array.from({ length: 8 }, (_, i) => ({
-      q: "Für wen sind diese Behandlungen geeignet?",
-    a: "Die Behandlungen für reife Haut eignen sich für alle, die Falten, Erschlaffung oder Pigmentveränderungen gezielt angehen möchten. Bereits ab Mitte 30 kann die Haut von speziell abgestimmten Anwendungen profitieren.",
-  },
-  {
-    q: "Wie läuft die Behandlung ab?",
-    a: "Vor jeder Behandlung wird die Haut analysiert und die passende Methode individuell gewählt. Je nach Anwendung — ob Microneedling, Microblading oder Fruchtsäure — dauert die Behandlung zwischen 30 und 60 Minuten.",
-  },
-  {
-    q: "Wann sehe ich erste Ergebnisse?",
-    a: "Erste Verbesserungen sind oft bereits nach der ersten Sitzung sichtbar — die Haut wirkt strahlender und straffer. Für langanhaltende Ergebnisse empfiehlt sich eine Behandlungskur über mehrere Sitzungen.",
-  },
-  {
-    q: "Wie viele Behandlungen werden empfohlen?",
-    a: "Das hängt vom individuellen Hautzustand und dem gewünschten Ergebnis ab. In der Regel werden 3 bis 6 Sitzungen im Abstand von 2 bis 4 Wochen empfohlen. Die genaue Anzahl wird beim ersten Termin gemeinsam besprochen.",
-  },
-  {
-    q: "Sind die Behandlungen auch für empfindliche Haut geeignet?",
-    a: "Ja — reife Haut ist oft sensibler, weshalb jede Behandlung individuell angepasst wird. Intensität und verwendete Wirkstoffe werden auf deine Haut abgestimmt, damit die Anwendung so schonend wie möglich ist.",
-  },
-  {
-    q: "Was muss nach der Behandlung beachtet werden?",
-    a: "Nach der Behandlung sollte die Haut gut mit Feuchtigkeit versorgt und vor Sonne geschützt werden — ein Sonnenschutz mit SPF 50 ist empfohlen. Leichte Rötungen oder ein Spannungsgefühl sind normal und klingen in der Regel schnell ab.",
-  },
-  {
-    q: "Können mehrere Behandlungen kombiniert werden?",
-    a: "Ja — Kombinationen wie Microneedling mit Hyaluron oder ergänzende Ampullen können die Wirkung deutlich verstärken. Welche Kombination für dich sinnvoll ist, wird beim Beratungsgespräch individuell festgelegt.",
-    }))}
+    faqs={[
+      {
+        q: "Für wen sind diese Behandlungen geeignet?",
+        a: "Die Behandlungen eignen sich für alle, die Falten, Elastizitätsverlust oder Pigmentveränderungen gezielt verbessern möchten. Bereits ab Mitte 30 kann die Haut von individuell abgestimmten Anti-Aging-Behandlungen profitieren.",
+      },
+      {
+        q: "Wie läuft die Behandlung ab?",
+        a: "Vor jeder Behandlung wird die Haut analysiert und die passende Methode individuell ausgewählt. Je nach Anwendung dauert die Behandlung etwa 30 bis 60 Minuten.",
+      },
+      {
+        q: "Wann sind erste Ergebnisse sichtbar?",
+        a: "Oft wirkt die Haut bereits nach der ersten Behandlung frischer, glatter und strahlender. Für langfristige Ergebnisse empfiehlt sich eine regelmäßige Behandlungskur.",
+      },
+      {
+        q: "Wie viele Behandlungen werden empfohlen?",
+        a: "Die Anzahl der Sitzungen richtet sich nach Hautzustand und gewünschtem Ergebnis. Häufig werden 3 bis 6 Behandlungen im Abstand von einigen Wochen empfohlen.",
+      },
+      {
+        q: "Sind die Behandlungen auch für empfindliche Haut geeignet?",
+        a: "Ja — jede Behandlung wird individuell an die Haut angepasst. Wirkstoffe und Intensität werden so gewählt, dass die Haut möglichst schonend behandelt wird.",
+      },
+      {
+        q: "Was sollte nach der Behandlung beachtet werden?",
+        a: "Nach der Behandlung sollte die Haut intensiv gepflegt und mit SPF 50 vor Sonne geschützt werden. Leichte Rötungen oder Spannungsgefühle sind kurzfristig normal.",
+      },
+      {
+        q: "Können verschiedene Behandlungen kombiniert werden?",
+        a: "Ja — Kombinationen wie Microneedling mit Wirkstoffampullen oder ergänzende Pflegebehandlungen können die Ergebnisse zusätzlich unterstützen und verstärken.",
+      },
+    ]}
   />
 );
 
