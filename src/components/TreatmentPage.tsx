@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Check, Plus, Clock, Tag, Repeat } from "lucide-react";
 import haut1 from "@/assets/haut1.jpg";
 import studioImg from "@/assets/studio.jpg";
+import michaelaImg from "@/assets/michaela.jpg";
 
 interface Faq { q: string; a: string }
 interface Step { t: string; d: string }
@@ -146,7 +147,7 @@ const TreatmentPage = (p: TreatmentPageProps) => (
           </ol>
         </div>
         <div className="lg:col-span-5 overflow-hidden">
-          <img src={p.gallery[1]} alt="" className="w-full h-full object-cover" loading="lazy" />
+          <img src={michaelaImg} alt="" className="w-full h-full object-cover" loading="lazy" />
         </div>
       </div>
     </section>
