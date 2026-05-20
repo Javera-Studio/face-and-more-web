@@ -66,5 +66,5 @@ const Fruchtsaeure = () => (
   },
 ]}
 />
-
+);
 export default Fruchtsaeure;
