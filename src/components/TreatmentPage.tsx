@@ -3,6 +3,7 @@ import SiteLayout from "@/components/SiteLayout";
 import { Link } from "react-router-dom";
 import { ArrowRight, Check, Plus, Clock, Tag, Repeat } from "lucide-react";
 import haut1 from "@/assets/haut1.jpg";
+import studioImg from "@/assets/studio.jpg";
 
 interface Faq { q: string; a: string }
 interface Step { t: string; d: string }
@@ -242,7 +243,7 @@ const TreatmentPage = (p: TreatmentPageProps) => (
     <section className="py-24 md:py-32">
       <div className="container-editorial grid md:grid-cols-2 gap-6 items-center">
         <div className="aspect-[3/4] overflow-hidden">
-          <img src={p.gallery[2]} alt="" className="w-full h-full object-cover" loading="lazy" />
+          <img src={studioImg} alt="" className="w-full h-full object-cover" loading="lazy" />
         </div>
         <div className="flex flex-col justify-center">
           <p className="eyebrow mb-5">Persönlich. Diskret.</p>
