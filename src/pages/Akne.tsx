@@ -2,7 +2,7 @@ import TreatmentPage from "@/components/TreatmentPage";
 import hero from "@/assets/treatment-akne.jpg";
 import g1 from "@/assets/treatment-facial.jpg";
 import g2 from "@/assets/studio.jpg";
-import g3 from "@/assets/michaela.avif";
+import g3 from "@/assets/michaela.jpg";
 
 export default function Akne() {
   return (

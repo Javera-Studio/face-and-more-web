@@ -4,7 +4,7 @@ import SiteLayout from "@/components/SiteLayout";
 import jugendImg from "@/assets/jugendliche-haut.jpg";
 import reifeImg from "@/assets/reife-haut.jpg";
 import allgemeinImg from "@/assets/allgemeine-hautberatung.jpg";
-import michaelaImg from "@/assets/michaela.avif";
+import michaelaImg from "@/assets/michaela.jpg";
 
 const paths = [
   {
