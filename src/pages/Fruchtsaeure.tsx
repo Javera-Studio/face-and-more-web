@@ -31,11 +31,40 @@ const Fruchtsaeure = () => (
       { name: "Fruchtsäure Premium", duration: "75 Min", price: "ab € 110" },
       { name: "Fruchtsäure 4er Serie", duration: "4 × 60 Min", price: "ab € 300", note: "Für sichtbare Resultate" },
     ]}
-    faqs={Array.from({ length: 8 }, (_, i) => ({
-      q: `FAQ ${i + 1}`,
-      a: `Antwort ${i + 1} — Platzhaltertext. Hier wird die finale Antwort eingefügt.`,
-    }))}
-  />
-);
+    faqs={[
+  {
+    q: "Was bewirkt ein Fruchtsäurepeeling?",
+    a: "Fruchtsäurepeelings entfernen abgestorbene Hautzellen, fördern die Hauterneuerung und sorgen für ein glatteres, frischeres Hautbild. Feine Linien, Pigmentflecken, Unreinheiten und große Poren können sichtbar verbessert werden.",
+  },
+  {
+    q: "Für welche Hautprobleme eignet sich ein AHA-Peeling?",
+    a: "Fruchtsäurepeelings eignen sich besonders bei Akne, unreiner Haut, Pigmentflecken, großporiger Haut, fahlem Teint sowie ersten Zeichen der Hautalterung.",
+  },
+  {
+    q: "Ist ein Fruchtsäurepeeling für jeden Hauttyp geeignet?",
+    a: "Grundsätzlich ja — bei sehr empfindlicher Haut, Couperose, Herpes oder entzündlichen Hauterkrankungen sollte jedoch vorher individuell beraten werden.",
+  },
+  {
+    q: "Wie läuft die Behandlung ab?",
+    a: "Vor jeder Behandlung wird die Haut analysiert und die passende Intensität gewählt. Während des Peelings kann ein leichtes Kribbeln auftreten. Die Behandlung dauert etwa 30 bis 45 Minuten.",
+  },
+  {
+    q: "Was muss nach einem Fruchtsäurepeeling beachtet werden?",
+    a: "Nach der Behandlung ist täglicher Sonnenschutz mit SPF 50 besonders wichtig, da die Haut lichtempfindlicher wird. Leichte Rötungen oder Spannungsgefühle sind normal.",
+  },
+  {
+    q: "Gibt es Nebenwirkungen nach einem AHA-Peeling?",
+    a: "Die Haut kann nach dem Peeling leicht gerötet, trocken oder empfindlich sein. Teilweise kann sich die Haut einige Tage leicht schälen — das gehört zum natürlichen Erneuerungsprozess.",
+  },
+  {
+    q: "Hilft Fruchtsäure gegen Pigmentflecken und Aknenarben?",
+    a: "Ja — regelmäßige Fruchtsäurebehandlungen können Pigmentflecken, Aknenarben und ungleichmäßige Hautstruktur sichtbar verbessern und den Teint ebenmäßiger wirken lassen.",
+  },
+  {
+    q: "Wie viele Behandlungen werden empfohlen?",
+    a: "Für optimale Ergebnisse wird häufig eine Kur empfohlen — meist mehrere Behandlungen im Abstand von 1 bis 2 Wochen. Die genaue Anzahl hängt vom Hautzustand und Ziel ab.",
+  },
+]}
+/>
 
 export default Fruchtsaeure;
