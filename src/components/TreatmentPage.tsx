@@ -147,7 +147,7 @@ const TreatmentPage = (p: TreatmentPageProps) => (
           </ol>
         </div>
         <div className="lg:col-span-5 overflow-hidden">
-          <img src={p.gallery[1]} alt="" className="w-full h-full object-cover" loading="lazy" />
+          <img src={michaelaImg} alt="" className="w-full h-full object-cover" loading="lazy" />
         </div>
       </div>
     </section>
