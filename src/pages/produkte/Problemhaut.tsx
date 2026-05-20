@@ -194,9 +194,8 @@ const ProductCard = ({ p }: { p: Product }) => (
       <Link
         to="/kontakt"
         className="group/cta mt-auto pt-6 border-t border-border/70 inline-flex items-center justify-between text-sm tracking-wide text-foreground hover:text-primary transition-colors"
-        style={{ marginTop: "auto" }}
       >
-        <span className="pt-8 block">Beratung anfragen</span>
+        Beratung anfragen
         <ArrowRight
           size={16}
           className="transition-transform duration-500 group-hover/cta:translate-x-1"
