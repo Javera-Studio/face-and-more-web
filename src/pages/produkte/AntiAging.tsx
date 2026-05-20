@@ -226,7 +226,7 @@ const ProductCard = ({ p }: { p: Product }) => (
 
       <Link
         to="/kontakt"
-        className="group/cta mt-8 pt-6 border-t border-border/70 inline-flex items-center justify-between text-sm tracking-wide text-foreground hover:text-primary transition-colors"
+        className="group/cta mt-auto pt-6 border-t border-border/70 inline-flex items-center justify-between text-sm tracking-wide text-foreground hover:text-primary transition-colors"
       >
         Beratung anfragen
         <ArrowRight
