@@ -159,8 +159,8 @@ const products: Product[] = [
 
 const benefitTags = [
   "Feuchtigkeit",
-  "Hautschutz",
   "Glow",
+  "Hautschutz",
   "Pflege",
   "Sensitive Skin",
   "Hautbalance",
@@ -242,13 +242,14 @@ const Feuchtigkeit = () => (
         </Link>
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-7">
-            <p className="eyebrow mb-6">Kategorie · Feuchtigkeit & Pflege</p>
+            <p className="eyebrow mb-6">KATEGORIE · FEUCHTIGKEIT & PFLEGE</p>
             <h1 className="display">
-              <span className="italic text-primary">Hydration</span>, Schutz & sichtbar{" "}
+              <span className="italic text-primary">Hydration</span>,{" "}
+              <span className="italic text-primary">Glow</span> & sichtbar{" "}
               <span className="italic text-primary">gepflegte</span> Haut.
             </h1>
             <p className="lede mt-7 max-w-xl">
-              Feuchtigkeit ist die Grundlage einer gesunden Hautbalance. Hochwertige Pflegeprodukte unterstützen die Haut dabei, geschmeidig, beruhigt und sichtbar strahlender zu wirken.
+              Eine ausgeglichene Feuchtigkeitsbalance ist die Grundlage gesunder und strahlender Haut. Hochwertige Pflegeprodukte unterstützen die Haut dabei, geschmeidig, beruhigt und sichtbar frischer zu wirken.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
@@ -285,19 +286,16 @@ const Feuchtigkeit = () => (
         <div className="lg:col-span-6">
           <p className="eyebrow mb-5">Philosophie</p>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl leading-[1.15] text-foreground/95">
-            Gesunde Haut beginnt mit der richtigen{" "}
-            <span className="italic text-primary">Feuchtigkeitsbalance</span>.
+            Feuchtigkeit ist der Schlüssel zu{" "}
+            <span className="italic text-primary">gesunder Haut</span>.
           </h2>
         </div>
         <div className="lg:col-span-6 lg:pt-3">
           <p className="text-foreground/75 leading-relaxed">
-            Feuchtigkeitspflege bedeutet heute weit mehr als nur Creme. Moderne Wirkstoffe unterstützen die Haut dabei, Feuchtigkeit zu speichern, die Hautbarriere zu stärken und ein ausgeglichenes Hautbild zu fördern.
+            Feuchtigkeitsarme Haut kann schnell fahl, gespannt oder empfindlich wirken. Moderne Pflegeprodukte kombinieren deshalb intensive Hydration mit beruhigenden Wirkstoffen, Antioxidantien und schützender Pflege für ein ausgeglichenes Hautbild.
           </p>
           <p className="mt-5 text-foreground/75 leading-relaxed">
-            Ob trockene, empfindliche oder feuchtigkeitsarme Haut — die passende Pflege kann dabei helfen, Spannungsgefühle zu reduzieren, den natürlichen Glow zu unterstützen und die Haut langfristig geschmeidig wirken zu lassen.
-          </p>
-          <p className="mt-5 text-foreground/75 leading-relaxed">
-            Bei FACE AND MORE werden Pflegeprodukte individuell auf Hauttyp, Hautzustand und persönliche Hautbedürfnisse abgestimmt.
+            Ob leichte Gelpflege, reichhaltige Feuchtigkeitscreme oder täglicher UV-Schutz — bei FACE AND MORE werden Pflegeprodukte individuell auf Hauttyp, Hautzustand und persönliche Hautbedürfnisse abgestimmt.
           </p>
           <div className="mt-10 flex flex-wrap gap-2">
             {benefitTags.map((t) => (
@@ -347,7 +345,7 @@ const Feuchtigkeit = () => (
             <span className="italic text-primary">deiner Haut</span>?
           </h2>
           <p className="mt-6 text-foreground/75 leading-relaxed max-w-xl">
-            Jede Haut hat unterschiedliche Bedürfnisse. Während manche Hauttypen intensive Feuchtigkeit und Schutz benötigen, profitieren andere stärker von leichter Pflege oder beruhigenden Wirkstoffen.
+            Nicht jede Haut benötigt dieselbe Pflege. Während manche Hauttypen intensive Feuchtigkeit und reichhaltige Texturen bevorzugen, profitieren andere stärker von leichter Pflege oder beruhigenden Wirkstoffen.
           </p>
           <p className="mt-5 text-foreground/75 leading-relaxed max-w-xl">
             Im Rahmen einer professionellen Hautanalyse helfen wir dabei, die passende Pflegeroutine für deine individuellen Hautbedürfnisse zu finden.
@@ -383,7 +381,7 @@ const Feuchtigkeit = () => (
       <div className="container-editorial text-center max-w-2xl mx-auto">
         <p className="eyebrow mb-5">FACE AND MORE</p>
         <h2 className="headline">
-          Strahlende Haut beginnt mit der{" "}
+          Gesunde Haut beginnt mit der{" "}
           <span className="italic text-primary">richtigen Pflege</span>.
         </h2>
         <p className="lede mt-6">
