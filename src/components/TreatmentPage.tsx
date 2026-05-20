@@ -3,6 +3,7 @@ import SiteLayout from "@/components/SiteLayout";
 import { Link } from "react-router-dom";
 import { ArrowRight, Check, Plus, Clock, Tag, Repeat } from "lucide-react";
 import haut1 from "@/assets/haut1.jpg";
+import studioImg from "@/assets/studio.jpg";
 
 interface Faq { q: string; a: string }
 interface Step { t: string; d: string }
