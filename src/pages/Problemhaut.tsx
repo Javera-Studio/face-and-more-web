@@ -66,5 +66,5 @@ const Problemhaut = () => (
   },
 ]}
 />
-
+);
 export default Problemhaut;
