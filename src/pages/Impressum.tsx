@@ -18,8 +18,8 @@ const Impressum = () => (
           <p>
             FACE AND MORE<br />
             Michaela Kornherr<br />
-            Liechtensteinstraße 62 TOP 2<br />
-            A-1090 Wien<br />
+            Wolfsaugasse 6/2<br />
+            A-1200 Wien<br />
             Österreich
           </p>
           <p>

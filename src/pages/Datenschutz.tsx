@@ -15,8 +15,8 @@ const Datenschutz = () => (
       <div className="container-editorial max-w-3xl">
         <Section title="Verantwortliche">
           <p>Michaela Kornherr</p>
-            <p>Liechtensteinstraße 62 TOP 2</p>
-            <p>A - 1090 Wien</p>
+            <p>Wolfsaugasse 6/2</p>
+            <p>A-1200 Wien</p>
 <p>
   E-Mail:{" "}
   <a

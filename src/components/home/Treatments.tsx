@@ -9,12 +9,12 @@ import facialImg from "@/assets/gesichtsbehandlung.jpg";
 import pmuImg from "@/assets/treatment-pmu.jpg";
 
 const treatments = [
-  { img: skinImg, title: "Hautverbesserung", desc: "Individuelle Behandlung für ein klareres, ebenmäßigeres Hautbild — abgestimmt auf deine Haut.", duration: "60–90 Min", price: "ab € 95", to: "/leistungen/problemhaut" },
+  { img: skinImg, title: "Hautverbesserung", desc: "Individuelle Behandlung für ein klareres, ebenmäßigeres Hautbild — abgestimmt auf deine Haut.", duration: "60 Min", price: "ab € 96", to: "/leistungen/problemhaut" },
   { img: antiagingImg, title: "Anti Aging", desc: "Sanfte Wirkstofftherapie für straffe, vitale Haut — natürlich und altersgerecht.", duration: "75 Min", price: "ab € 120", to: "/leistungen/anti-aging" },
-  { img: fruchtImg, title: "Fruchtsäure", desc: "Erneuert die Haut und verfeinert das Hautbild sichtbar — mit dezentem Glow-Effekt.", duration: "45 Min", price: "ab € 85", to: "/leistungen/fruchtsaeure" },
-  { img: needlingImg, title: "Microneedling", desc: "Aktiviert Kollagen und Hauterneuerung — Glow, Spannkraft und Frische von innen.", duration: "75 Min", price: "ab € 140", to: "/leistungen/microneedling" },
-  { img: facialImg, title: "Klassische Behandlung", desc: "Ruhige, gründliche Pflege für jede Hautsituation — der Klassiker, neu interpretiert.", duration: "60 Min", price: "ab € 75", to: "/leistungen/gesichtsbehandlung" },
-  { img: pmuImg, title: "Microblading / PMU", desc: "Definierte, natürliche Augenbrauen mit feinster Präzision — handwerklich gestaltet.", duration: "120 Min", price: "ab € 380", to: "/leistungen/microblading" },
+  { img: fruchtImg, title: "Fruchtsäure", desc: "Erneuert die Haut und verfeinert das Hautbild sichtbar — mit dezentem Glow-Effekt.", duration: "30 Min", price: "ab € 92", to: "/leistungen/fruchtsaeure" },
+  { img: needlingImg, title: "Microneedling", desc: "Aktiviert Kollagen und Hauterneuerung — Glow, Spannkraft und Frische von innen.", duration: "60 Min", price: "ab € 136", to: "/leistungen/microneedling" },
+  { img: facialImg, title: "Klassische Behandlung", desc: "Ruhige, gründliche Pflege für jede Hautsituation — der Klassiker, neu interpretiert.", duration: "60 Min", price: "ab € 72", to: "/leistungen/gesichtsbehandlung" },
+  { img: pmuImg, title: "Microblading / PMU", desc: "Definierte, natürliche Augenbrauen mit feinster Präzision — handwerklich gestaltet.", duration: "120 Min", price: "ab € 345", to: "/leistungen/microblading" },
 ];
 
 const TreatmentRow = ({ item, index }: { item: typeof treatments[number]; index: number }) => {
@@ -112,6 +112,19 @@ const Treatments = () => (
         {treatments.map((t, i) => (
           <TreatmentRow key={t.title} item={t} index={i} />
         ))}
+      </div>
+
+      <div className="mt-16 md:mt-20 pt-12 border-t border-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+        <p className="font-serif text-2xl md:text-3xl max-w-md leading-snug">
+          Nicht sicher, welche Behandlung zu dir passt?
+        </p>
+        <Link
+          to="/hautanalyse"
+          className="group inline-flex items-center gap-2 px-7 py-4 bg-primary text-primary-foreground text-sm tracking-wide hover:bg-primary-glow transition-colors shrink-0"
+        >
+          Hautanalyse buchen
+          <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+        </Link>
       </div>
     </div>
   </section>

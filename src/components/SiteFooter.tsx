@@ -15,15 +15,16 @@ const SiteFooter = () => (
       <div>
         <p className="eyebrow mb-4">Studio</p>
         <ul className="space-y-2 text-sm text-foreground/80">
-          <li>Wien, Österreich</li>
-          <li>+43 — auf Anfrage</li>
-          <li>hello@faceandmore.at</li>
+          <li>Wolfsaugasse 6/2, A-1200 Wien</li>
+          <li>+43 677 62 920 665</li>
+          <li>michaela@faceandmore.at</li>
         </ul>
       </div>
       <div>
         <p className="eyebrow mb-4">Navigation</p>
         <ul className="space-y-2 text-sm">
           <li><Link to="/leistungen" className="hover:text-primary">Leistungen</Link></li>
+          <li><Link to="/hautcoaching" className="hover:text-primary">Hautcoaching</Link></li>
           <li><Link to="/hautanalyse" className="hover:text-primary">Hautanalyse</Link></li>
           <li><Link to="/produkte" className="hover:text-primary">Produkte</Link></li>
           <li><Link to="/preise" className="hover:text-primary">Preise</Link></li>

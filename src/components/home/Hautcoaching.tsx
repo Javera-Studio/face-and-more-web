@@ -41,9 +41,17 @@ const Hautcoaching = () => (
             Als Hautcoach unterstütze ich dich nicht nur im Studio, sondern auch bei deiner täglichen
             Pflegeroutine zu Hause — abgestimmt auf deinen Hautzustand und deine Lebensphase.
           </p>
-          <Link to="/hautcoaching" className="link-underline mt-6 inline-flex text-sm">
-            Mehr über Hautcoaching <ArrowUpRight size={16} />
-          </Link>
+          <div className="mt-6 flex flex-wrap gap-4">
+            <Link
+              to="/kontakt"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground text-sm tracking-wide hover:bg-primary-glow transition-colors"
+            >
+              Coaching-Termin buchen <ArrowUpRight size={14} />
+            </Link>
+            <Link to="/hautcoaching" className="link-underline inline-flex items-center text-sm">
+              Mehr über Hautcoaching <ArrowUpRight size={16} />
+            </Link>
+          </div>
         </div>
       </div>
 

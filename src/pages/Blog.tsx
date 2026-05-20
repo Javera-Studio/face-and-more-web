@@ -2,64 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import SiteLayout from "@/components/SiteLayout";
 import PageHero from "@/components/PageHero";
-import img1 from "@/assets/treatment-fruchtsaeure.jpg";
-import img2 from "@/assets/treatment-microneedling.jpg";
-import img3 from "@/assets/treatment-facial.jpg";
-import img4 from "@/assets/treatment-skin.jpg";
-import img5 from "@/assets/treatment-antiaging.jpg";
-import img6 from "@/assets/gesichtsbehandlung.jpg";
-
-interface Article {
-  title: string;
-  excerpt: string;
-  category: string;
-  image: string;
-}
-
-const articles: Article[] = [
-  {
-    title: "Warum ein Fruchtsäurepeeling auch im Frühjahr sinnvoll sein kann",
-    excerpt:
-      "Viele denken, Fruchtsäure sei nur im Winter möglich — dabei kann sie bei richtiger Pflege auch im Frühjahr eine effektive Behandlung für Glow, Hautstruktur und Unreinheiten sein.",
-    category: "Fruchtsäure",
-    image: img1,
-  },
-  {
-    title: "Warum Microneedling die Haut frischer und strahlender wirken lässt",
-    excerpt:
-      "Microneedling unterstützt die natürliche Hauterneuerung, verbessert die Hautstruktur und sorgt für einen frischen, gesunden Glow.",
-    category: "Microneedling",
-    image: img2,
-  },
-  {
-    title: "Gesichtsbehandlungen mit ASAP Skincare bei Face and More",
-    excerpt:
-      "Hochwertige Wirkstoffe, individuell abgestimmte Pflege und professionelle Behandlungen unterstützen die Haut langfristig und nachhaltig.",
-    category: "Hautpflege",
-    image: img3,
-  },
-  {
-    title: "Warum täglicher UVA/UVB Schutz so wichtig ist",
-    excerpt:
-      "UV-Strahlung beeinflusst die Haut das ganze Jahr über. Ein täglicher Sonnenschutz hilft dabei, Hautalterung und Pigmentflecken vorzubeugen.",
-    category: "Hautpflege",
-    image: img4,
-  },
-  {
-    title: "Warum AHA-Fruchtsäureprodukte nach Behandlungen sinnvoll sind",
-    excerpt:
-      "AHA-Fruchtsäuren unterstützen die Hauterneuerung, verbessern die Wirkstoffaufnahme und sorgen für ein glatteres Hautbild.",
-    category: "Fruchtsäure",
-    image: img5,
-  },
-  {
-    title: "Warum Fruchtsäure in der modernen Kosmetik nicht mehr wegzudenken ist",
-    excerpt:
-      "Fruchtsäure zählt zu den effektivsten Wirkstoffen zur Verbesserung von Hautstruktur, Glow, Poren und Unreinheiten.",
-    category: "Fruchtsäure",
-    image: img6,
-  },
-];
+import articles from "@/data/blogArticles";
 
 const Blog = () => (
   <SiteLayout>
@@ -76,22 +19,22 @@ const Blog = () => (
     <section className="py-20 md:py-28">
       <div className="container-editorial grid sm:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-x-10 lg:gap-y-20">
         {articles.map((a) => (
-          <article key={a.title} className="group flex flex-col">
-            <div className="aspect-[4/5] overflow-hidden mb-6">
+          <article key={a.slug} className="group flex flex-col">
+            <Link to={`/blog/${a.slug}`} className="aspect-[4/5] overflow-hidden mb-6 block">
               <img
                 src={a.image}
-                alt=""
+                alt={a.title}
                 loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
               />
-            </div>
+            </Link>
             <p className="eyebrow mb-3">{a.category}</p>
             <h2 className="font-serif text-2xl leading-snug text-foreground group-hover:text-primary transition-colors">
-              {a.title}
+              <Link to={`/blog/${a.slug}`}>{a.title}</Link>
             </h2>
             <p className="mt-4 text-foreground/70 leading-relaxed text-sm">{a.excerpt}</p>
             <Link
-              to="/kontakt"
+              to={`/blog/${a.slug}`}
               className="mt-6 inline-flex items-center gap-2 text-sm tracking-wide text-primary hover:text-primary-glow transition-colors"
             >
               Artikel lesen <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />

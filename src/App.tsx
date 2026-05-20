@@ -36,6 +36,7 @@ import ProdSets from "./pages/produkte/Sets.tsx";
 import ProdZubehoer from "./pages/produkte/Zubehoer.tsx";
 import Preise from "./pages/Preise.tsx";
 import Blog from "./pages/Blog.tsx";
+import BlogPost from "./pages/BlogPost.tsx";
 
 const queryClient = new QueryClient();
 
@@ -71,6 +72,7 @@ const App = () => (
           <Route path="/produkte/zubehoer" element={<ProdZubehoer />} />
           <Route path="/preise" element={<Preise />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/hautcoaching" element={<Hautcoaching />} />
           <Route path="/hautcoaching/jugendliche-haut" element={<JugendlicheHaut />} />
           <Route path="/hautcoaching/reife-haut" element={<ReifeHaut />} />

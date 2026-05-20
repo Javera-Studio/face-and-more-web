@@ -40,9 +40,9 @@ const categories: Category[] = [
     title: "Gesichtsbehandlungen",
     to: "/leistungen/gesichtsbehandlung",
     items: [
-      { name: "Express-Pflege", duration: "45 Min", price: "ab € 55" },
-      { name: "Klassische Gesichtsbehandlung", duration: "60 Min", price: "ab € 75" },
-      { name: "Premium Gesichtsbehandlung", duration: "90 Min", price: "ab € 110" },
+      { name: "Klassische Gesichtsbehandlung", duration: "60 Min", price: "€ 89" },
+      { name: "Men's Facial", duration: "60 Min", price: "€ 72" },
+      { name: "Microdermabrasion / Aqua Abrasion", duration: "60 Min", price: "€ 119" },
     ],
   },
   {
@@ -51,8 +51,9 @@ const categories: Category[] = [
     to: "/leistungen/microneedling",
     items: [
       { name: "Microneedling mit Hyaluron", duration: "60 Min", price: "€ 136" },
-      { name: "Microneedling mit Hyaluron & Toxome Ampulle", duration: "60 Min", price: "€ 149" },
-      { name: "Kurpaket 5 + 1 gratis", duration: "6 Sitzungen", price: "ab € 680" },
+      { name: "Microneedling mit Hyaluron & Toxome", duration: "60 Min", price: "€ 149" },
+      { name: "Hyaluron-Paket 3 ×", duration: "3 × 60 Min", price: "€ 369" },
+      { name: "Hyaluron & Toxome-Paket 3 ×", duration: "3 × 60 Min", price: "€ 390" },
     ],
   },
   {
@@ -71,10 +72,12 @@ const categories: Category[] = [
     title: "Fruchtsäure",
     to: "/leistungen/fruchtsaeure",
     items: [
-      { name: "Fruchtsäure Klassik", duration: "60 Min", price: "ab € 85" },
-      { name: "Fruchtsäurebehandlung", duration: "30 Min", price: "€ 94" },
-      { name: "Fruchtsäure Premium", duration: "75 Min", price: "ab € 110" },
-      { name: "Fruchtsäure 4er Serie", duration: "4 × 60 Min", price: "ab € 300" },
+      { name: "Gym for the Skin Workout", duration: "30 Min", price: "€ 92" },
+      { name: "Fruchtsäure Standard", duration: "30 Min", price: "€ 99" },
+      { name: "Fruchtsäure Jugendliche / Reife Haut", duration: "30 Min", price: "€ 94" },
+      { name: "Gym for the Skin Workout-Paket 6 ×", duration: "6 × 30 Min", price: "€ 465" },
+      { name: "Fruchtsäure Standard-Paket 6 ×", duration: "6 × 30 Min", price: "€ 510" },
+      { name: "Fruchtsäure Jugendliche/Reife Haut-Paket 6 ×", duration: "6 × 30 Min", price: "€ 510" },
     ],
   },
   {
