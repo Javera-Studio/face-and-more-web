@@ -14,7 +14,7 @@ title={<>Natürlich schöne Augenbrauen mit präzisem <span className="italic te
 
 subtitle="Typgerechtes Microblading und Permanent Make-Up für natürliche, harmonische Ergebnisse."
 
-intro="Mit Microblading lassen sich lückenhafte oder sehr feine Augenbrauen auf natürliche Weise auffüllen und neu formen. Feine pigmentierte Härchen werden farblich auf deinen Hauttyp und deine Haarfarbe abgestimmt, sodass ein besonders harmonisches und typgerechtes Ergebnis entsteht."
+intro="Microblading verbindet Präzision, Ästhetik und typgerechte Beratung. Feine pigmentierte Härchen werden individuell auf deinen Hauttyp, deine Gesichtsform und deine natürliche Augenbraue abgestimmt — für besonders harmonische und natürliche Ergebnisse."
 
 benefits={[
   "Natürlich wirkende Härchenzeichnung",
