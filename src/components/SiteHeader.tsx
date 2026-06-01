@@ -1,7 +1,10 @@
-import { Link, NavLink as RouterNavLink } from "react-router-dom";
+'use client'
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.jpg";
+import { imgSrc } from "@/lib/utils";
 
 const links = [
   { to: "/leistungen", label: "Leistungen" },
@@ -17,6 +20,7 @@ const links = [
 const SiteHeader = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -32,29 +36,30 @@ const SiteHeader = () => {
       }`}
     >
       <div className="container-editorial flex items-center justify-between h-24 md:h-32">
-        <Link to="/" className="flex items-center" aria-label="FACE AND MORE — Startseite">
-          <img src={logo} alt="FACE AND MORE by Michaela Kornherr" className="h-24 md:h-28 w-auto" />
+        <Link href="/" className="flex items-center" aria-label="FACE AND MORE — Startseite">
+          <img src={imgSrc(logo)} alt="FACE AND MORE by Michaela Kornherr" className="h-24 md:h-28 w-auto" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-9">
-          {links.map((l) => (
-            <RouterNavLink
-              key={l.to}
-              to={l.to}
-              className={({ isActive }) =>
-                `text-sm tracking-wide transition-colors ${
+          {links.map((l) => {
+            const isActive = pathname === l.to || (l.to !== "/" && pathname.startsWith(l.to));
+            return (
+              <Link
+                key={l.to}
+                href={l.to}
+                className={`text-xs tracking-wide transition-colors ${
                   isActive ? "text-primary" : "text-foreground/80 hover:text-primary"
-                }`
-              }
-            >
-              {l.label}
-            </RouterNavLink>
-          ))}
+                }`}
+              >
+                {l.label}
+              </Link>
+            );
+          })}
         </nav>
 
         <div className="hidden lg:block">
           <Link
-            to="/kontakt"
+            href="/kontakt"
             className="inline-flex items-center px-5 py-2.5 bg-primary text-primary-foreground text-sm tracking-wide hover:bg-primary-glow transition-colors"
           >
             Termin buchen
@@ -74,17 +79,17 @@ const SiteHeader = () => {
         <div className="lg:hidden bg-background border-t border-border">
           <div className="container-editorial py-6 flex flex-col gap-5">
             {links.map((l) => (
-              <RouterNavLink
+              <Link
                 key={l.to}
-                to={l.to}
+                href={l.to}
                 onClick={() => setOpen(false)}
                 className="text-base text-foreground"
               >
                 {l.label}
-              </RouterNavLink>
+              </Link>
             ))}
             <Link
-              to="/kontakt"
+              href="/kontakt"
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center justify-center px-5 py-3 bg-primary text-primary-foreground text-sm tracking-wide"
             >
