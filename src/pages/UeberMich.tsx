@@ -32,22 +32,30 @@ const UeberMich = () => (
           </div>
         </div>
 
-        <div className="lg:col-span-7 space-y-6 text-foreground/85 leading-relaxed">
-          <p>
-            Mein Anspruch ist es, moderne, fundierte Behandlungen mit echter Zeit, Aufmerksamkeit und Wärme zu verbinden. Im Studio FACE AND MORE arbeite ich nicht nach Schema F — jede Behandlung beginnt mit einer fundierten Hautanalyse und einem Gespräch.
-          </p>
-          <p>
-            Als Kosmetikerin und Hautcoach begleite ich Jugendliche und Erwachsene bei Akne, Problemhaut und individuellen Hautbedürfnissen. Mir ist wichtig, die Haut nicht nur kurzfristig zu behandeln, sondern gemeinsam langfristig zu verstehen und zu stärken.
-          </p>
-          <p>
-            Besonders spezialisiert habe ich mich auf unreine Haut, Akne, Pigmentflecken und die Bedürfnisse reifer Haut. Jede Haut ist anders — deshalb erhältst du bei FACE AND MORE nicht nur eine Behandlung, sondern auch eine individuell abgestimmte Pflege und ehrliche Beratung für Zuhause.
-          </p>
-          <p>
-            Kontinuierliche Weiterbildung ist mir besonders wichtig: Ich besuche regelmäßig Fortbildungen rund um moderne Hautanalyse, Wirkstofftherapie und Behandlungstechniken — damit du immer auf dem aktuellsten Stand profitierst.
-          </p>
-          <p>
-            Mein Studio in Wien ist bewusst ruhig, hochwertig und persönlich gestaltet — ein Ort, an dem du dich entspannen, deine Haut verstehen und langfristig stärken kannst.
-          </p>
+      <div className="lg:col-span-7 space-y-6 text-foreground/85 leading-relaxed">
+  <p>
+    Hautgesundheit ist für mich mehr als nur Pflege — sie bedeutet Wohlbefinden, Selbstvertrauen und sich in der eigenen Haut wieder wohlzufühlen. Deshalb nehme ich mir bewusst Zeit für jede Person, jede Haut und jede individuelle Geschichte dahinter.
+  </p>
+
+  <p>
+    Als Kosmetikerin und Hautcoach begleite ich Jugendliche und Erwachsene bei Akne, Problemhaut, Pigmentflecken und den Bedürfnissen reifer Haut. Jede Behandlung beginnt bei mir mit einer fundierten Hautanalyse, ehrlicher Beratung und einem persönlichen Gespräch — denn keine Haut ist wie die andere.
+  </p>
+
+  <p>
+    Mein Ziel ist es nicht, Haut nur kurzfristig zu verbessern, sondern sie langfristig zu verstehen, zu stärken und nachhaltig zu begleiten. Deshalb erhältst du bei FACE AND MORE nicht nur eine Behandlung, sondern auch individuell abgestimmte Pflegeempfehlungen für Zuhause.
+  </p>
+
+  <p>
+    Eine besondere Leidenschaft von mir ist außerdem das Pigmentieren von Augenbrauen und präzises Microblading. Natürlich wirkende Ergebnisse, harmonische Formen und typgerechte Beratung stehen dabei immer im Mittelpunkt — für ein Ergebnis, das deine natürliche Schönheit unterstreicht.
+  </p>
+
+  <p>
+    Kontinuierliche Weiterbildung ist mir besonders wichtig. Ich bilde mich regelmäßig in moderner Hautanalyse, Wirkstofftherapie und neuen Behandlungstechniken weiter, damit du von aktuellen, fundierten und wirkungsvollen Methoden profitieren kannst.
+  </p>
+
+  <p>
+    Mein Studio in Wien ist bewusst ruhig, hochwertig und persönlich gestaltet — ein Ort zum Ankommen, Entspannen und Wohlfühlen.
+  </p>
           <div className="pt-6">
             <Link
               to="/kontakt"
