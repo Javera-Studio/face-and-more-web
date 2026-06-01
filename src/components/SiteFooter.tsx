@@ -41,14 +41,11 @@ const SiteFooter = () => (
     <div className="border-t border-border">
       <div className="container-editorial py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
         <p>© {new Date().getFullYear()} FACE AND MORE by Michaela Kornherr</p>
-        <p>Premium Skin Studio · Wien</p>
-      </div>
-      <div className="container-editorial pb-6 flex justify-center">
         <a
           href="https://javera-studio.at"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 opacity-[0.28] hover:opacity-50 transition-opacity duration-500"
+          className="inline-flex items-center gap-2 opacity-40 hover:opacity-70 transition-opacity duration-500"
           style={{ textDecoration: "none" }}
         >
           <span className="text-[9px] tracking-[0.18em] uppercase text-muted-foreground font-light">
