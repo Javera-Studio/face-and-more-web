@@ -1,6 +1,8 @@
+'use client'
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { imgSrc } from "@/lib/utils";
 import skinImg from "@/assets/treatment-skin.jpg";
 import antiagingImg from "@/assets/treatment-antiaging.jpg";
 import fruchtImg from "@/assets/treatment-fruchtsaeure.jpg";
@@ -46,10 +48,10 @@ const TreatmentRow = ({ item, index }: { item: typeof treatments[number]; index:
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <Link to={item.to} className="block overflow-hidden bg-muted">
+          <Link href={item.to} className="block overflow-hidden bg-muted">
             <div className="aspect-[4/3] md:aspect-[5/4] overflow-hidden">
               <img
-                src={item.img}
+                src={imgSrc(item.img)}
                 alt={item.title}
                 loading="lazy"
                 className={`w-full h-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.04] ${
@@ -82,7 +84,7 @@ const TreatmentRow = ({ item, index }: { item: typeof treatments[number]; index:
           </div>
 
           <Link
-            to={item.to}
+            href={item.to}
             className="mt-10 inline-flex items-center gap-2 text-sm tracking-wide text-foreground border-b border-foreground/30 pb-1 transition-all duration-300 hover:text-primary hover:border-primary hover:gap-3"
           >
             Mehr erfahren
@@ -102,7 +104,7 @@ const Treatments = () => (
           <p className="eyebrow mb-5">Beliebte Behandlungen</p>
           <h2 className="headline">Gezielte Behandlungen für deine Haut.</h2>
         </div>
-        <Link to="/leistungen" className="link-underline text-sm">
+        <Link href="/leistungen" className="link-underline text-sm">
           Alle Leistungen
           <ArrowUpRight size={16} />
         </Link>
@@ -119,7 +121,7 @@ const Treatments = () => (
           Nicht sicher, welche Behandlung zu dir passt?
         </p>
         <Link
-          to="/hautanalyse"
+          href="/hautanalyse"
           className="group inline-flex items-center gap-2 px-7 py-4 bg-primary text-primary-foreground text-sm tracking-wide hover:bg-primary-glow transition-colors shrink-0"
         >
           Hautanalyse buchen

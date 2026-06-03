@@ -1,10 +1,12 @@
+'use client'
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { imgSrc } from "@/lib/utils";
 
 export interface CarouselProduct {
   name: string;
   desc: string;
-  image: string;
+  image: any;
 }
 
 interface ProductCarouselProps {
@@ -61,7 +63,7 @@ const ProductCarousel = ({ products }: ProductCarouselProps) => {
                 }`}
               >
                 <img
-                  src={p.image}
+                  src={imgSrc(p.image)}
                   alt={p.name}
                   className="w-full h-full object-cover"
                   loading="lazy"

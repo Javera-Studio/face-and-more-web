@@ -1,5 +1,6 @@
+'use client'
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 const concerns = [
@@ -42,7 +43,7 @@ const ConcernRow = ({ title, desc, index }: { title: string; desc: string; index
       style={{ transitionDelay: `${index * 60}ms` }}
     >
       <Link
-        to="/hautanalyse"
+        href="/hautanalyse"
         className="flex items-baseline gap-5 md:gap-8 py-6 md:py-7 transition-colors hover:text-primary"
       >
         <span className="eyebrow shrink-0 w-8 text-muted-foreground">
@@ -81,7 +82,7 @@ const Concerns = () => (
 
       <div className="mt-12">
         <Link
-          to="/hautanalyse"
+          href="/hautanalyse"
           className="group inline-flex items-center gap-3 text-primary border-b border-primary/40 pb-1 hover:border-primary transition-colors"
         >
           Jetzt Haut analysieren lassen

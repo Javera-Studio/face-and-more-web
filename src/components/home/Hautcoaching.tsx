@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { imgSrc } from "@/lib/utils";
 import jugendImg from "@/assets/jugendliche-haut.jpg";
 import reifeImg from "@/assets/reife-haut.jpg";
 import allgemeinImg from "@/assets/allgemeine-hautberatung.jpg";
@@ -43,12 +44,12 @@ const Hautcoaching = () => (
           </p>
           <div className="mt-6 flex flex-wrap gap-4">
             <Link
-              to="/kontakt"
+              href="/kontakt"
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground text-sm tracking-wide hover:bg-primary-glow transition-colors"
             >
               Coaching-Termin buchen <ArrowUpRight size={14} />
             </Link>
-            <Link to="/hautcoaching" className="link-underline inline-flex items-center text-sm">
+            <Link href="/hautcoaching" className="link-underline inline-flex items-center text-sm">
               Mehr über Hautcoaching <ArrowUpRight size={16} />
             </Link>
           </div>
@@ -59,12 +60,12 @@ const Hautcoaching = () => (
         {paths.map((p) => (
           <Link
             key={p.title}
-            to={p.to}
+            href={p.to}
             className="group flex flex-col bg-background transition-all duration-500"
           >
             <div className="aspect-[4/5] overflow-hidden bg-muted">
               <img
-                src={p.img}
+                src={imgSrc(p.img)}
                 alt={p.title}
                 loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.04]"

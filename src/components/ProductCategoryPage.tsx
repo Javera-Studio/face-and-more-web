@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import SiteLayout from "@/components/SiteLayout";
 import PageHero from "@/components/PageHero";
@@ -28,7 +28,7 @@ const ProductCategoryPage = ({ eyebrow, title, intro, description }: ProductCate
     <section className="py-20 md:py-28">
       <div className="container-editorial">
         <Link
-          to="/produkte"
+          href="/produkte"
           className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-12"
         >
           <ArrowLeft size={16} /> Zurück zu allen Kategorien
@@ -50,14 +50,14 @@ const ProductCategoryPage = ({ eyebrow, title, intro, description }: ProductCate
           </p>
           <div className="mt-10 flex flex-wrap gap-4 justify-center">
             <Link
-              to="/hautanalyse"
+              href="/hautanalyse"
               className="group inline-flex items-center gap-2 px-7 py-4 bg-primary text-primary-foreground text-sm tracking-wide hover:bg-primary-glow transition-colors"
             >
               Hautanalyse buchen{" "}
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
             </Link>
             <Link
-              to="/kontakt"
+              href="/kontakt"
               className="inline-flex items-center px-7 py-4 border border-border text-sm tracking-wide hover:border-primary hover:text-primary transition-colors"
             >
               Persönliche Beratung

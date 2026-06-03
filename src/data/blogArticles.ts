@@ -10,7 +10,7 @@ export interface BlogArticle {
   title: string;
   category: string;
   excerpt: string;
-  image: string;
+  image: any;
   relatedTo: string;
   content: { heading?: string; text: string }[];
 }

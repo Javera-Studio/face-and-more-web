@@ -1,10 +1,12 @@
+﻿'use client'
 import { ReactNode, useState } from "react";
 import SiteLayout from "@/components/SiteLayout";
-import { Link } from "react-router-dom";
-import { ArrowRight, Check, Plus, Clock, Tag, Repeat } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, Plus, Clock, Tag, Repeat } from "lucide-react";
+import { imgSrc } from "@/lib/utils";
 import haut1 from "@/assets/haut1.jpg";
 import studioImg from "@/assets/studio.jpg";
-import michaelaImg from "@/assets/michaela.jpg";
+import michaelaImg from "@/assets/michaela.avif";
 
 interface Faq { q: string; a: string }
 interface Step { t: string; d: string }
@@ -15,8 +17,8 @@ export interface TreatmentPageProps {
   title: ReactNode;
   subtitle: string;
   intro: string;
-  heroImage: string;
-  gallery: [string, string, string];
+  heroImage: any;
+  gallery: [any, any, any];
   benefits: string[];
   process: Step[];
   prices: PriceItem[];
@@ -58,19 +60,19 @@ const TreatmentPage = (p: TreatmentPageProps) => (
           <p className="lede mt-6 max-w-xl">{p.subtitle}</p>
           <div className="mt-9 flex flex-wrap gap-4">
             <Link
-              to="/kontakt"
+              href="/kontakt"
               className="group inline-flex items-center gap-2 px-7 py-4 bg-primary text-primary-foreground text-sm tracking-wide hover:bg-primary-glow transition-colors"
             >
               Termin buchen <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
             </Link>
-            <Link to="/leistungen" className="inline-flex items-center px-7 py-4 border border-border text-sm tracking-wide hover:border-primary hover:text-primary transition-colors">
+            <Link href="/leistungen" className="inline-flex items-center px-7 py-4 border border-border text-sm tracking-wide hover:border-primary hover:text-primary transition-colors">
               Alle Leistungen
             </Link>
           </div>
         </div>
         <div className="lg:col-span-6">
           <div className="aspect-[4/5] md:aspect-[5/6] overflow-hidden shadow-soft">
-            <img src={p.heroImage} alt={p.eyebrow} className="w-full h-full object-cover" />
+            <img src={imgSrc(p.heroImage)} alt={p.eyebrow} className="w-full h-full object-cover" />
           </div>
         </div>
       </div>
@@ -94,7 +96,7 @@ const TreatmentPage = (p: TreatmentPageProps) => (
     <section className="pb-24 md:pb-32">
       <div className="container-editorial">
         <div className="aspect-[16/8] overflow-hidden">
-          <img src={p.gallery[0]} alt="" className="w-full h-full object-cover" loading="lazy" />
+          <img src={imgSrc(p.gallery[0])} alt="" className="w-full h-full object-cover" loading="lazy" />
         </div>
       </div>
     </section>
@@ -147,7 +149,7 @@ const TreatmentPage = (p: TreatmentPageProps) => (
           </ol>
         </div>
         <div className="lg:col-span-5 overflow-hidden">
-          <img src={michaelaImg} alt="" className="w-full h-full object-cover" loading="lazy" />
+          <img src={imgSrc(michaelaImg)} alt="" className="w-full h-full object-cover" loading="lazy" />
         </div>
       </div>
     </section>
@@ -200,7 +202,7 @@ const TreatmentPage = (p: TreatmentPageProps) => (
               </p>
             </div>
             <div className="aspect-[4/3] overflow-hidden shadow-soft">
-              <img src={haut1} alt="" className="w-full h-full object-cover" loading="lazy" />
+              <img src={imgSrc(haut1)} alt="" className="w-full h-full object-cover" loading="lazy" />
             </div>
           </div>
         ) : (
@@ -244,7 +246,7 @@ const TreatmentPage = (p: TreatmentPageProps) => (
     <section className="py-24 md:py-32">
       <div className="container-editorial grid md:grid-cols-2 gap-6 items-center">
         <div className="aspect-[3/4] overflow-hidden">
-          <img src={studioImg} alt="" className="w-full h-full object-cover" loading="lazy" />
+          <img src={imgSrc(studioImg)} alt="" className="w-full h-full object-cover" loading="lazy" />
         </div>
         <div className="flex flex-col justify-center">
           <p className="eyebrow mb-5">Persönlich. Diskret.</p>
@@ -268,7 +270,7 @@ const TreatmentPage = (p: TreatmentPageProps) => (
           <p className="mt-6 text-foreground/75 leading-relaxed">
             Du hast eine Frage, die hier nicht beantwortet ist? Schreib mir — ich melde mich persönlich zurück.
           </p>
-          <Link to="/kontakt" className="link-underline mt-8 inline-block text-sm">
+          <Link href="/kontakt" className="link-underline mt-8 inline-block text-sm">
             Frage stellen →
           </Link>
         </div>
@@ -289,7 +291,7 @@ const TreatmentPage = (p: TreatmentPageProps) => (
           Buche dein persönliches Erstgespräch oder direkt deinen Termin im Studio FACE AND MORE in Wien.
         </p>
         <Link
-          to="/kontakt"
+          href="/kontakt"
           className="group mt-10 inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground text-sm tracking-wide hover:bg-primary-glow transition-colors"
         >
           Termin buchen <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />

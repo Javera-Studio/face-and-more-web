@@ -1,5 +1,2 @@
-import { createRoot } from "react-dom/client";
-import App from "./App.tsx";
-import "./index.css";
-
-createRoot(document.getElementById("root")!).render(<App />);
+﻿// Vite entry point - not used in Next.js
+export {};

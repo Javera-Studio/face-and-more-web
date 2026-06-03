@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Editorial premium skin clinic palette */
+    --background: 340 18% 97%;          /* #FAFAF8 warm off-white */
+    --foreground: 0 0% 18%;            /* #2E2E2E deep ink */
+
+    --card: 340 18% 98%;
+    --card-foreground: 0 0% 18%;
+
+    --popover: 60 14% 99%;
+    --popover-foreground: 0 0% 18%;
+
+    /* Logo teal */
+    --primary: 180 79% 33%;            /* #129798 */
+    --primary-foreground: 60 14% 98%;
+    --primary-soft: 173 31% 95%;       /* #EEF7F6 */
+    --primary-glow: 180 80% 28%;       /* #0E7F80 hover */
+
+    --secondary: 340 25% 90%;          /* soft aqua #EEF7F6 */
+    --secondary-foreground: 0 0% 18%;
+
+    --muted: 340 15% 93%;
+    --muted-foreground: 0 0% 38%;
+
+    --accent: 173 31% 95%;
+    --accent-foreground: 0 0% 18%;
+
+    --destructive: 0 60% 45%;
+    --destructive-foreground: 60 14% 98%;
+
+    --border: 60 8% 88%;
+    --input: 60 8% 88%;
+    --ring: 180 79% 33%;
+
+    --radius: 0.25rem;
+
+   --gradient-warm: linear-gradient(180deg, hsl(340 18% 98%) 0%, hsl(340 25% 92%) 100%);
+    --gradient-teal: linear-gradient(135deg, hsl(180 79% 33%), hsl(180 80% 28%));
+    --shadow-soft: 0 1px 2px hsl(0 0% 18% / 0.04), 0 12px 40px -12px hsl(0 0% 18% / 0.08);
+    --shadow-elegant: 0 30px 60px -30px hsl(180 79% 33% / 0.22);
+    --transition-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+
+    --sidebar-background: 36 30% 97%;
+    --sidebar-foreground: 200 15% 16%;
+    --sidebar-primary: 188 38% 30%;
+    --sidebar-primary-foreground: 36 30% 97%;
+    --sidebar-accent: 32 18% 94%;
+    --sidebar-accent-foreground: 200 15% 16%;
+    --sidebar-border: 32 14% 88%;
+    --sidebar-ring: 188 38% 30%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-feature-settings: 'ss01', 'cv11';
+  }
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer components {
+  .container-editorial {
+    @apply mx-auto px-6 md:px-10 lg:px-16;
+    max-width: 1340px;
+  }
+  .eyebrow {
+    @apply text-[0.7rem] uppercase tracking-[0.22em] text-muted-foreground font-medium;
+  }
+  .display {
+    @apply font-serif leading-[1.05] text-foreground;
+    font-size: clamp(2.5rem, 5.5vw, 4.75rem);
+  }
+  .headline {
+    @apply font-serif leading-[1.1] text-foreground;
+    font-size: clamp(2rem, 3.6vw, 3.25rem);
+  }
+  .lede {
+    @apply text-base md:text-lg text-muted-foreground leading-relaxed;
+  }
+  .link-underline {
+    @apply relative inline-flex items-center gap-2 text-foreground transition-colors hover:text-primary;
+  }
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: reveal 0.9s var(--transition-smooth) forwards;
+  }
+  .reveal-delay-1 { animation-delay: 0.12s; }
+  .reveal-delay-2 { animation-delay: 0.24s; }
+  .reveal-delay-3 { animation-delay: 0.36s; }
+}
+
+@keyframes reveal {
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Calendar, ArrowUpRight } from "lucide-react";
 
 const WhatsAppIcon = () => (
@@ -22,7 +22,6 @@ const Booking = () => (
       </div>
 
       <div className="mt-12 grid lg:grid-cols-3 gap-6 items-stretch">
-        {/* WhatsApp — primary */}
         <a
           href="https://wa.me/436776292066?text=Hallo%20Michaela%2C%20ich%20m%C3%B6chte%20gerne%20einen%20Termin%20vereinbaren."
           target="_blank"
@@ -44,10 +43,9 @@ const Booking = () => (
           </div>
         </a>
 
-        {/* Rechte Spalte — Kontaktformular + Treatwell */}
         <div className="flex flex-col gap-6">
           <Link
-            to="/kontakt"
+            href="/kontakt"
             className="group flex-1 bg-background/5 border border-background/15 p-8 flex flex-col justify-between hover:bg-background/10 transition-colors"
           >
             <div className="flex items-start justify-between">

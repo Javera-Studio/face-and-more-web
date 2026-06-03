@@ -1,21 +1,23 @@
+'use client'
 import { ReactNode } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import SiteLayout from "@/components/SiteLayout";
 import ProductCarousel, { CarouselProduct } from "@/components/ProductCarousel";
+import { imgSrc } from "@/lib/utils";
 
 interface RecommendedTreatment {
   title: string;
   desc: string;
   to: string;
-  image: string;
+  image: any;
 }
 
 export interface HautcoachingDetailProps {
   eyebrow: string;
   title: ReactNode;
   subtitle: string;
-  heroImage: string;
+  heroImage: any;
   intro: string;
   treatments: RecommendedTreatment[];
   products: CarouselProduct[];
@@ -32,19 +34,19 @@ const HautcoachingDetailPage = (p: HautcoachingDetailProps) => (
           <p className="lede mt-6 max-w-xl">{p.subtitle}</p>
           <div className="mt-9 flex flex-wrap gap-4">
             <Link
-              to="/kontakt"
+              href="/kontakt"
               className="group inline-flex items-center gap-2 px-7 py-4 bg-primary text-primary-foreground text-sm tracking-wide hover:bg-primary-glow transition-colors"
             >
               Termin buchen <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
             </Link>
-            <Link to="/hautcoaching" className="inline-flex items-center px-7 py-4 border border-border text-sm tracking-wide hover:border-primary hover:text-primary transition-colors">
+            <Link href="/hautcoaching" className="inline-flex items-center px-7 py-4 border border-border text-sm tracking-wide hover:border-primary hover:text-primary transition-colors">
               Alle Coachings
             </Link>
           </div>
         </div>
         <div className="lg:col-span-6">
           <div className="aspect-[4/5] md:aspect-[5/6] overflow-hidden shadow-soft">
-            <img src={p.heroImage} alt={p.eyebrow} className="w-full h-full object-cover" />
+            <img src={imgSrc(p.heroImage)} alt={p.eyebrow} className="w-full h-full object-cover" />
           </div>
         </div>
       </div>
@@ -74,10 +76,10 @@ const HautcoachingDetailPage = (p: HautcoachingDetailProps) => (
 
         <div className="grid md:grid-cols-3 gap-8 md:gap-10">
           {p.treatments.map((t) => (
-            <Link key={t.title} to={t.to} className="group flex flex-col">
+            <Link key={t.title} href={t.to} className="group flex flex-col">
               <div className="aspect-[4/5] overflow-hidden bg-muted">
                 <img
-                  src={t.image}
+                  src={imgSrc(t.image)}
                   alt={t.title}
                   loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.04]"
@@ -123,7 +125,7 @@ const HautcoachingDetailPage = (p: HautcoachingDetailProps) => (
         </h2>
         <p className="lede mt-6">Buche dein persönliches Hautcoaching im Studio FACE AND MORE in Wien.</p>
         <Link
-          to="/kontakt"
+          href="/kontakt"
           className="group mt-10 inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground text-sm tracking-wide hover:bg-primary-glow transition-colors"
         >
           Termin buchen <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />

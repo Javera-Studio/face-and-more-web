@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { ArrowRight, Droplet, Aperture, Clock, Sun, Activity, Layers } from "lucide-react";
 import analysisImg from "@/assets/skin-analysis.jpg";
+import { imgSrc } from "@/lib/utils";
 
 const metrics = [
   { icon: Droplet, label: "Feuchtigkeit" },
@@ -25,7 +26,7 @@ const SkinAnalysis = () => (
         <div className="lg:col-span-6 lg:sticky lg:top-28">
           <div className="aspect-[4/5] overflow-hidden bg-muted shadow-elegant">
             <img
-              src={analysisImg}
+              src={imgSrc(analysisImg)}
               alt="Modernes 3D-Hautanalysegerät im Studio FACE AND MORE Wien"
               className="w-full h-full object-cover"
               loading="lazy"
@@ -74,7 +75,7 @@ const SkinAnalysis = () => (
           </div>
 
           <Link
-            to="/kontakt"
+            href="/kontakt"
             className="group mt-10 inline-flex items-center justify-center gap-2 px-7 py-4 bg-primary text-primary-foreground text-sm tracking-wide hover:bg-primary-glow transition-colors"
           >
             Hautanalyse Termin buchen

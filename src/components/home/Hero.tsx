@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { ArrowRight, Sparkles, Star, ShieldCheck, HeartHandshake } from "lucide-react";
 import heroImg from "@/assets/hero-skin.jpg";
+import { imgSrc } from "@/lib/utils";
 
 const Hero = () => (
   <section className="relative overflow-hidden bg-gradient-warm">
@@ -18,14 +19,14 @@ const Hero = () => (
 
         <div className="mt-10 flex flex-col sm:flex-row gap-3">
           <Link
-            to="/hautanalyse"
+            href="/hautanalyse"
             className="group inline-flex items-center justify-center gap-2 px-7 py-4 bg-primary text-primary-foreground text-sm tracking-wide hover:bg-primary-glow transition-colors"
           >
             Hautanalyse buchen
             <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
           </Link>
           <Link
-            to="/leistungen"
+            href="/leistungen"
             className="inline-flex items-center justify-center gap-2 px-7 py-4 border border-foreground/20 text-foreground text-sm tracking-wide hover:border-primary hover:text-primary transition-colors"
           >
             Behandlungen ansehen
@@ -50,7 +51,7 @@ const Hero = () => (
       <div className="lg:col-span-5 reveal reveal-delay-2">
         <div className="relative aspect-[2/3] overflow-hidden shadow-elegant">
           <img
-            src={heroImg}
+            src={imgSrc(heroImg)}
             alt="Hautanalyse und Hautpflege bei FACE AND MORE in Wien"
             className="w-full h-full object-cover"
             loading="eager"

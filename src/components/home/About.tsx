@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom";
-import portrait from "@/assets/michaela.jpg";
+﻿import Link from "next/link";
+import portrait from "@/assets/michaela.avif";
+import { imgSrc } from "@/lib/utils";
 
 const About = () => (
   <section className="py-24 md:py-32 bg-secondary/40">
@@ -7,7 +8,7 @@ const About = () => (
       <div className="lg:col-span-5">
         <div className="aspect-[4/5] overflow-hidden shadow-soft">
           <img
-            src={portrait}
+            src={imgSrc(portrait)}
             alt="Michaela Kornherr — Hautexpertin & Gründerin von FACE AND MORE in Wien"
             loading="lazy"
             className="w-full h-full object-cover"
@@ -43,7 +44,7 @@ const About = () => (
           ))}
         </div>
 
-        <Link to="/ueber-mich" className="link-underline mt-10 text-sm">
+        <Link href="/ueber-mich" className="link-underline mt-10 text-sm">
           Mehr über mich erfahren →
         </Link>
       </div>
