@@ -102,7 +102,7 @@ const Preise = () => (
           Transparente <span className="italic text-primary">Preise</span> für persönliche Hautpflege.
         </>
       }
-      intro="Unsere Preise sind transparent und nachvollziehbar. Welche Behandlung wirklich zu dir passt, besprechen wir gemeinsam in einer persönlichen Beratung — die finale Empfehlung richtet sich immer nach deinem Hautzustand und deinen Zielen."
+      intro="Meine Preise sind transparent und nachvollziehbar. Welche Behandlung wirklich zu dir passt, bespreche ich gerne mit dir in einer persönlichen Beratung — die finale Empfehlung richtet sich immer nach deinem Hautzustand und deinen Zielen."
     />
 
     <div className="container-editorial py-10">

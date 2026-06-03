@@ -244,7 +244,7 @@ const Zubehoer = () => (
             Nicht jedes Hautpflege-Tool eignet sich für jeden Hauttyp. Während manche Haut von sanfter Exfoliation profitiert, benötigen andere Hautbilder besonders beruhigende oder unterstützende Pflege.
           </p>
           <p className="mt-5 text-foreground/75 leading-relaxed max-w-xl">
-            Im Rahmen einer professionellen Hautanalyse helfen wir dabei, die passenden Produkte und Tools für deine individuelle Hautroutine zu finden.
+            Im Rahmen einer professionellen Hautanalyse helfe ich dabei, die passenden Produkte und Tools für deine individuelle Hautroutine zu finden.
           </p>
           <ul className="mt-10 space-y-4">
             {[

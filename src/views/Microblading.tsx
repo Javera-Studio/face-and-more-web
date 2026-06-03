@@ -50,7 +50,7 @@ const benefits = [
 const process = [
   {
     t: "Persönliche Beratung",
-    d: "Wir besprechen gemeinsam deine Wünsche, deine natürliche Brauenform und den genauen Ablauf – ohne Druck, in Ruhe.",
+    d: "Ich bespreche mit dir deine Wünsche, deine natürliche Brauenform und den genauen Ablauf – ohne Druck, in Ruhe.",
   },
   {
     t: "Präzise Vorzeichnung",
@@ -83,7 +83,7 @@ const faqs: Faq[] = [
   },
   {
     q: "Wie läuft die Behandlung ab?",
-    a: "Wir beginnen immer mit einem ausführlichen Gespräch, einer gemeinsamen Vorzeichnung und der Farbabstimmung. Erst wenn du mit der Form zufrieden bist, beginne ich mit der Pigmentierung.",
+    a: "Ich beginne immer mit einem ausführlichen Gespräch, einer gemeinsamen Vorzeichnung und der Farbabstimmung. Erst wenn du mit der Form zufrieden bist, starte ich mit der Pigmentierung.",
   },
   {
     q: "Wie lange dauert die Behandlung?",

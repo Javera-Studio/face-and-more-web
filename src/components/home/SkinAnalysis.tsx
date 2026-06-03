@@ -14,7 +14,7 @@ const metrics = [
 
 const steps = [
   { n: "01", t: "Analyse", d: "Präzise 3D-Aufnahme deiner Haut." },
-  { n: "02", t: "Persönliche Beratung", d: "Wir besprechen Ergebnisse & Ziele." },
+  { n: "02", t: "Persönliche Beratung", d: "Ich bespreche mit dir Ergebnisse & Ziele." },
   { n: "03", t: "Individueller Pflegeplan", d: "Routine, die wirklich zu dir passt." },
   { n: "04", t: "Behandlungsempfehlung", d: "Gezielte Treatments für sichtbare Resultate." },
 ];
@@ -42,8 +42,8 @@ const SkinAnalysis = () => (
             Deine Haut zeigt mehr, als man mit bloßem Auge sieht.
           </h2>
           <p className="lede mt-6">
-            Mit unserer modernen 3D-Hautanalyse erkennen wir Hautzustände sichtbar
-            unter der Oberfläche und erstellen eine individuelle Empfehlung —
+            Mit meiner modernen 3D-Hautanalyse erkenne ich Hautzustände sichtbar
+            unter der Oberfläche und erstelle eine individuelle Empfehlung —
             präzise, fundiert, persönlich.
           </p>
 

@@ -164,7 +164,7 @@ const TreatmentPage = (p: TreatmentPageProps) => (
           </div>
           {p.prices.length > 1 && (
             <p className="text-sm text-muted-foreground max-w-sm">
-              Jede Behandlung wird individuell an deinen Hautzustand angepasst. Gemeinsam finden wir die passende Pflege und Behandlung für deine Hautziele.
+              Ich passe jede Behandlung individuell an deinen Hautzustand an und finde mit dir die passende Pflege für deine Hautziele.
             </p>
           )}
         </div>
@@ -198,7 +198,7 @@ const TreatmentPage = (p: TreatmentPageProps) => (
                 </div>
               ))}
               <p className="text-sm text-muted-foreground leading-relaxed bg-background p-8">
-                Jede Behandlung wird individuell an deinen Hautzustand angepasst. Gemeinsam finden wir die passende Pflege und Behandlung für deine Hautziele.
+                Ich passe jede Behandlung individuell an deinen Hautzustand an und finde mit dir die passende Pflege für deine Hautziele.
               </p>
             </div>
             <div className="aspect-[4/3] overflow-hidden shadow-soft">

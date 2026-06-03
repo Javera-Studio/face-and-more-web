@@ -9,7 +9,7 @@ const Hautanalyse = () => (
     eyebrow="Hautanalyse Wien"
     title={<>Moderne 3D-<span className="italic text-primary">Hautanalyse</span> in Wien.</>}
     subtitle="Der Einstieg in eine Hautpflege, die wirklich zu dir passt — fundiert, präzise und persönlich besprochen."
-    intro="Eine moderne Hautanalyse ist mehr als ein Blick auf die Hautoberfläche. Mit hochauflösender 3D-Technologie machen wir Hautzustände sichtbar, die mit dem bloßen Auge nicht erkennbar sind — und entwickeln einen Pflegeplan, der wirklich passt."
+    intro="Eine moderne Hautanalyse ist mehr als ein Blick auf die Hautoberfläche. Mit hochauflösender 3D-Technologie mache ich Hautzustände sichtbar, die mit dem bloßen Auge nicht erkennbar sind — und entwickle gemeinsam mit dir einen Pflegeplan, der wirklich passt."
     heroImage={hero}
     gallery={[g1, g2, g3]}
   benefits={[

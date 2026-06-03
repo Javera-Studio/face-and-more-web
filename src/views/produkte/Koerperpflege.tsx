@@ -289,7 +289,7 @@ const Koerperpflege = () => (
             Jede Haut hat unterschiedliche Bedürfnisse. Während manche Haut intensive Feuchtigkeit und beruhigende Pflege benötigt, profitieren andere Hautbilder stärker von glättenden Wirkstoffen, Peelings oder straffender Bodycare.
           </p>
           <p className="mt-5 text-foreground/75 leading-relaxed max-w-xl">
-            Im Rahmen einer professionellen Hautanalyse helfen wir dabei, die passende Körperpflege für deine individuellen Hautbedürfnisse zu finden.
+            Im Rahmen einer professionellen Hautanalyse helfe ich dabei, die passende Körperpflege für deine individuellen Hautbedürfnisse zu finden.
           </p>
           <ul className="mt-10 space-y-4">
             {[

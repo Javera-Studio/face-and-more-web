@@ -350,7 +350,7 @@ const Feuchtigkeit = () => (
             Nicht jede Haut benötigt dieselbe Pflege. Während manche Hauttypen intensive Feuchtigkeit und reichhaltige Texturen bevorzugen, profitieren andere stärker von leichter Pflege oder beruhigenden Wirkstoffen.
           </p>
           <p className="mt-5 text-foreground/75 leading-relaxed max-w-xl">
-            Im Rahmen einer professionellen Hautanalyse helfen wir dabei, die passende Pflegeroutine für deine individuellen Hautbedürfnisse zu finden.
+            Im Rahmen einer professionellen Hautanalyse helfe ich dabei, die passende Pflegeroutine für deine individuellen Hautbedürfnisse zu finden.
           </p>
           <ul className="mt-10 space-y-4">
             {[

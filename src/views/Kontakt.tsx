@@ -19,7 +19,7 @@ const Kontakt = () => {
     setSending(true);
     setTimeout(() => {
       setSending(false);
-      toast.success("Vielen Dank — wir melden uns persönlich bei dir.");
+      toast.success("Vielen Dank — ich melde mich persönlich bei dir.");
       (e.target as HTMLFormElement).reset();
     }, 600);
   };

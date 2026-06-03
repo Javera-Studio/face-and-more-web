@@ -17,13 +17,13 @@ const paths = [
   },
   {
     title: "Hautcoaching für reife Haut",
-    text: "Reife Haut hat andere Bedürfnisse. Gemeinsam stimmen wir Pflege, Wirkstoffe und Behandlungen auf deinen aktuellen Hautzustand ab.",
+    text: "Reife Haut hat andere Bedürfnisse. Ich stimme Pflege, Wirkstoffe und Behandlungen individuell auf deinen aktuellen Hautzustand ab.",
     to: "/hautcoaching/reife-haut",
     img: reifeImg,
   },
   {
     title: "Hautcoaching bei Problemhaut",
-    text: "Bei unreiner Haut, Pigmentflecken oder wiederkehrenden Entzündungen erarbeiten wir einen klaren Behandlungs- und Pflegeplan.",
+    text: "Bei unreiner Haut, Pigmentflecken oder wiederkehrenden Entzündungen erarbeite ich mit dir einen klaren Behandlungs- und Pflegeplan.",
     to: "/hautcoaching/allgemeine-hautberatung",
     img: allgemeinImg,
   },
@@ -77,7 +77,7 @@ const Hautcoaching = () => (
         </div>
         <div className="lg:col-span-8">
           <p className="font-serif text-2xl md:text-3xl leading-snug text-foreground/90">
-            Als Hautcoach begleite ich dich nicht nur während der Behandlung im Studio, sondern unterstütze dich auch bei deiner täglichen Pflegeroutine zu Hause. Gemeinsam finden wir heraus, was deine Haut wirklich braucht und welche Schritte langfristig zu einem ruhigeren, reineren und gesünderen Hautbild führen.
+            Als Hautcoach begleite ich dich nicht nur während der Behandlung im Studio, sondern unterstütze dich auch bei deiner täglichen Pflegeroutine zu Hause. Ich finde heraus, was deine Haut wirklich braucht, und zeige dir, welche Schritte langfristig zu einem ruhigeren, reineren und gesünderen Hautbild führen.
           </p>
         </div>
       </div>
@@ -143,7 +143,7 @@ const Hautcoaching = () => (
       <div className="container-editorial text-center max-w-2xl mx-auto">
         <p className="eyebrow mb-5">Bereit?</p>
         <h2 className="headline">
-          Starten wir mit deinem <span className="italic text-primary">Hautcoaching</span>.
+          Starte dein <span className="italic text-primary">Hautcoaching</span>.
         </h2>
         <p className="lede mt-6">
           Buche dein persönliches Beratungsgespräch im Studio FACE AND MORE in Wien.

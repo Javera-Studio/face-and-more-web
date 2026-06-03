@@ -16,7 +16,7 @@ export default function ReifeHaut() {
       title={<>Hautcoaching für <span className="italic text-primary">reife Haut</span>.</>}
       subtitle="Pflege, Wirkstoffe und Behandlungen — abgestimmt auf deinen aktuellen Hautzustand."
       heroImage={hero}
-      intro="Reife Haut braucht eine durchdachte, wirkstoffstarke Pflege. Im Hautcoaching schauen wir gemeinsam, welche Inhaltsstoffe deine Haut wirklich braucht — von Retinol über Peptide bis hin zu Antioxidantien. Ziel ist eine Routine, die dich entspannt, sichtbar pflegt und nachhaltig wirkt."
+      intro="Reife Haut braucht eine durchdachte, wirkstoffstarke Pflege. Im Hautcoaching zeige ich dir, welche Inhaltsstoffe deine Haut wirklich braucht — von Retinol über Peptide bis hin zu Antioxidantien. Ziel ist eine Routine, die dich entspannt, sichtbar pflegt und nachhaltig wirkt."
       treatments={[
         { title: "Anti Aging", desc: "Hochwirksame Wirkstofftherapien für straffe, vitale Haut.", to: "/leistungen/anti-aging", image: antiagingImg },
         { title: "Microneedling", desc: "Aktiviert Kollagen und natürliche Hauterneuerung.", to: "/leistungen/microneedling", image: needlingImg },

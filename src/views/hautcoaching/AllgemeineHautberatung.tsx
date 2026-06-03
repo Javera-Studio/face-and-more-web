@@ -16,7 +16,7 @@ export default function AllgemeineHautberatung() {
       title={<>Hautcoaching bei <span className="italic text-primary">Problemhaut</span>.</>}
       subtitle="Klare Pläne bei Unreinheiten, Pigmentflecken und wiederkehrenden Entzündungen."
       heroImage={hero}
-      intro="Problemhaut hat viele Gesichter — von Rosacea und Couperose über Pigmentflecken bis hin zu hormonell bedingten Unreinheiten. Im persönlichen Hautcoaching analysieren wir die Ursachen, erarbeiten einen klaren Behandlungs- und Pflegeplan und finden eine Routine, die deine Haut wirklich beruhigt."
+      intro="Problemhaut hat viele Gesichter — von Rosacea und Couperose über Pigmentflecken bis hin zu hormonell bedingten Unreinheiten. Im persönlichen Hautcoaching analysiere ich die Ursachen, erarbeite mit dir einen klaren Behandlungs- und Pflegeplan und finde eine Routine, die deine Haut wirklich beruhigt."
       treatments={[
         { title: "Problemhaut", desc: "Sanfte, individuelle Pflege für sensible und gestresste Haut.", to: "/leistungen/problemhaut", image: problemImg },
         { title: "Fruchtsäure Peeling", desc: "Verfeinert das Hautbild und mildert Pigmentflecken.", to: "/leistungen/fruchtsaeure", image: fruchtImg },

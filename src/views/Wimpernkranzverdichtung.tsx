@@ -9,7 +9,7 @@ const Wimpernkranzverdichtung = () => (
     eyebrow="Permanent Make-Up Wien"
     title={<>Natürlich betonte Augen mit <span className="italic text-primary">Wimpernkranzverdichtung</span>.</>}
     subtitle="Permanent Make-Up für einen ausdrucksstarken Blick – natürlich, präzise und typgerecht abgestimmt."
-    intro="Du möchtest deine Wimpern auf natürliche Weise betonen? Eine Wimpernkranzverdichtung oder ein feiner Eyeliner sorgt dafür, dass deine Augen ausdrucksstärker wirken und optisch mehr Tiefe bekommen. Gemeinsam stimmen wir ab, welche Variante am besten zu dir und deinem Gesicht passt."
+    intro="Du möchtest deine Wimpern auf natürliche Weise betonen? Eine Wimpernkranzverdichtung oder ein feiner Eyeliner sorgt dafür, dass deine Augen ausdrucksstärker wirken und optisch mehr Tiefe bekommen. Ich stimme gemeinsam mit dir ab, welche Variante am besten zu dir und deinem Gesicht passt."
     heroImage={hero}
     gallery={[g1, g2, g3]}
     benefits={[
@@ -21,7 +21,7 @@ const Wimpernkranzverdichtung = () => (
       "Langanhaltendes Permanent Make-Up",
     ]}
     process={[
-      { t: "Aufklärungsgespräch", d: "Wir besprechen deine Wünsche, den Ablauf und welche Variante zu dir passt." },
+      { t: "Aufklärungsgespräch", d: "Ich bespreche mit dir deine Wünsche, den Ablauf und welche Variante am besten zu dir passt." },
       { t: "Vorzeichnung & Abstimmung", d: "Eyeliner oder Wimpernkranzverdichtung werden passend zu deiner Augenform abgestimmt." },
       { t: "Pigmentierung", d: "Die Farbe wird präzise am Wimpernkranz eingearbeitet." },
       { t: "Pflege & Nachbehandlung", d: "Du erhältst eine Healing Creme, Pflegeanleitung und die Nachbearbeitung innerhalb von 2 Monaten." },

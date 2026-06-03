@@ -226,7 +226,7 @@ const Produkte = () => (
             Ich arbeite bewusst mit ASAP Australian Skincare, weil die Produkte wirksam, modern und gleichzeitig hautfreundlich sind. Die Pflege basiert auf hochwertigen Wirkstoffen, ist vegan, tierversuchsfrei und frei von unnötigen Zusatzstoffen.
           </p>
           <p className="mt-5 text-foreground/75 leading-relaxed max-w-xl">
-            Gemeinsam finden wir die Produkte, die wirklich zu deiner Haut passen — statt wahllos Produkte auszuprobieren.
+            Ich finde mit dir die Produkte, die wirklich zu deiner Haut passen — statt wahllos auszuprobieren.
           </p>
         </div>
       </div>
@@ -339,7 +339,7 @@ const Produkte = () => (
           Unsicher, welche Produkte zu deiner <span className="italic text-primary">Haut</span> passen?
         </h2>
         <p className="lede mt-6">
-          Bei einer persönlichen Hautanalyse finden wir gemeinsam die passende Pflegeroutine für deine Haut.
+          Bei einer persönlichen Hautanalyse finde ich mit dir die passende Pflegeroutine für deine Haut.
         </p>
         <Link
           href="/hautanalyse"

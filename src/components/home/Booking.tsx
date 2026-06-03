@@ -56,7 +56,7 @@ const Booking = () => (
               <p className="eyebrow text-background/50 mb-1">Alternativ</p>
               <p className="font-serif text-xl">Kontaktformular</p>
               <p className="mt-1 text-xs text-background/60 leading-relaxed">
-                Anfrage schreiben, wir melden uns persönlich.
+                Anfrage schreiben, ich melde mich persönlich.
               </p>
             </div>
           </Link>

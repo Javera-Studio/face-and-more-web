@@ -8,8 +8,8 @@ const Problemhaut = () => (
   <TreatmentPage
     eyebrow="Problemhaut Wien"
     title={<>Problemhaut — <span className="italic text-primary">verstanden</span> & ausgeglichen.</>}
-    subtitle="Wenn deine Haut sensibel, gerötet oder unausgeglichen ist — wir finden gemeinsam einen Weg, der wirklich passt."
-    intro="Problemhaut braucht Verständnis statt schneller Lösungen. Wir analysieren in Ruhe, was deine Haut belastet, und entwickeln eine Behandlung, die langfristig stärkt — sanft, individuell und mit echter Begleitung."
+    subtitle="Wenn deine Haut sensibel, gerötet oder unausgeglichen ist — ich finde mit dir einen Weg, der wirklich passt."
+    intro="Problemhaut braucht Verständnis statt schneller Lösungen. Ich analysiere in Ruhe, was deine Haut belastet, und entwickle eine Behandlung, die langfristig stärkt — sanft, individuell und mit echter Begleitung."
     heroImage={hero}
     gallery={[g1, g2, g3]}
     benefits={[

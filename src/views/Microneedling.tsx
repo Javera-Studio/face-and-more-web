@@ -9,7 +9,7 @@ const Microneedling = () => (
     eyebrow="Microneedling Wien"
     title={<>Straffere und strahlendere Haut mit <span className="italic text-primary">Microneedling</span>.</>}
     subtitle="Effektive Behandlung gegen Falten, Narben, große Poren und müde Haut."
-    intro="Microneedling ist eine moderne und effektive Behandlung zur Verbesserung des Hautbildes. Die Haut wirkt straffer, frischer und ebenmäßiger. Besonders bei Falten, Narben, großen Poren oder schlaffer Haut können bereits nach der ersten Behandlung sichtbare Ergebnisse erzielt werden."
+    intro="Microneedling ist eine meiner wirkungsvollsten Behandlungen zur Verbesserung des Hautbildes. Ich setze sie gezielt ein, wenn die Haut straffer, frischer und ebenmäßiger werden soll – besonders bei Falten, Narben, großen Poren oder schlaffer Haut. Bereits nach der ersten Sitzung sind sichtbare Ergebnisse möglich."
     heroImage={hero}
     gallery={[g1, g2, g3]}
     benefits={[
@@ -21,10 +21,10 @@ const Microneedling = () => (
       "Frischer und strahlender Teint",
     ]}
     process={[
-      { t: "Hautanalyse & Beratung", d: "Individuelle Analyse deiner Haut und persönliche Beratung." },
-      { t: "Vorbereitung der Haut", d: "Reinigung, Peeling und Desinfektion der Haut." },
-      { t: "Microneedling Behandlung", d: "Hyaluron wird mittels Dermapen sanft in die Haut eingeschleust." },
-      { t: "Abschluss & Pflege", d: "Beruhigende Abschlussmaske und Pflegehinweise für Zuhause." },
+      { t: "Hautanalyse & Beratung", d: "Ich analysiere deine Haut individuell und bespreche mit dir die passende Behandlung." },
+      { t: "Vorbereitung der Haut", d: "Ich reinige, pelle und desinfiziere die Haut sorgfältig vor." },
+      { t: "Microneedling Behandlung", d: "Ich schleuße Hyaluron mittels Dermapen sanft in die Haut ein." },
+      { t: "Abschluss & Pflege", d: "Ich lege eine beruhigende Abschlussmaske auf und gebe dir alle Pflegehinweise für Zuhause mit." },
     ]}
     prices={[
       { name: "Microneedling mit Hyaluron", duration: "60 Min", price: "€ 136 inkl. MwSt." },
@@ -34,7 +34,7 @@ const Microneedling = () => (
     faqs={[
   {
     q: "Was passiert bei einer Microneedling Behandlung?",
-    a: "Beim Microneedling wird die Haut mit einem Dermapen behandelt. Die feinen Nadeln regen die Hauterneuerung, die Kollagenbildung und die Durchblutung an. Nach Reinigung, Peeling und Desinfektion werden Wirkstoffe wie Hyaluron tief in die Haut eingeschleust. Zum Abschluss beruhigt eine pflegende Maske die Haut. Die Behandlung dauert etwa 60 Minuten.",
+    a: "Beim Microneedling behandle ich deine Haut mit einem Dermapen. Die feinen Nadeln regen die Hauterneuerung, die Kollagenbildung und die Durchblutung an. Nach Reinigung, Peeling und Desinfektion schleuße ich Wirkstoffe wie Hyaluron tief in die Haut ein. Zum Abschluss lege ich eine pflegende Maske auf. Die Behandlung dauert etwa 60 Minuten.",
   },
   {
     q: "Für welche Hautprobleme eignet sich Microneedling?",

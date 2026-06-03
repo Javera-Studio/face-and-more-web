@@ -10,7 +10,7 @@ export default function Akne() {
       eyebrow="Aknebehandlung Wien"
       title={<>Gezielte <span className="italic text-primary">Aknebehandlungen</span> für reine und ausgeglichene Haut.</>}
       subtitle="Individuelle Aknebehandlungen und Hautcoaching für jugendliche sowie reife Haut."
-      intro="Unreine Haut, Akne oder entzündete Hautstellen brauchen eine individuell abgestimmte Behandlung. Durch meine langjährige Erfahrung als Hautcoach unterstütze ich Jugendliche und Erwachsene dabei, ihr Hautbild nachhaltig zu verbessern. Gemeinsam kombinieren wir professionelle Behandlungen im Studio mit der passenden Pflegeroutine für Zuhause."
+      intro="Unreine Haut, Akne oder entzündete Hautstellen brauchen eine individuell abgestimmte Behandlung. Durch meine langjährige Erfahrung als Hautcoach unterstütze ich Jugendliche und Erwachsene dabei, ihr Hautbild nachhaltig zu verbessern. Ich kombiniere professionelle Behandlungen im Studio mit der passenden Pflegeroutine für Zuhause."
       heroImage={hero}
       gallery={[g1, g2, g3]}
       benefits={[

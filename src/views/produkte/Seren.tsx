@@ -292,7 +292,7 @@ const Seren = () => (
             Jede Haut hat unterschiedliche Bedürfnisse. Während manche Hauttypen intensive Feuchtigkeit und Beruhigung benötigen, profitieren andere stärker von regenerierenden Wirkstoffen, Vitamin C oder Retinol.
           </p>
           <p className="mt-5 text-foreground/75 leading-relaxed max-w-xl">
-            Im Rahmen einer professionellen Hautanalyse helfen wir dabei, die passenden Wirkstoffseren für deine individuelle Hautroutine zu finden.
+            Im Rahmen einer professionellen Hautanalyse helfe ich dabei, die passenden Wirkstoffseren für deine individuelle Hautroutine zu finden.
           </p>
           <ul className="mt-10 space-y-4">
             {[

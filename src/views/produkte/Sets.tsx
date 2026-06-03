@@ -301,7 +301,7 @@ const Sets = () => (
             Nicht jede Haut benötigt dieselbe Routine. Während manche Hauttypen intensive Feuchtigkeit und Schutz benötigen, profitieren andere stärker von regenerierenden Wirkstoffen oder gezielter Pflege bei Unreinheiten.
           </p>
           <p className="mt-5 text-foreground/75 leading-relaxed max-w-xl">
-            Im Rahmen einer professionellen Hautanalyse helfen wir dabei, die passende Pflegekombination für deine individuellen Hautbedürfnisse zu finden.
+            Im Rahmen einer professionellen Hautanalyse helfe ich dabei, die passende Pflegekombination für deine individuellen Hautbedürfnisse zu finden.
           </p>
           <ul className="mt-10 space-y-4">
             {[

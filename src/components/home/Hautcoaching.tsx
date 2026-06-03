@@ -14,13 +14,13 @@ const paths = [
   },
   {
     title: "Hautcoaching für reife Haut",
-    text: "Reife Haut hat andere Bedürfnisse. Gemeinsam stimmen wir Pflege, Wirkstoffe und Behandlungen auf deinen aktuellen Hautzustand ab.",
+    text: "Reife Haut hat andere Bedürfnisse. Ich stimme Pflege, Wirkstoffe und Behandlungen individuell auf deinen aktuellen Hautzustand ab.",
     to: "/hautcoaching/reife-haut",
     img: reifeImg,
   },
   {
     title: "Hautcoaching bei Problemhaut",
-    text: "Bei unreiner Haut, Pigmentflecken oder wiederkehrenden Entzündungen erarbeiten wir einen klaren Behandlungs- und Pflegeplan.",
+    text: "Bei unreiner Haut, Pigmentflecken oder wiederkehrenden Entzündungen erarbeite ich mit dir einen klaren Behandlungs- und Pflegeplan.",
     to: "/hautcoaching/allgemeine-hautberatung",
     img: allgemeinImg,
   },
