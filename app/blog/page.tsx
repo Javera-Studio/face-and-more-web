@@ -3,15 +3,30 @@ import { ArrowRight } from "lucide-react";
 import SiteLayout from "@/components/SiteLayout";
 import PageHero from "@/components/PageHero";
 import { fetchBlogPosts } from "@/../../lib/notion";
+import articles from "@/data/blogArticles";
+import { imgSrc } from "@/lib/utils";
 
 export const revalidate = 3600
 
+const fallbackPosts = articles.map((a) => ({
+  id: a.slug,
+  slug: a.slug,
+  title: a.title,
+  category: a.category,
+  excerpt: a.excerpt,
+  coverUrl: imgSrc(a.image),
+  publishedAt: '',
+  content: a.content,
+  relatedTo: a.relatedTo,
+}))
+
 export default async function BlogPage() {
-  let posts = []
+  let posts: typeof fallbackPosts = []
   try {
-    posts = await fetchBlogPosts()
+    const notion = await fetchBlogPosts()
+    posts = notion.length > 0 ? notion : fallbackPosts
   } catch (e) {
-    // Notion not configured yet — render empty state
+    posts = fallbackPosts
   }
 
   return (
@@ -28,49 +43,37 @@ export default async function BlogPage() {
 
       <section className="py-20 md:py-28">
         <div className="container-editorial">
-          {posts.length === 0 ? (
-            <div className="border border-border/70 bg-secondary/30 px-8 py-20 md:py-28 text-center max-w-2xl mx-auto">
-              <p className="eyebrow mb-5">Bald verfügbar</p>
-              <h2 className="font-serif text-3xl md:text-4xl leading-tight">
-                Neue Artikel folgen <span className="italic text-primary">in Kürze</span>.
-              </h2>
-              <p className="lede mt-6 max-w-lg mx-auto">
-                Bald findest du hier Hautpflegewissen, Wirkstoff-Guides und persönliche Einblicke aus dem Studio.
-              </p>
-            </div>
-          ) : (
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-x-10 lg:gap-y-20">
-              {posts.map((post) => (
-                <article key={post.id} className="group flex flex-col">
-                  <Link href={`/blog/${post.slug}`} className="aspect-[4/5] overflow-hidden mb-6 block bg-secondary/30">
-                    {post.coverUrl ? (
-                      <img
-                        src={post.coverUrl}
-                        alt={post.title}
-                        loading="lazy"
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-                      />
-                    ) : (
-                      <div className="w-full h-full bg-gradient-warm flex items-center justify-center">
-                        <span className="eyebrow text-primary">{post.category}</span>
-                      </div>
-                    )}
-                  </Link>
-                  <p className="eyebrow mb-3">{post.category}</p>
-                  <h2 className="font-serif text-2xl leading-snug text-foreground group-hover:text-primary transition-colors">
-                    <Link href={`/blog/${post.slug}`}>{post.title}</Link>
-                  </h2>
-                  <p className="mt-4 text-foreground/70 leading-relaxed text-sm">{post.excerpt}</p>
-                  <Link
-                    href={`/blog/${post.slug}`}
-                    className="mt-6 inline-flex items-center gap-2 text-sm tracking-wide text-primary hover:text-primary-glow transition-colors"
-                  >
-                    Artikel lesen <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-                  </Link>
-                </article>
-              ))}
-            </div>
-          )}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-x-10 lg:gap-y-20">
+            {posts.map((post) => (
+              <article key={post.id} className="group flex flex-col">
+                <Link href={`/blog/${post.slug}`} className="aspect-[4/5] overflow-hidden mb-6 block bg-secondary/30">
+                  {post.coverUrl ? (
+                    <img
+                      src={post.coverUrl}
+                      alt={post.title}
+                      loading="lazy"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gradient-warm flex items-center justify-center">
+                      <span className="eyebrow text-primary">{post.category}</span>
+                    </div>
+                  )}
+                </Link>
+                <p className="eyebrow mb-3">{post.category}</p>
+                <h2 className="font-serif text-2xl leading-snug text-foreground group-hover:text-primary transition-colors">
+                  <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                </h2>
+                <p className="mt-4 text-foreground/70 leading-relaxed text-sm">{post.excerpt}</p>
+                <Link
+                  href={`/blog/${post.slug}`}
+                  className="mt-6 inline-flex items-center gap-2 text-sm tracking-wide text-primary hover:text-primary-glow transition-colors"
+                >
+                  Artikel lesen <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                </Link>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 

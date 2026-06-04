@@ -3,15 +3,35 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import SiteLayout from "@/components/SiteLayout";
 import { fetchBlogPosts, fetchBlogPostBySlug } from "@/../../lib/notion";
+import articles from "@/data/blogArticles";
+import { imgSrc } from "@/lib/utils";
 
 export const revalidate = 3600
 
+const fallbackPosts = articles.map((a) => ({
+  id: a.slug,
+  slug: a.slug,
+  title: a.title,
+  category: a.category,
+  excerpt: a.excerpt,
+  coverUrl: imgSrc(a.image),
+  publishedAt: '',
+  content: a.content,
+  relatedTo: a.relatedTo,
+}))
+
 export async function generateStaticParams() {
+  const hardcoded = articles.map((a) => ({ slug: a.slug }))
   try {
     const posts = await fetchBlogPosts()
-    return posts.map((p) => ({ slug: p.slug }))
+    const notionSlugs = posts.map((p) => ({ slug: p.slug }))
+    const all = [...hardcoded]
+    for (const p of notionSlugs) {
+      if (!all.find((h) => h.slug === p.slug)) all.push(p)
+    }
+    return all
   } catch {
-    return []
+    return hardcoded
   }
 }
 
@@ -20,16 +40,37 @@ export default async function BlogPostPage({
 }: {
   params: { slug: string }
 }) {
-  let post = null
-  let allPosts: any[] = []
+  let post: (typeof fallbackPosts)[0] | null = null
+  let allPosts: typeof fallbackPosts = []
 
   try {
-    ;[post, allPosts] = await Promise.all([
+    const [notionPost, notionAll] = await Promise.all([
       fetchBlogPostBySlug(params.slug),
       fetchBlogPosts(),
     ])
-  } catch (e) {
-    notFound()
+    post = notionPost
+    allPosts = notionAll.length > 0 ? notionAll : fallbackPosts
+  } catch {
+    allPosts = fallbackPosts
+  }
+
+  // Fallback: look up in hardcoded articles
+  if (!post) {
+    const article = articles.find((a) => a.slug === params.slug)
+    if (article) {
+      post = {
+        id: article.slug,
+        slug: article.slug,
+        title: article.title,
+        category: article.category,
+        excerpt: article.excerpt,
+        coverUrl: imgSrc(article.image),
+        publishedAt: '',
+        content: article.content,
+        relatedTo: article.relatedTo,
+      }
+    }
+    if (allPosts.length === 0) allPosts = fallbackPosts
   }
 
   if (!post) notFound()
