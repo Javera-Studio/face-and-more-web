@@ -30,7 +30,7 @@ const OfferItem = ({ offer }: { offer: SpecialOffer }) => (
     )}
 
     {/* 2 · Angebotsname */}
-    <span style={{ fontSize: "18px", fontWeight: 600, color: "#fff" }}>
+    <span className="font-serif" style={{ fontSize: "18px", fontWeight: 600, color: "#fff" }}>
       {offer.title}
     </span>
 
@@ -49,7 +49,7 @@ const OfferItem = ({ offer }: { offer: SpecialOffer }) => (
       <>
         <Dot />
         <span style={{ fontSize: "20px", fontWeight: 700, color: "#fff" }}>
-          {offer.price}
+          {offer.price.includes("€") ? offer.price : `${offer.price} €`}
         </span>
       </>
     )}
@@ -92,8 +92,8 @@ const SpecialOffers = ({ offers }: SpecialOffersProps) => {
 
   return (
     <div
-      className="overflow-hidden"
-      style={{ background: "#1AA6A6" }}
+      className="overflow-hidden border-y"
+      style={{ background: "#1AA6A6", borderColor: "rgba(0,0,0,0.08)" }}
       aria-label="Aktuelle Angebote"
     >
       <style>{`
