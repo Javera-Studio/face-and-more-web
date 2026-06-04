@@ -171,7 +171,7 @@ export async function fetchSpecialOffers(): Promise<SpecialOffer[]> {
 
   return res.results.map((page: any) => ({
     id: page.id,
-    title: getTitleFromPage(page) || 'Angebot',
+    title: getTitleFromPage(page) || richText(getProp(page, 'Angebotsname')) || 'Angebot',
     description: richText(getProp(page, 'Beschreibung')) || '',
     price: numberPrice(getProp(page, 'Preis')) || richText(getProp(page, 'Preis')) || '',
     validUntil: dateVal(getProp(page, 'Gültig bis')),
