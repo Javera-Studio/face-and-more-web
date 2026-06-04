@@ -46,6 +46,16 @@ function dateVal(prop: any): string | null {
   return prop?.date?.start ?? null
 }
 
+function selectText(prop: any): string {
+  return prop?.select?.name ?? ''
+}
+
+function numberPrice(prop: any): string {
+  const n = prop?.number
+  if (n == null) return ''
+  return `${n} €`
+}
+
 function filesUrl(prop: any): string | null {
   const files = prop?.files
   if (!files || files.length === 0) return null
@@ -151,9 +161,9 @@ export async function fetchSpecialOffers(): Promise<SpecialOffer[]> {
     id: page.id,
     title: titleText(getProp(page, 'Name')) || 'Angebot',
     description: richText(getProp(page, 'Beschreibung')) || '',
-    price: richText(getProp(page, 'Preis')) || '',
+    price: numberPrice(getProp(page, 'Preis')) || richText(getProp(page, 'Preis')) || '',
     validUntil: dateVal(getProp(page, 'Gültig bis')),
-    badge: richText(getProp(page, 'Leistung')) || null,
+    badge: selectText(getProp(page, 'Leistung')) || richText(getProp(page, 'Leistung')) || null,
     linkUrl: '/kontakt',
     photoUrl: filesUrl(getProp(page, 'Foto')),
   }))
