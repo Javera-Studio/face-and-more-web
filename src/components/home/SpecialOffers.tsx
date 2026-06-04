@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Tag, Clock } from "lucide-react";
 import type { SpecialOffer } from "@/../../lib/notion";
@@ -37,6 +38,18 @@ const SpecialOffers = ({ offers }: SpecialOffersProps) => {
                   <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary text-primary-foreground text-[0.65rem] uppercase tracking-widest font-medium">
                     <Tag size={10} /> {offer.badge}
                   </span>
+                </div>
+              )}
+
+              {offer.photoUrl && (
+                <div className="relative w-full" style={{ aspectRatio: "4/3" }}>
+                  <Image
+                    src={offer.photoUrl}
+                    alt={offer.title}
+                    fill
+                    className="object-cover"
+                    unoptimized
+                  />
                 </div>
               )}
 

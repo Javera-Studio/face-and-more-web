@@ -27,6 +27,7 @@ export interface SpecialOffer {
   validUntil: string | null
   badge: string | null
   linkUrl: string | null
+  photoUrl: string | null
 }
 
 function getProp(page: any, name: string): any {
@@ -154,5 +155,6 @@ export async function fetchSpecialOffers(): Promise<SpecialOffer[]> {
     validUntil: dateVal(getProp(page, 'Gültig bis')),
     badge: richText(getProp(page, 'Leistung')) || null,
     linkUrl: '/kontakt',
+    photoUrl: filesUrl(getProp(page, 'Foto')),
   }))
 }
