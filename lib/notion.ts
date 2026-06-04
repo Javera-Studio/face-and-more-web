@@ -42,6 +42,18 @@ function titleText(prop: any): string {
   return prop?.title?.map((r: any) => r.plain_text).join('') ?? ''
 }
 
+// Finds the title-type property regardless of its column name in Notion
+function getTitleFromPage(page: any): string {
+  const props = page.properties ?? {}
+  for (const key of Object.keys(props)) {
+    if (props[key]?.type === 'title') {
+      const t = titleText(props[key])
+      if (t) return t
+    }
+  }
+  return ''
+}
+
 function dateVal(prop: any): string | null {
   return prop?.date?.start ?? null
 }
@@ -159,7 +171,7 @@ export async function fetchSpecialOffers(): Promise<SpecialOffer[]> {
 
   return res.results.map((page: any) => ({
     id: page.id,
-    title: titleText(getProp(page, 'Name')) || 'Angebot',
+    title: getTitleFromPage(page) || 'Angebot',
     description: richText(getProp(page, 'Beschreibung')) || '',
     price: numberPrice(getProp(page, 'Preis')) || richText(getProp(page, 'Preis')) || '',
     validUntil: dateVal(getProp(page, 'Gültig bis')),
