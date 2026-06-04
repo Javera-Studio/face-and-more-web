@@ -6,40 +6,39 @@ interface SpecialOffersProps {
   offers: SpecialOffer[];
 }
 
-// Enough repeats so even a single short offer fills any viewport width
 const REPEATS = 6;
 
 const Dot = () => (
-  <span className="mx-3 text-[#c9b4a8] select-none" aria-hidden="true">·</span>
+  <span className="mx-4 select-none" style={{ color: "rgba(255,255,255,0.5)" }} aria-hidden="true">·</span>
 );
 
 const Divider = () => (
-  <span className="mx-10 text-[#c9b4a8]/50 text-[0.55rem] select-none" aria-hidden="true">◆</span>
+  <span className="mx-12 select-none" style={{ color: "rgba(255,255,255,0.35)", fontSize: "0.5rem" }} aria-hidden="true">◆</span>
 );
 
 const OfferItem = ({ offer }: { offer: SpecialOffer }) => (
   <span className="inline-flex items-center whitespace-nowrap">
 
-    {/* 1 · Name */}
-    <span className="font-serif text-[1rem] text-foreground">
-      {offer.title}
-    </span>
-
-    {/* 2 · Leistung */}
+    {/* 1 · Leistung */}
     {offer.badge && (
       <>
-        <Dot />
-        <span className="text-[0.6rem] uppercase tracking-widest font-medium text-primary">
+        <span style={{ fontSize: "14px", letterSpacing: "0.15em", fontWeight: 500, color: "#fff", textTransform: "uppercase" }}>
           {offer.badge}
         </span>
+        <Dot />
       </>
     )}
+
+    {/* 2 · Angebotsname */}
+    <span style={{ fontSize: "18px", fontWeight: 600, color: "#fff" }}>
+      {offer.title}
+    </span>
 
     {/* 3 · Beschreibung */}
     {offer.description && (
       <>
         <Dot />
-        <span className="text-[0.78rem] text-foreground/55 tracking-wide">
+        <span style={{ fontSize: "16px", color: "rgba(255,255,255,0.85)" }}>
           {offer.description}
         </span>
       </>
@@ -49,7 +48,7 @@ const OfferItem = ({ offer }: { offer: SpecialOffer }) => (
     {offer.price && (
       <>
         <Dot />
-        <span className="font-serif text-[1rem] text-primary">
+        <span style={{ fontSize: "20px", fontWeight: 700, color: "#fff" }}>
           {offer.price}
         </span>
       </>
@@ -59,7 +58,7 @@ const OfferItem = ({ offer }: { offer: SpecialOffer }) => (
     {offer.validUntil && (
       <>
         <Dot />
-        <span className="text-[0.6rem] uppercase tracking-widest text-muted-foreground">
+        <span style={{ fontSize: "14px", color: "rgba(255,255,255,0.85)", letterSpacing: "0.03em" }}>
           Gültig bis{" "}
           {new Date(offer.validUntil).toLocaleDateString("de-AT", {
             day: "2-digit",
@@ -74,11 +73,12 @@ const OfferItem = ({ offer }: { offer: SpecialOffer }) => (
     <Dot />
     <Link
       href={offer.linkUrl || "/kontakt"}
-      className="inline-flex items-center gap-1 text-[0.65rem] uppercase tracking-widest text-primary hover:text-primary-glow transition-colors"
+      className="inline-flex items-center gap-1.5 transition-opacity hover:opacity-80"
+      style={{ fontSize: "16px", fontWeight: 600, color: "#fff", letterSpacing: "0.05em" }}
       tabIndex={-1}
       aria-hidden="true"
     >
-      Buchen <ArrowRight size={9} />
+      Buchen <ArrowRight size={14} />
     </Link>
 
     <Divider />
@@ -92,7 +92,8 @@ const SpecialOffers = ({ offers }: SpecialOffersProps) => {
 
   return (
     <div
-      className="bg-[#f9f4f0] border-y border-[#e8ddd5] overflow-hidden"
+      className="overflow-hidden"
+      style={{ background: "#1AA6A6" }}
       aria-label="Aktuelle Angebote"
     >
       <style>{`
@@ -115,13 +116,13 @@ const SpecialOffers = ({ offers }: SpecialOffersProps) => {
         }
       `}</style>
 
-      <div className="javera-ticker flex w-max py-[18px]">
+      <div className="javera-ticker flex w-max items-center" style={{ minHeight: "64px", paddingTop: "14px", paddingBottom: "14px" }}>
         {track.map((offer, i) => (
           <OfferItem key={i} offer={offer} />
         ))}
       </div>
 
-      {/* Accessible static link for screen readers and keyboard users */}
+      {/* Accessible static links for screen readers */}
       <div className="sr-only">
         {offers.map((offer) => (
           <Link key={offer.id} href={offer.linkUrl || "/kontakt"}>
