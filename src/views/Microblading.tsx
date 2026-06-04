@@ -5,13 +5,13 @@ import Link from "next/link";
 import { ArrowRight, Plus, Clock, Tag, Repeat, Award } from "lucide-react";
 import { imgSrc } from "@/lib/utils";
 
-import heroImg   from "@/assets/treatment-pmu.jpg";
-import awardImg  from "@/assets/image0.jpeg";
+import heroImg    from "@/assets/treatment-pmu.jpg";
+import awardImg   from "@/assets/image0.jpeg";
 import processImg from "@/assets/IMG_2542.JPG";
-import gallery1  from "@/assets/image0.jpeg";
-import gallery2  from "@/assets/IMG_2541.JPG";
-import gallery3  from "@/assets/IMG_2543.JPG";
-import studioImg from "@/assets/studio.jpg";
+import gallery1   from "@/assets/image0.jpeg";
+import gallery2   from "@/assets/IMG_2541.JPG";
+import gallery3   from "@/assets/IMG_2543.JPG";
+import studioImg  from "@/assets/studio.jpg";
 
 interface Faq { q: string; a: string }
 
@@ -119,7 +119,7 @@ const Microblading = () => (
   <SiteLayout>
 
     {/* HERO */}
-    <section className="bg-gradient-warm pt-16 md:pt-20 pb-16 md:pb-24">
+    <section className="bg-gradient-warm pt-16 md:pt-20 pb-12 md:pb-16">
       <div className="container-editorial grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
         <div className="lg:col-span-6">
           <p className="eyebrow mb-6">Microblading Wien</p>
@@ -157,30 +157,30 @@ const Microblading = () => (
       </div>
     </section>
 
-    {/* INTRO */}
-    <section className="py-24 md:py-32">
-      <div className="container-editorial grid lg:grid-cols-12 gap-12">
+    {/* INTRO – Mein Ansatz */}
+    <section className="py-12 md:py-16 border-t border-border/40">
+      <div className="container-editorial grid lg:grid-cols-12 gap-8">
         <div className="lg:col-span-4">
           <p className="eyebrow">Mein Ansatz</p>
         </div>
-        <div className="lg:col-span-8 flex flex-col gap-6">
-          <p className="font-serif text-2xl md:text-3xl leading-snug text-foreground/90">
-            Jede Augenbraue ist einzigartig. Deshalb beginnt jede Behandlung bei mir mit einer persönlichen Beratung und einer präzisen Vorzeichnung. Form, Symmetrie und Farbwahl werden individuell auf dein Gesicht abgestimmt.
+        <div className="lg:col-span-8 flex flex-col gap-4">
+          <p className="font-serif text-xl md:text-2xl leading-snug text-foreground/90">
+            Jede Augenbraue ist einzigartig. Deshalb beginnt jede Behandlung bei mir mit einer persönlichen Beratung und einer präzisen Vorzeichnung – Form, Symmetrie und Farbwahl werden individuell auf dein Gesicht abgestimmt.
           </p>
-          <p className="font-serif text-2xl md:text-3xl leading-snug text-foreground/90">
-            Mein Ziel sind keine künstlich wirkenden Augenbrauen, sondern natürliche Ergebnisse, die zu dir passen und deine Ausstrahlung unterstreichen.
+          <p className="text-foreground/70 leading-relaxed">
+            Mir ist wichtig, dass du dich mit deiner neuen Augenbrauenform wirklich wohlfühlst — natürlich, harmonisch und passend zu deinem Gesicht. Mein Ziel sind keine künstlich wirkenden Augenbrauen, sondern Ergebnisse, die deine Ausstrahlung unterstreichen.
           </p>
         </div>
       </div>
     </section>
 
-    {/* AWARD */}
-    <section className="pb-24 md:pb-32">
+    {/* AWARD – Browista */}
+    <section className="py-12 md:py-16 bg-secondary/30 border-t border-border/40">
       <div className="container-editorial grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
         <div className="flex flex-col">
-          <div className="inline-flex items-center gap-3 mb-8">
-            <span className="size-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-              <Award size={18} className="text-primary" />
+          <div className="inline-flex items-center gap-3 mb-6">
+            <span className="size-9 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+              <Award size={16} className="text-primary" />
             </span>
             <p className="eyebrow">Browista Meisterschaft 2025</p>
           </div>
@@ -188,29 +188,59 @@ const Microblading = () => (
             Ausgezeichnete{" "}
             <span className="italic text-primary">Präzision</span>.
           </h2>
-          <p className="mt-6 text-foreground/75 leading-relaxed max-w-md">
+          <p className="mt-5 text-foreground/75 leading-relaxed max-w-md">
             Bei der Browista Meisterschaft durfte ich einen Platz unter den Top 3 erreichen und den 2. Platz in der Kategorie Microblading belegen.
           </p>
-          <p className="mt-4 text-foreground/75 leading-relaxed max-w-md">
+          <p className="mt-3 text-foreground/75 leading-relaxed max-w-md">
             Diese Auszeichnung bestätigt meinen Anspruch an Präzision, Natürlichkeit und typgerechte Ergebnisse – und den hohen Standard, den ich mir für jede einzelne Behandlung setze.
           </p>
         </div>
-        <div className="aspect-[4/5] overflow-hidden shadow-soft">
-          <img
-            src={imgSrc(awardImg)}
-            alt="Microblading Ergebnis – Vorher / Nachher"
-            className="w-full h-full object-cover"
-            loading="lazy"
-          />
+        <div className="flex justify-center lg:justify-end">
+          <div className="w-full max-w-[320px] aspect-[4/5] overflow-hidden border border-border/50 shadow-soft">
+            <img
+              src={imgSrc(awardImg)}
+              alt="Microblading Ergebnis – Browista Meisterschaft"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* GALLERY – Natürliche Ergebnisse */}
+    <section className="py-12 md:py-16 border-t border-border/40">
+      <div className="container-editorial">
+        <div className="max-w-2xl mb-10">
+          <p className="eyebrow mb-4">Ergebnisse</p>
+          <h2 className="headline">
+            Natürliche{" "}
+            <span className="italic text-primary">Ergebnisse</span>.
+          </h2>
+          <p className="mt-4 text-foreground/70 leading-relaxed max-w-lg">
+            Feine Härchenzeichnung, typgerechte Form und harmonische Farbwahl.
+          </p>
+        </div>
+        <div className="grid sm:grid-cols-3 gap-4 lg:gap-6">
+          {([gallery1, gallery2, gallery3] as const).map((img, i) => (
+            <div key={i} className="group aspect-[3/4] overflow-hidden border border-border/40 shadow-soft">
+              <img
+                src={imgSrc(img)}
+                alt={`Microblading Ergebnis ${i + 1}`}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                loading="lazy"
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>
 
     {/* BENEFITS */}
-    <section className="py-24 md:py-32 bg-secondary/40">
+    <section className="py-12 md:py-16 bg-secondary/40 border-t border-border/40">
       <div className="container-editorial">
-        <div className="max-w-2xl mb-14">
-          <p className="eyebrow mb-5">Vorteile</p>
+        <div className="max-w-2xl mb-10">
+          <p className="eyebrow mb-4">Vorteile</p>
           <h2 className="headline">
             Was diese Behandlung{" "}
             <span className="italic text-primary">besonders</span> macht.
@@ -220,7 +250,7 @@ const Microblading = () => (
           {benefits.map((b, i) => (
             <div
               key={b}
-              className="group relative bg-background p-8 lg:p-10 flex flex-col gap-5 min-h-[180px] transition-colors duration-500 hover:bg-secondary/40"
+              className="group relative bg-background p-8 lg:p-10 flex flex-col gap-5 min-h-[160px] transition-colors duration-500 hover:bg-secondary/40"
             >
               <div className="flex items-center justify-between">
                 <span className="font-serif text-xs text-primary tracking-widest">
@@ -235,51 +265,23 @@ const Microblading = () => (
       </div>
     </section>
 
-    {/* GALLERY */}
-    <section className="py-24 md:py-32">
-      <div className="container-editorial">
-        <div className="max-w-2xl mb-14">
-          <p className="eyebrow mb-5">Ergebnisse</p>
-          <h2 className="headline">
-            Natürliche{" "}
-            <span className="italic text-primary">Ergebnisse</span>.
-          </h2>
-          <p className="mt-6 text-foreground/75 leading-relaxed max-w-lg">
-            Jede Augenbraue wird individuell geplant und auf Gesichtsform, Hauttyp und Wünsche abgestimmt.
-          </p>
-        </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {([gallery1, gallery2, gallery3] as const).map((img, i) => (
-            <div key={i} className="group aspect-square overflow-hidden shadow-soft">
-              <img
-                src={imgSrc(img)}
-                alt={`Microblading Ergebnis ${i + 1} – Vorher / Nachher`}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                loading="lazy"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
     {/* PROCESS */}
-    <section className="py-24 md:py-32 bg-secondary/40">
+    <section className="py-12 md:py-16 border-t border-border/40">
       <div className="container-editorial grid lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
         <div className="lg:col-span-7 flex flex-col">
-          <p className="eyebrow mb-5">Ablauf</p>
+          <p className="eyebrow mb-4">Ablauf</p>
           <h2 className="headline">
             Dein Weg{" "}
             <span className="italic text-primary">Schritt für Schritt</span>.
           </h2>
-          <p className="mt-6 text-foreground/75 leading-relaxed max-w-md">
+          <p className="mt-4 text-foreground/75 leading-relaxed max-w-md">
             Jede Behandlung beginnt mit einem persönlichen Gespräch – ohne Eile, mit echtem Interesse an deinen Wünschen.
           </p>
-          <ol className="mt-8 flex-1">
+          <ol className="mt-6 flex-1">
             {process.map((s, i) => (
               <li
                 key={s.t}
-                className="grid grid-cols-[auto_1fr] gap-8 p-8 md:p-10 border-b border-border last:border-b-0"
+                className="grid grid-cols-[auto_1fr] gap-8 p-7 md:p-8 border-b border-border last:border-b-0"
               >
                 <span className="font-serif text-3xl text-primary leading-none">
                   {String(i + 1).padStart(2, "0")}
@@ -295,7 +297,7 @@ const Microblading = () => (
         <div className="lg:col-span-5 overflow-hidden">
           <img
             src={imgSrc(processImg)}
-            alt="Microblading Vorher Nachher"
+            alt="Microblading Behandlungsdetail"
             className="w-full h-full object-cover"
             loading="lazy"
           />
@@ -304,11 +306,11 @@ const Microblading = () => (
     </section>
 
     {/* PRICES */}
-    <section className="py-24 md:py-32">
+    <section className="py-12 md:py-16 bg-secondary/40 border-t border-border/40">
       <div className="container-editorial">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
           <div className="max-w-xl">
-            <p className="eyebrow mb-5">Preise & Dauer</p>
+            <p className="eyebrow mb-4">Preise & Dauer</p>
             <h2 className="headline">
               Transparent. <span className="italic text-primary">Klar.</span> Persönlich.
             </h2>
@@ -341,7 +343,7 @@ const Microblading = () => (
             </div>
           ))}
         </div>
-        <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 text-xs text-muted-foreground">
+        <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-xs text-muted-foreground">
           <span className="inline-flex items-center gap-2"><Tag size={14} /> Inkl. Beratung & Vorzeichnung</span>
           <span className="inline-flex items-center gap-2"><Repeat size={14} /> Nachbehandlung inklusive</span>
         </div>
@@ -349,7 +351,7 @@ const Microblading = () => (
     </section>
 
     {/* STUDIO / CLOSING */}
-    <section className="py-24 md:py-32 bg-secondary/40">
+    <section className="py-12 md:py-16 border-t border-border/40">
       <div className="container-editorial grid md:grid-cols-2 gap-6 items-center">
         <div className="aspect-[3/4] overflow-hidden">
           <img
@@ -360,15 +362,15 @@ const Microblading = () => (
           />
         </div>
         <div className="flex flex-col justify-center">
-          <p className="eyebrow mb-5">Persönlich. Diskret.</p>
+          <p className="eyebrow mb-4">Persönlich. Diskret.</p>
           <h2 className="headline">
             Behandlung mit{" "}
             <span className="italic text-primary">Herzblut</span> und Ruhe.
           </h2>
-          <p className="mt-6 text-foreground/75 leading-relaxed max-w-md">
+          <p className="mt-5 text-foreground/75 leading-relaxed max-w-md">
             Im Studio FACE AND MORE in Wien nehme ich mir die Zeit, die du und deine Wünsche verdienen. Keine Hektik, kein Fließband – sondern echtes Handwerk und eine Behandlung, die ich mit voller Sorgfalt umsetze.
           </p>
-          <p className="mt-4 text-foreground/75 leading-relaxed max-w-md">
+          <p className="mt-3 text-foreground/75 leading-relaxed max-w-md">
             Ich freue mich darauf, dich kennenzulernen und gemeinsam das perfekte Ergebnis für dich zu finden.
           </p>
         </div>
@@ -376,17 +378,17 @@ const Microblading = () => (
     </section>
 
     {/* FAQ */}
-    <section className="py-24 md:py-32">
+    <section className="py-12 md:py-16 bg-secondary/40 border-t border-border/40">
       <div className="container-editorial grid lg:grid-cols-12 gap-12 lg:gap-16">
         <div className="lg:col-span-4">
-          <p className="eyebrow mb-5">FAQ</p>
+          <p className="eyebrow mb-4">FAQ</p>
           <h2 className="headline">
             Häufige <span className="italic text-primary">Fragen</span>.
           </h2>
-          <p className="mt-6 text-foreground/75 leading-relaxed">
+          <p className="mt-4 text-foreground/75 leading-relaxed">
             Du hast eine Frage, die hier nicht beantwortet ist? Schreib mir – ich melde mich persönlich bei dir.
           </p>
-          <Link href="/kontakt" className="link-underline mt-8 inline-block text-sm">
+          <Link href="/kontakt" className="link-underline mt-6 inline-block text-sm">
             Frage stellen →
           </Link>
         </div>
@@ -399,19 +401,19 @@ const Microblading = () => (
     </section>
 
     {/* CTA */}
-    <section className="py-24 md:py-32 bg-secondary/40">
+    <section className="py-16 md:py-20 border-t border-border/40">
       <div className="container-editorial text-center max-w-2xl mx-auto">
-        <p className="eyebrow mb-5">Dein nächster Schritt</p>
+        <p className="eyebrow mb-4">Dein nächster Schritt</p>
         <h2 className="headline">
           Lass uns gemeinsam{" "}
           <span className="italic text-primary">starten</span>.
         </h2>
-        <p className="lede mt-6">
+        <p className="lede mt-5">
           Buche dein persönliches Erstgespräch oder direkt deinen Termin im Studio FACE AND MORE in Wien. Ich freue mich auf dich.
         </p>
         <Link
           href="/kontakt"
-          className="group mt-10 inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground text-sm tracking-wide hover:bg-primary-glow transition-colors"
+          className="group mt-8 inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground text-sm tracking-wide hover:bg-primary-glow transition-colors"
         >
           Termin buchen{" "}
           <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
