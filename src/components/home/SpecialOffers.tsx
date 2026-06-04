@@ -19,19 +19,23 @@ const Divider = () => (
 
 const OfferItem = ({ offer }: { offer: SpecialOffer }) => (
   <span className="inline-flex items-center whitespace-nowrap">
-    {offer.badge && (
-      <>
-        <span className="text-[0.6rem] uppercase tracking-widest font-medium text-primary">
-          {offer.badge}
-        </span>
-        <span className="mx-3 text-[#c9b4a8]" aria-hidden="true">—</span>
-      </>
-    )}
 
+    {/* 1 · Name */}
     <span className="font-serif text-[1rem] text-foreground">
       {offer.title}
     </span>
 
+    {/* 2 · Leistung */}
+    {offer.badge && (
+      <>
+        <Dot />
+        <span className="text-[0.6rem] uppercase tracking-widest font-medium text-primary">
+          {offer.badge}
+        </span>
+      </>
+    )}
+
+    {/* 3 · Beschreibung */}
     {offer.description && (
       <>
         <Dot />
@@ -41,6 +45,7 @@ const OfferItem = ({ offer }: { offer: SpecialOffer }) => (
       </>
     )}
 
+    {/* 4 · Preis */}
     {offer.price && (
       <>
         <Dot />
@@ -50,6 +55,7 @@ const OfferItem = ({ offer }: { offer: SpecialOffer }) => (
       </>
     )}
 
+    {/* 5 · Gültig bis */}
     {offer.validUntil && (
       <>
         <Dot />
@@ -64,9 +70,11 @@ const OfferItem = ({ offer }: { offer: SpecialOffer }) => (
       </>
     )}
 
+    {/* 6 · Buchen */}
+    <Dot />
     <Link
       href={offer.linkUrl || "/kontakt"}
-      className="ml-5 inline-flex items-center gap-1 text-[0.65rem] uppercase tracking-widest text-primary hover:text-primary-glow transition-colors"
+      className="inline-flex items-center gap-1 text-[0.65rem] uppercase tracking-widest text-primary hover:text-primary-glow transition-colors"
       tabIndex={-1}
       aria-hidden="true"
     >
