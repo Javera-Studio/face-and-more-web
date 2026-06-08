@@ -24,20 +24,20 @@ const SiteFooter = () => (
       </div>
     </div>
     <div className="border-t border-border">
-      <div className="container-editorial py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
+      <div className="container-editorial py-6 flex flex-col items-center gap-4 text-xs text-muted-foreground">
         <p>© {new Date().getFullYear()} FACE AND MORE by Michaela Kornherr</p>
         <a
           href="https://javera-studio.at"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 opacity-40 hover:opacity-70 transition-opacity duration-500"
+          className="inline-flex items-center gap-2 opacity-35 hover:opacity-60 transition-opacity duration-500"
           style={{ textDecoration: "none" }}
         >
-          <span className="text-[9px] tracking-[0.18em] uppercase text-muted-foreground font-light">
+          <span className="text-[9px] tracking-[0.18em] uppercase font-light">
             Webdesign by
           </span>
           <img src={imgSrc(javeraLogo)} alt="JAVERA STUDIO" className="h-3.5 w-auto" />
-          <span className="text-[9px] tracking-[0.18em] uppercase text-muted-foreground font-light">
+          <span className="text-[9px] tracking-[0.18em] uppercase font-light">
             JAVERA STUDIO
           </span>
         </a>
