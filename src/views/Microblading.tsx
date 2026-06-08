@@ -6,7 +6,7 @@ import { ArrowRight, Plus, Clock, Tag, Repeat, Award } from "lucide-react";
 import { imgSrc } from "@/lib/utils";
 
 import heroImg    from "@/assets/treatment-pmu.jpg";
-import awardImg   from "@/assets/image0.jpeg";
+import awardImg   from "@/assets/microbladingneu.jpg";
 import processImg from "@/assets/IMG_2542.JPG";
 import gallery1   from "@/assets/image0.jpeg";
 import gallery2   from "@/assets/IMG_2541.JPG";
