@@ -216,6 +216,7 @@ const Produkte = () => (
               src={imgSrc(pflegeImg)}
               alt="Heimpflege mit ASAP"
               className="w-full h-full object-cover"
+              style={{ objectPosition: "center 80%" }}
               loading="lazy"
             />
           </div>
@@ -232,6 +233,7 @@ const Produkte = () => (
               src={imgSrc(hautberatungImg)}
               alt="Persönliche Hautberatung"
               className="w-full h-full object-cover"
+              style={{ objectPosition: "center 20%" }}
               loading="lazy"
             />
           </div>
