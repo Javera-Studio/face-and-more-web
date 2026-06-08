@@ -74,7 +74,7 @@ const Produkte = () => (
     <section className="py-24 md:py-32">
       <div className="container-editorial grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         <div className="lg:col-span-7">
-          <div className="aspect-[4/5] overflow-hidden shadow-soft">
+          <div className="aspect-[3/2] overflow-hidden shadow-soft">
             <img
               src={imgSrc(asapHydrateImg)}
               alt="ASAP Australian Skin Active Products"
@@ -126,7 +126,7 @@ const Produkte = () => (
     <section className="py-24 md:py-32">
       <div className="container-editorial grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         <div className="lg:col-span-5 lg:order-2">
-          <div className="aspect-[4/5] overflow-hidden shadow-soft">
+          <div className="aspect-[3/2] overflow-hidden shadow-soft">
             <img
               src={imgSrc(asapCleanserImg)}
               alt="Individuelle ASAP Hautpflege"
@@ -211,7 +211,7 @@ const Produkte = () => (
           </p>
         </div>
         <div className="lg:col-span-6">
-          <div className="aspect-[4/5] overflow-hidden shadow-soft">
+          <div className="aspect-[3/2] overflow-hidden shadow-soft">
             <img
               src={imgSrc(pflegeImg)}
               alt="Heimpflege mit ASAP"
@@ -227,7 +227,7 @@ const Produkte = () => (
     <section className="py-24 md:py-32 bg-secondary/40">
       <div className="container-editorial grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         <div className="lg:col-span-6">
-          <div className="aspect-[4/5] overflow-hidden shadow-soft">
+          <div className="aspect-[3/2] overflow-hidden shadow-soft">
             <img
               src={imgSrc(hautberatungImg)}
               alt="Persönliche Hautberatung"
