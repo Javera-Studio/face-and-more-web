@@ -12,7 +12,7 @@ import pmuImg from "@/assets/treatment-pmu.jpg";
 
 const treatments = [
   { img: skinImg, title: "Hautverbesserung", desc: "Individuelle Behandlung für ein klareres, ebenmäßigeres Hautbild — abgestimmt auf deine Haut.", duration: "60 Min", price: "ab € 96", to: "/leistungen/problemhaut" },
-  { img: antiagingImg, title: "Anti Aging", desc: "Sanfte Wirkstofftherapie für straffe, vitale Haut — natürlich und altersgerecht.", duration: "75 Min", price: "ab € 120", to: "/leistungen/anti-aging" },
+  { img: antiagingImg, title: "Anti Aging", desc: "Sanfte Wirkstofftherapie für straffe, vitale Haut — natürlich und altersgerecht.", duration: "60 Min", price: "ab € 120", to: "/leistungen/anti-aging" },
   { img: fruchtImg, title: "Fruchtsäure", desc: "Erneuert die Haut und verfeinert das Hautbild sichtbar — mit dezentem Glow-Effekt.", duration: "30 Min", price: "ab € 92", to: "/leistungen/fruchtsaeure" },
   { img: needlingImg, title: "Microneedling", desc: "Aktiviert Kollagen und Hauterneuerung — Glow, Spannkraft und Frische von innen.", duration: "60 Min", price: "ab € 136", to: "/leistungen/microneedling" },
   { img: facialImg, title: "Klassische Behandlung", desc: "Ruhige, gründliche Pflege für jede Hautsituation — der Klassiker, neu interpretiert.", duration: "60 Min", price: "ab € 72", to: "/leistungen/gesichtsbehandlung" },

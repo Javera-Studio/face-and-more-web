@@ -27,9 +27,9 @@ const AntiAging = () => (
       { t: "Pflegeempfehlung", d: "Aufbauende Pflege für nachhaltige Effekte." },
     ]}
     prices={[
-      { name: "Anti Aging Behandlung", duration: "75 Min", price: "ab € 120" },
+      { name: "Anti Aging Behandlung", duration: "60 Min", price: "ab € 120" },
       { name: "Anti Aging Premium", duration: "90 Min", price: "ab € 150" },
-      { name: "Anti Aging 4er Serie", duration: "4 × 75 Min", price: "ab € 440", note: "Optimale Wirkung in Serie" },
+      { name: "Anti Aging 4er Serie", duration: "4 × 60 Min", price: "ab € 440", note: "Optimale Wirkung in Serie" },
     ]}
     faqs={[
       {

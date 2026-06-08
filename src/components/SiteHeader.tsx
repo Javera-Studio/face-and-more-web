@@ -28,23 +28,11 @@ const leistungen: NavChild[] = [
   { to: "/hautanalyse",                       label: "Hautanalyse" },
 ];
 
-const produkte: NavChild[] = [
-  { to: "/produkte/reinigung",   label: "Reinigung" },
-  { to: "/produkte/seren",       label: "Seren" },
-  { to: "/produkte/anti-aging",  label: "Anti-Aging & Regeneration" },
-  { to: "/produkte/problemhaut", label: "Problemhaut & Akne" },
-  { to: "/produkte/feuchtigkeit",label: "Feuchtigkeit & Pflege" },
-  { to: "/produkte/sonnenschutz",label: "Sonnenschutz" },
-  { to: "/produkte/koerperpflege",label: "Körperpflege" },
-  { to: "/produkte/sets",        label: "Sets & Pflegekits" },
-  { to: "/produkte/zubehoer",    label: "Zubehör & Tools" },
-];
-
 const navItems: NavItem[] = [
   { to: "/leistungen",  label: "Leistungen",  children: leistungen },
   { to: "/hautcoaching",label: "Hautcoaching" },
   { to: "/hautanalyse", label: "Hautanalyse" },
-  { to: "/produkte",    label: "Produkte",    children: produkte },
+  { to: "/produkte",    label: "Produkte" },
   { to: "/preise",      label: "Preise" },
   { to: "/ueber-mich",  label: "Über mich" },
   { to: "/kontakt",     label: "Kontakt" },

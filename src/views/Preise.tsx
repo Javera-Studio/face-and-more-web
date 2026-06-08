@@ -32,8 +32,8 @@ const categories: Category[] = [
     items: [
       { name: "Akne Jugendprogramm", duration: "60 Min", price: "€ 63" },
       { name: "Erstberatung & Analyse Problemhaut", duration: "60 Min", price: "ab € 65" },
-      { name: "Problemhaut-Behandlung", duration: "75 Min", price: "ab € 95" },
-      { name: "Hautberuhigungs-Serie", duration: "4 × 75 Min", price: "ab € 340" },
+      { name: "Problemhaut-Behandlung", duration: "60 Min", price: "ab € 95" },
+      { name: "Hautberuhigungs-Serie", duration: "4 × 60 Min", price: "ab € 340" },
     ],
   },
   {
@@ -86,9 +86,9 @@ const categories: Category[] = [
     title: "Anti Aging",
     to: "/leistungen/anti-aging",
     items: [
-      { name: "Anti Aging Behandlung", duration: "75 Min", price: "ab € 120" },
+      { name: "Anti Aging Behandlung", duration: "60 Min", price: "ab € 120" },
       { name: "Anti Aging Premium", duration: "90 Min", price: "ab € 150" },
-      { name: "Anti Aging 4er Serie", duration: "4 × 75 Min", price: "ab € 440" },
+      { name: "Anti Aging 4er Serie", duration: "4 × 60 Min", price: "ab € 440" },
     ],
   },
 ];

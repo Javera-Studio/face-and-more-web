@@ -10,7 +10,7 @@ import Testimonials from "@/components/home/Testimonials";
 import Booking from "@/components/home/Booking";
 import { fetchSpecialOffers } from "@/../../lib/notion";
 
-export const revalidate = 600
+export const revalidate = 120
 
 export default async function HomePage() {
   let offers = []

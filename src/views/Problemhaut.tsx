@@ -28,8 +28,8 @@ const Problemhaut = () => (
     ]}
     prices={[
       { name: "Erstberatung & Analyse", duration: "60 Min", price: "ab € 65" },
-      { name: "Problemhaut-Behandlung", duration: "75 Min", price: "ab € 95" },
-      { name: "Hautberuhigungs-Serie", duration: "4 × 75 Min", price: "ab € 340", note: "Für nachhaltigen Aufbau" },
+      { name: "Problemhaut-Behandlung", duration: "60 Min", price: "ab € 95" },
+      { name: "Hautberuhigungs-Serie", duration: "4 × 60 Min", price: "ab € 340", note: "Für nachhaltigen Aufbau" },
     ]}
     faqs={[
   {

@@ -6,7 +6,7 @@ import { fetchBlogPosts } from "@/../../lib/notion";
 import articles from "@/data/blogArticles";
 import { imgSrc } from "@/lib/utils";
 
-export const revalidate = 3600
+export const revalidate = 600
 
 const fallbackPosts = articles.map((a) => ({
   id: a.slug,

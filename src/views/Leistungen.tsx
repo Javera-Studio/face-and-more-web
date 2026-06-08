@@ -17,9 +17,9 @@ import analysisImg from "@/assets/skin-analysis.jpg";
 
 const items = [
   { img: analysisImg, title: "3D Hautanalyse", desc: "Der präzise Einstieg in eine individuell abgestimmte Hautpflege — fundiert, datenbasiert und persönlich begleitet.", price: "€ 95", duration: "45 Min", to: "/hautanalyse" },
-  { img: akneImg, title: "Akne Behandlung", desc: "Klärend, ausgleichend und langfristig wirksam — für ein ruhiges, klares Hautbild, das du wieder gerne zeigst.", price: "ab € 95", duration: "75 Min", to: "/leistungen/akne" },
-  { img: skinImg, title: "Problemhaut", desc: "Sanfte, individuelle Pflege für sensible, gestresste oder reaktive Haut. Mit Geduld und Expertise zurück ins Gleichgewicht.", price: "ab € 95", duration: "75 Min", to: "/leistungen/problemhaut" },
-  { img: antiagingImg, title: "Anti Aging", desc: "Sichtbar straffere, vitale Haut durch hochwirksame Wirkstofftherapien — natürlich und altersgerecht.", price: "ab € 120", duration: "75 Min", to: "/leistungen/anti-aging" },
+  { img: akneImg, title: "Akne Behandlung", desc: "Klärend, ausgleichend und langfristig wirksam — für ein ruhiges, klares Hautbild, das du wieder gerne zeigst.", price: "ab € 95", duration: "60 Min", to: "/leistungen/akne" },
+  { img: skinImg, title: "Problemhaut", desc: "Sanfte, individuelle Pflege für sensible, gestresste oder reaktive Haut. Mit Geduld und Expertise zurück ins Gleichgewicht.", price: "ab € 95", duration: "60 Min", to: "/leistungen/problemhaut" },
+  { img: antiagingImg, title: "Anti Aging", desc: "Sichtbar straffere, vitale Haut durch hochwirksame Wirkstofftherapien — natürlich und altersgerecht.", price: "ab € 120", duration: "60 Min", to: "/leistungen/anti-aging" },
   { img: fruchtImg, title: "Fruchtsäure Peeling", desc: "Eine sanfte Hauterneuerung mit sichtbarem Glow-Effekt — verfeinert die Poren und ebnet das Hautbild.", price: "ab € 85", duration: "45 Min", to: "/leistungen/fruchtsaeure" },
   { img: needlingImg, title: "Microneedling", desc: "Aktiviert Kollagen und natürliche Hauterneuerung — für mehr Spannkraft, Frische und Strahlkraft.", price: "ab € 136", duration: "60 Min", to: "/leistungen/microneedling" },
   { img: facialImg, title: "Kosmetische Gesichtsbehandlung", desc: "Eine ruhige, gründliche Pflegeroutine, die deine Haut tief reinigt, beruhigt und sichtbar zum Strahlen bringt.", price: "ab € 72", duration: "60 Min", to: "/leistungen/gesichtsbehandlung" },

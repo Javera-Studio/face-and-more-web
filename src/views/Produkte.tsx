@@ -8,239 +8,105 @@ import {
   Ban,
   FlaskConical,
   Sparkles,
-  ShieldCheck,
-  Users,
+  CheckCircle2,
 } from "lucide-react";
 import SiteLayout from "@/components/SiteLayout";
 import { imgSrc } from "@/lib/utils";
-import heroImg from "@/assets/treatment-skin.jpg";
-import beratungImg from "@/assets/treatment-facial.jpg";
-import philosophyImg from "@/assets/treatment-antiaging.jpg";
-import Produkt1 from "@/assets/Produkt1.jpg";
-import Produkt2 from "@/assets/Produkt2.jpg";
-import Produkt3 from "@/assets/Produkt3.jpg";
-import Produkt4 from "@/assets/Produkt4.jpg";
-import Produkt5 from "@/assets/Produkt5.jpg";
-import Produkt6 from "@/assets/Produkt6.jpg";
-
-interface Product {
-  name: string;
-  type: string;
-  price: string;
-  benefits: string[];
-  skinType: string;
-  description: string;
-  image: any;
-  category: string;
-}
-
-const products: Product[] = [
-  {
-    name: "Super C Complex",
-    type: "Serum",
-    price: "€110",
-    description:
-      "Hochkonzentriertes Vitamin-C-Serum für einen ebenmäßigen, strahlenden Teint.",
-    skinType: "Alle Hauttypen · fahle Haut",
-    benefits: ["Glow & Kollagenaufbau", "Antioxidativer Schutz", "Ebenmäßiger Teint"],
-    image: Produkt1,
-    category: "Seren",
-  },
-  {
-    name: "Super B Complex",
-    type: "Serum",
-    price: "€110",
-    description:
-      "Niacinamid-Serum, das Rötungen beruhigt und das Hautbild sichtbar verfeinert.",
-    skinType: "Sensible & unreine Haut",
-    benefits: ["Beruhigt Rötungen", "Unterstützt Feuchtigkeit", "Gegen Pigmentflecken"],
-    image: Produkt2,
-    category: "Seren",
-  },
-  {
-    name: "Liquid Platinum",
-    type: "Nachtpflege",
-    price: "€79,50",
-    description:
-      "Regenerierende Nachtpflege mit Peptiden für ein verfeinertes Hautbild über Nacht.",
-    skinType: "Reife & anspruchsvolle Haut",
-    benefits: [
-      "Verfeinert das Hautbild",
-      "Unterstützt Kollagenproduktion",
-      "Mehr Glow über Nacht",
-    ],
-    image: Produkt3,
-    category: "Anti-Aging",
-  },
-  {
-    name: "Clear Complexion Gel",
-    type: "Aknepflege",
-    price: "€60",
-    description:
-      "Klärendes Gel für unreine, zu Akne neigende Haut — beruhigend und ausgleichend.",
-    skinType: "Unreine & ölige Haut",
-    benefits: [
-      "Gegen Unreinheiten",
-      "Beruhigt entzündete Haut",
-      "Unterstützt reine Haut",
-    ],
-    image: Produkt4,
-    category: "Akne & Problemhaut",
-  },
-  {
-    name: "SPF50+ Hydrating Defence",
-    type: "Tagespflege mit SPF",
-    price: "€59",
-    description:
-      "Leichter, feuchtigkeitsspendender Sonnenschutz für täglichen UVA/UVB-Schutz.",
-    skinType: "Alle Hauttypen",
-    benefits: ["UVA/UVB Schutz", "Feuchtigkeit", "Anti-Aging Schutz"],
-    image: Produkt5,
-    category: "Sonnenschutz",
-  },
-  {
-    name: "Ultimate Hydration",
-    type: "Tages- & Nachtpflege",
-    price: "€99",
-    description:
-      "Reichhaltige Pflege mit Hyaluron für intensive, langanhaltende Feuchtigkeit.",
-    skinType: "Trockene & reife Haut",
-    benefits: [
-      "Intensive Feuchtigkeit",
-      "Unterstützt Elastizität",
-      "Für trockene Haut",
-    ],
-    image: Produkt6,
-    category: "Feuchtigkeit",
-  },
-];
-
-const categories: { title: string; text: string; href: string }[] = [
-  { title: "Reinigung", text: "Sanfte, effektive Reinigung als Basis jeder Pflegeroutine.", href: "/produkte/reinigung" },
-  { title: "Seren", text: "Hochkonzentrierte Wirkstoffe für gezielte Hautziele.", href: "/produkte/seren" },
-  { title: "Anti-Aging & Regeneration", text: "Pflege, die Festigkeit, Glow und Elastizität unterstützt.", href: "/produkte/anti-aging" },
-  { title: "Problemhaut & Akne", text: "Klärende Pflege für ein beruhigtes, reineres Hautbild.", href: "/produkte/problemhaut" },
-  { title: "Feuchtigkeit & Pflege", text: "Aufbauende Pflege für eine widerstandsfähige Hautbarriere.", href: "/produkte/feuchtigkeit" },
-  { title: "Sonnenschutz", text: "Täglicher Schutz vor UV-Strahlung und vorzeitiger Hautalterung.", href: "/produkte/sonnenschutz" },
-  { title: "Körperpflege", text: "Verwöhnende Pflege für einen seidigen, glatten Teint am Körper.", href: "/produkte/koerperpflege" },
-  { title: "Sets & Pflegekits", text: "Abgestimmte Routinen, ideal zum Einstieg in deine Pflege.", href: "/produkte/sets" },
-  { title: "Zubehör & Tools", text: "Hochwertige Tools, die deine Pflegeroutine ergänzen.", href: "/produkte/zubehoer" },
-];
+import asapHydrateImg from "@/assets/asaphydrate.jpg";
+import asapCleanserImg from "@/assets/asapCleanser.jpg";
 
 const benefits = [
-  { icon: Leaf, label: "Vegan" },
-  { icon: Rabbit, label: "Tierversuchsfrei" },
-  { icon: Droplets, label: "Frei von Mikroplastik" },
-  { icon: Ban, label: "Keine Parabene" },
-  { icon: FlaskConical, label: "Keine Mineralöle" },
-  { icon: Sparkles, label: "Keine künstlichen Duftstoffe" },
-  { icon: ShieldCheck, label: "Wirkstoffkosmetik" },
-  { icon: Users, label: "Für alle Hauttypen" },
+  { icon: Leaf,         label: "Vegan" },
+  { icon: Rabbit,       label: "Tierversuchsfrei" },
+  { icon: Droplets,     label: "Frei von Mikroplastik" },
+  { icon: Ban,          label: "Frei von Parabenen" },
+  { icon: FlaskConical, label: "Frei von Mineralölen" },
+  { icon: Sparkles,     label: "Ohne künstliche Farb- & Duftstoffe" },
 ];
 
-const ProductCard = ({ p }: { p: Product }) => (
-  <article className="group bg-background border border-border/70 transition-all duration-500 hover:border-primary/40 hover:shadow-soft flex flex-col">
-    <div className="aspect-[4/5] overflow-hidden bg-secondary/40">
-      <img
-        src={imgSrc(p.image)}
-        alt={p.name}
-        loading="lazy"
-        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-      />
-    </div>
-    <div className="p-7 lg:p-8 flex flex-col flex-1">
-      <p className="eyebrow mb-3">{p.type}</p>
-      <h3 className="font-serif text-2xl leading-snug">{p.name}</h3>
-      <p className="mt-3 text-sm text-foreground/70 leading-relaxed">{p.description}</p>
+const ingredients = [
+  { label: "Hochkonzentriertes Vitamin C",        desc: "Für Glow, Kollagenaufbau und antioxidativen Schutz vor Umwelteinflüssen." },
+  { label: "Vitamin A zur Hauterneuerung",        desc: "Beschleunigt die Zellregeneration und verfeinert die Hautstruktur sichtbar." },
+  { label: "Fruchtsäuren (AHA)",                  desc: "Lösen abgestorbene Hautzellen und sorgen für ein ebenmäßigeres Hautbild." },
+  { label: "Antioxidantien",                      desc: "Schützen die Haut vor freien Radikalen und vorzeitiger Hautalterung." },
+  { label: "Kollagen-Support",                    desc: "Unterstützt die natürliche Kollagenproduktion für mehr Spannkraft und Elastizität." },
+];
 
-      <ul className="mt-6 space-y-2">
-        {p.benefits.map((b) => (
-          <li key={b} className="flex items-start gap-3 text-sm text-foreground/80">
-            <span className="mt-2 h-1 w-1 rounded-full bg-primary shrink-0" />
-            <span>{b}</span>
-          </li>
-        ))}
-      </ul>
-
-      <div className="mt-auto pt-7 flex items-end justify-between gap-4 border-t border-border/70 mt-7">
-        <div>
-          <p className="text-[11px] uppercase tracking-widest text-muted-foreground">Hauttyp</p>
-          <p className="text-sm text-foreground/80 mt-1">{p.skinType}</p>
-        </div>
-        <p className="font-serif text-2xl text-primary">{p.price}</p>
-      </div>
-    </div>
-  </article>
-);
+const skinTypes = [
+  "Akne & unreine Haut",
+  "Problemhaut & Rötungen",
+  "Pigmentflecken",
+  "Reife Haut",
+  "Empfindliche Haut",
+];
 
 const Produkte = () => (
   <SiteLayout>
+
+    {/* Hero */}
     <section className="bg-gradient-warm pt-16 md:pt-20 pb-16 md:pb-24">
-      <div className="container-editorial grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-        <div className="lg:col-span-6">
+      <div className="container-editorial">
+        <div className="max-w-3xl">
           <p className="eyebrow mb-6">Professionelle Hautpflege Wien</p>
           <h1 className="display">
-            Professionelle Hautpflege für{" "}
-            <span className="italic text-primary">gesunde, strahlende</span> Haut.
+            Wissenschaft trifft{" "}
+            <span className="italic text-primary">Hautgesundheit</span>
           </h1>
-          <p className="lede mt-6 max-w-xl">
-            Die richtigen Produkte können deine Haut langfristig verändern — wenn sie wirklich zu deinem Hauttyp passen.
+          <p className="lede mt-6 max-w-2xl">
+            Bei FACE AND MORE arbeite ich mit ASAP – Australian Skin Active Products, einer der führenden professionellen Hautpflegemarken Australiens.
           </p>
           <div className="mt-9 flex flex-wrap gap-4">
             <Link
-              href="/hautanalyse"
+              href="/kontakt"
               className="group inline-flex items-center gap-2 px-7 py-4 bg-primary text-primary-foreground text-sm tracking-wide hover:bg-primary-glow transition-colors"
             >
-              Hautanalyse buchen{" "}
+              Persönliche Hautberatung vereinbaren{" "}
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
             </Link>
-            <Link
-              href="/kontakt"
-              className="inline-flex items-center px-7 py-4 border border-border text-sm tracking-wide hover:border-primary hover:text-primary transition-colors"
-            >
-              Persönliche Beratung
-            </Link>
-          </div>
-        </div>
-        <div className="lg:col-span-6">
-          <div className="aspect-[4/5] md:aspect-[5/6] overflow-hidden shadow-soft">
-            <img src={imgSrc(heroImg)} alt="Professionelle Hautpflege" className="w-full h-full object-cover" />
           </div>
         </div>
       </div>
     </section>
 
+    {/* Großes ASAP-Bild + Intro */}
     <section className="py-24 md:py-32">
       <div className="container-editorial grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-        <div className="lg:col-span-5">
-          <div className="aspect-[4/5] overflow-hidden">
-            <img src={imgSrc(philosophyImg)} alt="ASAP Skincare" className="w-full h-full object-cover" loading="lazy" />
+        <div className="lg:col-span-7">
+          <div className="aspect-[4/3] overflow-hidden shadow-soft">
+            <img
+              src={imgSrc(asapHydrateImg)}
+              alt="ASAP Australian Skin Active Products"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
-        <div className="lg:col-span-7">
-          <p className="eyebrow mb-5">Philosophie</p>
+        <div className="lg:col-span-5">
+          <p className="eyebrow mb-5">Über ASAP</p>
           <h2 className="headline">
-            Warum ich mit <span className="italic text-primary">ASAP</span> arbeite.
+            Seit über 20 Jahren für{" "}
+            <span className="italic text-primary">sichtbare Ergebnisse</span>.
           </h2>
-          <p className="mt-6 text-foreground/75 leading-relaxed max-w-xl">
-            Ich arbeite bewusst mit ASAP Australian Skincare, weil die Produkte wirksam, modern und gleichzeitig hautfreundlich sind. Die Pflege basiert auf hochwertigen Wirkstoffen, ist vegan, tierversuchsfrei und frei von unnötigen Zusatzstoffen.
-          </p>
-          <p className="mt-5 text-foreground/75 leading-relaxed max-w-xl">
-            Ich finde mit dir die Produkte, die wirklich zu deiner Haut passen — statt wahllos auszuprobieren.
+          <p className="mt-6 text-foreground/75 leading-relaxed">
+            ASAP steht für innovative Wirkstoffe, wissenschaftlich fundierte Hautpflege und sichtbare Ergebnisse. Die Produkte wurden speziell für professionelle Hautexperten entwickelt und unterstützen die Haut gezielt bei Regeneration, Schutz und langfristiger Hautgesundheit.
           </p>
         </div>
       </div>
     </section>
 
+    {/* Benefits — Rein. Vegan. Verantwortungsvoll. */}
     <section className="py-24 md:py-32 bg-secondary/40">
       <div className="container-editorial">
         <div className="max-w-2xl mb-14">
-          <p className="eyebrow mb-5">Was ASAP ausmacht</p>
+          <p className="eyebrow mb-5">Haltung & Inhaltsstoffe</p>
           <h2 className="headline">
-            Wirkstoffkosmetik mit <span className="italic text-primary">klarer Haltung</span>.
+            Rein. Vegan.{" "}
+            <span className="italic text-primary">Verantwortungsvoll.</span>
           </h2>
+          <p className="mt-5 text-foreground/70 leading-relaxed">
+            ASAP steht für moderne Hautpflege ohne unnötige Zusätze — wirksam, verträglich und mit klarer Haltung.
+          </p>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-border border border-border">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-border border border-border">
           {benefits.map(({ icon: Icon, label }) => (
             <div
               key={label}
@@ -254,102 +120,111 @@ const Produkte = () => (
       </div>
     </section>
 
+    {/* Für jede Haut das passende Pflegekonzept */}
     <section className="py-24 md:py-32">
       <div className="container-editorial grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-        <div className="lg:col-span-6 lg:order-2">
-          <div className="aspect-[4/5] overflow-hidden">
-            <img src={imgSrc(beratungImg)} alt="Persönliche Hautberatung" className="w-full h-full object-cover" loading="lazy" />
+        <div className="lg:col-span-5 lg:order-2">
+          <div className="aspect-[4/5] overflow-hidden shadow-soft">
+            <img
+              src={imgSrc(asapCleanserImg)}
+              alt="Individuelle ASAP Hautpflege"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
           </div>
         </div>
-        <div className="lg:col-span-6">
-          <p className="eyebrow mb-5">Persönliche Beratung</p>
+        <div className="lg:col-span-7">
+          <p className="eyebrow mb-5">Individuelle Empfehlungen</p>
           <h2 className="headline">
-            Pflege, die wirklich zu <span className="italic text-primary">deiner Haut</span> passt.
+            Für jede Haut das{" "}
+            <span className="italic text-primary">passende Pflegekonzept</span>.
           </h2>
-          <p className="mt-6 text-foreground/75 leading-relaxed max-w-md">
-            Nicht jedes Produkt passt zu jeder Haut. Deshalb empfehle ich Pflegeprodukte immer individuell — abgestimmt auf Hautzustand, Ziele und bestehende Probleme wie Akne, Rötungen oder Pigmentflecken.
+          <p className="mt-6 text-foreground/75 leading-relaxed max-w-xl">
+            Jede Haut ist einzigartig und verdient eine individuelle Lösung. Deshalb wähle ich die passenden Produkte nicht nach Trends, sondern nach den tatsächlichen Bedürfnissen deiner Haut.
           </p>
-          <Link
-            href="/hautanalyse"
-            className="group mt-9 inline-flex items-center gap-2 px-7 py-4 bg-primary text-primary-foreground text-sm tracking-wide hover:bg-primary-glow transition-colors"
-          >
-            Hautanalyse buchen{" "}
-            <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-          </Link>
+          <p className="mt-5 text-foreground/75 leading-relaxed max-w-xl">
+            Meine Produktempfehlungen sind immer auf deine persönliche Hautanalyse und deine Behandlungsziele abgestimmt.
+          </p>
+          <ul className="mt-8 space-y-3">
+            {skinTypes.map((type) => (
+              <li key={type} className="flex items-center gap-3 text-sm text-foreground/80">
+                <CheckCircle2 size={16} className="text-primary shrink-0" />
+                <span>{type}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>
 
+    {/* Hochwertige Wirkstoffe */}
     <section className="py-24 md:py-32 bg-secondary/40">
       <div className="container-editorial">
         <div className="max-w-2xl mb-14">
-          <p className="eyebrow mb-5">Kategorien</p>
+          <p className="eyebrow mb-5">Wirkstoffkosmetik</p>
           <h2 className="headline">
-            Kuratierte Pflege — <span className="italic text-primary">für jeden Schritt</span>.
+            Hochwertige Wirkstoffe für{" "}
+            <span className="italic text-primary">sichtbare Ergebnisse</span>.
           </h2>
+          <p className="mt-5 text-foreground/70 leading-relaxed">
+            ASAP kombiniert moderne Wirkstoffkosmetik mit einer klaren Philosophie — das Ergebnis ist eine gesündere, strahlendere und sichtbar gepflegte Haut.
+          </p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
-          {categories.map((c, i) => (
-            <Link
-              key={c.title}
-              href={c.href}
-              className="group bg-background p-7 lg:p-9 min-h-[200px] flex flex-col gap-4 transition-colors duration-500 hover:bg-secondary/40 relative"
+          {ingredients.map((item, i) => (
+            <div
+              key={item.label}
+              className="group bg-background p-7 lg:p-9 flex flex-col gap-4 transition-colors duration-500 hover:bg-secondary/40"
             >
               <span className="font-serif text-xs text-primary tracking-widest">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <p className="font-serif text-xl leading-snug">{c.title}</p>
-              <p className="text-sm text-foreground/70 leading-relaxed">{c.text}</p>
-              <ArrowRight
-                size={18}
-                className="text-primary mt-auto transition-transform duration-500 group-hover:translate-x-1"
-              />
-            </Link>
+              <p className="font-serif text-xl leading-snug">{item.label}</p>
+              <p className="text-sm text-foreground/70 leading-relaxed">{item.desc}</p>
+            </div>
           ))}
         </div>
       </div>
     </section>
 
+    {/* Pflege die Wirkung zeigt */}
     <section className="py-24 md:py-32">
-      <div className="container-editorial">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
-          <div className="max-w-xl">
-            <p className="eyebrow mb-5">Ausgewählte Produkte</p>
-            <h2 className="headline">
-              Eine kleine Auswahl aus dem <span className="italic text-primary">ASAP Sortiment</span>.
-            </h2>
-          </div>
-          <p className="text-sm text-muted-foreground max-w-sm">
-            Jedes Produkt empfehle ich erst nach einem persönlichen Gespräch und einer Hautanalyse — abgestimmt auf dich.
-          </p>
-        </div>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-          {products.map((p) => (
-            <ProductCard key={p.name} p={p} />
-          ))}
-        </div>
+      <div className="container-editorial max-w-3xl">
+        <p className="eyebrow mb-5">Heimpflege</p>
+        <h2 className="headline">
+          Pflege, die{" "}
+          <span className="italic text-primary">Wirkung zeigt</span>.
+        </h2>
+        <p className="mt-6 text-foreground/75 leading-relaxed">
+          Für mich endet eine Behandlung nicht nach deinem Termin. Die richtige Heimpflege unterstützt und verlängert die Ergebnisse deiner Behandlung und hilft dabei, deine Haut langfristig gesund und ausgeglichen zu halten.
+        </p>
+        <p className="mt-5 text-foreground/75 leading-relaxed">
+          Gerne berate ich dich persönlich, welche Produkte am besten zu deiner Haut passen.
+        </p>
       </div>
     </section>
 
+    {/* CTA */}
     <section className="py-24 md:py-32 bg-secondary/40">
       <div className="container-editorial text-center max-w-2xl mx-auto">
-        <p className="eyebrow mb-5">Noch unsicher?</p>
+        <p className="eyebrow mb-5">Glow. Pflege. ASAP.</p>
         <h2 className="headline">
-          Unsicher, welche Produkte zu deiner <span className="italic text-primary">Haut</span> passen?
+          Persönliche Hautberatung{" "}
+          <span className="italic text-primary">vereinbaren</span>.
         </h2>
         <p className="lede mt-6">
-          Bei einer persönlichen Hautanalyse finde ich mit dir die passende Pflegeroutine für deine Haut.
+          Gemeinsam finden wir die Produkte, die wirklich zu deiner Haut passen — abgestimmt auf deine Hautanalyse und Behandlungsziele.
         </p>
         <Link
-          href="/hautanalyse"
+          href="/kontakt"
           className="group mt-10 inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground text-sm tracking-wide hover:bg-primary-glow transition-colors"
         >
-          Hautanalyse buchen{" "}
+          Termin vereinbaren{" "}
           <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
         </Link>
       </div>
     </section>
+
   </SiteLayout>
 );
 
