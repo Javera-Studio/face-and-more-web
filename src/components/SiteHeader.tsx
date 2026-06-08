@@ -3,7 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
-import logo from "@/assets/logo.jpg";
+import logo from "@/assets/logotransparent.jpg";
 import { imgSrc } from "@/lib/utils";
 
 interface NavChild {

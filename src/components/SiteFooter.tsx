@@ -1,5 +1,5 @@
 import Link from "next/link";
-import logo from "@/assets/logo.jpg";
+import logo from "@/assets/logotransparent.jpg";
 import javeraLogo from "@/assets/Javera.logo.rund.png";
 import { imgSrc } from "@/lib/utils";
 
