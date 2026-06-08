@@ -1,9 +1,6 @@
-'use client'
 import SiteLayout from "@/components/SiteLayout";
 import PageHero from "@/components/PageHero";
-import { useState } from "react";
-import { Mail, Phone, MapPin, Calendar, ArrowUpRight } from "lucide-react";
-import { toast } from "sonner";
+import { Mail, Phone, MapPin, ArrowUpRight, Clock } from "lucide-react";
 
 const WhatsAppIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 shrink-0">
@@ -11,129 +8,92 @@ const WhatsAppIcon = () => (
   </svg>
 );
 
-const Kontakt = () => {
-  const [sending, setSending] = useState(false);
+const Kontakt = () => (
+  <SiteLayout>
+    <PageHero
+      eyebrow="Kontakt & Buchung"
+      title={<>Lass uns über deine <span className="italic text-primary">Haut</span> sprechen.</>}
+      intro="Schreib mir einfach auf WhatsApp — ich antworte persönlich und finde mit dir den passenden Termin."
+    />
 
-  const onSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSending(true);
-    setTimeout(() => {
-      setSending(false);
-      toast.success("Vielen Dank — ich melde mich persönlich bei dir.");
-      (e.target as HTMLFormElement).reset();
-    }, 600);
-  };
+    <section className="py-16 md:py-20">
+      <div className="container-editorial grid lg:grid-cols-2 gap-8 lg:gap-12">
 
-  return (
-    <SiteLayout>
-      <PageHero
-        eyebrow="Kontakt & Buchung"
-        title={<>Lass uns über deine <span className="italic text-primary">Haut</span> sprechen.</>}
-        intro="Schreib mir kurz, was du dir wünschst — ich melde mich persönlich bei dir und finde mit dir den passenden Termin."
-      />
-
-      <section className="py-20">
-        <div className="container-editorial grid lg:grid-cols-12 gap-12 lg:gap-16">
-          <div className="lg:col-span-7">
-            <form onSubmit={onSubmit} className="space-y-5">
-              <div className="grid sm:grid-cols-2 gap-5">
-                <div>
-                  <label className="eyebrow block mb-2">Name</label>
-                  <input required className="w-full bg-background border border-input px-4 py-3 focus:outline-none focus:border-primary transition-colors" />
-                </div>
-                <div>
-                  <label className="eyebrow block mb-2">E-Mail</label>
-                  <input type="email" required className="w-full bg-background border border-input px-4 py-3 focus:outline-none focus:border-primary transition-colors" />
-                </div>
-              </div>
-              <div>
-                <label className="eyebrow block mb-2">Telefon (optional)</label>
-                <input type="tel" className="w-full bg-background border border-input px-4 py-3 focus:outline-none focus:border-primary transition-colors" />
-              </div>
-              <div>
-                <label className="eyebrow block mb-2">Behandlung</label>
-                <select className="w-full bg-background border border-input px-4 py-3 focus:outline-none focus:border-primary transition-colors">
-                  <option>Hautanalyse</option>
-                  <option>Akne Behandlung</option>
-                  <option>Anti Aging</option>
-                  <option>Microneedling</option>
-                  <option>Fruchtsäure</option>
-                  <option>Problemhaut</option>
-                  <option>Microblading / PMU</option>
-                  <option>Sonstiges</option>
-                </select>
-              </div>
-              <div>
-                <label className="eyebrow block mb-2">Nachricht</label>
-                <textarea rows={5} className="w-full bg-background border border-input px-4 py-3 focus:outline-none focus:border-primary transition-colors resize-none" />
-              </div>
-              <button
-                type="submit"
-                disabled={sending}
-                className="inline-flex items-center gap-2 px-7 py-4 bg-primary text-primary-foreground text-sm tracking-wide hover:bg-primary-glow transition-colors disabled:opacity-60"
-              >
-                <Calendar size={16} /> {sending ? "Wird gesendet …" : "Anfrage senden"}
-              </button>
-            </form>
-          </div>
-
-          <aside className="lg:col-span-5 space-y-8">
-            <a
-              href="https://wa.me/436776292066?text=Hallo%20Michaela%2C%20ich%20m%C3%B6chte%20gerne%20einen%20Termin%20vereinbaren."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center justify-between bg-primary text-primary-foreground p-7 hover:bg-primary-glow transition-colors"
-            >
-              <div className="flex items-center gap-4">
-                <WhatsAppIcon />
-                <div>
-                  <p className="eyebrow text-primary-foreground/70 mb-1">Schnellste Option</p>
-                  <p className="font-serif text-xl">WhatsApp schreiben</p>
-                </div>
-              </div>
-              <ArrowUpRight size={20} className="text-primary-foreground/70 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-            </a>
-
-            <div className="bg-secondary/60 p-7 space-y-4">
-              <p className="eyebrow">Studio</p>
-              <div className="flex gap-3 text-sm text-foreground/85">
-                <MapPin size={16} className="text-primary mt-0.5" /> Wolfsaugasse 6/2, A-1200 Wien
-              </div>
-              <div className="flex gap-3 text-sm text-foreground/85">
-                <Phone size={16} className="text-primary mt-0.5" />
-                <a href="tel:+436776292066">+43 677 62 920 665</a>
-              </div>
-              <div className="flex gap-3 text-sm text-foreground/85">
-                <Mail size={16} className="text-primary mt-0.5" />
-                <a href="mailto:michaela@faceandmore.at">michaela@faceandmore.at</a>
-              </div>
+        {/* Left — WhatsApp + Treatwell */}
+        <div className="flex flex-col gap-4">
+          <a
+            href="https://wa.me/436776292066?text=Hallo%20Michaela%2C%20ich%20m%C3%B6chte%20gerne%20einen%20Termin%20vereinbaren."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex-1 bg-primary text-primary-foreground p-8 md:p-10 flex flex-col justify-between hover:bg-primary-glow transition-colors"
+          >
+            <div className="flex items-start justify-between">
+              <WhatsAppIcon />
+              <ArrowUpRight size={18} strokeWidth={1.3} className="text-primary-foreground/70 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
             </div>
-
-            <div className="bg-secondary/60 p-7 space-y-4">
-              <p className="eyebrow">Öffnungszeiten</p>
-              <p className="text-sm text-foreground/85">Mo – Do: 08:30 – 18:00 Uhr</p>
-              <p className="text-sm text-foreground/85">
-                Fr: 08:30 – 13:00 Uhr{" "}
-                <span className="text-foreground/50">(nachmittags nach Rücksprache)</span>
+            <div className="mt-10">
+              <p className="eyebrow text-primary-foreground/70 mb-1">Empfohlen</p>
+              <p className="font-serif text-2xl md:text-3xl">Direkt auf WhatsApp anfragen</p>
+              <p className="mt-3 text-sm text-primary-foreground/80 max-w-sm">
+                Schnell, unkompliziert und persönlich — Michaela antwortet direkt.
               </p>
             </div>
+          </a>
 
-            <a href="https://www.treatwell.at/ort/face-and-more/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center justify-between border border-border p-5 hover:border-primary/40 transition-colors"
-            >
-              <div>
-                <p className="eyebrow">Alternative</p>
-                <p className="font-serif text-lg mt-1">Über Treatwell buchen</p>
-              </div>
-              <ArrowUpRight size={18} className="text-primary transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-            </a>
-          </aside>
+          <a
+            href="https://www.treatwell.at/ort/face-and-more/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group bg-secondary/60 border border-border p-5 flex items-center justify-between hover:border-primary/40 transition-colors"
+          >
+            <div>
+              <p className="eyebrow mb-0.5">Alternativ</p>
+              <p className="font-serif text-lg">Online Buchung über Treatwell</p>
+            </div>
+            <ArrowUpRight size={16} className="text-primary transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 shrink-0 ml-4" />
+          </a>
         </div>
-      </section>
-    </SiteLayout>
-  );
-};
+
+        {/* Right — Address + Opening hours */}
+        <div className="flex flex-col gap-4">
+          <div className="bg-secondary/60 p-8 space-y-5">
+            <p className="eyebrow">Studio</p>
+            <div className="flex gap-3 text-sm text-foreground/85">
+              <MapPin size={15} className="text-primary mt-0.5 shrink-0" />
+              <span>Wolfsaugasse 6/2, A-1200 Wien</span>
+            </div>
+            <div className="flex gap-3 text-sm text-foreground/85">
+              <Phone size={15} className="text-primary mt-0.5 shrink-0" />
+              <a href="tel:+436776292066" className="hover:text-primary transition-colors">
+                +43 677 62 920 665
+              </a>
+            </div>
+            <div className="flex gap-3 text-sm text-foreground/85">
+              <Mail size={15} className="text-primary mt-0.5 shrink-0" />
+              <a href="mailto:michaela@faceandmore.at" className="hover:text-primary transition-colors">
+                michaela@faceandmore.at
+              </a>
+            </div>
+          </div>
+
+          <div className="bg-secondary/60 p-8 space-y-4">
+            <p className="eyebrow">Öffnungszeiten</p>
+            <div className="flex gap-3 text-sm text-foreground/85">
+              <Clock size={15} className="text-primary mt-0.5 shrink-0" />
+              <div className="space-y-1.5">
+                <p>Mo – Do: 08:30 – 18:00 Uhr</p>
+                <p>
+                  Fr: 08:30 – 13:00 Uhr{" "}
+                  <span className="text-foreground/50">(nachmittags nach Rücksprache)</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </SiteLayout>
+);
 
 export default Kontakt;
