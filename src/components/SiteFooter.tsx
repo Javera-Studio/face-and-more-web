@@ -33,14 +33,8 @@ const SiteFooter = () => (
         <ul className="space-y-2 text-sm text-foreground/80">
           <li>Wolfsaugasse 6/2, A-1200 Wien</li>
           <li>+43 677 62 920 665</li>
-          <li className="flex items-center gap-1.5">
-            <Mail size={13} className="text-primary shrink-0" />
-            <a href="mailto:michaela@faceandmore.at" className="hover:text-primary transition-colors">
-              michaela@faceandmore.at
-            </a>
-          </li>
         </ul>
-        <div className="flex items-center gap-3 mt-5">
+        <div className="flex items-center gap-4 mt-5">
           <a
             href="https://www.instagram.com/faceandmorewien/"
             target="_blank"
@@ -58,6 +52,13 @@ const SiteFooter = () => (
             className="text-foreground/60 hover:text-primary transition-colors"
           >
             <Facebook size={18} />
+          </a>
+          <a
+            href="mailto:michaela@faceandmore.at"
+            aria-label="E-Mail"
+            className="text-foreground/60 hover:text-primary transition-colors"
+          >
+            <Mail size={18} />
           </a>
         </div>
       </div>
