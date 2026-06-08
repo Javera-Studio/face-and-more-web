@@ -5,7 +5,7 @@ import { imgSrc } from "@/lib/utils";
 
 const SiteFooter = () => (
   <footer className="bg-secondary/60 border-t border-border mt-24">
-    <div className="container-editorial py-16 grid gap-12 md:grid-cols-4">
+    <div className="container-editorial py-16 grid gap-12 md:grid-cols-3">
       <div className="md:col-span-2">
         <Link href="/" aria-label="FACE AND MORE — Startseite" className="inline-block">
           <img src={imgSrc(logo)} alt="FACE AND MORE by Michaela Kornherr" className="h-28 md:h-32 w-auto" />
@@ -20,21 +20,6 @@ const SiteFooter = () => (
           <li>Wolfsaugasse 6/2, A-1200 Wien</li>
           <li>+43 677 62 920 665</li>
           <li>michaela@faceandmore.at</li>
-        </ul>
-      </div>
-      <div>
-        <p className="eyebrow mb-4">Navigation</p>
-        <ul className="space-y-2 text-sm">
-          <li><Link href="/leistungen" className="hover:text-primary">Leistungen</Link></li>
-          <li><Link href="/hautcoaching" className="hover:text-primary">Hautcoaching</Link></li>
-          <li><Link href="/hautanalyse" className="hover:text-primary">Hautanalyse</Link></li>
-          <li><Link href="/produkte" className="hover:text-primary">Produkte</Link></li>
-          <li><Link href="/preise" className="hover:text-primary">Preise</Link></li>
-          <li><Link href="/blog" className="hover:text-primary">Blog</Link></li>
-          <li><Link href="/ueber-mich" className="hover:text-primary">Über mich</Link></li>
-          <li><Link href="/kontakt" className="hover:text-primary">Kontakt</Link></li>
-          <li><Link href="/impressum" className="hover:text-primary">Impressum</Link></li>
-          <li><Link href="/datenschutz" className="hover:text-primary">Datenschutz</Link></li>
         </ul>
       </div>
     </div>
