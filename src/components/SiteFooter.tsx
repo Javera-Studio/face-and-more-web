@@ -42,7 +42,7 @@ const SiteFooter = () => (
         </ul>
         <div className="flex items-center gap-3 mt-5">
           <a
-            href="https://www.instagram.com/faceandmore_wien"
+            href="https://www.instagram.com/faceandmorewien/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
