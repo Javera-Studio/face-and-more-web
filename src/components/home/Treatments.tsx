@@ -6,7 +6,7 @@ import { imgSrc } from "@/lib/utils";
 import skinImg from "@/assets/treatment-skin.jpg";
 import antiagingImg from "@/assets/treatment-antiaging.jpg";
 import fruchtImg from "@/assets/treatment-fruchtsaeure.jpg";
-import needlingImg from "@/assets/treatment-microneedling.jpg";
+import needlingImg from "@/assets/microneedlingneu.jpg";
 import facialImg from "@/assets/gesichtsbehandlung.jpg";
 import pmuImg from "@/assets/treatment-pmu.jpg";
 
