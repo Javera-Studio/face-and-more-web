@@ -159,30 +159,35 @@ const Produkte = () => (
 
     {/* Hochwertige Wirkstoffe */}
     <section className="py-24 md:py-32 bg-secondary/40">
-      <div className="container-editorial">
-        <div className="max-w-2xl mb-14">
+      <div className="container-editorial grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="lg:col-span-5">
           <p className="eyebrow mb-5">Wirkstoffkosmetik</p>
           <h2 className="headline">
-            Hochwertige Wirkstoffe für{" "}
-            <span className="italic text-primary">sichtbare Ergebnisse</span>.
+            Hochwertige Wirkstoffe für sichtbare{" "}
+            <span className="italic text-primary">Ergebnisse</span>.
           </h2>
-          <p className="mt-5 text-foreground/70 leading-relaxed">
+          <p className="mt-6 text-foreground/70 leading-relaxed">
             ASAP kombiniert moderne Wirkstoffkosmetik mit einer klaren Philosophie — das Ergebnis ist eine gesündere, strahlendere und sichtbar gepflegte Haut.
           </p>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
+        <div className="lg:col-span-7">
           {ingredients.map((item, i) => (
-            <div
-              key={item.label}
-              className="group bg-background p-7 lg:p-9 flex flex-col gap-4 transition-colors duration-500 hover:bg-secondary/40"
-            >
-              <span className="font-serif text-xs text-primary tracking-widest">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <p className="font-serif text-xl leading-snug">{item.label}</p>
-              <p className="text-sm text-foreground/70 leading-relaxed">{item.desc}</p>
+            <div key={item.label} className="border-t border-border/60 py-7 lg:py-8">
+              <div className="flex gap-6 lg:gap-8 items-start">
+                <span
+                  className="font-serif text-sm tracking-widest shrink-0 mt-0.5"
+                  style={{ color: "#1aa5a5" }}
+                >
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div>
+                  <p className="font-serif text-lg leading-snug text-foreground">{item.label}</p>
+                  <p className="mt-2 text-sm text-foreground/65 leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
             </div>
           ))}
+          <div className="border-t border-border/60" />
         </div>
       </div>
     </section>
