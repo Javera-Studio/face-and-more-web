@@ -14,6 +14,8 @@ import SiteLayout from "@/components/SiteLayout";
 import { imgSrc } from "@/lib/utils";
 import asapHydrateImg from "@/assets/asaphydrate.jpg";
 import asapCleanserImg from "@/assets/asapCleanser.jpg";
+import pflegeImg from "@/assets/pflege.jpg";
+import hautberatungImg from "@/assets/hautberatung.jpg";
 
 const benefits = [
   { icon: Leaf,         label: "Vegan" },
@@ -194,39 +196,63 @@ const Produkte = () => (
 
     {/* Pflege die Wirkung zeigt */}
     <section className="py-24 md:py-32">
-      <div className="container-editorial max-w-3xl">
-        <p className="eyebrow mb-5">Heimpflege</p>
-        <h2 className="headline">
-          Pflege, die{" "}
-          <span className="italic text-primary">Wirkung zeigt</span>.
-        </h2>
-        <p className="mt-6 text-foreground/75 leading-relaxed">
-          Für mich endet eine Behandlung nicht nach deinem Termin. Die richtige Heimpflege unterstützt und verlängert die Ergebnisse deiner Behandlung und hilft dabei, deine Haut langfristig gesund und ausgeglichen zu halten.
-        </p>
-        <p className="mt-5 text-foreground/75 leading-relaxed">
-          Gerne berate ich dich persönlich, welche Produkte am besten zu deiner Haut passen.
-        </p>
+      <div className="container-editorial grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="lg:col-span-6">
+          <p className="eyebrow mb-5">Heimpflege</p>
+          <h2 className="headline">
+            Pflege, die{" "}
+            <span className="italic text-primary">Wirkung zeigt</span>.
+          </h2>
+          <p className="mt-6 text-foreground/75 leading-relaxed">
+            Für mich endet eine Behandlung nicht nach deinem Termin. Die richtige Heimpflege unterstützt und verlängert die Ergebnisse deiner Behandlung und hilft dabei, deine Haut langfristig gesund und ausgeglichen zu halten.
+          </p>
+          <p className="mt-5 text-foreground/75 leading-relaxed">
+            Gerne berate ich dich persönlich, welche Produkte am besten zu deiner Haut passen.
+          </p>
+        </div>
+        <div className="lg:col-span-6">
+          <div className="aspect-[4/5] overflow-hidden shadow-soft">
+            <img
+              src={imgSrc(pflegeImg)}
+              alt="Heimpflege mit ASAP"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
       </div>
     </section>
 
     {/* CTA */}
     <section className="py-24 md:py-32 bg-secondary/40">
-      <div className="container-editorial text-center max-w-2xl mx-auto">
-        <p className="eyebrow mb-5">Glow. Pflege. ASAP.</p>
-        <h2 className="headline">
-          Persönliche Hautberatung{" "}
-          <span className="italic text-primary">vereinbaren</span>.
-        </h2>
-        <p className="lede mt-6">
-          Gemeinsam finden wir die Produkte, die wirklich zu deiner Haut passen — abgestimmt auf deine Hautanalyse und Behandlungsziele.
-        </p>
-        <Link
-          href="/kontakt"
-          className="group mt-10 inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground text-sm tracking-wide hover:bg-primary-glow transition-colors"
-        >
-          Termin vereinbaren{" "}
-          <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-        </Link>
+      <div className="container-editorial grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="lg:col-span-6">
+          <div className="aspect-[4/5] overflow-hidden shadow-soft">
+            <img
+              src={imgSrc(hautberatungImg)}
+              alt="Persönliche Hautberatung"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <div className="lg:col-span-6">
+          <p className="eyebrow mb-5">Glow. Pflege. ASAP.</p>
+          <h2 className="headline">
+            Persönliche Hautberatung{" "}
+            <span className="italic text-primary">vereinbaren</span>.
+          </h2>
+          <p className="mt-6 text-foreground/75 leading-relaxed">
+            Gemeinsam finden wir die Produkte, die wirklich zu deiner Haut passen — abgestimmt auf deine Hautanalyse und Behandlungsziele.
+          </p>
+          <Link
+            href="/kontakt"
+            className="group mt-9 inline-flex items-center gap-2 px-7 py-4 bg-primary text-primary-foreground text-sm tracking-wide hover:bg-primary-glow transition-colors"
+          >
+            Termin vereinbaren{" "}
+            <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+          </Link>
+        </div>
       </div>
     </section>
 
