@@ -7,6 +7,7 @@ import { imgSrc } from "@/lib/utils";
 
 import heroImg    from "@/assets/treatment-pmu.jpg";
 import awardImg   from "@/assets/microbladingneu.jpg";
+import ausgezeichnetImg from "@/assets/ausgezeichnet.JPG";
 import processImg from "@/assets/IMG_2542.JPG";
 import gallery1   from "@/assets/image0.jpeg";
 import gallery2   from "@/assets/IMG_2541.JPG";
@@ -195,12 +196,20 @@ const Microblading = () => (
             Diese Auszeichnung bestätigt meinen Anspruch an Präzision, Natürlichkeit und typgerechte Ergebnisse – und den hohen Standard, den ich mir für jede einzelne Behandlung setze.
           </p>
         </div>
-        <div className="flex justify-center lg:justify-end">
-          <div className="w-full max-w-[320px] aspect-[4/5] overflow-hidden border border-border/50 shadow-soft">
+        <div className="flex flex-col gap-5 items-center lg:items-end">
+          <div className="w-full max-w-[320px] aspect-[4/3] overflow-hidden border border-border/50 shadow-soft">
+            <img
+              src={imgSrc(ausgezeichnetImg)}
+              alt="Browista Meisterschaft 2025 – Auszeichnung"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div className="w-full max-w-[320px] aspect-[4/3] overflow-hidden border border-border/50 shadow-soft">
             <img
               src={imgSrc(awardImg)}
               alt="Microblading Ergebnis – Browista Meisterschaft"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover -rotate-90 scale-[1.35]"
               loading="lazy"
             />
           </div>
