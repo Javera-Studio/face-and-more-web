@@ -96,6 +96,7 @@ const categories: Category[] = [
 const Preise = () => (
   <SiteLayout>
     <PageHero
+      centered
       eyebrow="Preise — FACE AND MORE Wien"
       title={
         <>

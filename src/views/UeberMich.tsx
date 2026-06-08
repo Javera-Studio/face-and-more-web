@@ -18,6 +18,7 @@ const credentials = [
 const UeberMich = () => (
   <SiteLayout>
     <PageHero
+      centered
       eyebrow="Über Michaela"
       title={
         <>
