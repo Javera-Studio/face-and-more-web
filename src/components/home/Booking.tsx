@@ -7,44 +7,44 @@ const WhatsAppIcon = () => (
 );
 
 const Booking = () => (
-  <section className="py-10 md:py-14 bg-foreground text-background">
+  <section className="py-10 md:py-14 bg-primary">
     <div className="container-editorial">
-      <div className="grid lg:grid-cols-2 gap-4 items-stretch">
+      <div className="grid lg:grid-cols-2 gap-3 items-stretch">
 
-        {/* Left — 2 stacked containers */}
-        <div className="flex flex-col gap-4">
-          <div className="bg-background/5 border border-background/10 p-6 md:p-8">
-            <p className="eyebrow mb-2 text-background/60">Termin buchen</p>
-            <h2 className="text-2xl md:text-3xl font-serif text-background leading-snug">
+        {/* Left — 2 stacked rose-cream containers */}
+        <div className="flex flex-col gap-3">
+          <div className="bg-secondary p-6 md:p-8">
+            <p className="eyebrow mb-2">Termin buchen</p>
+            <h2 className="text-2xl md:text-3xl font-serif text-foreground leading-snug">
               Bereit für deine<br />Hautanalyse?
             </h2>
           </div>
-          <div className="bg-background/5 border border-background/10 p-6 md:p-8 flex-1">
-            <p className="text-sm text-background/70 leading-relaxed">
+          <div className="bg-secondary p-6 md:p-8 flex-1">
+            <p className="text-sm text-muted-foreground leading-relaxed">
               Schreib mir einfach auf WhatsApp — ich antworte persönlich und
               finde mit dir den passenden Termin.
             </p>
           </div>
         </div>
 
-        {/* Right — WhatsApp (bigger) + Treatwell (smaller) */}
-        <div className="flex flex-col gap-4">
+        {/* Right — light teal WhatsApp + rose-cream Treatwell */}
+        <div className="flex flex-col gap-3">
           <a
             href="https://wa.me/436776292066?text=Hallo%20Michaela%2C%20ich%20m%C3%B6chte%20gerne%20einen%20Termin%20vereinbaren."
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex-1 bg-primary text-primary-foreground p-6 md:p-8 flex flex-col justify-between hover:bg-primary-glow transition-colors"
+            className="group flex-1 bg-primary-soft p-6 md:p-8 flex flex-col justify-between hover:bg-accent transition-colors"
           >
             <div className="flex items-start justify-between">
               <WhatsAppIcon />
-              <ArrowUpRight size={16} strokeWidth={1.3} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+              <ArrowUpRight size={16} strokeWidth={1.3} className="text-primary transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
             </div>
             <div className="mt-6">
-              <p className="eyebrow text-primary-foreground/70">Empfohlen</p>
-              <p className="font-serif text-xl md:text-2xl mt-1">
+              <p className="eyebrow text-primary mb-1">Empfohlen</p>
+              <p className="font-serif text-xl md:text-2xl text-foreground mt-1">
                 Direkt auf WhatsApp anfragen
               </p>
-              <p className="mt-2 text-xs text-primary-foreground/80">
+              <p className="mt-2 text-xs text-muted-foreground">
                 Schnell, unkompliziert und persönlich — Michaela antwortet direkt.
               </p>
             </div>
@@ -54,13 +54,13 @@ const Booking = () => (
             href="https://www.treatwell.at/ort/face-and-more/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group bg-background/5 border border-background/15 p-4 md:p-5 flex items-center justify-between hover:bg-background/10 transition-colors"
+            className="group bg-secondary p-4 md:p-5 flex items-center justify-between hover:bg-secondary/80 transition-colors"
           >
             <div>
-              <p className="eyebrow text-background/50 mb-0.5">Alternativ</p>
-              <p className="font-serif text-base">Online Buchung über Treatwell</p>
+              <p className="eyebrow mb-0.5">Alternativ</p>
+              <p className="font-serif text-base text-foreground">Online Buchung über Treatwell</p>
             </div>
-            <ArrowUpRight size={14} className="text-background/60 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 shrink-0 ml-4" />
+            <ArrowUpRight size={14} className="text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 shrink-0 ml-4" />
           </a>
         </div>
 
