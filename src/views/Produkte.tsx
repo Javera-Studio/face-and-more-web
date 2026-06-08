@@ -160,16 +160,6 @@ const Produkte = () => (
     {/* Hochwertige Wirkstoffe */}
     <section className="py-24 md:py-32 bg-secondary/40">
       <div className="container-editorial grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-        <div className="lg:col-span-5">
-          <p className="eyebrow mb-5">Wirkstoffkosmetik</p>
-          <h2 className="headline">
-            Hochwertige Wirkstoffe für sichtbare{" "}
-            <span className="italic text-primary">Ergebnisse</span>.
-          </h2>
-          <p className="mt-6 text-foreground/70 leading-relaxed">
-            ASAP kombiniert moderne Wirkstoffkosmetik mit einer klaren Philosophie — das Ergebnis ist eine gesündere, strahlendere und sichtbar gepflegte Haut.
-          </p>
-        </div>
         <div className="lg:col-span-7">
           {ingredients.map((item, i) => (
             <div key={item.label} className="border-t border-border/60 py-7 lg:py-8">
@@ -188,6 +178,16 @@ const Produkte = () => (
             </div>
           ))}
           <div className="border-t border-border/60" />
+        </div>
+        <div className="lg:col-span-5">
+          <p className="eyebrow mb-5">Wirkstoffkosmetik</p>
+          <h2 className="headline">
+            Hochwertige Wirkstoffe für sichtbare{" "}
+            <span className="italic text-primary">Ergebnisse</span>.
+          </h2>
+          <p className="mt-6 text-foreground/70 leading-relaxed">
+            ASAP kombiniert moderne Wirkstoffkosmetik mit einer klaren Philosophie — das Ergebnis ist eine gesündere, strahlendere und sichtbar gepflegte Haut.
+          </p>
         </div>
       </div>
     </section>
