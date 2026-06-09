@@ -7,7 +7,7 @@ import { imgSrc } from "@/lib/utils";
 const SiteFooter = () => (
   <footer className="bg-secondary/60 border-t border-border mt-24">
     <div className="container-editorial py-10 grid gap-8 md:grid-cols-3">
-      <div>
+      <div className="flex flex-col items-center text-center">
         <Link href="/" aria-label="FACE AND MORE — Startseite" className="inline-block">
           <img src={imgSrc(logo)} alt="FACE AND MORE by Michaela Kornherr" className="h-20 md:h-24 w-auto" />
         </Link>
@@ -33,6 +33,11 @@ const SiteFooter = () => (
         <ul className="space-y-2 text-sm text-foreground/80">
           <li>Wolfsaugasse 6/2, A-1200 Wien</li>
           <li>+43 677 62 920 665</li>
+        </ul>
+        <p className="eyebrow mt-5 mb-2">Öffnungszeiten</p>
+        <ul className="space-y-1.5 text-sm text-foreground/80">
+          <li>Mo – Do: 08:30 – 18:00 Uhr</li>
+          <li>Fr: 08:30 – 13:00 Uhr<br /><span className="text-xs text-muted-foreground">(nach Rücksprache auch nachmittags)</span></li>
         </ul>
         <div className="flex items-center gap-4 mt-5">
           <a

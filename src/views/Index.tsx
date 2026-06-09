@@ -6,6 +6,7 @@ import Hautcoaching from "@/components/home/Hautcoaching";
 import Treatments from "@/components/home/Treatments";
 import About from "@/components/home/About";
 import Testimonials from "@/components/home/Testimonials";
+import WhyUs from "@/components/home/WhyUs";
 import Booking from "@/components/home/Booking";
 
 const Index = () => (
@@ -17,6 +18,7 @@ const Index = () => (
     <Treatments />
     <About />
     <Testimonials />
+    <WhyUs />
     <Booking />
   </SiteLayout>
 );
