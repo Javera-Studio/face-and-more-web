@@ -1,58 +1,80 @@
-import Link from "next/link";
+import { Check } from "lucide-react";
+import { imgSrc } from "@/lib/utils";
+import michiImg from "@/assets/michi.JPG";
 
-const tiles = [
-  {
-    nr: "01",
-    title: "Individuelle Hautanalyse",
-    text: "Keine Behandlung von der Stange – deine Haut wird genau angesehen und die Pflege individuell auf deine Bedürfnisse abgestimmt.",
-  },
-  {
-    nr: "02",
-    title: "Expertise bei Problemhaut",
-    text: "Spezialisiert auf Akne, Unreinheiten, Aknenarben und Pigmentflecken – mit Erfahrung, Geduld und gezielten Behandlungskonzepten.",
-  },
-  {
-    nr: "03",
-    title: "Persönliche Betreuung",
-    text: "Michaela nimmt sich Zeit, hört zu und begleitet dich Schritt für Schritt – damit du dich gut aufgehoben fühlst.",
-  },
+const advantages = [
+  "Spezialisierung auf Akne & Problemhaut",
+  "Individuelle Hautanalyse & Hautcoaching",
+  "Natürliches Microblading mit Liebe zum Detail",
+  "Meisterbetrieb mit langjähriger Erfahrung",
+  "Treatwell Top Rated 2025",
+  "Über 269 verifizierte Bewertungen auf Treatwell",
+  "5 Sterne auf Google",
+  "Persönliche Betreuung statt Massenabfertigung",
+];
+
+const stats = [
+  { value: "269+", label: "Treatwell\nBewertungen" },
+  { value: "5,0 ★", label: "Google\nBewertung" },
+  { value: "Top Rated", label: "Treatwell\n2025" },
 ];
 
 const WhyUs = () => (
-  <section className="py-20 md:py-28 bg-background">
+  <section className="py-16 md:py-24 bg-background border-t border-border/40">
     <div className="container-editorial">
-      <div className="max-w-2xl">
-        <p className="eyebrow mb-4">Persönlich. Erfahren. Individuell.</p>
-        <h2 className="headline">Warum Face and More?</h2>
-        <p className="lede mt-5">
-          Bei Michaela steht nicht nur die Behandlung im Mittelpunkt, sondern
-          deine Haut, deine Bedürfnisse und dein persönliches Wohlbefinden.
-        </p>
-      </div>
+      <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
 
-      <div className="mt-14 md:mt-16 grid md:grid-cols-3 gap-6 md:gap-8">
-        {tiles.map(({ nr, title, text }) => (
-          <div
-            key={nr}
-            className="bg-secondary/40 border border-border/60 p-8 md:p-9 flex flex-col"
-          >
-            <span className="font-serif text-3xl text-primary/40 leading-none mb-6">
-              {nr}
-            </span>
-            <h3 className="font-serif text-lg md:text-xl text-foreground leading-snug">
-              {title}
-            </h3>
-            <p className="mt-3 text-sm text-foreground/70 leading-relaxed">
-              {text}
-            </p>
+        {/* Left column — text + advantages */}
+        <div className="lg:col-span-7 order-2 lg:order-1">
+          <p className="eyebrow mb-4">Warum Face and More?</p>
+          <h2 className="font-serif text-4xl md:text-5xl leading-[1.1] text-foreground">
+            Persönliche Betreuung.<br />
+            <span className="text-primary">Sichtbare Ergebnisse.</span>
+          </h2>
+          <p className="lede mt-5 max-w-xl">
+            Bei Michaela steht nicht nur die Behandlung im Mittelpunkt, sondern
+            deine Haut, deine Bedürfnisse und dein persönliches Wohlbefinden.
+          </p>
+
+          <ul className="mt-8 grid sm:grid-cols-2 gap-x-8 gap-y-3">
+            {advantages.map((item) => (
+              <li key={item} className="flex items-start gap-3">
+                <span className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Check size={12} className="text-primary stroke-[2.5]" />
+                </span>
+                <span className="text-sm text-foreground/80 leading-snug">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Right column — portrait + stats */}
+        <div className="lg:col-span-5 order-1 lg:order-2 flex flex-col gap-6">
+          <div className="overflow-hidden border border-border/50">
+            <img
+              src={imgSrc(michiImg)}
+              alt="Michaela Senker — Kosmetikerin & Gründerin von Face and More"
+              loading="lazy"
+              className="w-full object-cover object-top aspect-[4/5]"
+            />
           </div>
-        ))}
-      </div>
 
-      <div className="mt-12 md:mt-14 border-t border-border/60 pt-8 flex justify-end">
-        <Link href="/kontakt" className="link-underline text-sm uppercase tracking-[0.2em]">
-          Termin vereinbaren →
-        </Link>
+          <div className="px-1">
+            <p className="font-serif text-xl text-foreground">Michaela Senker</p>
+            <p className="mt-1 text-sm text-foreground/60">Kosmetikerin, Hautcoach & Gründerin von Face and More</p>
+          </div>
+
+          {/* Trust stats */}
+          <div className="grid grid-cols-3 gap-px border border-border/50 bg-border/50">
+            {stats.map(({ value, label }) => (
+              <div key={value} className="bg-background px-3 py-5 text-center">
+                <p className="font-serif text-2xl md:text-3xl text-primary leading-none">{value}</p>
+                <p className="mt-2 text-[11px] uppercase tracking-wider text-foreground/50 leading-snug whitespace-pre-line">{label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
     </div>
   </section>

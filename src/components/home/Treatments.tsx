@@ -42,7 +42,7 @@ const TreatmentRow = ({ item, index }: { item: typeof treatments[number]; index:
 
   return (
     <article ref={ref} className="group relative py-14 md:py-20 border-b border-border/60 last:border-b-0">
-      <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-center">
+      <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-stretch">
         <div
           className={`md:col-span-7 ${reverse ? "md:order-1" : "md:order-2"} transition-all duration-1000 ease-out ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
@@ -63,7 +63,7 @@ const TreatmentRow = ({ item, index }: { item: typeof treatments[number]; index:
         </div>
 
         <div
-          className={`md:col-span-5 ${reverse ? "md:order-2 md:pl-4" : "md:order-1 md:pr-4"} transition-all duration-1000 delay-150 ease-out ${
+          className={`md:col-span-5 flex flex-col ${reverse ? "md:order-2 md:pl-4" : "md:order-1 md:pr-4"} transition-all duration-1000 delay-150 ease-out ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
@@ -85,7 +85,7 @@ const TreatmentRow = ({ item, index }: { item: typeof treatments[number]; index:
 
           <Link
             href={item.to}
-            className="mt-10 inline-flex items-center gap-2 text-sm tracking-wide text-foreground border-b border-foreground/30 pb-1 transition-all duration-300 hover:text-primary hover:border-primary hover:gap-3"
+            className="mt-auto pt-10 inline-flex items-center gap-2 text-sm tracking-wide text-foreground border-b border-foreground/30 pb-1 transition-all duration-300 hover:text-primary hover:border-primary hover:gap-3"
           >
             Mehr erfahren
             <ArrowUpRight size={16} />
@@ -97,7 +97,7 @@ const TreatmentRow = ({ item, index }: { item: typeof treatments[number]; index:
 };
 
 const Treatments = () => (
-  <section className="py-24 md:py-32">
+  <section className="py-12 md:py-16">
     <div className="container-editorial">
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 md:mb-16">
         <div className="max-w-xl">
