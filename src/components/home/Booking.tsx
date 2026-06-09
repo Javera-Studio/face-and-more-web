@@ -13,13 +13,13 @@ const Booking = () => (
 
         {/* Left — 2 stacked rose-cream containers */}
         <div className="flex flex-col gap-3">
-          <div className="bg-secondary p-6 md:p-8">
+          <div className="bg-white p-6 md:p-8">
             <p className="eyebrow mb-2">Termin buchen</p>
             <h2 className="text-2xl md:text-3xl font-serif text-foreground leading-snug">
               Bereit für deine<br />Hautanalyse?
             </h2>
           </div>
-          <div className="bg-secondary p-6 md:p-8 flex-1">
+          <div className="bg-white p-6 md:p-8 flex-1">
             <p className="text-sm text-muted-foreground leading-relaxed">
               Schreib mir einfach auf WhatsApp — ich antworte persönlich und
               finde mit dir den passenden Termin.
@@ -54,7 +54,7 @@ const Booking = () => (
             href="https://www.treatwell.at/ort/face-and-more/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group bg-secondary p-4 md:p-5 flex items-center justify-between hover:bg-secondary/80 transition-colors"
+            className="group bg-white p-4 md:p-5 flex items-center justify-between hover:bg-white/80 transition-colors"
           >
             <div>
               <p className="eyebrow mb-0.5">Alternativ</p>
