@@ -20,7 +20,7 @@ const stats = [
 ];
 
 const WhyUs = () => (
-  <section className="py-16 md:py-32 bg-background border-t border-border/40">
+  <section className="py-16 bg-background border-t border-border/40">
     <div className="container-editorial">
       <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
 
@@ -48,7 +48,7 @@ const WhyUs = () => (
           </ul>
 
           {/* Trust stats — pushed to bottom of column */}
-          <div className="mt-auto pt-10 grid grid-cols-3 gap-px border border-border/50 bg-border/50">
+          <div className="mt-auto pt-5 grid grid-cols-3 gap-px border border-border/50 bg-border/50">
             {stats.map(({ value, label }) => (
               <div key={value} className="bg-background px-3 py-5 text-center">
                 <p className="font-serif text-2xl md:text-3xl text-primary leading-none">{value}</p>

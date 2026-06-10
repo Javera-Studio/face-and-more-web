@@ -50,7 +50,7 @@ const Initial = ({ name }: { name: string }) => (
 );
 
 const Testimonials = () => (
-  <section className="relative py-16 md:py-40 bg-background overflow-hidden">
+  <section className="relative py-16 bg-background overflow-hidden">
     {/* subtle decorative wash */}
     <div
       aria-hidden

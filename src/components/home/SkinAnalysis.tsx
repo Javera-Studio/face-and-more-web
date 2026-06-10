@@ -20,7 +20,7 @@ const steps = [
 ];
 
 const SkinAnalysis = () => (
-  <section className="py-16 md:py-32 bg-secondary/40">
+  <section className="py-16 bg-secondary/40">
     <div className="container-editorial">
       <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
         <div className="lg:col-span-6 lg:sticky lg:top-28">

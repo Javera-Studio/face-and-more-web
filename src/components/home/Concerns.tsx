@@ -63,7 +63,7 @@ const ConcernRow = ({ title, desc, index }: { title: string; desc: string; index
 };
 
 const Concerns = () => (
-  <section className="py-16 md:py-32">
+  <section className="py-16 md:py-16">
     <div className="container-editorial">
       <div className="max-w-2xl">
         <p className="eyebrow mb-5">Hautanliegen</p>

@@ -27,7 +27,7 @@ const paths = [
 ];
 
 const Hautcoaching = () => (
-  <section className="py-16 md:py-32">
+  <section className="py-16 md:py-16">
     <div className="container-editorial">
       <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-end mb-14 md:mb-20">
         <div className="lg:col-span-7">
