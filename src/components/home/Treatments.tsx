@@ -97,7 +97,7 @@ const TreatmentRow = ({ item, index }: { item: typeof treatments[number]; index:
 };
 
 const Treatments = () => (
-  <section className="py-12 md:py-16">
+  <section className="py-16 md:py-16">
     <div className="container-editorial">
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 md:mb-16">
         <div className="max-w-xl">

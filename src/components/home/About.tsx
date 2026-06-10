@@ -3,7 +3,7 @@ import portrait from "@/assets/michaela.avif";
 import { imgSrc } from "@/lib/utils";
 
 const About = () => (
-  <section className="py-24 md:py-32 bg-secondary/40">
+  <section className="py-16 md:py-32 bg-secondary/40">
     <div className="container-editorial grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
       <div className="lg:col-span-5">
         <div className="aspect-[4/5] overflow-hidden shadow-soft">

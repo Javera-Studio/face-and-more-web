@@ -20,7 +20,7 @@ const stats = [
 ];
 
 const WhyUs = () => (
-  <section className="py-16 md:py-24 bg-background border-t border-border/40">
+  <section className="py-16 md:py-32 bg-background border-t border-border/40">
     <div className="container-editorial">
       <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
 
