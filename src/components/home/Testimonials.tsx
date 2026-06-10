@@ -205,15 +205,6 @@ const Testimonials = () => (
         </article>
       </div>
 
-      {/* Footer note */}
-      <div className="mt-24 md:mt-32 flex flex-col md:flex-row md:items-end md:justify-between gap-8 border-t border-border/60 pt-10">
-        <p className="font-serif text-2xl md:text-3xl max-w-xl leading-snug">
-          Persönliche Betreuung, die man spürt — Behandlung für Behandlung.
-        </p>
-        <a href="/kontakt" className="link-underline text-sm uppercase tracking-[0.2em]">
-          Termin vereinbaren →
-        </a>
-      </div>
     </div>
   </section>
 );

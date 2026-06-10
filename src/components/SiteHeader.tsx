@@ -162,6 +162,16 @@ const SiteHeader = () => {
       {open && (
         <div className="lg:hidden bg-background border-t border-border">
           <div className="container-editorial py-6 flex flex-col gap-1">
+
+            {/* Brand header */}
+            <div className="flex items-center gap-4 pb-5 mb-2 border-b border-border/50">
+              <img src={imgSrc(logo)} alt="FACE AND MORE" className="h-16 w-auto" />
+              <div>
+                <p className="font-serif text-lg leading-tight text-foreground">Face and More</p>
+                <p className="text-xs text-foreground/50 mt-0.5">Kosmetikstudio Wien</p>
+              </div>
+            </div>
+
             {navItems.map((item) => {
               if (item.children) {
                 const isExpanded = openSubmenu === item.to;

@@ -22,10 +22,10 @@ const stats = [
 const WhyUs = () => (
   <section className="py-16 md:py-24 bg-background border-t border-border/40">
     <div className="container-editorial">
-      <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+      <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
 
-        {/* Left column — text + advantages */}
-        <div className="lg:col-span-7 order-2 lg:order-1">
+        {/* Left column — text + advantages + stats */}
+        <div className="lg:col-span-7 order-2 lg:order-1 flex flex-col">
           <p className="eyebrow mb-4">Warum Face and More?</p>
           <h2 className="font-serif text-4xl md:text-5xl leading-[1.1] text-foreground">
             Persönliche Betreuung.<br />
@@ -46,32 +46,32 @@ const WhyUs = () => (
               </li>
             ))}
           </ul>
-        </div>
 
-        {/* Right column — portrait + stats */}
-        <div className="lg:col-span-5 order-1 lg:order-2 flex flex-col gap-6">
-          <div className="overflow-hidden border border-border/50">
-            <img
-              src={imgSrc(michiImg)}
-              alt="Michaela Senker — Kosmetikerin & Gründerin von Face and More"
-              loading="lazy"
-              className="w-full object-cover object-top aspect-[4/5]"
-            />
-          </div>
-
-          <div className="px-1">
-            <p className="font-serif text-xl text-foreground">Michaela Senker</p>
-            <p className="mt-1 text-sm text-foreground/60">Kosmetikerin, Hautcoach & Gründerin von Face and More</p>
-          </div>
-
-          {/* Trust stats */}
-          <div className="grid grid-cols-3 gap-px border border-border/50 bg-border/50">
+          {/* Trust stats — pushed to bottom of column */}
+          <div className="mt-auto pt-10 grid grid-cols-3 gap-px border border-border/50 bg-border/50">
             {stats.map(({ value, label }) => (
               <div key={value} className="bg-background px-3 py-5 text-center">
                 <p className="font-serif text-2xl md:text-3xl text-primary leading-none">{value}</p>
                 <p className="mt-2 text-[11px] uppercase tracking-wider text-foreground/50 leading-snug whitespace-pre-line">{label}</p>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Right column — portrait only */}
+        <div className="lg:col-span-5 order-1 lg:order-2 flex flex-col">
+          <div className="overflow-hidden border border-border/50">
+            <img
+              src={imgSrc(michiImg)}
+              alt="Michaela Kornherr — Kosmetikerin & Gründerin von Face and More"
+              loading="lazy"
+              className="w-full object-cover object-top aspect-[4/4.5]"
+            />
+          </div>
+
+          <div className="px-1 mt-4">
+            <p className="font-serif text-xl text-foreground">Michaela Kornherr</p>
+            <p className="mt-1 text-sm text-foreground/60">Kosmetikerin, Hautcoach & Gründerin von Face and More</p>
           </div>
         </div>
 
