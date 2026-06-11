@@ -1,6 +1,7 @@
 import SiteLayout from "@/components/SiteLayout";
-import PageHero from "@/components/PageHero";
 import { Mail, Phone, MapPin, ArrowUpRight, Clock } from "lucide-react";
+import { imgSrc } from "@/lib/utils";
+import michiImg from "@/assets/michi.JPG";
 
 const WhatsAppIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 shrink-0">
@@ -10,11 +11,22 @@ const WhatsAppIcon = () => (
 
 const Kontakt = () => (
   <SiteLayout>
-    <PageHero
-      eyebrow="Kontakt & Buchung"
-      title={<>Lass uns über deine <span className="italic text-primary">Haut</span> sprechen.</>}
-      intro="Schreib mir einfach auf WhatsApp — ich antworte persönlich und finde mit dir den passenden Termin."
-    />
+    <section className="bg-gradient-warm pt-16 md:pt-24 pb-16 md:pb-24">
+      <div className="container-editorial grid lg:grid-cols-[3fr_2fr] gap-10 lg:gap-16 items-center">
+        <div>
+          <p className="eyebrow mb-6">Kontakt & Buchung</p>
+          <h1 className="display max-w-4xl">Lass uns über deine <span className="italic text-primary">Haut</span> sprechen.</h1>
+          <p className="lede mt-7 max-w-2xl">Schreib mir einfach auf WhatsApp — ich antworte persönlich und finde mit dir den passenden Termin.</p>
+        </div>
+        <div className="overflow-hidden shadow-soft">
+          <img
+            src={imgSrc(michiImg)}
+            alt="Michaela Kornherr — Kosmetikerin & Gründerin von Face and More"
+            className="w-full object-cover object-top aspect-[4/4.5]"
+          />
+        </div>
+      </div>
+    </section>
 
     <section className="py-16 md:py-20">
       <div className="container-editorial grid lg:grid-cols-2 gap-8 lg:gap-12">

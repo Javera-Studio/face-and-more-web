@@ -53,8 +53,8 @@ const TreatmentPage = (p: TreatmentPageProps) => (
   <SiteLayout>
     {/* HERO */}
     <section className="bg-gradient-warm pt-16 md:pt-20 pb-16 md:pb-24">
-      <div className="container-editorial grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-        <div className="lg:col-span-6">
+      <div className="container-editorial grid lg:grid-cols-[3fr_2fr] gap-10 lg:gap-16 items-center">
+        <div>
           <p className="eyebrow mb-6">{p.eyebrow}</p>
           <h1 className="display">{p.title}</h1>
           <p className="lede mt-6 max-w-xl">{p.subtitle}</p>
@@ -70,7 +70,7 @@ const TreatmentPage = (p: TreatmentPageProps) => (
             </Link>
           </div>
         </div>
-        <div className="lg:col-span-6">
+        <div>
           <div className="aspect-[4/5] md:aspect-[5/6] overflow-hidden shadow-soft">
             <img src={imgSrc(p.heroImage)} alt={p.eyebrow} className="w-full h-full object-cover" />
           </div>

@@ -41,8 +41,8 @@ const benefits = [
 const Hautcoaching = () => (
   <SiteLayout>
     <section className="bg-gradient-warm pt-28 md:pt-32 pb-16 md:pb-24">
-      <div className="container-editorial grid lg:grid-cols-12 gap-10 lg:gap-16 items-end">
-        <div className="lg:col-span-6">
+      <div className="container-editorial grid lg:grid-cols-[3fr_2fr] gap-10 lg:gap-16 items-end">
+        <div>
           <p className="eyebrow mb-6">Hautcoach Wien</p>
           <h1 className="display">
             Hautcoaching für <span className="italic text-primary">Problemhaut</span>, Akne und individuelle Pflege.
@@ -62,7 +62,7 @@ const Hautcoaching = () => (
             </Link>
           </div>
         </div>
-        <div className="lg:col-span-6">
+        <div>
           <div className="aspect-[4/5] md:aspect-[5/6] overflow-hidden shadow-soft">
             <img src={imgSrc(michaelaImg)} alt="Michaela — Hautcoach Wien" className="w-full h-full object-cover" />
           </div>
