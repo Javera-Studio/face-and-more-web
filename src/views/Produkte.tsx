@@ -48,7 +48,7 @@ const Produkte = () => (
 
     {/* Hero */}
     <section className="bg-gradient-warm pt-16 md:pt-20 pb-16 md:pb-24">
-      <div className="container-editorial grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+      <div className="container-editorial grid md:grid-cols-[3fr_2fr] gap-10 md:gap-16 items-center">
         <div>
           <p className="eyebrow mb-6">Professionelle Hautpflege Wien</p>
           <h1 className="display">
