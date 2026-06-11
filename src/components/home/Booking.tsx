@@ -30,7 +30,7 @@ const Booking = () => (
         {/* Right — light teal WhatsApp + rose-cream Treatwell */}
         <div className="flex flex-col gap-3">
           <a
-            href="https://wa.me/436776292066?text=Hallo%20Michaela%2C%20ich%20m%C3%B6chte%20gerne%20einen%20Termin%20vereinbaren."
+            href="https://wa.me/4367762920665?text=Hallo%20Michaela%2C%20ich%20m%C3%B6chte%20gerne%20einen%20Termin%20vereinbaren."
             target="_blank"
             rel="noopener noreferrer"
             className="group flex-1 bg-primary-soft p-6 md:p-8 flex flex-col justify-between hover:bg-accent transition-colors"

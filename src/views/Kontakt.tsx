@@ -34,7 +34,7 @@ const Kontakt = () => (
         {/* Left — WhatsApp + Treatwell */}
         <div className="flex flex-col gap-4">
           <a
-            href="https://wa.me/436776292066?text=Hallo%20Michaela%2C%20ich%20m%C3%B6chte%20gerne%20einen%20Termin%20vereinbaren."
+            href="https://wa.me/4367762920665?text=Hallo%20Michaela%2C%20ich%20m%C3%B6chte%20gerne%20einen%20Termin%20vereinbaren."
             target="_blank"
             rel="noopener noreferrer"
             className="group flex-1 bg-primary text-primary-foreground p-8 md:p-10 flex flex-col justify-between hover:bg-primary-glow transition-colors"

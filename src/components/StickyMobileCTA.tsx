@@ -8,7 +8,7 @@ const StickyMobileCTA = () => (
   <div className="lg:hidden fixed bottom-0 inset-x-0 z-40 p-3 bg-background/95 backdrop-blur border-t border-border">
     <div className="grid grid-cols-2 gap-2">
       <a
-        href="https://wa.me/436776292066?text=Hallo%20Michaela%2C%20ich%20m%C3%B6chte%20gerne%20einen%20Termin%20vereinbaren."
+        href="https://wa.me/4367762920665?text=Hallo%20Michaela%2C%20ich%20m%C3%B6chte%20gerne%20einen%20Termin%20vereinbaren."
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center justify-center gap-2 py-3.5 bg-primary text-primary-foreground text-sm tracking-wide"
