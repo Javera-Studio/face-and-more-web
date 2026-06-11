@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import SiteLayout from "@/components/SiteLayout";
 import { imgSrc } from "@/lib/utils";
+import asapABCImg from "@/assets/asapABC.jpg";
 import asapHydrateImg from "@/assets/asaphydrate.jpg";
 import asapCleanserImg from "@/assets/asapCleanser.jpg";
 import pflegeImg from "@/assets/pflege.jpg";
@@ -47,14 +48,14 @@ const Produkte = () => (
 
     {/* Hero */}
     <section className="bg-gradient-warm pt-16 md:pt-20 pb-16 md:pb-24">
-      <div className="container-editorial">
-        <div className="max-w-3xl">
+      <div className="container-editorial grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+        <div>
           <p className="eyebrow mb-6">Professionelle Hautpflege Wien</p>
           <h1 className="display">
             Wissenschaft trifft{" "}
             <span className="italic text-primary">Hautgesundheit</span>
           </h1>
-          <p className="lede mt-6 max-w-2xl">
+          <p className="lede mt-6">
             Bei FACE AND MORE arbeite ich mit ASAP – Australian Skin Active Products, einer der führenden professionellen Hautpflegemarken Australiens.
           </p>
           <div className="mt-9 flex flex-wrap gap-4">
@@ -66,6 +67,13 @@ const Produkte = () => (
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
+        </div>
+        <div className="aspect-[3/4] overflow-hidden shadow-soft">
+          <img
+            src={imgSrc(asapABCImg)}
+            alt="ASAP Australian Skin Active Products"
+            className="w-full h-full object-cover"
+          />
         </div>
       </div>
     </section>
