@@ -136,13 +136,15 @@ const Preise = () => (
               {cat.items.map((it) => (
                 <li
                   key={it.name}
-                  className="grid grid-cols-1 sm:grid-cols-[1fr_auto_auto] items-baseline gap-3 sm:gap-10 py-6 border-b border-border"
+                  className="grid grid-cols-1 sm:grid-cols-[1fr_auto_auto] items-baseline gap-1 sm:gap-10 py-6 border-b border-border"
                 >
                   <p className="font-serif text-lg md:text-xl text-foreground/90">{it.name}</p>
-                  <p className="inline-flex items-center gap-1.5 text-[11px] uppercase tracking-widest text-muted-foreground">
-                    <Clock size={12} /> {it.duration}
-                  </p>
-                  <p className="font-serif text-xl md:text-2xl text-primary sm:text-right">{it.price}</p>
+                  <div className="flex items-baseline justify-between sm:contents">
+                    <p className="inline-flex items-center gap-1.5 text-[11px] uppercase tracking-widest text-muted-foreground">
+                      <Clock size={12} /> {it.duration}
+                    </p>
+                    <p className="font-serif text-xl md:text-2xl text-primary sm:text-right">{it.price}</p>
+                  </div>
                 </li>
               ))}
             </ul>
