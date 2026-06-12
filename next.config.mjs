@@ -1,5 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      { source: '/anwendungen', destination: '/leistungen', permanent: true },
+      { source: '/face-and-more', destination: '/kontakt', permanent: true },
+      { source: '/services-produkte', destination: '/produkte', permanent: true },
+    ]
+  },
   images: {
     unoptimized: true,
   },

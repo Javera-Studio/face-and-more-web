@@ -1,5 +1,16 @@
+import type { Metadata } from 'next'
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: 'Blog — Hautwissen & Tipps',
+  description: 'Hautwissen verständlich erklärt: Wirkstoffe, Pflegetipps aus der Praxis und persönliche Einblicke von Michaela Kornherr — für eine Hautpflege, die wirklich wirkt.',
+  openGraph: {
+    title: 'Blog — Hautwissen & Tipps | FACE AND MORE Wien',
+    description: 'Hautwissen verständlich erklärt: Wirkstoffe, Pflegetipps und persönliche Einblicke für eine Hautpflege, die wirklich wirkt.',
+    url: 'https://faceandmore.at/blog',
+  },
+}
 import SiteLayout from "@/components/SiteLayout";
 import PageHero from "@/components/PageHero";
 import { fetchBlogPosts } from "@/../../lib/notion";
