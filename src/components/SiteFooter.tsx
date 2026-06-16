@@ -70,7 +70,13 @@ const SiteFooter = () => (
     </div>
     <div className="border-t border-border">
       <div className="container-editorial py-4 flex flex-col items-center gap-3 text-xs text-muted-foreground">
-        <p>© {new Date().getFullYear()} FACE AND MORE by Michaela Kornherr</p>
+        <div className="flex items-center gap-4">
+          <p>© {new Date().getFullYear()} FACE AND MORE by Michaela Kornherr</p>
+          <span>·</span>
+          <Link href="/impressum" className="hover:text-foreground transition-colors">Impressum</Link>
+          <span>·</span>
+          <Link href="/datenschutz" className="hover:text-foreground transition-colors">Datenschutz</Link>
+        </div>
         <a
           href="https://javera-studio.at"
           target="_blank"
