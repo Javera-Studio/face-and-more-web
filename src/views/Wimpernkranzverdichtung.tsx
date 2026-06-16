@@ -3,6 +3,10 @@ import hero from "@/assets/wimpernkranz.jpg";
 import g1 from "@/assets/treatment-facial.jpg";
 import g2 from "@/assets/michaela.avif";
 import g3 from "@/assets/studio.jpg";
+import kranz1 from "@/assets/kranz1.jpg";
+import kranz2 from "@/assets/kranz2.jpg";
+import kranz3 from "@/assets/kranz3.jpg";
+import kranz4 from "@/assets/kranz4.jpg";
 
 const Wimpernkranzverdichtung = () => (
   <TreatmentPage
@@ -12,6 +16,7 @@ const Wimpernkranzverdichtung = () => (
     intro="Du möchtest deine Wimpern auf natürliche Weise betonen? Eine Wimpernkranzverdichtung oder ein feiner Eyeliner sorgt dafür, dass deine Augen ausdrucksstärker wirken und optisch mehr Tiefe bekommen. Ich stimme gemeinsam mit dir ab, welche Variante am besten zu dir und deinem Gesicht passt."
     heroImage={hero}
     gallery={[g1, g2, g3]}
+    galleryGrid={[kranz1, kranz2, kranz3, kranz4]}
     benefits={[
       "Natürlich betonter Wimpernkranz",
       "Ausdrucksstärkerer Blick",
