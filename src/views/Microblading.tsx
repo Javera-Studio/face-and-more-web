@@ -8,7 +8,7 @@ import { imgSrc } from "@/lib/utils";
 import heroImg    from "@/assets/treatment-pmu.jpg";
 import awardImg   from "@/assets/microbladingneu.jpg";
 import ausgezeichnetImg from "@/assets/ausgezeichnet.JPG";
-import processImg from "@/assets/IMG_2542.JPG";
+import processImg from "@/assets/IMG_2543.JPG";
 import vorher1  from "@/assets/1vorher.jpg";
 import nachher1 from "@/assets/1nachher.jpg";
 import vorher2  from "@/assets/2vorher.jpg";
