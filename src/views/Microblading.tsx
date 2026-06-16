@@ -253,22 +253,22 @@ const Microblading = () => (
         <div className="grid sm:grid-cols-2 gap-4 lg:gap-6">
           {beforeAfterPairs.map((pair, i) => (
             <div key={i} className="group flex gap-0.5 overflow-hidden border border-border/40 shadow-soft">
-              <div className="relative flex-1 overflow-hidden aspect-[3/4]">
+              <div className="relative flex-1 overflow-hidden aspect-[3/4] bg-secondary/30">
                 <img
                   src={imgSrc(pair.vorher)}
                   alt={`Microblading Vorher ${i + 1}`}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                 />
                 <span className="absolute bottom-0 inset-x-0 py-2 bg-foreground/55 text-background text-[9px] uppercase tracking-[0.2em] text-center">
                   Vorher
                 </span>
               </div>
-              <div className="relative flex-1 overflow-hidden aspect-[3/4]">
+              <div className="relative flex-1 overflow-hidden aspect-[3/4] bg-secondary/30">
                 <img
                   src={imgSrc(pair.nachher)}
                   alt={`Microblading Nachher ${i + 1}`}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                 />
                 <span className="absolute bottom-0 inset-x-0 py-2 bg-primary/80 text-primary-foreground text-[9px] uppercase tracking-[0.2em] text-center">
