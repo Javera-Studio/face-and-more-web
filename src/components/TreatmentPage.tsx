@@ -97,7 +97,7 @@ const TreatmentPage = (p: TreatmentPageProps) => (
     <section className="pb-24 md:pb-32">
       <div className="container-editorial">
         {p.galleryGrid ? (
-          <div className="grid grid-cols-2 gap-2 md:gap-3">
+          <div className="max-w-[70%] mx-auto grid grid-cols-2 gap-2 md:gap-3">
             {p.galleryGrid.map((img, i) => (
               <div key={i} className="aspect-square overflow-hidden">
                 <img src={imgSrc(img)} alt="" className="w-full h-full object-cover" loading="lazy" />
