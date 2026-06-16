@@ -126,12 +126,12 @@ const faqs: Faq[] = [
 ];
 
 const beforeAfterPairs = [
-  { vorher: vorher1, nachher: nachher1 },
+  { vorher: vorher1, nachher: nachher1, scaleV: 0.70 },
   { vorher: vorher2, nachher: nachher2 },
   { vorher: vorher3, nachher: nachher3 },
   { vorher: vorher4, nachher: nachher4 },
   { vorher: vorher6, nachher: nachher6 },
-  { vorher: vorher7, nachher: nachher7 },
+  { vorher: vorher7, nachher: nachher7, scaleV: 0.70, scaleN: 0.70 },
   // Set 5 folgt – einfach hier ergänzen:
   // { vorher: vorher5, nachher: nachher5 },
 ];
@@ -257,7 +257,8 @@ const Microblading = () => (
                 <img
                   src={imgSrc(pair.vorher)}
                   alt={`Microblading Vorher ${i + 1}`}
-                  className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full object-contain transition-transform duration-700"
+                  style={pair.scaleV ? { transform: `scale(${pair.scaleV})` } : undefined}
                   loading="lazy"
                 />
                 <span className="absolute bottom-0 inset-x-0 py-2 bg-foreground/55 text-background text-[9px] uppercase tracking-[0.2em] text-center">
@@ -268,7 +269,8 @@ const Microblading = () => (
                 <img
                   src={imgSrc(pair.nachher)}
                   alt={`Microblading Nachher ${i + 1}`}
-                  className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full object-contain transition-transform duration-700"
+                  style={pair.scaleN ? { transform: `scale(${pair.scaleN})` } : undefined}
                   loading="lazy"
                 />
                 <span className="absolute bottom-0 inset-x-0 py-2 bg-primary/80 text-primary-foreground text-[9px] uppercase tracking-[0.2em] text-center">
