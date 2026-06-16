@@ -13,6 +13,8 @@ import vorher1  from "@/assets/1vorher.jpg";
 import nachher1 from "@/assets/1nachher.jpg";
 import vorher2  from "@/assets/2vorher.jpg";
 import nachher2 from "@/assets/2nachher.jpg";
+import vorher3  from "@/assets/3vorher.jpg";
+import nachher3 from "@/assets/3nachher.jpg";
 import vorher4  from "@/assets/4vorher.jpg";
 import nachher4 from "@/assets/4nachher.jpg";
 import vorher6  from "@/assets/6vorher.jpg";
@@ -126,11 +128,11 @@ const faqs: Faq[] = [
 const beforeAfterPairs = [
   { vorher: vorher1, nachher: nachher1 },
   { vorher: vorher2, nachher: nachher2 },
+  { vorher: vorher3, nachher: nachher3 },
   { vorher: vorher4, nachher: nachher4 },
   { vorher: vorher6, nachher: nachher6 },
   { vorher: vorher7, nachher: nachher7 },
-  // Sets 3 & 5 folgen – einfach hier ergänzen:
-  // { vorher: vorher3, nachher: nachher3 },
+  // Set 5 folgt – einfach hier ergänzen:
   // { vorher: vorher5, nachher: nachher5 },
 ];
 
