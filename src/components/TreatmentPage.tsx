@@ -99,8 +99,8 @@ const TreatmentPage = (p: TreatmentPageProps) => (
         {p.galleryGrid ? (
           <div className="grid grid-cols-4 gap-2 md:gap-3">
             {p.galleryGrid.map((img, i) => (
-              <div key={i} className="aspect-square overflow-hidden">
-                <img src={imgSrc(img)} alt="" className="w-full h-full object-cover" loading="lazy" />
+              <div key={i} className="aspect-square overflow-hidden group">
+                <img src={imgSrc(img)} alt="" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.3]" loading="lazy" />
               </div>
             ))}
           </div>

@@ -127,7 +127,7 @@ const faqs: Faq[] = [
 
 const beforeAfterPairs = [
   { vorher: vorher1, nachher: nachher1 },
-  { vorher: vorher2, nachher: nachher2, scaleV: 0.70 },
+  { vorher: vorher2, nachher: nachher2, scaleV: 0.85 },
   { vorher: vorher3, nachher: nachher3 },
   { vorher: vorher4, nachher: nachher4 },
   { vorher: vorher6, nachher: nachher6 },
@@ -251,14 +251,19 @@ const Microblading = () => (
           </p>
         </div>
         <div className="grid sm:grid-cols-2 gap-4 lg:gap-6">
-          {beforeAfterPairs.map((pair, i) => (
-            <div key={i} className="group flex gap-0.5 overflow-hidden border border-border/40 shadow-soft">
+          {beforeAfterPairs.map((pair, i) => {
+            const sv = pair.scaleV ?? 1;
+            const sn = pair.scaleN ?? 1;
+            return (
+            <div key={i} className="flex gap-0.5 overflow-hidden border border-border/40 shadow-soft">
               <div className="relative flex-1 overflow-hidden aspect-[3/4] bg-secondary/30">
                 <img
                   src={imgSrc(pair.vorher)}
                   alt={`Microblading Vorher ${i + 1}`}
                   className="w-full h-full object-contain transition-transform duration-700"
-                  style={pair.scaleV ? { transform: `scale(${pair.scaleV})` } : undefined}
+                  style={{ transform: `scale(${sv})` }}
+                  onMouseEnter={e => { e.currentTarget.style.transform = `scale(${+(sv * 1.3).toFixed(2)})`; }}
+                  onMouseLeave={e => { e.currentTarget.style.transform = `scale(${sv})`; }}
                   loading="lazy"
                 />
                 <span className="absolute bottom-0 inset-x-0 py-2 bg-foreground/55 text-background text-[9px] uppercase tracking-[0.2em] text-center">
@@ -270,7 +275,9 @@ const Microblading = () => (
                   src={imgSrc(pair.nachher)}
                   alt={`Microblading Nachher ${i + 1}`}
                   className="w-full h-full object-contain transition-transform duration-700"
-                  style={pair.scaleN ? { transform: `scale(${pair.scaleN})` } : undefined}
+                  style={{ transform: `scale(${sn})` }}
+                  onMouseEnter={e => { e.currentTarget.style.transform = `scale(${+(sn * 1.3).toFixed(2)})`; }}
+                  onMouseLeave={e => { e.currentTarget.style.transform = `scale(${sn})`; }}
                   loading="lazy"
                 />
                 <span className="absolute bottom-0 inset-x-0 py-2 bg-primary/80 text-primary-foreground text-[9px] uppercase tracking-[0.2em] text-center">
@@ -278,7 +285,7 @@ const Microblading = () => (
                 </span>
               </div>
             </div>
-          ))}
+          ); })}
         </div>
       </div>
     </section>
