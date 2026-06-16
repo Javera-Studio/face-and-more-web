@@ -9,9 +9,16 @@ import heroImg    from "@/assets/treatment-pmu.jpg";
 import awardImg   from "@/assets/microbladingneu.jpg";
 import ausgezeichnetImg from "@/assets/ausgezeichnet.JPG";
 import processImg from "@/assets/IMG_2542.JPG";
-import gallery1   from "@/assets/image0.jpeg";
-import gallery2   from "@/assets/IMG_2541.JPG";
-import gallery3   from "@/assets/IMG_2543.JPG";
+import vorher1  from "@/assets/1vorher.jpg";
+import nachher1 from "@/assets/1nachher.jpg";
+import vorher2  from "@/assets/2vorher.jpg";
+import nachher2 from "@/assets/2nachher.jpg";
+import vorher4  from "@/assets/4vorher.jpg";
+import nachher4 from "@/assets/4nachher.jpg";
+import vorher6  from "@/assets/6vorher.jpg";
+import nachher6 from "@/assets/6nachher.jpg";
+import vorher7  from "@/assets/7vorher.jpg";
+import nachher7 from "@/assets/7nachher.jpg";
 import studioImg  from "@/assets/studio.jpg";
 
 interface Faq { q: string; a: string }
@@ -116,6 +123,17 @@ const faqs: Faq[] = [
   },
 ];
 
+const beforeAfterPairs = [
+  { vorher: vorher1, nachher: nachher1 },
+  { vorher: vorher2, nachher: nachher2 },
+  { vorher: vorher4, nachher: nachher4 },
+  { vorher: vorher6, nachher: nachher6 },
+  { vorher: vorher7, nachher: nachher7 },
+  // Sets 3 & 5 folgen – einfach hier ergänzen:
+  // { vorher: vorher3, nachher: nachher3 },
+  // { vorher: vorher5, nachher: nachher5 },
+];
+
 const Microblading = () => (
   <SiteLayout>
 
@@ -217,28 +235,44 @@ const Microblading = () => (
       </div>
     </section>
 
-    {/* GALLERY – Natürliche Ergebnisse */}
+    {/* BEFORE / AFTER */}
     <section className="py-12 md:py-16 border-t border-border/40">
       <div className="container-editorial">
         <div className="max-w-2xl mb-10">
-          <p className="eyebrow mb-4">Ergebnisse</p>
+          <p className="eyebrow mb-4">Vorher & Nachher</p>
           <h2 className="headline">
-            Natürliche{" "}
+            Echte{" "}
             <span className="italic text-primary">Ergebnisse</span>.
           </h2>
           <p className="mt-4 text-foreground/70 leading-relaxed max-w-lg">
-            Feine Härchenzeichnung, typgerechte Form und harmonische Farbwahl.
+            Feine Härchenzeichnung, typgerechte Form und harmonische Farbwahl – alle Ergebnisse entstanden in meinem Studio.
           </p>
         </div>
-        <div className="grid sm:grid-cols-3 gap-4 lg:gap-6">
-          {([gallery1, gallery2, gallery3] as const).map((img, i) => (
-            <div key={i} className="group aspect-[3/4] overflow-hidden border border-border/40 shadow-soft">
-              <img
-                src={imgSrc(img)}
-                alt={`Microblading Ergebnis ${i + 1}`}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                loading="lazy"
-              />
+        <div className="grid sm:grid-cols-2 gap-4 lg:gap-6">
+          {beforeAfterPairs.map((pair, i) => (
+            <div key={i} className="group flex gap-0.5 overflow-hidden border border-border/40 shadow-soft">
+              <div className="relative flex-1 overflow-hidden aspect-[3/4]">
+                <img
+                  src={imgSrc(pair.vorher)}
+                  alt={`Microblading Vorher ${i + 1}`}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <span className="absolute bottom-0 inset-x-0 py-2 bg-foreground/55 text-background text-[9px] uppercase tracking-[0.2em] text-center">
+                  Vorher
+                </span>
+              </div>
+              <div className="relative flex-1 overflow-hidden aspect-[3/4]">
+                <img
+                  src={imgSrc(pair.nachher)}
+                  alt={`Microblading Nachher ${i + 1}`}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <span className="absolute bottom-0 inset-x-0 py-2 bg-primary/80 text-primary-foreground text-[9px] uppercase tracking-[0.2em] text-center">
+                  Nachher
+                </span>
+              </div>
             </div>
           ))}
         </div>
