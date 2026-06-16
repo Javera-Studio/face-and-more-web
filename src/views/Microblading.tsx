@@ -126,8 +126,8 @@ const faqs: Faq[] = [
 ];
 
 const beforeAfterPairs = [
-  { vorher: vorher1, nachher: nachher1, scaleV: 0.70 },
-  { vorher: vorher2, nachher: nachher2 },
+  { vorher: vorher1, nachher: nachher1 },
+  { vorher: vorher2, nachher: nachher2, scaleV: 0.70 },
   { vorher: vorher3, nachher: nachher3 },
   { vorher: vorher4, nachher: nachher4 },
   { vorher: vorher6, nachher: nachher6 },
