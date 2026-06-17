@@ -51,7 +51,7 @@ const Booking = () => (
           </a>
 
           <a
-            href="https://www.treatwell.at/ort/face-and-more/"
+            href="https://trea.tw/hqPzucg27A6wtwtVa"
             target="_blank"
             rel="noopener noreferrer"
             className="group bg-white p-4 md:p-5 flex items-center justify-between hover:bg-white/80 transition-colors"

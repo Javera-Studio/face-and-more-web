@@ -16,7 +16,7 @@ const StickyMobileCTA = () => (
         <WhatsAppIcon /> WhatsApp
       </a>
       <a
-        href="https://www.treatwell.at/ort/face-and-more/"
+        href="https://trea.tw/hqPzucg27A6wtwtVa"
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center justify-center gap-2 py-3.5 border border-border text-foreground text-sm tracking-wide"

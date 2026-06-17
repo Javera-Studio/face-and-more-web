@@ -53,7 +53,7 @@ const Kontakt = () => (
           </a>
 
           <a
-            href="https://www.treatwell.at/ort/face-and-more/"
+            href="https://trea.tw/hqPzucg27A6wtwtVa"
             target="_blank"
             rel="noopener noreferrer"
             className="group bg-secondary/60 border border-border p-5 flex items-center justify-between hover:border-primary/40 transition-colors"
