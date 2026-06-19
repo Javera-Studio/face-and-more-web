@@ -4,6 +4,7 @@ import Hautanalyse from '@/views/Hautanalyse'
 export const metadata: Metadata = {
   title: 'Moderne 3D-Hautanalyse Wien',
   description: 'Professionelle 3D-Hautanalyse in Wien mit modernster Technologie. Erkenne deinen genauen Hauttyp, Pigmentierung, Poren und Feuchtigkeit — die Basis für jede wirksame Hautpflege.',
+  alternates: { canonical: '/hautanalyse' },
   openGraph: {
     title: 'Moderne 3D-Hautanalyse Wien | FACE AND MORE',
     description: 'Professionelle 3D-Hautanalyse in Wien: Erkenne deinen genauen Hauttyp und erhalte eine individuelle Pflegeempfehlung.',

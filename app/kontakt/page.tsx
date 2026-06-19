@@ -4,6 +4,7 @@ import Kontakt from '@/views/Kontakt'
 export const metadata: Metadata = {
   title: 'Kontakt & Terminvereinbarung',
   description: 'Nimm Kontakt mit FACE AND MORE Wien auf oder vereinbare einen Termin für deine Hautanalyse, Behandlung oder Hautcoaching — Michaela Kornherr freut sich auf dich.',
+  alternates: { canonical: '/kontakt' },
   openGraph: {
     title: 'Kontakt & Terminvereinbarung | FACE AND MORE Wien',
     description: 'Kontakt aufnehmen oder Termin vereinbaren für Hautanalyse, Behandlung oder Hautcoaching in Wien.',

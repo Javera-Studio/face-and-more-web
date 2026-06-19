@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight } from "lucide-react";
@@ -19,6 +20,54 @@ const fallbackPosts = articles.map((a) => ({
   content: a.content,
   relatedTo: a.relatedTo,
 }))
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string }
+}): Promise<Metadata> {
+  let post: (typeof fallbackPosts)[0] | null = null
+  try {
+    post = await fetchBlogPostBySlug(params.slug)
+  } catch {}
+
+  if (!post) {
+    const article = articles.find((a) => a.slug === params.slug)
+    if (article) {
+      post = {
+        id: article.slug,
+        slug: article.slug,
+        title: article.title,
+        category: article.category,
+        excerpt: article.excerpt,
+        coverUrl: imgSrc(article.image),
+        publishedAt: '',
+        content: article.content,
+        relatedTo: article.relatedTo,
+      }
+    }
+  }
+
+  if (!post) return { title: 'Blog | FACE AND MORE Wien' }
+
+  return {
+    title: post.title,
+    description: post.excerpt,
+    alternates: { canonical: `/blog/${post.slug}` },
+    openGraph: {
+      title: `${post.title} | FACE AND MORE Wien`,
+      description: post.excerpt,
+      url: `https://faceandmore.at/blog/${post.slug}`,
+      ...(post.coverUrl ? { images: [{ url: post.coverUrl }] } : {}),
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${post.title} | FACE AND MORE Wien`,
+      description: post.excerpt,
+      ...(post.coverUrl ? { images: [post.coverUrl] } : {}),
+    },
+  }
+}
 
 export async function generateStaticParams() {
   const hardcoded = articles.map((a) => ({ slug: a.slug }))

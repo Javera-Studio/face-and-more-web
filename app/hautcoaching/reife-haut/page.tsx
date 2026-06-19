@@ -4,6 +4,7 @@ import ReifeHaut from '@/views/hautcoaching/ReifeHaut'
 export const metadata: Metadata = {
   title: 'Hautcoaching reife Haut Wien',
   description: 'Hautcoaching für reife Haut in Wien bei FACE AND MORE — gezielte Beratung und Behandlung bei Falten, Elastizitätsverlust und den besonderen Bedürfnissen reifer Haut.',
+  alternates: { canonical: '/hautcoaching/reife-haut' },
   openGraph: {
     title: 'Hautcoaching reife Haut Wien | FACE AND MORE',
     description: 'Hautcoaching für reife Haut in Wien: gezielte Behandlung bei Falten, Elastizitätsverlust und den Bedürfnissen reifer Haut.',

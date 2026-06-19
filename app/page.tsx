@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import SiteLayout from "@/components/SiteLayout";
 import Hero from "@/components/home/Hero";
 import SpecialOffers from "@/components/home/SpecialOffers";
@@ -10,6 +11,10 @@ import Testimonials from "@/components/home/Testimonials";
 import WhyUs from "@/components/home/WhyUs";
 import Booking from "@/components/home/Booking";
 import { fetchSpecialOffers } from "@/../../lib/notion";
+
+export const metadata: Metadata = {
+  alternates: { canonical: '/' },
+}
 
 export const revalidate = 120
 

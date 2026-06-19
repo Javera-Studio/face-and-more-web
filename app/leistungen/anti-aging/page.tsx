@@ -4,6 +4,7 @@ import AntiAging from '@/views/AntiAging'
 export const metadata: Metadata = {
   title: 'Anti-Aging Behandlung Wien',
   description: 'Anti-Aging Behandlung in Wien bei FACE AND MORE — gezielte Behandlungen gegen Falten, Hautalterung und Elastizitätsverlust. Für jugendlich aussehende, strahlende Haut.',
+  alternates: { canonical: '/leistungen/anti-aging' },
   openGraph: {
     title: 'Anti-Aging Behandlung Wien | FACE AND MORE',
     description: 'Anti-Aging Behandlung in Wien: gezielte Therapie gegen Falten, Hautalterung und Elastizitätsverlust.',
