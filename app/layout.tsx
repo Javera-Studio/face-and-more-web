@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: 'FACE AND MORE Wien — Hautanalyse & Premium Hautpflege',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'FACE AND MORE Wien | Hautanalyse & Premium Hautpflege',
     description: 'Moderne 3D-Hautanalyse, gezielte Behandlungen und persönliche Hautberatung im Herzen Wiens.',
-    images: ['/og-image.jpg'],
+    images: ['/og-image.png'],
   },
   icons: {
     icon: [
@@ -72,7 +72,7 @@ const localBusinessSchema = {
     },
   ],
   priceRange: '€€',
-  image: 'https://faceandmore.at/og-image.jpg',
+  image: 'https://faceandmore.at/og-image.png',
   sameAs: [
     'https://www.instagram.com/faceandmorewien/',
     'https://www.facebook.com/faceandmore.wien',
