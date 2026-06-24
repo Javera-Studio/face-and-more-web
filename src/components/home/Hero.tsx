@@ -3,11 +3,19 @@ import { ArrowRight, Sparkles, Star, ShieldCheck, HeartHandshake } from "lucide-
 import heroImg from "@/assets/hero-skin.jpg";
 import { imgSrc } from "@/lib/utils";
 
+const trustBadges = [
+  { icon: HeartHandshake, label: "Persönliche Betreuung" },
+  { icon: Sparkles, label: "3D Hautanalyse" },
+  { icon: ShieldCheck, label: "Langjährige Erfahrung" },
+  { icon: Star, label: "5.0 Bewertungen" },
+];
+
 const Hero = () => (
   <section className="relative overflow-hidden bg-gradient-warm">
-    <div className="container-editorial pt-12 md:pt-20 pb-16 md:pb-24 grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-      {/* Heading + lede — always first */}
-      <div className="lg:col-span-7 reveal">
+    <div className="container-editorial pt-12 md:pt-20 pb-16 md:pb-24 grid lg:grid-cols-12 gap-10 lg:gap-x-16 lg:gap-y-0">
+
+      {/* Heading + lede */}
+      <div className="lg:col-span-7 lg:row-start-1 reveal">
         <p className="eyebrow mb-6">Premium Skin Studio · Wien</p>
         <h1 className="display">
           Individuelle Hautpflege beginnt mit dem richtigen{" "}
@@ -17,41 +25,10 @@ const Hero = () => (
           Moderne 3D-Hautanalyse, gezielte Behandlungen und persönliche Betreuung —
           für Ergebnisse, die zu deiner Haut passen.
         </p>
-
-        {/* Buttons + trust — desktop only here */}
-        <div className="hidden lg:flex mt-10 flex-col sm:flex-row gap-3">
-          <Link
-            href="/hautanalyse"
-            className="group inline-flex items-center justify-center gap-2 px-7 py-4 bg-primary text-primary-foreground text-sm tracking-wide hover:bg-primary-glow transition-colors"
-          >
-            Hautanalyse buchen
-            <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-          </Link>
-          <Link
-            href="/leistungen"
-            className="inline-flex items-center justify-center gap-2 px-7 py-4 border border-foreground/20 text-foreground text-sm tracking-wide hover:border-primary hover:text-primary transition-colors"
-          >
-            Behandlungen ansehen
-          </Link>
-        </div>
-
-        <div className="hidden lg:grid mt-12 grid-cols-2 sm:grid-cols-4 gap-6 max-w-2xl">
-          {[
-            { icon: HeartHandshake, label: "Persönliche Betreuung" },
-            { icon: Sparkles, label: "3D Hautanalyse" },
-            { icon: ShieldCheck, label: "Langjährige Erfahrung" },
-            { icon: Star, label: "5.0 Bewertungen" },
-          ].map(({ icon: Icon, label }) => (
-            <div key={label} className="flex items-start gap-3">
-              <Icon size={18} className="text-primary mt-0.5 shrink-0" />
-              <span className="text-xs leading-snug text-foreground/75">{label}</span>
-            </div>
-          ))}
-        </div>
       </div>
 
-      {/* Image */}
-      <div className="lg:col-span-5 reveal reveal-delay-2">
+      {/* Image — spans 2 grid rows on desktop */}
+      <div className="lg:col-span-5 lg:row-start-1 lg:row-span-2 reveal reveal-delay-2">
         <div className="relative aspect-[2/3] overflow-hidden shadow-elegant">
           <img
             src={imgSrc(heroImg)}
@@ -63,8 +40,8 @@ const Hero = () => (
         </div>
       </div>
 
-      {/* Buttons + trust — mobile only, after image */}
-      <div className="lg:hidden lg:col-span-7 flex flex-col gap-3">
+      {/* Buttons + trust — single instance, after image in DOM (mobile) / bottom-left on desktop */}
+      <div className="lg:col-span-7 lg:row-start-2 lg:self-end lg:pb-4">
         <div className="flex flex-col sm:flex-row gap-3">
           <Link
             href="/hautanalyse"
@@ -81,13 +58,8 @@ const Hero = () => (
           </Link>
         </div>
 
-        <div className="mt-6 grid grid-cols-2 gap-4 max-w-2xl">
-          {[
-            { icon: HeartHandshake, label: "Persönliche Betreuung" },
-            { icon: Sparkles, label: "3D Hautanalyse" },
-            { icon: ShieldCheck, label: "Langjährige Erfahrung" },
-            { icon: Star, label: "5.0 Bewertungen" },
-          ].map(({ icon: Icon, label }) => (
+        <div className="mt-6 lg:mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 lg:gap-6 max-w-2xl">
+          {trustBadges.map(({ icon: Icon, label }) => (
             <div key={label} className="flex items-start gap-3">
               <Icon size={18} className="text-primary mt-0.5 shrink-0" />
               <span className="text-xs leading-snug text-foreground/75">{label}</span>
@@ -95,6 +67,7 @@ const Hero = () => (
           ))}
         </div>
       </div>
+
     </div>
   </section>
 );

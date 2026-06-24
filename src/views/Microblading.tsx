@@ -125,6 +125,16 @@ const faqs: Faq[] = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 const beforeAfterPairs = [
   { vorher: vorher1, nachher: nachher1 },
   { vorher: vorher2, nachher: nachher2, scaleV: 0.85 },
@@ -138,6 +148,10 @@ const beforeAfterPairs = [
 
 const Microblading = () => (
   <SiteLayout>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+    />
 
     {/* HERO */}
     <section className="bg-gradient-warm pt-16 md:pt-20 pb-12 md:pb-16">

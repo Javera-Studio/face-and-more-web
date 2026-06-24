@@ -27,8 +27,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FACE AND MORE Wien | Hautanalyse & Premium Hautpflege',
-    description: 'Moderne 3D-Hautanalyse, gezielte Behandlungen und persönliche Hautberatung im Herzen Wiens.',
+    title: {
+      template: '%s | FACE AND MORE Wien',
+      default: 'FACE AND MORE Wien | Hautanalyse & Premium Hautpflege',
+    },
     images: ['/og-image.png'],
   },
   icons: {
@@ -56,6 +58,11 @@ const localBusinessSchema = {
     postalCode: '1200',
     addressLocality: 'Wien',
     addressCountry: 'AT',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 48.2330,
+    longitude: 16.3760,
   },
   openingHoursSpecification: [
     {

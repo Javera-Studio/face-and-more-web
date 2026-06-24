@@ -1,8 +1,16 @@
 import type { MetadataRoute } from 'next'
+import articles from "@/data/blogArticles"
 
 const BASE_URL = 'https://faceandmore.at'
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const blogEntries: MetadataRoute.Sitemap = articles.map((a) => ({
+    url: `${BASE_URL}/blog/${a.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }))
+
   return [
     {
       url: BASE_URL,
@@ -124,5 +132,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.7,
     },
+    ...blogEntries,
   ]
 }

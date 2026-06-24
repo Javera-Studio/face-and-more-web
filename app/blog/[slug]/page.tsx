@@ -58,13 +58,15 @@ export async function generateMetadata({
       title: `${post.title} | FACE AND MORE Wien`,
       description: post.excerpt,
       url: `https://faceandmore.at/blog/${post.slug}`,
-      ...(post.coverUrl ? { images: [{ url: post.coverUrl }] } : {}),
+      images: post.coverUrl
+        ? [{ url: post.coverUrl }]
+        : [{ url: '/og-image.png', width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',
       title: `${post.title} | FACE AND MORE Wien`,
       description: post.excerpt,
-      ...(post.coverUrl ? { images: [post.coverUrl] } : {}),
+      images: post.coverUrl ? [post.coverUrl] : ['/og-image.png'],
     },
   }
 }
@@ -128,8 +130,24 @@ export default async function BlogPostPage({
   const prev = currentIndex > 0 ? allPosts[currentIndex - 1] : null
   const next = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    author: { "@type": "Person", name: "Michaela Kornherr" },
+    publisher: { "@type": "Organization", name: "FACE AND MORE Wien", url: "https://faceandmore.at" },
+    url: `https://faceandmore.at/blog/${post.slug}`,
+    ...(post.coverUrl ? { image: post.coverUrl } : {}),
+    ...(post.publishedAt ? { datePublished: post.publishedAt } : {}),
+  };
+
   return (
     <SiteLayout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <div className="bg-gradient-warm pt-28 md:pt-36 pb-16">
         <div className="container-editorial max-w-3xl">
           <Link

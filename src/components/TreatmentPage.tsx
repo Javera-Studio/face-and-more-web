@@ -50,8 +50,22 @@ const FaqItem = ({ q, a, defaultOpen = false }: Faq & { defaultOpen?: boolean })
   );
 };
 
-const TreatmentPage = (p: TreatmentPageProps) => (
+const TreatmentPage = (p: TreatmentPageProps) => {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: p.faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+  return (
   <SiteLayout>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+    />
     {/* HERO */}
     <section className="bg-gradient-warm pt-16 md:pt-20 pb-16 md:pb-24">
       <div className="container-editorial grid lg:grid-cols-[3fr_2fr] gap-10 lg:gap-16 items-center">
@@ -310,6 +324,7 @@ const TreatmentPage = (p: TreatmentPageProps) => (
       </div>
     </section>
   </SiteLayout>
-);
+  );
+};
 
 export default TreatmentPage;
