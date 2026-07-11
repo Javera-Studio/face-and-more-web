@@ -17,6 +17,9 @@ dist
 dist-ssr
 *.local
 
+# env files (Notion-Token etc. dürfen nie ins Repo)
+.env*
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
