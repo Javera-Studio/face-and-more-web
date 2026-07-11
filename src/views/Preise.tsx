@@ -106,6 +106,10 @@ const Preise = () => (
       intro="Meine Preise sind transparent und nachvollziehbar. Welche Behandlung wirklich zu dir passt, bespreche ich gerne mit dir in einer persönlichen Beratung — die finale Empfehlung richtet sich immer nach deinem Hautzustand und deinen Zielen."
     />
 
+    <p className="container-editorial text-center text-xs text-muted-foreground/60 -mt-6 mb-2">
+      Preise zuletzt aktualisiert am 12.07.2026
+    </p>
+
     <div className="container-editorial py-10">
       <div className="aspect-[21/9] overflow-hidden shadow-soft">
         <img
