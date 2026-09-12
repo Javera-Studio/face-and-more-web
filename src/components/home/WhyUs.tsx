@@ -1,6 +1,6 @@
 import { Check } from "lucide-react";
 import { imgSrc } from "@/lib/utils";
-import michiImg from "@/assets/michi.JPG";
+import michiImg from "@/assets/michineu2.jpg";
 
 const advantages = [
   "Spezialisierung auf Akne & Problemhaut",

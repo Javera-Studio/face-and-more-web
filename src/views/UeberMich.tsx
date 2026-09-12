@@ -1,7 +1,7 @@
 import SiteLayout from "@/components/SiteLayout";
 import PageHero from "@/components/PageHero";
 import { imgSrc } from "@/lib/utils";
-import portrait from "@/assets/michaela.avif";
+import portrait from "@/assets/michineu1.jpg";
 import studio from "@/assets/studio.jpg";
 import studio2 from "@/assets/studio2.jpg";
 import studio3 from "@/assets/studio3.jpg";

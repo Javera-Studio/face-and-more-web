@@ -1,5 +1,5 @@
 ﻿import Link from "next/link";
-import portrait from "@/assets/michaela.avif";
+import portrait from "@/assets/michineu1.jpg";
 import { imgSrc } from "@/lib/utils";
 
 const About = () => (
