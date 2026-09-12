@@ -11,7 +11,7 @@ const About = () => (
             src={imgSrc(portrait)}
             alt="Michaela Kornherr — Hautexpertin & Gründerin von FACE AND MORE in Wien"
             loading="lazy"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-top"
           />
         </div>
       </div>

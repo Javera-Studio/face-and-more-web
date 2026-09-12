@@ -39,7 +39,7 @@ const UeberMich = () => (
               src={imgSrc(portrait)}
               alt="Michaela Kornherr — Hautexpertin in Wien"
               loading="lazy"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-top"
             />
           </div>
 
