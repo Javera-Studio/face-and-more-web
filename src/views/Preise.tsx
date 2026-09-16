@@ -32,7 +32,7 @@ const categories: Category[] = [
     items: [
       { name: "Akne Jugendprogramm", duration: "60 Min", price: "€ 63" },
       { name: "Erstberatung & Analyse Problemhaut", duration: "60 Min", price: "ab € 65" },
-      { name: "Problemhaut-Behandlung", duration: "60 Min", price: "ab € 95" },
+      { name: "Problemhaut-Behandlung", duration: "60 Min", price: "ab € 96" },
       { name: "Hautberuhigungs-Serie", duration: "4 × 60 Min", price: "ab € 340" },
     ],
   },
