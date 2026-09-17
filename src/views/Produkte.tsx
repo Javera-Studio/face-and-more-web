@@ -12,11 +12,11 @@ import {
 } from "lucide-react";
 import SiteLayout from "@/components/SiteLayout";
 import { imgSrc } from "@/lib/utils";
-import asapABCImg from "@/assets/asapABC.jpg";
+import asapABCImg from "@/assets/asapABC.webp";
 import asapHydrateImg from "@/assets/asaphydrate.jpg";
-import asapCleanserImg from "@/assets/asapCleanser.jpg";
-import pflegeImg from "@/assets/pflege.jpg";
-import hautberatungImg from "@/assets/hautberatung.jpg";
+import asapCleanserImg from "@/assets/asapCleanser.webp";
+import pflegeImg from "@/assets/pflege.webp";
+import hautberatungImg from "@/assets/hautberatung.webp";
 
 const benefits = [
   { icon: Leaf,         label: "Vegan" },

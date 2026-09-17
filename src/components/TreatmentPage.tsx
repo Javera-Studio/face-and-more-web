@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ArrowRight, Plus, Clock, Tag, Repeat } from "lucide-react";
 import { imgSrc } from "@/lib/utils";
 import haut1 from "@/assets/haut1.jpg";
-import studioImg from "@/assets/studio.jpg";
+import studioImg from "@/assets/studio.webp";
 import michaelaImg from "@/assets/michaela.avif";
 
 interface Faq { q: string; a: string }

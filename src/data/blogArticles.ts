@@ -1,9 +1,9 @@
-import img1 from "@/assets/treatment-fruchtsaeure.jpg";
+import img1 from "@/assets/treatment-fruchtsaeure.webp";
 import img2 from "@/assets/treatment-microneedling.jpg";
-import img3 from "@/assets/asapABC.jpg";
-import img4 from "@/assets/uvschutz.jpg";
-import img5 from "@/assets/fruchtsaeure.jpg";
-import img6 from "@/assets/gesichtsbehandlung.jpg";
+import img3 from "@/assets/asapABC.webp";
+import img4 from "@/assets/uvschutz.webp";
+import img5 from "@/assets/fruchtsaeure.webp";
+import img6 from "@/assets/gesichtsbehandlung.webp";
 
 export interface BlogArticle {
   slug: string;

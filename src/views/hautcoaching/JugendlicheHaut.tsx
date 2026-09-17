@@ -1,12 +1,12 @@
 import HautcoachingDetailPage from "@/components/HautcoachingDetailPage";
-import hero from "@/assets/jugendliche-haut.jpg";
-import akneImg from "@/assets/treatment-akne.jpg";
-import fruchtImg from "@/assets/treatment-fruchtsaeure.jpg";
-import facialImg from "@/assets/gesichtsbehandlung.jpg";
+import hero from "@/assets/jugendliche-haut.webp";
+import akneImg from "@/assets/treatment-akne.webp";
+import fruchtImg from "@/assets/treatment-fruchtsaeure.webp";
+import facialImg from "@/assets/gesichtsbehandlung.webp";
 import p1 from "@/assets/treatment-skin.jpg";
-import p2 from "@/assets/treatment-akne.jpg";
-import p3 from "@/assets/treatment-fruchtsaeure.jpg";
-import p4 from "@/assets/treatment-facial.jpg";
+import p2 from "@/assets/treatment-akne.webp";
+import p3 from "@/assets/treatment-fruchtsaeure.webp";
+import p4 from "@/assets/treatment-facial.webp";
 import p5 from "@/assets/treatment-microneedling.jpg";
 
 export default function JugendlicheHaut() {

@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { imgSrc } from "@/lib/utils";
-import jugendImg from "@/assets/jugendliche-haut.jpg";
-import reifeImg from "@/assets/reife-haut.jpg";
-import allgemeinImg from "@/assets/allgemeine-hautberatung.jpg";
+import jugendImg from "@/assets/jugendliche-haut.webp";
+import reifeImg from "@/assets/reife-haut.webp";
+import allgemeinImg from "@/assets/allgemeine-hautberatung.webp";
 
 const paths = [
   {

@@ -4,11 +4,11 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { imgSrc } from "@/lib/utils";
 import skinImg from "@/assets/treatment-skin.jpg";
-import antiagingImg from "@/assets/treatment-antiaging.jpg";
-import fruchtImg from "@/assets/treatment-fruchtsaeure.jpg";
-import needlingImg from "@/assets/microneedlingneu.jpg";
-import facialImg from "@/assets/gesichtsbehandlung.jpg";
-import pmuImg from "@/assets/treatment-pmu.jpg";
+import antiagingImg from "@/assets/treatment-antiaging.webp";
+import fruchtImg from "@/assets/treatment-fruchtsaeure.webp";
+import needlingImg from "@/assets/microneedlingneu.webp";
+import facialImg from "@/assets/gesichtsbehandlung.webp";
+import pmuImg from "@/assets/treatment-pmu.webp";
 
 const treatments = [
   { img: skinImg, title: "Hautverbesserung", desc: "Individuelle Behandlung für ein klareres, ebenmäßigeres Hautbild — abgestimmt auf deine Haut.", duration: "60 Min", price: "ab € 96", to: "/leistungen/problemhaut" },

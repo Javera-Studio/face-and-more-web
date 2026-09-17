@@ -6,13 +6,13 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { imgSrc } from "@/lib/utils";
 import skinImg from "@/assets/treatment-skin.jpg";
-import antiagingImg from "@/assets/treatment-antiaging.jpg";
-import fruchtImg from "@/assets/treatment-fruchtsaeure.jpg";
+import antiagingImg from "@/assets/treatment-antiaging.webp";
+import fruchtImg from "@/assets/treatment-fruchtsaeure.webp";
 import needlingImg from "@/assets/treatment-microneedling.jpg";
-import facialImg from "@/assets/treatment-facial.jpg";
-import pmuImg from "@/assets/treatment-pmu.jpg";
-import wimpernImg from "@/assets/wimpernkranz.jpg";
-import akneImg from "@/assets/treatment-akne.jpg";
+import facialImg from "@/assets/treatment-facial.webp";
+import pmuImg from "@/assets/treatment-pmu.webp";
+import wimpernImg from "@/assets/wimpernkranz.webp";
+import akneImg from "@/assets/treatment-akne.webp";
 import analysisImg from "@/assets/skin-analysis.jpg";
 
 const items = [

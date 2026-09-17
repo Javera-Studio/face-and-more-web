@@ -5,23 +5,23 @@ import Link from "next/link";
 import { ArrowRight, Plus, Clock, Tag, Repeat, Award } from "lucide-react";
 import { imgSrc } from "@/lib/utils";
 
-import heroImg    from "@/assets/treatment-pmu.jpg";
-import awardImg   from "@/assets/microbladingneu.jpg";
-import ausgezeichnetImg from "@/assets/ausgezeichnet.JPG";
+import heroImg    from "@/assets/treatment-pmu.webp";
+import awardImg   from "@/assets/microbladingneu.webp";
+import ausgezeichnetImg from "@/assets/ausgezeichnet.webp";
 import processImg from "@/assets/IMG_2543.JPG";
-import vorher1  from "@/assets/1vorher.jpg";
-import nachher1 from "@/assets/1nachher.jpg";
+import vorher1  from "@/assets/1vorher.webp";
+import nachher1 from "@/assets/1nachher.webp";
 import vorher2  from "@/assets/2vorher.jpg";
 import nachher2 from "@/assets/2nachher.jpg";
-import vorher3  from "@/assets/3vorher.jpg";
-import nachher3 from "@/assets/3nachher.jpg";
-import vorher4  from "@/assets/4vorher.jpg";
-import nachher4 from "@/assets/4nachher.jpg";
-import vorher6  from "@/assets/6vorher.jpg";
-import nachher6 from "@/assets/6nachher.jpg";
-import vorher7  from "@/assets/7vorher.jpg";
+import vorher3  from "@/assets/3vorher.webp";
+import nachher3 from "@/assets/3nachher.webp";
+import vorher4  from "@/assets/4vorher.webp";
+import nachher4 from "@/assets/4nachher.webp";
+import vorher6  from "@/assets/6vorher.webp";
+import nachher6 from "@/assets/6nachher.webp";
+import vorher7  from "@/assets/7vorher.webp";
 import nachher7 from "@/assets/7nachher.jpg";
-import studioImg  from "@/assets/studio.jpg";
+import studioImg  from "@/assets/studio.webp";
 
 interface Faq { q: string; a: string }
 

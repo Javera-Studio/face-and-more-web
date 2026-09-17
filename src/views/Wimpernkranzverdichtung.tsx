@@ -1,12 +1,12 @@
 ﻿import TreatmentPage from "@/components/TreatmentPage";
-import hero from "@/assets/wimpernkranz.jpg";
-import g1 from "@/assets/treatment-facial.jpg";
+import hero from "@/assets/wimpernkranz.webp";
+import g1 from "@/assets/treatment-facial.webp";
 import g2 from "@/assets/michaela.avif";
-import g3 from "@/assets/studio.jpg";
-import kranz1 from "@/assets/kranz1.jpg";
-import kranz2 from "@/assets/kranz2.jpg";
-import kranz3 from "@/assets/kranz3.jpg";
-import kranz4 from "@/assets/kranz4.jpg";
+import g3 from "@/assets/studio.webp";
+import kranz1 from "@/assets/kranz1.webp";
+import kranz2 from "@/assets/kranz2.webp";
+import kranz3 from "@/assets/kranz3.webp";
+import kranz4 from "@/assets/kranz4.webp";
 
 const Wimpernkranzverdichtung = () => (
   <TreatmentPage

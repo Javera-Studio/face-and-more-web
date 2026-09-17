@@ -1,13 +1,13 @@
 import HautcoachingDetailPage from "@/components/HautcoachingDetailPage";
-import hero from "@/assets/reife-haut.jpg";
-import antiagingImg from "@/assets/treatment-antiaging.jpg";
+import hero from "@/assets/reife-haut.webp";
+import antiagingImg from "@/assets/treatment-antiaging.webp";
 import needlingImg from "@/assets/treatment-microneedling.jpg";
-import fruchtImg from "@/assets/treatment-fruchtsaeure.jpg";
-import p1 from "@/assets/treatment-antiaging.jpg";
+import fruchtImg from "@/assets/treatment-fruchtsaeure.webp";
+import p1 from "@/assets/treatment-antiaging.webp";
 import p2 from "@/assets/treatment-skin.jpg";
 import p3 from "@/assets/treatment-microneedling.jpg";
-import p4 from "@/assets/treatment-facial.jpg";
-import p5 from "@/assets/treatment-fruchtsaeure.jpg";
+import p4 from "@/assets/treatment-facial.webp";
+import p5 from "@/assets/treatment-fruchtsaeure.webp";
 
 export default function ReifeHaut() {
   return (

@@ -1,13 +1,13 @@
 import HautcoachingDetailPage from "@/components/HautcoachingDetailPage";
-import hero from "@/assets/allgemeine-hautberatung.jpg";
+import hero from "@/assets/allgemeine-hautberatung.webp";
 import problemImg from "@/assets/treatment-skin.jpg";
-import fruchtImg from "@/assets/treatment-fruchtsaeure.jpg";
+import fruchtImg from "@/assets/treatment-fruchtsaeure.webp";
 import needlingImg from "@/assets/treatment-microneedling.jpg";
 import p1 from "@/assets/treatment-skin.jpg";
-import p2 from "@/assets/treatment-fruchtsaeure.jpg";
+import p2 from "@/assets/treatment-fruchtsaeure.webp";
 import p3 from "@/assets/treatment-microneedling.jpg";
-import p4 from "@/assets/treatment-facial.jpg";
-import p5 from "@/assets/treatment-antiaging.jpg";
+import p4 from "@/assets/treatment-facial.webp";
+import p5 from "@/assets/treatment-antiaging.webp";
 
 export default function AllgemeineHautberatung() {
   return (

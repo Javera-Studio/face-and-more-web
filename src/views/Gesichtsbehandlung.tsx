@@ -1,8 +1,8 @@
 import TreatmentPage from "@/components/TreatmentPage";
-import hero from "@/assets/gesichtsbehandlung.jpg";
+import hero from "@/assets/gesichtsbehandlung.webp";
 import g1 from "@/assets/treatment-skin.jpg";
-import g2 from "@/assets/treatment-antiaging.jpg";
-import g3 from "@/assets/studio.jpg";
+import g2 from "@/assets/treatment-antiaging.webp";
+import g3 from "@/assets/studio.webp";
 
 const Gesichtsbehandlung = () => (
   <TreatmentPage

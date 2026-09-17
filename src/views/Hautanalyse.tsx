@@ -1,8 +1,8 @@
 import TreatmentPage from "@/components/TreatmentPage";
 import hero from "@/assets/skin-analysis.jpg";
-import g1 from "@/assets/treatment-facial.jpg";
+import g1 from "@/assets/treatment-facial.webp";
 import g2 from "@/assets/treatment-skin.jpg";
-import g3 from "@/assets/studio.jpg";
+import g3 from "@/assets/studio.webp";
 
 const Hautanalyse = () => (
   <TreatmentPage

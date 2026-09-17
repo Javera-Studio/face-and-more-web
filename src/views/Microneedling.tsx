@@ -1,7 +1,7 @@
 ﻿import TreatmentPage from "@/components/TreatmentPage";
-import hero from "@/assets/microneedlingneu.jpg";
-import g1 from "@/assets/treatment-facial.jpg";
-import g2 from "@/assets/studio.jpg";
+import hero from "@/assets/microneedlingneu.webp";
+import g1 from "@/assets/treatment-facial.webp";
+import g2 from "@/assets/studio.webp";
 import g3 from "@/assets/michaela.avif";
 
 const Microneedling = () => (

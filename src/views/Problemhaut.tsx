@@ -1,8 +1,8 @@
 import TreatmentPage from "@/components/TreatmentPage";
 import hero from "@/assets/treatment-skin.jpg";
-import g1 from "@/assets/treatment-facial.jpg";
-import g2 from "@/assets/treatment-akne.jpg";
-import g3 from "@/assets/studio.jpg";
+import g1 from "@/assets/treatment-facial.webp";
+import g2 from "@/assets/treatment-akne.webp";
+import g3 from "@/assets/studio.webp";
 
 const Problemhaut = () => (
   <TreatmentPage
