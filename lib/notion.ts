@@ -1,6 +1,52 @@
 import { Client } from '@notionhq/client'
+import { createHash } from 'node:crypto'
+import { existsSync, mkdirSync, writeFileSync } from 'node:fs'
+import { join, extname } from 'node:path'
 
 const notion = new Client({ auth: process.env.NOTION_TOKEN })
+
+// Notion-Dateien vom Typ "file" (in Notion selbst hochgeladen) liefern zeitlich signierte
+// S3-URLs, die nach kurzer Zeit ablaufen (siehe expiry_time der Notion-API). Im statischen
+// Export wird eine solche URL einmalig zum Build-Zeitpunkt eingebettet und wuerde danach
+// dauerhaft ins Leere zeigen. Deshalb wird jedes Bild einmal beim Build heruntergeladen und
+// unter public/notion-images/ zwischengespeichert; referenziert wird nur noch der lokale,
+// dauerhaft gueltige Pfad. Nur der Pfad-Anteil der URL (ohne Signatur-Query) ist zwischen
+// Notion-Abfragen stabil und dient als Cache-Schluessel.
+const NOTION_IMAGE_DIR = join(process.cwd(), 'public', 'notion-images')
+
+async function cacheNotionFile(url: string | null): Promise<string | null> {
+  if (!url) return null
+
+  let parsed: URL
+  try {
+    parsed = new URL(url)
+  } catch {
+    return url
+  }
+
+  const ext = extname(parsed.pathname).toLowerCase() || '.jpg'
+  const hash = createHash('sha1').update(parsed.pathname).digest('hex')
+  const filename = `${hash}${ext}`
+  const filePath = join(NOTION_IMAGE_DIR, filename)
+  const publicPath = `/notion-images/${filename}`
+
+  if (existsSync(filePath)) return publicPath
+
+  try {
+    const res = await fetch(url)
+    if (!res.ok) throw new Error(`HTTP ${res.status}`)
+    const buffer = Buffer.from(await res.arrayBuffer())
+    mkdirSync(NOTION_IMAGE_DIR, { recursive: true })
+    writeFileSync(filePath, buffer)
+    return publicPath
+  } catch (e) {
+    // Ein abgelaufener Notion-Link im statischen Export ist schlechter als gar kein Bild —
+    // deshalb hier kein Fallback auf die (bald ungueltige) Original-URL, sondern sichtbarer
+    // Fehler im Build-Log und null (Aufrufer zeigen dann einen Platzhalter).
+    console.error(`[Notion] Bild-Download fehlgeschlagen fuer ${parsed.pathname}:`, e)
+    return null
+  }
+}
 
 // Blog Posts DB: Datum, Veröffentlicht (checkbox), Kategorie, Titelbild, Kurzbeschreibung, Name
 const BLOG_DB = process.env.NOTION_BLOG_DB!
@@ -121,17 +167,17 @@ export async function fetchBlogPosts(): Promise<BlogPost[]> {
     filter: { property: 'Veröffentlicht', checkbox: { equals: true } },
   })
 
-  return res.results.map((page: any) => ({
+  return Promise.all(res.results.map(async (page: any) => ({
     id: page.id,
     slug: page.id,
     title: titleText(getProp(page, 'Name')) || 'Artikel',
     category: richText(getProp(page, 'Kategorie')) || 'Blog',
     excerpt: richText(getProp(page, 'Kurzbeschreibung')) || '',
-    coverUrl: filesUrl(getProp(page, 'Titelbild')),
+    coverUrl: await cacheNotionFile(filesUrl(getProp(page, 'Titelbild'))),
     publishedAt: dateVal(getProp(page, 'Datum')) || '',
     content: [],
     relatedTo: '/leistungen',
-  }))
+  })))
 }
 
 // Fetch a single blog post by its page ID (used as slug)
@@ -152,7 +198,7 @@ export async function fetchBlogPostBySlug(slug: string): Promise<BlogPost | null
       title: titleText(getProp(page, 'Name')) || 'Artikel',
       category: richText(getProp(page, 'Kategorie')) || 'Blog',
       excerpt: richText(getProp(page, 'Kurzbeschreibung')) || '',
-      coverUrl: filesUrl(getProp(page, 'Titelbild')),
+      coverUrl: await cacheNotionFile(filesUrl(getProp(page, 'Titelbild'))),
       publishedAt: dateVal(getProp(page, 'Datum')) || '',
       content,
       relatedTo: '/leistungen',
@@ -169,7 +215,7 @@ export async function fetchSpecialOffers(): Promise<SpecialOffer[]> {
     filter: { property: 'Aktiv', checkbox: { equals: true } },
   })
 
-  return res.results.map((page: any) => ({
+  return Promise.all(res.results.map(async (page: any) => ({
     id: page.id,
     title: getTitleFromPage(page) || richText(getProp(page, 'Angebotsname')) || 'Angebot',
     description: richText(getProp(page, 'Beschreibung')) || '',
@@ -177,6 +223,6 @@ export async function fetchSpecialOffers(): Promise<SpecialOffer[]> {
     validUntil: dateVal(getProp(page, 'Gültig bis')),
     badge: selectText(getProp(page, 'Leistung')) || richText(getProp(page, 'Leistung')) || null,
     linkUrl: '/kontakt',
-    photoUrl: filesUrl(getProp(page, 'Foto')),
-  }))
+    photoUrl: await cacheNotionFile(filesUrl(getProp(page, 'Foto'))),
+  })))
 }

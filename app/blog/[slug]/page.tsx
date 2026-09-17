@@ -7,8 +7,6 @@ import { fetchBlogPosts, fetchBlogPostBySlug } from "@/../../lib/notion";
 import articles from "@/data/blogArticles";
 import { imgSrc } from "@/lib/utils";
 
-export const revalidate = 600
-
 const fallbackPosts = articles.map((a) => ({
   id: a.slug,
   slug: a.slug,
@@ -81,7 +79,10 @@ export async function generateStaticParams() {
       if (!all.find((h) => h.slug === p.slug)) all.push(p)
     }
     return all
-  } catch {
+  } catch (e) {
+    // Statischer Export: ohne die Notion-Slugs werden diese Artikel nicht generiert und
+    // fehlen bis zum naechsten erfolgreichen Build. Muss im Build-Log sichtbar sein.
+    console.error("[Notion] generateStaticParams fehlgeschlagen — nur fest hinterlegte Blogartikel werden exportiert:", e)
     return hardcoded
   }
 }
@@ -92,7 +93,7 @@ export default async function BlogPostPage({
   params: { slug: string }
 }) {
   let post: (typeof fallbackPosts)[0] | null = null
-  let allPosts: typeof fallbackPosts = []
+  let allPosts: typeof fallbackPosts = fallbackPosts
 
   try {
     const [notionPost, notionAll] = await Promise.all([
@@ -100,9 +101,13 @@ export default async function BlogPostPage({
       fetchBlogPosts(),
     ])
     post = notionPost
-    allPosts = notionAll.length > 0 ? notionAll : fallbackPosts
-  } catch {
-    allPosts = fallbackPosts
+    const merged = [...fallbackPosts]
+    for (const p of notionAll) {
+      if (!merged.find((existing) => existing.slug === p.slug)) merged.push(p)
+    }
+    allPosts = merged
+  } catch (e) {
+    console.error(`[Notion] Blogartikel-Abruf fuer Slug "${params.slug}" beim Build fehlgeschlagen:`, e)
   }
 
   // Fallback: look up in hardcoded articles

@@ -18,8 +18,6 @@ import { fetchBlogPosts } from "@/../../lib/notion";
 import articles from "@/data/blogArticles";
 import { imgSrc } from "@/lib/utils";
 
-export const revalidate = 600
-
 const fallbackPosts = articles.map((a) => ({
   id: a.slug,
   slug: a.slug,
@@ -33,12 +31,20 @@ const fallbackPosts = articles.map((a) => ({
 }))
 
 export default async function BlogPage() {
-  let posts: typeof fallbackPosts = []
+  // Statischer Export: Notion wird nur einmal beim Build abgefragt. Fest hinterlegte und
+  // Notion-Artikel werden zusammengefuehrt (wie in generateStaticParams von blog/[slug]),
+  // damit auf /blog dieselben Artikel erscheinen, die auch exportiert und in der Sitemap
+  // gelistet werden.
+  let posts: typeof fallbackPosts = fallbackPosts
   try {
-    const notion = await fetchBlogPosts()
-    posts = notion.length > 0 ? notion : fallbackPosts
+    const notionPosts = await fetchBlogPosts()
+    const merged = [...fallbackPosts]
+    for (const p of notionPosts) {
+      if (!merged.find((existing) => existing.slug === p.slug)) merged.push(p)
+    }
+    posts = merged
   } catch (e) {
-    posts = fallbackPosts
+    console.error("[Notion] fetchBlogPosts beim Build fehlgeschlagen — /blog zeigt nur die fest hinterlegten Artikel:", e)
   }
 
   return (

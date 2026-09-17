@@ -1,11 +1,24 @@
 import type { MetadataRoute } from 'next'
 import articles from "@/data/blogArticles"
+import { fetchBlogPosts } from "@/../../lib/notion"
 
 const BASE_URL = 'https://faceandmore.at'
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const blogEntries: MetadataRoute.Sitemap = articles.map((a) => ({
-    url: `${BASE_URL}/blog/${a.slug}`,
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  // Statischer Export: dieselbe Zusammenfuehrung aus fest hinterlegten und Notion-Artikeln
+  // wie in generateStaticParams (app/blog/[slug]/page.tsx), damit jeder exportierte
+  // Blogartikel auch in der Sitemap steht. Ein Notion-Fehlschlag darf nicht unbemerkt
+  // Artikel aus der Sitemap verschwinden lassen -> Fehler wird im Build-Log geloggt.
+  const slugs = new Set(articles.map((a) => a.slug))
+  try {
+    const notionPosts = await fetchBlogPosts()
+    for (const p of notionPosts) slugs.add(p.slug)
+  } catch (e) {
+    console.error("[Notion] sitemap.ts: fetchBlogPosts fehlgeschlagen — Sitemap enthaelt nur fest hinterlegte Blogartikel:", e)
+  }
+
+  const blogEntries: MetadataRoute.Sitemap = Array.from(slugs).map((slug) => ({
+    url: `${BASE_URL}/blog/${slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.6,

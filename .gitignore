@@ -1,7 +1,12 @@
 # Next.js
 .next/
+out/
 next-env.d.ts
 tsconfig.tsbuildinfo
+
+# Beim Build aus Notion heruntergeladene Bilder (siehe lib/notion.ts, cacheNotionFile) —
+# werden bei jedem Build neu erzeugt, gehoeren nicht ins Repo
+public/notion-images/
 
 # Logs
 logs

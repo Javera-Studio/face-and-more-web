@@ -16,14 +16,15 @@ export const metadata: Metadata = {
   alternates: { canonical: '/' },
 }
 
-export const revalidate = 120
-
 export default async function HomePage() {
   let offers = []
   try {
     offers = await fetchSpecialOffers()
   } catch (e) {
-    // Notion not configured yet — renders without offers section
+    // Statischer Export: Notion wird nur einmal beim Build abgefragt, es gibt keine
+    // Moeglichkeit zur Laufzeit erneut zu versuchen. Ein Fehlschlag darf deshalb nicht
+    // unbemerkt bleiben, sonst fehlt die Angebote-Leiste bis zum naechsten Deploy.
+    console.error("[Notion] fetchSpecialOffers beim Build fehlgeschlagen — Angebote-Leiste bleibt leer:", e)
   }
 
   return (
