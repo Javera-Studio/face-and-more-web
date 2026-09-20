@@ -39,7 +39,7 @@ export default function Akne() {
         },
         {
           q: "Was kostet eine Aknebehandlung?",
-          a: "Eine Aknebehandlung inklusive Hautcoaching kostet für Jugendliche bis 18 Jahre ab € 63 und für Erwachsene ab € 89. Für langfristige Ergebnisse empfehle ich mehrere aufeinander abgestimmte Behandlungen.",
+          a: "Eine Aknebehandlung inklusive Hautcoaching kostet für Jugendliche bis 18 Jahre ab € 63 und für Erwachsene ab € 96. Für langfristige Ergebnisse empfehle ich mehrere aufeinander abgestimmte Behandlungen.",
         },
         {
           q: "Was hilft gegen Akne, Pickel und Mitesser?",

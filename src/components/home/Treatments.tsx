@@ -15,7 +15,7 @@ const treatments = [
   { img: antiagingImg, title: "Anti Aging", desc: "Sanfte Wirkstofftherapie für straffe, vitale Haut — natürlich und altersgerecht.", duration: "60 Min", price: "ab € 120", to: "/leistungen/anti-aging" },
   { img: fruchtImg, title: "Fruchtsäure", desc: "Erneuert die Haut und verfeinert das Hautbild sichtbar — mit dezentem Glow-Effekt.", duration: "30 Min", price: "ab € 92", to: "/leistungen/fruchtsaeure" },
   { img: needlingImg, title: "Microneedling", desc: "Aktiviert Kollagen und Hauterneuerung — Glow, Spannkraft und Frische von innen.", duration: "60 Min", price: "ab € 136", to: "/leistungen/microneedling" },
-  { img: facialImg, title: "Klassische Behandlung", desc: "Ruhige, gründliche Pflege für jede Hautsituation — der Klassiker, neu interpretiert.", duration: "60 Min", price: "ab € 72", to: "/leistungen/gesichtsbehandlung" },
+  { img: facialImg, title: "Klassische Behandlung", desc: "Ruhige, gründliche Pflege für jede Hautsituation — der Klassiker, neu interpretiert.", duration: "60 Min", price: "ab € 89", to: "/leistungen/gesichtsbehandlung" },
   { img: pmuImg, title: "Microblading / PMU", desc: "Definierte, natürliche Augenbrauen mit feinster Präzision — handwerklich gestaltet.", duration: "120 Min", price: "ab € 345", to: "/leistungen/microblading" },
 ];
 
