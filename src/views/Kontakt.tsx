@@ -1,7 +1,7 @@
 import SiteLayout from "@/components/SiteLayout";
 import { Mail, Phone, MapPin, ArrowUpRight, Clock } from "lucide-react";
 import { imgSrc } from "@/lib/utils";
-import michiImg from "@/assets/michi.JPG";
+import michiImg from "@/assets/michineu3.webp";
 
 const WhatsAppIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 shrink-0">
