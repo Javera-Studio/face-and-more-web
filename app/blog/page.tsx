@@ -34,17 +34,13 @@ export default async function BlogPage() {
   // Statischer Export: Notion wird nur einmal beim Build abgefragt. Fest hinterlegte und
   // Notion-Artikel werden zusammengefuehrt (wie in generateStaticParams von blog/[slug]),
   // damit auf /blog dieselben Artikel erscheinen, die auch exportiert und in der Sitemap
-  // gelistet werden.
-  let posts: typeof fallbackPosts = fallbackPosts
-  try {
-    const notionPosts = await fetchBlogPosts()
-    const merged = [...fallbackPosts]
-    for (const p of notionPosts) {
-      if (!merged.find((existing) => existing.slug === p.slug)) merged.push(p)
-    }
-    posts = merged
-  } catch (e) {
-    console.error("[Notion] fetchBlogPosts beim Build fehlgeschlagen — /blog zeigt nur die fest hinterlegten Artikel:", e)
+  // gelistet werden. Ein echter Notion-Fehlschlag wird bewusst NICHT abgefangen, damit nicht
+  // unbemerkt ein Deploy entsteht, auf dem veroeffentlichte Artikel fehlen - lieber ein
+  // fehlschlagender Build als eine unvollstaendige Blog-Uebersicht.
+  const notionPosts = await fetchBlogPosts()
+  const posts: typeof fallbackPosts = [...fallbackPosts]
+  for (const p of notionPosts) {
+    if (!posts.find((existing) => existing.slug === p.slug)) posts.push(p)
   }
 
   return (

@@ -1,7 +1,22 @@
-import { Client } from '@notionhq/client'
+import { Client, APIErrorCode, isNotionClientError } from '@notionhq/client'
 import { createHash } from 'node:crypto'
 import { existsSync, mkdirSync, writeFileSync } from 'node:fs'
 import { join, extname } from 'node:path'
+
+// Ohne Token/Datenbank-IDs liefert die Notion-Abfrage entweder einen Auth-Fehler oder eine
+// falsche Datenbank und wuerde nur zu einer leeren Angebote-Leiste bzw. fehlenden Blogartikeln
+// fuehren - ohne dass der Build das bemerkt. Deshalb hier hart und sofort beim Laden des
+// Moduls pruefen: fehlt eine der drei Variablen, bricht der Build sofort mit einer eindeutigen
+// Fehlermeldung ab, statt "erfolgreich" ohne die erwarteten Inhalte zu deployen.
+for (const name of ['NOTION_TOKEN', 'NOTION_BLOG_DB', 'NOTION_OFFERS_DB']) {
+  if (!process.env[name]) {
+    throw new Error(
+      `[Notion] Pflicht-Umgebungsvariable ${name} fehlt. Build abgebrochen, damit nicht ` +
+      `unbemerkt ein Deploy ohne Blogartikel/Angebote entsteht. In Cloudflare Pages unter ` +
+      `Settings -> Environment variables eintragen.`
+    )
+  }
+}
 
 const notion = new Client({ auth: process.env.NOTION_TOKEN })
 
@@ -114,6 +129,24 @@ function numberPrice(prop: any): string {
   return `${n} €`
 }
 
+// Heutiges Datum in Europe/Vienna als "YYYY-MM-DD" (lexikographisch vergleichbar mit den
+// Notion-Datumswerten, die ebenfalls reine Kalendertage ohne Uhrzeit/Zeitzone sind). Ein
+// Angebot mit "Gültig bis" = heute soll noch den ganzen Tag sichtbar bleiben, ab dem
+// Folgetag nicht mehr - siehe isOfferStillValid.
+function todayInVienna(): string {
+  return new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Europe/Vienna',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).format(new Date())
+}
+
+function isOfferStillValid(validUntil: string | null): boolean {
+  if (!validUntil) return true
+  return validUntil >= todayInVienna()
+}
+
 function filesUrl(prop: any): string | null {
   const files = prop?.files
   if (!files || files.length === 0) return null
@@ -182,40 +215,58 @@ export async function fetchBlogPosts(): Promise<BlogPost[]> {
 
 // Fetch a single blog post by its page ID (used as slug)
 export async function fetchBlogPostBySlug(slug: string): Promise<BlogPost | null> {
+  let page: any
   try {
-    const page = await notion.pages.retrieve({ page_id: slug }) as any
-    if (!page) return null
-
-    // Check it's published
-    const published = page.properties?.Veröffentlicht?.checkbox
-    if (!published) return null
-
-    const content = await getBlocks(page.id)
-
-    return {
-      id: page.id,
-      slug: page.id,
-      title: titleText(getProp(page, 'Name')) || 'Artikel',
-      category: richText(getProp(page, 'Kategorie')) || 'Blog',
-      excerpt: richText(getProp(page, 'Kurzbeschreibung')) || '',
-      coverUrl: await cacheNotionFile(filesUrl(getProp(page, 'Titelbild'))),
-      publishedAt: dateVal(getProp(page, 'Datum')) || '',
-      content,
-      relatedTo: '/leistungen',
+    page = await notion.pages.retrieve({ page_id: slug })
+  } catch (e) {
+    // Erwartete, harmlose Faelle: fest hinterlegte Blogartikel (blogArticles.ts) haben
+    // sprechende Slugs statt echter Notion-UUIDs, die Notion konsequent ablehnt
+    // (validation_error) oder eine geloeschte/verschobene Notion-Seite (object_not_found).
+    // Beides bedeutet nur "kein Notion-Artikel unter diesem Slug", kein Systemfehler.
+    if (
+      isNotionClientError(e) &&
+      (e.code === APIErrorCode.ValidationError || e.code === APIErrorCode.ObjectNotFound)
+    ) {
+      return null
     }
-  } catch {
-    return null
+    // Alles andere (falscher Token, Rate-Limit, Netzwerkfehler, Notion down) ist ein echter
+    // Fehler und darf den Build nicht unbemerkt mit fehlendem Artikel-Inhalt durchlaufen lassen.
+    throw e
+  }
+  if (!page) return null
+
+  // Check it's published
+  const published = page.properties?.Veröffentlicht?.checkbox
+  if (!published) return null
+
+  const content = await getBlocks(page.id)
+
+  return {
+    id: page.id,
+    slug: page.id,
+    title: titleText(getProp(page, 'Name')) || 'Artikel',
+    category: richText(getProp(page, 'Kategorie')) || 'Blog',
+    excerpt: richText(getProp(page, 'Kurzbeschreibung')) || '',
+    coverUrl: await cacheNotionFile(filesUrl(getProp(page, 'Titelbild'))),
+    publishedAt: dateVal(getProp(page, 'Datum')) || '',
+    content,
+    relatedTo: '/leistungen',
   }
 }
 
-// Fetch active special offers (Aktiv = true)
+// Fetch active special offers (Aktiv = true UND "Gültig bis" noch nicht abgelaufen).
+// Die Ablaufpruefung passiert hier zusaetzlich zum Notion-Filter, weil "Gültig bis" in
+// Notion selbst nicht automatisch "Aktiv" deaktiviert - ohne diese Pruefung wuerde ein
+// abgelaufenes Angebot weiterlaufen, bis Michaela es manuell abhakt. Da die Seite statisch
+// exportiert wird, wirkt das erst ab dem naechsten Build (siehe Cloudflare Cron Trigger in
+// der Migrations-Doku fuer den taeglichen Rebuild nach Mitternacht Europe/Vienna).
 export async function fetchSpecialOffers(): Promise<SpecialOffer[]> {
   const res = await notion.databases.query({
     database_id: OFFERS_DB,
     filter: { property: 'Aktiv', checkbox: { equals: true } },
   })
 
-  return Promise.all(res.results.map(async (page: any) => ({
+  const offers = await Promise.all(res.results.map(async (page: any) => ({
     id: page.id,
     title: getTitleFromPage(page) || richText(getProp(page, 'Angebotsname')) || 'Angebot',
     description: richText(getProp(page, 'Beschreibung')) || '',
@@ -225,4 +276,6 @@ export async function fetchSpecialOffers(): Promise<SpecialOffer[]> {
     linkUrl: '/kontakt',
     photoUrl: await cacheNotionFile(filesUrl(getProp(page, 'Foto'))),
   })))
+
+  return offers.filter((o) => isOfferStillValid(o.validUntil))
 }

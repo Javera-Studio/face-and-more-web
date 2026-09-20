@@ -1,0 +1,7 @@
+name = "faceandmore-rebuild-cron"
+main = "worker.js"
+compatibility_date = "2026-01-01"
+
+# 01:00 UTC = 02:00 Wien (Winter/CET) bzw. 03:00 Wien (Sommer/CEST) - siehe worker.js
+[triggers]
+crons = ["0 1 * * *"]

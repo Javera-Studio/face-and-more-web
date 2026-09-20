@@ -24,10 +24,9 @@ export async function generateMetadata({
 }: {
   params: { slug: string }
 }): Promise<Metadata> {
-  let post: (typeof fallbackPosts)[0] | null = null
-  try {
-    post = await fetchBlogPostBySlug(params.slug)
-  } catch {}
+  // fetchBlogPostBySlug faengt selbst nur den erwarteten Fall ab (Slug ist keine echte
+  // Notion-Seite -> null); ein echter Notion-Fehler soll hier den Build stoppen.
+  let post: (typeof fallbackPosts)[0] | null = await fetchBlogPostBySlug(params.slug)
 
   if (!post) {
     const article = articles.find((a) => a.slug === params.slug)
@@ -70,21 +69,16 @@ export async function generateMetadata({
 }
 
 export async function generateStaticParams() {
+  // Ohne die Notion-Slugs wuerden diese Artikel gar nicht erst generiert und wuerden bis
+  // zum naechsten Build unbemerkt fehlen. Ein echter Notion-Fehlschlag wird deshalb bewusst
+  // NICHT abgefangen und stoppt den Build.
   const hardcoded = articles.map((a) => ({ slug: a.slug }))
-  try {
-    const posts = await fetchBlogPosts()
-    const notionSlugs = posts.map((p) => ({ slug: p.slug }))
-    const all = [...hardcoded]
-    for (const p of notionSlugs) {
-      if (!all.find((h) => h.slug === p.slug)) all.push(p)
-    }
-    return all
-  } catch (e) {
-    // Statischer Export: ohne die Notion-Slugs werden diese Artikel nicht generiert und
-    // fehlen bis zum naechsten erfolgreichen Build. Muss im Build-Log sichtbar sein.
-    console.error("[Notion] generateStaticParams fehlgeschlagen — nur fest hinterlegte Blogartikel werden exportiert:", e)
-    return hardcoded
+  const posts = await fetchBlogPosts()
+  const all = [...hardcoded]
+  for (const p of posts) {
+    if (!all.find((h) => h.slug === p.slug)) all.push({ slug: p.slug })
   }
+  return all
 }
 
 export default async function BlogPostPage({
@@ -92,22 +86,15 @@ export default async function BlogPostPage({
 }: {
   params: { slug: string }
 }) {
-  let post: (typeof fallbackPosts)[0] | null = null
-  let allPosts: typeof fallbackPosts = fallbackPosts
-
-  try {
-    const [notionPost, notionAll] = await Promise.all([
-      fetchBlogPostBySlug(params.slug),
-      fetchBlogPosts(),
-    ])
-    post = notionPost
-    const merged = [...fallbackPosts]
-    for (const p of notionAll) {
-      if (!merged.find((existing) => existing.slug === p.slug)) merged.push(p)
-    }
-    allPosts = merged
-  } catch (e) {
-    console.error(`[Notion] Blogartikel-Abruf fuer Slug "${params.slug}" beim Build fehlgeschlagen:`, e)
+  // Wie in generateMetadata/generateStaticParams: ein echter Notion-Fehlschlag stoppt hier
+  // bewusst den Build, statt eine Seite ohne die erwarteten Inhalte auszuliefern.
+  let [post, notionAll] = await Promise.all([
+    fetchBlogPostBySlug(params.slug),
+    fetchBlogPosts(),
+  ])
+  let allPosts: typeof fallbackPosts = [...fallbackPosts]
+  for (const p of notionAll) {
+    if (!allPosts.find((existing) => existing.slug === p.slug)) allPosts.push(p)
   }
 
   // Fallback: look up in hardcoded articles

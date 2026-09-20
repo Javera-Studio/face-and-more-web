@@ -17,15 +17,12 @@ export const metadata: Metadata = {
 }
 
 export default async function HomePage() {
-  let offers = []
-  try {
-    offers = await fetchSpecialOffers()
-  } catch (e) {
-    // Statischer Export: Notion wird nur einmal beim Build abgefragt, es gibt keine
-    // Moeglichkeit zur Laufzeit erneut zu versuchen. Ein Fehlschlag darf deshalb nicht
-    // unbemerkt bleiben, sonst fehlt die Angebote-Leiste bis zum naechsten Deploy.
-    console.error("[Notion] fetchSpecialOffers beim Build fehlgeschlagen — Angebote-Leiste bleibt leer:", e)
-  }
+  // Statischer Export: Notion wird nur einmal beim Build abgefragt, es gibt keine
+  // Moeglichkeit zur Laufzeit erneut zu versuchen. Ein Fehlschlag wird bewusst NICHT
+  // abgefangen: soll der Build fehlschlagen, statt "erfolgreich" ohne Angebote-Leiste zu
+  // deployen. Eine leere Liste (keine aktiven Angebote) ist dagegen ein normaler, gueltiger
+  // Zustand und wirft keinen Fehler.
+  const offers = await fetchSpecialOffers()
 
   return (
     <SiteLayout>
