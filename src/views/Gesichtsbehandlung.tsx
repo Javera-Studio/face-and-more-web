@@ -27,7 +27,7 @@ const Gesichtsbehandlung = () => (
       { t: "Pflegeempfehlung", d: "Tipps für die optimale Pflege zu Hause." },
     ]}
     prices={[
-      { name: "Klassische Gesichtsbehandlung", duration: "60 Min", price: "ab € 75" },
+      { name: "Klassische Gesichtsbehandlung", duration: "60 Min", price: "ab € 89" },
       { name: "Premium Gesichtsbehandlung", duration: "90 Min", price: "ab € 110" },
       { name: "Express-Pflege", duration: "45 Min", price: "ab € 55", note: "Für zwischendurch" },
     ]}
