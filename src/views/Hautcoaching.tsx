@@ -6,7 +6,7 @@ import { imgSrc } from "@/lib/utils";
 import jugendImg from "@/assets/jugendliche-haut.jpg";
 import reifeImg from "@/assets/reife-haut.jpg";
 import allgemeinImg from "@/assets/allgemeine-hautberatung.jpg";
-import michaelaImg from "@/assets/michaela.avif";
+import michaelaImg from "@/assets/michineu2.jpg";
 
 const paths = [
   {
