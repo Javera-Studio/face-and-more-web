@@ -18,6 +18,7 @@ export interface TreatmentPageProps {
   subtitle: string;
   intro: string;
   heroImage: any;
+  processImage?: any;
   gallery: [any, any, any];
   galleryGrid?: [any, any, any, any];
   benefits: string[];
@@ -174,7 +175,7 @@ const TreatmentPage = (p: TreatmentPageProps) => {
           </ol>
         </div>
         <div className="lg:col-span-5 overflow-hidden">
-          <img src={imgSrc(michaelaImg)} alt="" className="w-full h-full object-cover" loading="lazy" />
+          <img src={imgSrc(p.processImage ?? michaelaImg)} alt="" className="w-full h-full object-cover" loading="lazy" />
         </div>
       </div>
     </section>
