@@ -2,7 +2,7 @@
 import hero from "@/assets/microneedlingneu.webp";
 import g1 from "@/assets/treatment-facial.webp";
 import g2 from "@/assets/studio.webp";
-import g3 from "@/assets/michaela.avif";
+import g3 from "@/assets/michineu1.jpg";
 
 const Microneedling = () => (
   <TreatmentPage

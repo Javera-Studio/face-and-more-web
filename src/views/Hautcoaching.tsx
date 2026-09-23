@@ -6,7 +6,7 @@ import { imgSrc } from "@/lib/utils";
 import jugendImg from "@/assets/jugendliche-haut.webp";
 import reifeImg from "@/assets/reife-haut.webp";
 import allgemeinImg from "@/assets/allgemeine-hautberatung.webp";
-import michaelaImg from "@/assets/michaela.avif";
+import michaelaImg from "@/assets/michineu2.webp";
 
 const paths = [
   {

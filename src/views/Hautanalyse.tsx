@@ -3,6 +3,7 @@ import hero from "@/assets/skin-analysis.jpg";
 import g1 from "@/assets/treatment-facial.webp";
 import g2 from "@/assets/treatment-skin.jpg";
 import g3 from "@/assets/studio.webp";
+import processImage from "@/assets/michineu3.webp";
 
 const Hautanalyse = () => (
   <TreatmentPage
@@ -11,6 +12,7 @@ const Hautanalyse = () => (
     subtitle="Der Einstieg in eine Hautpflege, die wirklich zu dir passt — fundiert, präzise und persönlich besprochen."
     intro="Eine moderne Hautanalyse ist mehr als ein Blick auf die Hautoberfläche. Mit hochauflösender 3D-Technologie mache ich Hautzustände sichtbar, die mit dem bloßen Auge nicht erkennbar sind — und entwickle gemeinsam mit dir einen Pflegeplan, der wirklich passt."
     heroImage={hero}
+    processImage={processImage}
     gallery={[g1, g2, g3]}
   benefits={[
   "Professionelle Hautberatung",

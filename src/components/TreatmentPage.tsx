@@ -6,7 +6,7 @@ import { ArrowRight, Plus, Clock, Tag, Repeat } from "lucide-react";
 import { imgSrc } from "@/lib/utils";
 import haut1 from "@/assets/haut1.jpg";
 import studioImg from "@/assets/studio.webp";
-import michaelaImg from "@/assets/michaela.avif";
+import michaelaImg from "@/assets/michineu1.jpg";
 
 interface Faq { q: string; a: string }
 interface Step { t: string; d: string }
@@ -18,6 +18,7 @@ export interface TreatmentPageProps {
   subtitle: string;
   intro: string;
   heroImage: any;
+  processImage?: any;
   gallery: [any, any, any];
   galleryGrid?: [any, any, any, any];
   benefits: string[];
@@ -174,7 +175,7 @@ const TreatmentPage = (p: TreatmentPageProps) => {
           </ol>
         </div>
         <div className="lg:col-span-5 overflow-hidden">
-          <img src={imgSrc(michaelaImg)} alt="" className="w-full h-full object-cover" loading="lazy" />
+          <img src={imgSrc(p.processImage ?? michaelaImg)} alt="" className="w-full h-full object-cover" loading="lazy" />
         </div>
       </div>
     </section>
