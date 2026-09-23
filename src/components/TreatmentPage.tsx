@@ -6,7 +6,7 @@ import { ArrowRight, Plus, Clock, Tag, Repeat } from "lucide-react";
 import { imgSrc } from "@/lib/utils";
 import haut1 from "@/assets/haut1.jpg";
 import studioImg from "@/assets/studio.jpg";
-import michaelaImg from "@/assets/michaela.avif";
+import michaelaImg from "@/assets/michineu1.jpg";
 
 interface Faq { q: string; a: string }
 interface Step { t: string; d: string }
